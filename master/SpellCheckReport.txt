@@ -1,5 +1,6 @@
 output/FDEEE-release-linkable.html: 10C
 output/FDEEE-release-linkable.html: 11C
+output/FDEEE-release-linkable.html: 38B
 output/FDEEE-release-linkable.html: 38F
 output/FDEEE-release-linkable.html: 4C
 output/FDEEE-release-linkable.html: 56B
@@ -16,7 +17,12 @@ output/FDEEE-release-linkable.html: BEVs
 output/FDEEE-release-linkable.html: CC1
 output/FDEEE-release-linkable.html: CCDB
 output/FDEEE-release-linkable.html: CCL
+output/FDEEE-release-linkable.html: CMAC
 output/FDEEE-release-linkable.html: CSP
+output/FDEEE-release-linkable.html: D0
+output/FDEEE-release-linkable.html: D1
+output/FDEEE-release-linkable.html: D2
+output/FDEEE-release-linkable.html: D3
 output/FDEEE-release-linkable.html: DEKs
 output/FDEEE-release-linkable.html: DRBGs
 output/FDEEE-release-linkable.html: DSK
@@ -35,7 +41,6 @@ output/FDEEE-release-linkable.html: MBRs
 output/FDEEE-release-linkable.html: MMMM
 output/FDEEE-release-linkable.html: NAS
 output/FDEEE-release-linkable.html: P9
-output/FDEEE-release-linkable.html: PBKDF2
 output/FDEEE-release-linkable.html: PINs
 output/FDEEE-release-linkable.html: PSS
 output/FDEEE-release-linkable.html: Pre30
@@ -61,6 +66,7 @@ output/FDEEE-release-linkable.html: checksums
 output/FDEEE-release-linkable.html: chipsets
 output/FDEEE-release-linkable.html: crypto
 output/FDEEE-release-linkable.html: enquiries
+output/FDEEE-release-linkable.html: extist
 output/FDEEE-release-linkable.html: fcs
 output/FDEEE-release-linkable.html: fulfils
 output/FDEEE-release-linkable.html: href
@@ -79,6 +85,7 @@ output/FDEEE-release-linkable.html: v1
 output/FDEEE-release-linkable.html: v2
 output/FDEEE-release.html: 10C
 output/FDEEE-release.html: 11C
+output/FDEEE-release.html: 38B
 output/FDEEE-release.html: 38F
 output/FDEEE-release.html: 4C
 output/FDEEE-release.html: 56B
@@ -95,8 +102,13 @@ output/FDEEE-release.html: BEVs
 output/FDEEE-release.html: CC1
 output/FDEEE-release.html: CCDB
 output/FDEEE-release.html: CCL
+output/FDEEE-release.html: CMAC
 output/FDEEE-release.html: CSP
 output/FDEEE-release.html: CSP’
+output/FDEEE-release.html: D0
+output/FDEEE-release.html: D1
+output/FDEEE-release.html: D2
+output/FDEEE-release.html: D3
 output/FDEEE-release.html: DEKs
 output/FDEEE-release.html: DRBGs
 output/FDEEE-release.html: DSK
@@ -115,7 +127,6 @@ output/FDEEE-release.html: MBRs
 output/FDEEE-release.html: MMMM
 output/FDEEE-release.html: NAS
 output/FDEEE-release.html: P9
-output/FDEEE-release.html: PBKDF2
 output/FDEEE-release.html: PINs
 output/FDEEE-release.html: PSS
 output/FDEEE-release.html: Pre30
@@ -141,6 +152,7 @@ output/FDEEE-release.html: checksums
 output/FDEEE-release.html: chipsets
 output/FDEEE-release.html: crypto
 output/FDEEE-release.html: enquiries
+output/FDEEE-release.html: extist
 output/FDEEE-release.html: fcs
 output/FDEEE-release.html: fulfils
 output/FDEEE-release.html: iTC
@@ -160,6 +172,7 @@ output/FDEEE-release.html: v2
 output/FDEEE.html: 0x00
 output/FDEEE.html: 0x00007A4B
 output/FDEEE.html: 0x01
+output/FDEEE.html: 38B
 output/FDEEE.html: 38E
 output/FDEEE.html: 38F
 output/FDEEE.html: 4C
@@ -186,6 +199,10 @@ output/FDEEE.html: CMAC
 output/FDEEE.html: CSP
 output/FDEEE.html: CSPs
 output/FDEEE.html: CSP’
+output/FDEEE.html: D0
+output/FDEEE.html: D1
+output/FDEEE.html: D2
+output/FDEEE.html: D3
 output/FDEEE.html: DEKs
 output/FDEEE.html: DRBGs
 output/FDEEE.html: DSK
@@ -213,7 +230,6 @@ output/FDEEE.html: MMMM
 output/FDEEE.html: NAS
 output/FDEEE.html: OEAP
 output/FDEEE.html: P9
-output/FDEEE.html: PBKDF2
 output/FDEEE.html: PCI
 output/FDEEE.html: PINs
 output/FDEEE.html: PSS
@@ -247,10 +263,12 @@ output/FDEEE.html: checksums
 output/FDEEE.html: chipsets
 output/FDEEE.html: crypto
 output/FDEEE.html: decryptions
+output/FDEEE.html: extist
 output/FDEEE.html: fcs
 output/FDEEE.html: fulfils
 output/FDEEE.html: iTC
 output/FDEEE.html: lifecycle
+output/FDEEE.html: miniscule
 output/FDEEE.html: nLen
 output/FDEEE.html: nist
 output/FDEEE.html: nmap
@@ -261,6 +279,7 @@ output/FDEEE.html: reinstantiating
 output/FDEEE.html: sanitization
 output/FDEEE.html: sel
 output/FDEEE.html: sni
+output/FDEEE.html: statescan
 output/FDEEE.html: subkey
 output/FDEEE.html: un
 output/FDEEE.html: uninstantiating
