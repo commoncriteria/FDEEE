@@ -890,7 +890,7 @@
                                 <span class="selectable-content" id="_s_210">key transport as specified in FCS_COP.1<b>/KeyEncap</b></span>
                             </li>
                             <li style="">
-                                <span class="selectable-content" id="_s_211">key encryption as specified in FCS_COP.1<b>/KeyEnc</b></span>
+                                <span class="selectable-content" id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1<b>/KeyEnc</b></span>
                             </li>
                         </ul>
                         ] while maintaining an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_212">128 bits</span>, <span class="selectable-content" id="_s_213">256 bits</span>] while maintaining an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_214">128 bits</span>, <span class="selectable-content" id="_s_215">256 bits</span>] for symmetric keys and an effective strength of [<b>selection</b>: <span class="selectable-content" id="_s_216">not applicable</span>, <span class="selectable-content" id="_s_217">112 bits</span>, <span class="selectable-content" id="_s_218">128 bits</span>, <span class="selectable-content" id="_s_219">192 bits</span>, <span class="selectable-content" id="_s_220">256 bits</span>] for asymmetric keys. 
@@ -2431,7 +2431,16 @@
             </div>
             <div class="comp" id="FCS_CKM.6/GENHW">
                 <h4>FCS_CKM.6/GENHW Cryptographic Key Destruction (General Hardware)</h4>
-                <div class="statustag"></div>
+                <div class="statustag">
+                    <p></p>
+                    <b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b>
+                    <br>
+                    <ul>
+                        <li>
+                            <b><i><a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i></b>
+                        </li>
+                    </ul>
+                </div>
                 <div class="element">
                     <div class="reqid" id="FCS_CKM.6.1/GENHW">
                         <a href="#FCS_CKM.6.1/GENHW" class="abbr">FCS_CKM.6.1/GENHW</a>
@@ -2532,7 +2541,16 @@
             </div>
             <div class="comp" id="FCS_CKM.6/SW">
                 <h4>FCS_CKM.6/SW Cryptographic Key Destruction (Software TOE, 3rd Party Storage)</h4>
-                <div class="statustag"></div>
+                <div class="statustag">
+                    <p></p>
+                    <b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b>
+                    <br>
+                    <ul>
+                        <li>
+                            <b><i><a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i></b>
+                        </li>
+                    </ul>
+                </div>
                 <div class="element">
                     <div class="reqid" id="FCS_CKM.6.1/SW">
                         <a href="#FCS_CKM.6.1/SW" class="abbr">FCS_CKM.6.1/SW</a>
@@ -2630,7 +2648,16 @@
             </div>
             <div class="comp" id="FCS_CKM.6/TOEHW">
                 <h4>FCS_CKM.6/TOEHW Cryptographic Key Destruction (TOE-Controlled Hardware)</h4>
-                <div class="statustag"></div>
+                <div class="statustag">
+                    <p></p>
+                    <b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b>
+                    <br>
+                    <ul>
+                        <li>
+                            <b><i><a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i></b>
+                        </li>
+                    </ul>
+                </div>
                 <div class="element">
                     <div class="reqid" id="FCS_CKM.6.1/TOEHW">
                         <a href="#FCS_CKM.6.1/TOEHW" class="abbr">FCS_CKM.6.1/TOEHW</a>
@@ -2834,7 +2861,9 @@
             </div>
             <div class="comp" id="FCS_KDF_EXT.1">
                 <h4>FCS_KDF_EXT.1 Cryptographic Key Derivation</h4>
-                <div class="statustag"></div>
+                <div class="statustag">
+                    <b><i>The inclusion of this selection-based component depends upon selection in <a href="#FCS_KYC_EXT.2.2">FCS_KYC_EXT.2.2</a>. </i></b>
+                </div>
                 <div class="element">
                     <div class="reqid" id="FCS_KDF_EXT.1.1">
                         <a href="#FCS_KDF_EXT.1.1" class="abbr">FCS_KDF_EXT.1.1</a>

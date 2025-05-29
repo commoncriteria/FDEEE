@@ -1323,7 +1323,7 @@
             </f-component>
       
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6" iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
-        <depends on-sel="fcs_ckm-ext-6"/>
+        <depends on-sel="fcs-ckm-ext-6"/>
         <f-element id="fcs_ckm-6-1-genhw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1485,14 +1485,14 @@
       </f-component>
       
       <f-component name="Cryptographic Key Destruction (Key Cryptographic Erase)" cc-id="fcs_ckm.6" iteration="KEK" id="fcs-ckm-6-kek" status="optional">
-        <f-element id="fcs_ckm-6-1-kek">
+        <f-element id="fcs-ckm-6-1-kek">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
             when [<h:i>no longer needed</h:i>].
           </title>          
         </f-element>
         
-        <f-element id="fcs_ckm-6-2-kek">
+        <f-element id="fcs-ckm-6-2-kek">
           <title>
             The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in accordance
             with a specified cryptographic key destruction method [<h:i>by using the appropriate method to destroy
@@ -1585,7 +1585,7 @@
             </f-component>
       
       <f-component name="Cryptographic Key Destruction (Software TOE, 3rd Party Storage)" cc-id="fcs_ckm.6" iteration="SW" id="fcs-ckm-6-sw" status="sel-based">
-        <depends on-sel="fcs_ckm-ext-6"/>
+        <depends on-sel="fcs-ckm-ext-6"/>
         <f-element id="fcs_ckm-6-1-sw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1751,7 +1751,7 @@
       </f-component>
       
       <f-component name="Cryptographic Key Destruction (TOE-Controlled Hardware)" cc-id="fcs_ckm.6" iteration="TOEHW" id="fcs-ckm-6-toehw" status="sel-based">
-        <depends on-sel="fcs_ckm-ext-6"/>
+        <depends on-sel="fcs-ckm-ext-6"/>
         <f-element id="fcs_ckm-6-1-toehw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -2612,7 +2612,7 @@
             
 
             <f-component cc-id="fcs_kdf_ext.1" name="Cryptographic Key Derivation" id="fcs-kdf-ext-1" status="sel-based">
-              <depends on="sel-fcs-kyc-ext-2-1-sel-1"/>
+              <depends on="fcs-kyc-ext-2-2-sel-1"/>
               <consistency-rationale/>
               <comp-lev>requires the TSF to derive intermediate keys from submasks using the specified hash functions.</comp-lev>
               <management/>
@@ -2815,7 +2815,7 @@
                 <selectable>key derivation as specified in FCS_KDF_EXT.1</selectable>
                 <selectable>key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
                 <selectable>key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
-                <selectable>key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
               </selectables> while maintaining an effective strength of <selectables>
                 <selectable>128 bits</selectable>
                 <selectable>256 bits</selectable>
