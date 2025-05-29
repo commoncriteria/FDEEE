@@ -21,6 +21,8 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[14]""/depends[2]""/on-sel[1]""
 * Error: Detected dangling id-reference to submask-derived from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[17]""/depends[3]""/on-sel[1]""
+* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-1-sel-1 from attribute
+        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[18]""/depends[1]""/on[1]""
 * Error: Detected dangling id-reference to sel-fcs-afa-ext-1-1-sel-1b from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[21]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-afa-ext-1-1-sel-6a from attribute

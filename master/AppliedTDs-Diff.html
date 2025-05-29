@@ -798,9 +798,9 @@
                         <a href="#FCS_CKM_EXT.6.1" class="abbr">FCS_CKM_EXT.6.1</a>
                     </div>
                     <div class="reqdesc">
-                         The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use [<b>selection</b>: <span class="selectable-content" id="_s_104">FCS_CKM.4<b>/TOEHW</b></span>, <span class="selectable-content" id="_s_105">FCS_CKM.4<b>/GENHW</b></span>, <span class="selectable-content" id="_s_106">FCS_CKM.4<b>/SW</b></span>] key destruction methods. 
+                         The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use [<b>selection</b>: <span class="selectable-content" id="_s_104"><a href="#FCS_CKM.6">FCS_CKM.6</a><b>/GENHW</b></span>, <span class="selectable-content" id="_s_105"><a href="#FCS_CKM.6">FCS_CKM.6</a><b>/SW</b></span>, <span class="selectable-content" id="_s_106"><a href="#FCS_CKM.6">FCS_CKM.6</a><b>/TOEHW</b></span>] key destruction methods. 
                         <div class="appnote">
-                            <span class="note-header">Application Note: </span><span class="note"> If multiple selections are made, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> should identify which keys are destroyed according to which selections. </span>
+                            <span class="note-header">Application Note: </span><span class="note"> The specific key destruction methods that will be claimed are dependent on the selections made for where keys are stored. If multiple selections are made, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> should identify which keys are destroyed according to which selections. </span>
                         </div>
                     </div>
                 </div>
@@ -2359,7 +2359,7 @@
                         <a href="#FPT_FAC_EXT.1.1" class="abbr">FPT_FAC_EXT.1.1</a>
                     </div>
                     <div class="reqdesc">
-                         The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_330">a password</span>, <span class="selectable-content" id="_s_331">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_332">a privileged user action</span>]before the firmware update proceeds. 
+                         The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_330">a password</span>, <span class="selectable-content" id="_s_331">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_332">a privileged user action</span>] before the firmware update proceeds. 
                         <div class="appnote">
                             <span class="note-header">Application Note: </span><span class="note"> Before an update takes place, the drive owner will authorize the update by providing either a known unique value (for example, a serial number) that is printed on the collaborative Protection Profile for Full Drive Encryption - Encryption Engine drive, a password (which should be administratively configurable as defined in <a href="#FMT_SMF.1">FMT_SMF.1</a>) or perform the operation as a privileged user. It is assumed that physical presence to the drive is limited to authorized personnel. If the correct value is not provided, the update will not take place. The values are intended to be unique per drive so they cannot be easily exhausted.
                                 <br>
@@ -2431,16 +2431,7 @@
             </div>
             <div class="comp" id="FCS_CKM.6/GENHW">
                 <h4>FCS_CKM.6/GENHW Cryptographic Key Destruction (General Hardware)</h4>
-                <div class="statustag">
-                    <p></p>
-                    <b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b>
-                    <br>
-                    <ul>
-                        <li>
-                            <b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b>
-                        </li>
-                    </ul>
-                </div>
+                <div class="statustag"></div>
                 <div class="element">
                     <div class="reqid" id="FCS_CKM.6.1/GENHW">
                         <a href="#FCS_CKM.6.1/GENHW" class="abbr">FCS_CKM.6.1/GENHW</a>
@@ -2525,7 +2516,7 @@
                         </ul>
                         ] that meets the following: [<i>no standard</i>]. 
                         <div class="appnote">
-                            <span class="note-header">Application Note: </span><span class="note"> In the first selection, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author is presented options for destroying disused cryptographic keys based on whether they are in volatile memory or non-volatile storage within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The selection of block erase for non-volatile storage applies only to flash memory. A block erase does not require a read-verify, since the reference to the memory location is erased as well as the data itself.
+                            <span class="note-header">Application Note: </span><span class="note"> This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if selected in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a>. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be In the first selection, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author is presented options for destroying disused cryptographic keys based on whether they are in volatile memory or non-volatile storage within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The selection of block erase for non-volatile storage applies only to flash memory. A block erase does not require a read-verify, since the reference to the memory location is erased as well as the data itself.
                                 <br>
                                 <br>
                                  Within the selections is the option to overwrite the memory location with a new value of a key. The intent is that a new value of a key (as specified in another <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> within the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>) can be used to &ldquo;replace&rdquo; an existing key.
@@ -2623,10 +2614,13 @@
                         </ul>
                         ] that meets the following: [<i>no standard</i>]. 
                         <div class="appnote">
-                            <span class="note-header">Application Note: </span><span class="note"> The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has access will be reflected in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> section of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.
+                            <span class="note-header">Application Note: </span><span class="note"> This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if selected in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a>.
                                 <br>
                                 <br>
-                                 Several selections allow assignment of a &lsquo;value that does not contain any CSP&rsquo;. This means that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses some other specified data not drawn from an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> meeting FCS_RBG_EXT requirements, and not being any of the particular values listed as other selection options. The point of the phrase &lsquo;does not contain any CSP&rsquo; is to ensure that the overwritten data is carefully selected, and not taken from a general &lsquo;pool&rsquo; that might contain current or residual data that itself requires confidentiality protection.
+                                 The interface referenced in the requirement could take different forms, the most likely of which is an application programming interface to an <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask the platform to delete the resource. The level of detail to which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has access will be reflected in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> section of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.
+                                <br>
+                                <br>
+                                 Several selections allow assignment of a &lsquo;value that does not contain any CSP&rsquo;. This means that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses some other specified data not drawn from an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> meeting FCS_RBG requirements, and not being any of the particular values listed as other selection options. The point of the phrase &lsquo;does not contain any CSP&rsquo; is to ensure that the overwritten data is carefully selected, and not taken from a general &lsquo;pool&rsquo; that might contain current or residual data that itself requires confidentiality protection.
                                 <br>
                                 <br>
                                  Key destruction does not apply to the public component of asymmetric key pairs. </span>
@@ -2712,7 +2706,10 @@
                         </ul>
                         ] that meets the following: [<i>no standard</i>]. 
                         <div class="appnote">
-                            <span class="note-header">Application Note: </span><span class="note"> In the first selection, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author is presented options for destroying a key based on the memory or storage technology where keys are stored within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
+                            <span class="note-header">Application Note: </span><span class="note"> This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if selected in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a>.
+                                <br>
+                                <br>
+                                 In the first selection, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author is presented options for destroying a key based on the memory or storage technology where keys are stored within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
                                 <br>
                                 <br>
                                  If non-volatile memory is used to store keys, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author selects whether the memory storage algorithm uses wear-leveling or not. Storage technologies or memory types that use wear-leveling are not required to perform a read verify. The selection for destruction includes block erase as an option, and this option applies only to flash memory. A block erase does not require a read verify, since the mappings of logical addresses to the erased memory locations are erased as well as the data itself.
@@ -2837,9 +2834,7 @@
             </div>
             <div class="comp" id="FCS_KDF_EXT.1">
                 <h4>FCS_KDF_EXT.1 Cryptographic Key Derivation</h4>
-                <div class="statustag">
-                    <b><i>The inclusion of this selection-based component depends upon selection in FCS_KYC_EXT.1.1. </i></b>
-                </div>
+                <div class="statustag"></div>
                 <div class="element">
                     <div class="reqid" id="FCS_KDF_EXT.1.1">
                         <a href="#FCS_KDF_EXT.1.1" class="abbr">FCS_KDF_EXT.1.1</a>
@@ -3638,7 +3633,7 @@
                                 </tr>
                             </table>
                             <h4 id="ext-comp-FPT_FAC_EXT.1.1">FPT_FAC_EXT.1.1</h4>
-                             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_330">a password</span>, <span class="selectable-content" id="_s_331">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_332">a privileged user action</span>]before the firmware update proceeds. 
+                             The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_330">a password</span>, <span class="selectable-content" id="_s_331">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_332">a privileged user action</span>] before the firmware update proceeds. 
                         </div>
                     </div>
                     <h3 id="ext-comp-FPT_FUA_EXT" class="indexable" data-level="4">C.2.2.2 FPT_FUA_EXT Firmware Update Authentication</h3>
