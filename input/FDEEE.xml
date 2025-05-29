@@ -1348,6 +1348,7 @@
       
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6"
         iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
+        <depends on-sel="fcs-rbg-1"></depends>
         <f-element id="fcs_ckm-6-1-genhw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1397,7 +1398,7 @@
             The intent is that a new value of a key (as specified in another SFR within the PP) can be used
             to “replace” an existing key.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG_EXT
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1542,7 +1543,7 @@
             <Tests/>
           </aactivity>
         </f-element>
-      </f-component>      
+      </f-component>            
         
             <f-component cc-id="fcs_ckm.6" iteration="Power" name="Cryptographic Key and Key Material Destruction (Power Management)" id="fcs-ckm-6-power">
               <f-element id="fcs-ckm-6e1-pwr">
