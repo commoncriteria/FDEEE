@@ -917,7 +917,7 @@ The following sections list Common Criteria and technology terms used in this do
               <div class="eacategory">TSS</div><div class="ea"><div class="ea">The evaluator shall validate the TSS contains a list of compliant power saving states.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall ensure that guidance documentation contains a list of compliant
                 power saving states. If additional power saving states are supported, then the evaluator
                 shall validate that the guidance documentation states how the use of non-compliant power
-                saving statescan be avoided.</div></div><div class="eacategory">KMD</div><div class="ea">
+                saving states can be avoided.</div></div><div class="eacategory">KMD</div><div class="ea">
 			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall confirm that for each listed compliant state all key/key materials
                 are removed from volatile memory by using the test indicated by the selection in FCS_CKM_EXT.6.</div></div></span></div><div class="comp" id="FPT-PWR-EXT-2-1"><h4>FPT_PWR_EXT.2 Timing of Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.2</div>
                 
@@ -938,6 +938,8 @@ The following sections list Common Criteria and technology terms used in this do
                   
                   
               <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                  If "authenticated firmware update mechanism as described in FPT_FUA_EXT.1" is
+                  selected, you must claim FPT_FUA_EXT.1.<br/><br/>
                   <p>The evaluator shall examine the TSS to ensure that it describes information stating that
                     an authorized source signs TOE updates and will have an associated digital signature.
                     The evaluator shall examine the TSS contains a definition of an authorized source along

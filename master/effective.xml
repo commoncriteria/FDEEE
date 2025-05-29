@@ -494,7 +494,7 @@
 		      in which it discloses protected data to unauthorized users. 
 		    </description>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
+		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring
 		      several options for enforcing validation, such as key sanitization of the DEK or when a
 		      configurable number of failed validation attempts is reached within a 24 hour period. This
 		      mitigates brute force attacks against authorization factors such as passwords and PINs.</rationale>
@@ -510,7 +510,7 @@
 		    </description>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper
 		      handling of salts, nonces, and initialization vectors.</rationale>
-		    <addressed-by>FCS_COP.1/SKC (optional)</addressed-by><rationale>Mitigates this threat by
+		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by
 		      ensuring the proper choice of encryption algorithm and mode.</rationale>
       </threat>
 		  
@@ -533,20 +533,26 @@
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
 		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key materials.</rationale>
 		    <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by requiring the TOE to enter into a safe state based on each condition. </rationale>
-		    <addressed-by>FCS_CKM.1/AKG (optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
-		    <addressed-by>FCS_KDF_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring a password that is not subject to a brute force attack.</rationale>
+		    <addressed-by>FCS_CKM.1/AKG (optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>		    		    
+		    <addressed-by>FCS_CKM.6/KEK (optional)</addressed-by><rationale>Mitigates this threat by ensuring proper key cryptographic erase.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
+		    <addressed-by>FCS_CKM.6/GENHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction in general hardware.</rationale>		    
+		    <addressed-by>FCS_CKM.6/SW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction within the software TOE and 3rd party storage.</rationale>
+		    <addressed-by>FCS_CKM.6/TOEHW</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
+		    <addressed-by>FCS_CKM.1/KeyedHash (selection-based)</addressed-by><rationale>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</rationale>
+		    <addressed-by>FCS_CKM_EXT.6</addressed-by><rationale>Mitigates this threat by mandating the use of a specified key destruction method.</rationale>
 		    <addressed-by>FCS_COP.1/KeyEnc (selection-based)</addressed-by><rationale>Mitigates this threat by performing key encryption and decryption.</rationale>
 		    <addressed-by>FCS_COP.1/KeyEncap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key transport.</rationale>
 		    <addressed-by>FCS_COP.1/KeyWrap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key wrapping.</rationale>			  
 		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by performing data encryption and encryption.</rationale>
+		    <addressed-by>FCS_KDF_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring a password that is not subject to a brute force attack.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by randomizing the generated keys in order to reduce the likelihood of guessing the future keys.</rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.4 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by obscuring the submasks via a XOR or hashing operation..</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FPT_FLS.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that a malfunctioning DRBG function cannot be used to generate potentially insecure keys.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</rationale>
 		  </threat>
@@ -577,9 +583,9 @@
 		      and initialization vectors along with known plaintext could allow an attacker to recover the
 		      effective DEK, thus providing unauthorized access to the previously unknown plaintext on the
 		      storage device.
-		    </description>
-		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</rationale>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper handling of salts, nonces, and initialization vectors.</rationale> 
+		    </description>		    
+		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper handling of salts, nonces, and initialization vectors.</rationale>
+		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</rationale>
 		  </threat>
 		  
 		  <threat id="t-unauth-data-access" name="T.UNAUTHORIZED_DATA_ACCESS">
@@ -590,11 +596,11 @@
 				  targeted storage device to a host of which they have complete control and have raw access to
 				  the storage device (e.g., to specified disk sectors, to specified blocks).
 				</description>				
-			  <addressed-by>FDP_DSK_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring the TOE performs full drive encryption, which includes all protected data.</rationale>
+		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper nonces and IVs are used in the encryption of data.</rationale>
+		    <addressed-by>FDP_DSK_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring the TOE performs full drive encryption, which includes all protected data.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
 			  <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by defining what power states are compliant for the TOE.</rationale>
 			  <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by defining conditions in which the TOE will enter a compliant power state. These requirements ensure the device is secure if lost in a compliant power state.</rationale>        
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper nonces and IVs are used in the encryption of data.</rationale>
 		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by defining proper AES encryption.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the correct authentication and limits attempts to decrypt the data.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates by testing the behavior of the cryptographic functions through the use of the self-tests.</rationale>			            
@@ -620,7 +626,7 @@
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by defining a secure mechanism for updating the TOE firmware.</rationale>
 		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated if the initiator can provide information that would only be known to a trusted administrator.</rationale>
-		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not prosent in the more recent version.</rationale>
+		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>
 		    <addressed-by>FPT_FUA_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by <comment>TBD</comment></rationale>		               
 		  </threat>
 
@@ -1364,7 +1370,7 @@
             that meets the following: [<h:i>no standard</h:i>].
           </title>
           <note role="application">
-            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.
+            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.<h:br/><h:br/>
             This SFR should be 
             In the first selection, the ST Author is presented options for destroying disused cryptographic
             keys based on whether they are in volatile memory or non-volatile storage within the TOE. The 
@@ -1610,7 +1616,7 @@
                 <selectable>destruction of reference to the key directly followed by a request for garbage collection</selectable>
                 </selectables></selectable>
               <selectable>
-                For non-volatile storage that consists of the invoication of an interface provided
+                For non-volatile storage that consists of the invocation of an interface provided
                 by the underlying platform that <selectables linebreak="yes">
                   <selectable>logically addresses the storage location of the key and performs a <selectables>
                     <selectable>single</selectable>
@@ -1946,6 +1952,12 @@
       </f-component>
       
       <f-component name="Cryptographic Key Destruction Types" cc-id="fcs_ckm_ext.6" id="fcs-ckm-ext-6">
+        <consistency-rationale/>
+        <comp-lev>provides the TOE with the ability to select between multiple methods of key destruction.</comp-lev>
+        <management/>
+        <audit/>
+        <dependencies>FCS_CKM.6 Cryptographic Key and Key Material Destruction</dependencies>
+        
         <f-element id="fcs_ckm-ext-6">
           <title>
             The TSF shall use <selectables>
@@ -1966,7 +1978,7 @@
           
           <note role="application">
             The specific key destruction methods that will be claimed are dependent on the
-            selections made for where keys are stored.
+            selections made for where keys are stored.<h:br/><h:br/>
             If multiple selections are made, the TSS should identify which keys are destroyed
             according to which selections.
           </note>
@@ -3367,7 +3379,7 @@
       </section>
     
     <section title="User Data Protection" id="FDP">
-      <ext-comp-def title="Protection of Data on Disk" fam-id="FPT_DSK_EXT">
+      <ext-comp-def title="Protection of Data on Disk" fam-id="FDP_DSK_EXT">
         <fam-behavior>This family specifies methods for ensuring that data residing in permanent storage on disk is
           not subject to unauthorized disclosure.
         </fam-behavior>
@@ -3539,7 +3551,7 @@
               manipulate the drive.<h:br/><h:br/>            
               For the purposes of this document, key sanitization means to destroy the DEK, using one of the 
               approved destruction methods. This applies to instances of the protected key that
-              extist in non-volatile storage.
+              exist in non-volatile storage.
           </note>
             <aactivity>
                 <TSS>
@@ -3672,7 +3684,7 @@
         
         
         <f-component cc-id="fpt_fls.1" name="Failure with Preservation of Secure State" status="sel-based">
-          <depends on-sel="external-seed"/>
+          <depends on-sel="fcs-kdf-ext-1"/>
           <f-element id="fel-pres-sec-state">
             <title>
               The TSF shall preserve a secure state when the following types of failures occur: [<h:i>DRBG self-test failure</h:i>].              
@@ -3691,7 +3703,7 @@
         </f-component>
         
         <f-component name="Firmware Update Authentication" cc-id="fpt_fua_ext.1" id="fpt-fua-1" status="sel-based">
-          <depends on-sel="fpt-tud-ext-1"/>
+          <depends on-sel="fpt-tud-ext-1-3"/>
           <consistency-rationale/>
           <comp-lev>requires the TSF to authenticate firmware updates using a specified method.</comp-lev>
           <management/>
@@ -3756,7 +3768,7 @@
                     with the update image. In the latter case, the update mechanism should hash the public key
                     provided with the update image, and ensure that it matches a hash which appears in the key
                     store before using the provided public key to verify the signature on the update image. If the
-                    hash of the public key is selected, the ST author may iterate the FCS_COP.1(b) requirement -
+                    hash of the public key is selected, the ST author may iterate the FCS_COP.1/Hash requirement -
                     to specify the hashing functions used.<h:br/><h:br/>
                     The intent of this requirement is to specify that the authenticated update mechanism should
                     ensure that the new image has been digitally signed; and that the digital signature can be
@@ -3907,7 +3919,7 @@
             <Guidance>The evaluator shall ensure that guidance documentation contains a list of compliant
                 power saving states. If additional power saving states are supported, then the evaluator
                 shall validate that the guidance documentation states how the use of non-compliant power
-                saving statescan be avoided.</Guidance>
+                saving states can be avoided.</Guidance>
               <KMD/>
               <Tests>The evaluator shall confirm that for each listed compliant state all key/key materials
                 are removed from volatile memory by using the test indicated by the selection in FCS_CKM_EXT.6.</Tests> 
@@ -4022,7 +4034,7 @@
               to demonstrate the correct operation of <selectables>
                 <selectable><assignable>parts of  TSF</assignable></selectable>
                 <selectable>TSF data</selectable>
-              </selectables>.              
+              </selectables>: <assignable>list of self-tests run by the TSF</assignable>.              
             </title>
           </f-element>
           
@@ -4122,7 +4134,13 @@
           </f-element>
           <f-element id="fpt-tud-ext-1-3">
             <title>
-              The TSF shall verify updates to the TOE software using a [<h:i>digital signature <h:b>as specified in FCS_COP.1/SigVer</h:b></h:i>] by the manufacturer prior to installing those updates.
+              The TSF shall verify updates to the TOE <selectables>
+                <selectable>software</selectable>
+                <selectable>firmware</selectable>
+              </selectables> using a <selectables>
+                <selectable>digital signature <h:b>as specified in FCS_COP.1/SigVer</h:b></selectable>
+                <selectable><h:b>authenticated firmware update mechanism as described in FPT_FUA_EXT.1</h:b></selectable>
+              </selectables> by the manufacturer prior to installing those updates.
             </title>
             
             <ext-comp-def-title>
@@ -4135,6 +4153,8 @@
             <note role="application">While this component requires the TOE to implement the update functionality itself, it is acceptable to perform the cryptographic checks using functionality available in the Operational Environment.</note>
               <aactivity>
                 <TSS>
+                  If "authenticated firmware update mechanism as described in FPT_FUA_EXT.1" is
+                  selected, you must claim FPT_FUA_EXT.1.<h:br/><h:br/>
                   <h:p>The evaluator shall examine the TSS to ensure that it describes information stating that
                     an authorized source signs TOE updates and will have an associated digital signature.
                     The evaluator shall examine the TSS contains a definition of an authorized source along
