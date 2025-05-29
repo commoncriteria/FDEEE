@@ -1348,7 +1348,7 @@
       
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6"
         iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
-        <depends on-sel="fcs-rbg-1"></depends>
+        <depends on-sel="fcs_ckm-ext-6"></depends>
         <f-element id="fcs_ckm-6-1-genhw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1389,6 +1389,8 @@
             that meets the following: [<h:i>no standard</h:i>].
           </title>
           <note role="application">
+            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.
+            This SFR should be 
             In the first selection, the ST Author is presented options for destroying disused cryptographic
             keys based on whether they are in volatile memory or non-volatile storage within the TOE. The 
             selection of block erase for non-volatile storage applies only to flash memory. A block erase
@@ -1610,6 +1612,7 @@
       
       <f-component name="Cryptographic Key Destruction (Software TOE, 3rd Party Storage)" cc-id="fcs_ckm.6"
         iteration="SW" id="fcs-ckm-6-sw" status="sel-based">
+        <depends on-sel="fcs_ckm-ext-6"/>
         <f-element id="fcs_ckm-6-1-sw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1653,6 +1656,7 @@
             that meets the following: [<h:i>no standard</h:i>].
           </title>
           <note role="application">
+            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.<h:br/><h:br/>
             The interface referenced in the requirement could take different forms, the
             most likely of which is an application programming interface to an OS kernel. There may be
             various levels of abstraction visible. For instance, in a given implementation the application
@@ -1661,7 +1665,7 @@
             and can only ask the platform to delete the resource. The level of detail to which the TOE has
             access will be reflected in the TSS section of the ST.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG_EXT
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1775,6 +1779,7 @@
       
       <f-component name="Cryptographic Key Destruction (TOE-Controlled Hardware)" cc-id="fcs_ckm.6"
         iteration="TOEHW" id="fcs-ckm-6-toehw" status="sel-based">
+        <depends on-sel="fcs_ckm-ext-6"/>
         <f-element id="fcs_ckm-6-1-toehw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1833,6 +1838,7 @@
             that meets the following: [<h:i>no standard</h:i>].
           </title>
           <note role="application">
+            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.<h:br/><h:br/>
             In the first selection, the ST Author is presented options for destroying a
             key based on the memory or storage technology where keys are stored within the TOE.<h:br/><h:br/>
             If non-volatile memory is used to store keys, the ST Author selects whether the memory
@@ -1971,9 +1977,10 @@
         <f-element id="fcs_ckm-ext-6">
           <title>
             The TSF shall use <selectables>
-              <selectable>FCS_CKM.4<h:b>/TOEHW</h:b></selectable>
-              <selectable>FCS_CKM.4<h:b>/GENHW</h:b></selectable>
-              <selectable>FCS_CKM.4<h:b>/SW</h:b></selectable>
+              <selectable>FCS_CKM.6<h:b>/GENHW</h:b></selectable>
+              <selectable>FCS_CKM.6<h:b>/SW</h:b></selectable>
+              <selectable>FCS_CKM.6<h:b>/TOEHW</h:b></selectable>
+              
             </selectables>
             key destruction methods.
           </title>
@@ -1986,6 +1993,8 @@
           </ext-comp-def-title>
           
           <note role="application">
+            The specific key destruction methods that will be claimed are dependent on the
+            selections made for where keys are stored.
             If multiple selections are made, the TSS should identify which keys are destroyed
             according to which selections.
           </note>
@@ -2631,7 +2640,7 @@
             
 
             <f-component cc-id="fcs_kdf_ext.1" name="Cryptographic Key Derivation" id="fcs-kdf-ext-1" status="sel-based">
-              <depends on="sel-fcs-kyc-ext-1-1-sel-1"/>
+              <depends on="sel-fcs-kyc-ext-2-1-sel-1"/>
               <consistency-rationale/>
               <comp-lev>requires the TSF to derive intermediate keys from submasks using the specified hash functions.</comp-lev>
               <management/>
@@ -3656,7 +3665,7 @@
                 <selectable>a password</selectable>
                 <selectable>a known unique value printed on the device</selectable>
                 <selectable>a privileged user action</selectable>
-              </selectables>before the firmware update proceeds.
+              </selectables> before the firmware update proceeds.
             </title>
             <note role="application">
               Before an update takes place, the drive owner will authorize the update by providing either a known unique 
