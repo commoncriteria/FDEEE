@@ -2,5 +2,5 @@
 * https://commoncriteria.github.io/FDEEE/master/AppliedTDs.html[AppliedTDs.html]
 * https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[FDEEE-release-linkable.html]
 * https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html[FDEEE-release.html]
+* https://commoncriteria.github.io/FDEEE/master/FDEEE-sd.html[FDEEE-sd.html]
 * https://commoncriteria.github.io/FDEEE/master/FDEEE.html[FDEEE.html]
-* https://commoncriteria.github.io/FDEEE/master/diff-v1.0.html[diff-v1.0.html]

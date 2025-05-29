@@ -1270,7 +1270,7 @@
                             <h:li>Cause the TOE to dump the entire memory of the TOE into a binary file.</h:li>
                             <h:li>Search the content of the binary file created in Step #5 for instances of the
                               known key value from Step #1.</h:li>
-                            <h:li>Break the key value from Step #1 into 3 similar sized pieces and perform a
+                            <h:li>Break the key value from Step #1 into three similar sized pieces and perform a
                               search using each piece.</h:li>
                           </h:ol>
                           <h:p>Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory. If
@@ -1294,7 +1294,7 @@
                               <h:li>Cause the TOE to clear the key.</h:li>
                               <h:li>Search the logical view that the key was stored in for instances of the known
                                 key value from Step #1. If a copy is found, then the test fails.</h:li>
-                              <h:li>Break the key value from Step #1 into 3 similar sized pieces and perform a
+                              <h:li>Break the key value from Step #1 into three similar sized pieces and perform a
                                 search using each piece. If a fragment is found then the test is repeated (as
                                 described for Use Case 1 test 1 above), and if a fragment is found in the
                                 repeated test then the test fails.</h:li>
@@ -1323,9 +1323,17 @@
             </f-component>
       
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6" iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
+        <depends on-sel="fcs-rbg-1"/>
         <f-element id="fcs_ckm-6-1-genhw">
           <title>
-            The TSF shall destroy cryptographic keys in accordance with a specified cryptographic
+            The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
+            when [<h:i>no longer needed</h:i>].
+          </title>
+          
+        </f-element>
+        <f-element id="fcs_ckm-6-2-genhw">
+          <title>
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
@@ -1365,7 +1373,7 @@
             The intent is that a new value of a key (as specified in another SFR within the PP) can be used
             to “replace” an existing key.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG_EXT
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1387,7 +1395,7 @@
               If the ST makes use of the open assignment and fills in the type of pattern that is used, the 
               evaluator examines the TSS to ensure it describes how that pattern is obtained and used. The 
               evaluator shall verify that the pattern does not contain any CSPs.<h:br/><h:br/>
-              182 The evaluator shall check that the TSS identifies any configurations or circumstances that
+              The evaluator shall check that the TSS identifies any configurations or circumstances that
               may not strictly conform to the key destruction requirement.
             </TSS>
             <Guidance>
@@ -1432,7 +1440,7 @@
                     <h:li>Cause the TOE to stop the execution but not exit.</h:li>
                     <h:li>Cause the TOE to dump the entire memory of the TOE into a binary file.</h:li>
                     <h:li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</h:li>
-                    <h:li>Break the key value from Step #1 into 3 similar sized pieces and perform a search using each piece.</h:li>
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each piece.</h:li>
                   </h:ol>
                   Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found,
                   then the test fails.<h:br/><h:br/>
@@ -1450,7 +1458,7 @@
                     <h:li>Cause the TOE to clear the key.</h:li>                    
                     <h:li>Search the non-volatile memory the key was stored in for instances of the known key value from 
                       Step #1. If a copy is found, then the test fails.</h:li>
-                    <h:li>Break the key value from Step #1 into 3 similar sized pieces and perform a search using each 
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each 
                       piece. If a fragment is found then the test is repeated (as described for test 1 above), and if 
                       a fragment is found in the repeated test then the test fails.</h:li>
                   </h:ol>
@@ -1474,30 +1482,42 @@
         </f-element>
       </f-component>
       
-      <f-component name="Cryptographic Key Destruction (Key Cryptographic Erase)" cc-id="fcs_ckm.6" iteration="KEK" id="fcs-ckm-6-kek">
-        <f-element id="fcs_ckm-1-1-kek">
+      <f-component name="Cryptographic Key Destruction (Key Cryptographic Erase)" cc-id="fcs_ckm.6" iteration="KEK" id="fcs-ckm-6-kek" status="optional">
+        <f-element id="fcs_ckm-6-1-kek">
           <title>
-            
-          </title>
-          <note role="application">
-            
-          </note>
-          <aactivity>
-            <TSS>
-              
-            </TSS>
-            <Guidance>
-              
-            </Guidance>
-            <Tests>
-              
-            </Tests>
-          </aactivity>
+            The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
+            when [<h:i>no longer needed</h:i>].
+          </title>          
         </f-element>
         
-        
-      </f-component>
-      
+        <f-element id="fcs_ckm-6-2-kek">
+          <title>
+            The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in accordance
+            with a specified cryptographic key destruction method [<h:i>by using the appropriate method to destroy
+            all encryption keys encrypting the key intended for destruction</h:i>] that meets the following: 
+            [<h:i>no standard</h:i>].
+          </title>
+          <note role="application">
+            A key can be considered destroyed by destroying the key that protects the
+            key. If a key is wrapped or encrypted it is not necessary to “overwrite” that key, overwriting
+            the key that is used to wrap or encrypt the key used to encrypt/decrypt data, using the
+            appropriate method for the memory type involved, will suffice. For example, if a product uses
+            a Key Encryption Key (KEK) to encrypt a Data Encryption Key (DEK), destroying the KEK
+            using one of the methods in FCS_CKM.EXT.6.1 is sufficient, since the DEK would no longer
+            be usable (of course, presumes the DEK is still encrypted.
+          </note>
+          <aactivity>
+            <TSS/>
+            <Guidance/>
+            <KMD>
+              The evaluator shall examine the TOE’s keychain in the TSS/KMD and identify each instance a
+              key is destroyed by this method. In each instance the evaluator shall verify all keys capable
+              of decrypting the target key are destroyed in accordance with a specified key destruction method.
+            </KMD>
+            <Tests/>
+          </aactivity>
+        </f-element>
+      </f-component>            
         
             <f-component cc-id="fcs_ckm.6" iteration="Power" name="Cryptographic Key and Key Material Destruction (Power Management)" id="fcs-ckm-6-power">
               <f-element id="fcs-ckm-6e1-pwr">
@@ -1559,11 +1579,399 @@
                             FCS_CKM.6 for the destruction.</h:p></CustomEA>
                       <Tests>There are no test evaluation activities for this SFR.</Tests>
                   </aactivity>
-              </f-element>
-          
+              </f-element>          
             </f-component>
       
+      <f-component name="Cryptographic Key Destruction (Software TOE, 3rd Party Storage)" cc-id="fcs_ckm.6" iteration="SW" id="fcs-ckm-6-sw" status="sel-based">
+        <f-element id="fcs_ckm-6-1-sw">
+          <title>
+            The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
+            when [<h:i>no longer needed</h:i>].
+          </title>
+          
+        </f-element>
+        <f-element id="fcs_ckm-6-2-sw">
+          <title>
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            key destruction method <selectables linebreak="yes">
+              <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
+                <selectable>single overwrite consisting of <selectables linebreak="yes">
+                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable>zeroes,</selectable>
+                  <selectable>ones,</selectable> 
+                  <selectable>a new value of a key,</selectable>
+                  <selectable><assignable>some value that does not contain any CSP</assignable></selectable>
+                </selectables>
+                </selectable>
+                <selectable>removal of power to the memory,</selectable>
+                <selectable>destruction of reference to the key directly followed by a request for garbage collection</selectable>
+                </selectables></selectable>
+              <selectable>
+                For non-volatile storage that consists of the invoication of an interface provided
+                by the underlying platform that <selectables linebreak="yes">
+                  <selectable>logically addresses the storage location of the key and performs a <selectables>
+                    <selectable>single</selectable>
+                    <selectable><assignable>ST author defined multi-pass</assignable></selectable></selectables>
+                    overwrite consisting of <selectables linebreak="yes">
+                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable>zeroes,</selectable>
+                  <selectable>ones,</selectable>
+                  <selectable>a new value of a key of the same size,</selectable>
+                  <selectable><assignable>some value that does not contain any
+                    CSP</assignable></selectable></selectables></selectable>
+                  <selectable>instructs the underlying platform to destroy the abstraction that
+                    represents the key</selectable>
+                </selectables></selectable>                  
+            </selectables>
+            that meets the following: [<h:i>no standard</h:i>].
+          </title>
+          <note role="application">
+            The interface referenced in the requirement could take different forms, the
+            most likely of which is an application programming interface to an OS kernel. There may be
+            various levels of abstraction visible. For instance, in a given implementation the application
+            may have access to the file system details and may be able to logically address specific memory
+            locations. In another implementation the application may simply have a handle to a resource
+            and can only ask the platform to delete the resource. The level of detail to which the TOE has
+            access will be reflected in the TSS section of the ST.<h:br/><h:br/>
+            Several selections allow assignment of a ‘value that does not contain any CSP’. This means
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG_EXT
+            requirements, and not being any of the particular values listed as other selection options. The
+            point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
+            selected, and not taken from a general ‘pool’ that might contain current or residual data that
+            itself requires confidentiality protection.<h:br/><h:br/>            
+            Key destruction does not apply to the public component of asymmetric key pairs.
+          </note>
+          <aactivity>
+            <TSS>
+              (Key Management Description may be used if necessary details describe proprietary information)<h:br/><h:br/>
+              The evaluator examines the TSS to ensure it describes how the keys are managed in volatile memory.
+              This description includes details of how each identified key is introduced into volatile memory (e.g.,
+              by derivation from user input, or by unwrapping a wrapped key stored in non-volatile memory) and how 
+              they are overwritten.<h:br/><h:br/>
+              The evaluator shall check to ensure the TSS lists each type of key that is stored in in non-volatile
+              memory, and identifies how the TOE interacts with the underlying platform to manage keys (e.g., store,
+              retrieve, destroy). The description includes details on the method of how the TOE interacts with the 
+              platform, including an identification and description of the interfaces it uses to manage keys (e.g.,
+              file system APIs, platform key store APIs).<h:br/><h:br/>
+              The evaluator examines the interface description for each different media type to ensure that the 
+              interface supports the selection(s) and description in the TSS.<h:br/><h:br/>
+              The evaluator shall check that the TSS identifies any configurations or circumstances that may not
+              strictly conform to the key destruction requirement. If the ST makes use of the open assignment and
+              fills in the type of pattern that is used, the evaluator examines the TSS to ensure it describes how
+              that pattern is obtained and used. The evaluator shall verify that the pattern does not contain any
+              CSPs.              
+            </TSS>
+            <Guidance>
+              There are a variety of concerns that may prevent or delay key destruction in some cases. The evaluator
+              shall check that the guidance documentation identifies configurations or circumstances that may not 
+              strictly conform to the key destruction requirement, and that this description is consistent with the
+              relevant parts of the TSS and any other relevant Required Supplementary Information. The evaluator 
+              shall check that the guidance documentation provides guidance on situations where key destruction may
+              be delayed at the physical layer.<h:br/><h:br/>
+              For example, when the TOE does not have full access to the physical memory, it is possible that the 
+              storage may be implementing wear-leveling and garbage collection. This may create additional copies
+              of the key that are logically inaccessible but persist physically. In this case, it is assumed the 
+              drive supports the TRIM command and implements garbage collection to destroy these persistent copies
+              when not actively engaged in other tasks.<h:br/><h:br/>
+              Drive vendors implement garbage collection in a variety of different ways, as such there is a variable
+              amount of time until data is truly removed from these solutions. There is a risk that data may persist
+              for a longer amount of time if it is contained in a block with other data not ready for erasure. It is
+              assumed the operating system and file system of the OE support TRIM, instructing the non-volatile memory
+              to erase copies via garbage collection upon their deletion.<h:br/><h:br/>
+              It is assumed that if a RAID array is being used, only set-ups that support TRIM are utilized. It is 
+              assumed if the drive is connected via PCI-Express, the operating system supports TRIM over that channel.
+              It is assumed the drive is healthy and contains minimal corrupted data and will be end of life before a 
+              significant amount of damage to drive health occurs, it is assumed there is a risk small amounts of 
+              potentially recoverable data may remain in damaged areas of the drive.<h:br/><h:br/>
+              Finally, it is assumed the keys are not stored using a method that would be inaccessible to TRIM, such 
+              as being contained in a file less than 982 bytes which would be completely contained in the master 
+              file table.
+            </Guidance>
+            <Tests>
+              <testlist>
+                <test>Applied to each key held as plaintext in volatile memory and subject to destruction by overwrite
+                  by the TOE (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
+                  non-volatile memory). In the case where the only selection made for the destruction method key was 
+                  removal of power, then this test is unnecessary. The evaluator shall:<h:ol type="1">
+                    <h:li>Record the value of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>
+                    <h:li>Cause the TOE to stop the execution but not exit.</h:li>
+                    <h:li>Cause the TOE to dump the entire memory of the TOE into a binary file.</h:li>
+                    <h:li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</h:li>
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each piece.</h:li>
+                  </h:ol>
+                  Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found,
+                  then the test fails.<h:br/><h:br/>
+                  Step 7 ensures that partial key fragments do not remain in memory. If a fragment is found, there is a 
+                  miniscule chance that it is not within the context of a key (e.g., some random bits that happen to match).
+                  If this is the case the test should be repeated with a different key in Step #1. If a fragment is found 
+                  the test fails.
+                </test>
+                The following tests apply only to selection a), since the TOE in this instance has more visibility into what is 
+                happening within the underlying platform (e.g., a logical view of the media). In selection b), the TOE has no 
+                visibility into the inner workings and completely relies on the underlying platform, so there is no reason to
+                test the TOE beyond test 1.<h:br/><h:br/>
+                For selection a), the following tests are used to determine the TOE is able to request the platform to overwrite
+                the key with a TOE supplied pattern.
+                <test>
+                  Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
+                  evaluator shall use a tool that provides a logical view of the media (e.g., MBR
+                  file system):<h:ol type="1">
+                    <h:li>Record the value of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>                    
+                    <h:li>Search the logical view that the key was stored in for instances of the known key value from 
+                      Step #1. If a copy is found, then the test fails.</h:li>
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each 
+                      piece. If a fragment is found then the test is repeated (as described for Use
+                      Case 1 test 1 above), and if a fragment is found in the repeated test then the test fails.</h:li>
+                  </h:ol>
+                </test>
+                <test>
+                  Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. 
+                  The evaluator shall use a tool that provides a logical view of the media:<h:ol type="1">
+                    <h:li>Record the logical storage location of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>
+                    <h:li>Read the logical storage location in Step #1 of non-volatile memory to
+                      ensure the appropriate pattern is used.</h:li>
+                  </h:ol>
+                  The test succeeds if the correct pattern is used to overwrite the key in the
+                  memory location. If the pattern is not found, the test fails. 
+                </test>
+              </testlist>              
+            </Tests>
+          </aactivity>
+        </f-element>
+      </f-component>
       
+      <f-component name="Cryptographic Key Destruction (TOE-Controlled Hardware)" cc-id="fcs_ckm.6" iteration="TOEHW" id="fcs-ckm-6-toehw" status="sel-based">
+        <f-element id="fcs_ckm-6-1-toehw">
+          <title>
+            The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
+            when [<h:i>no longer needed</h:i>].
+          </title>
+          
+        </f-element>
+        <f-element id="fcs_ckm-6-2-toehw">
+          <title>
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            key destruction method <selectables linebreak="yes">
+              <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
+                <selectable>single overwrite consisting of <selectables linebreak="yes">
+                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable>zeroes,</selectable>
+                  <selectable>ones,</selectable> 
+                  <selectable>a new value of a key,</selectable>
+                  <selectable><assignable>some value that does not contain any CSP</assignable></selectable>
+                </selectables>
+                </selectable>
+                <selectable>removal of power to the memory,</selectable>
+                <selectable>destruction of reference to the key directly followed by a request for garbage collection</selectable>
+              </selectables></selectable>
+              <selectable>
+                For non-volatile <selectables linebreak="yes">
+                  <selectable>that employs a wear-leveling algorithm, the destruction shall be
+                    executed by a <selectables>
+                    <selectable>single overwrite consisting of zeroes</selectable>
+                    <selectable>single overwrite consisting of ones</selectable>
+                    <selectable>overwrite with a new value of a key of the same size</selectable>
+                    <selectable>single overwrite consisting of <assignable>some value that does not
+                      29 contain any CSP</assignable></selectable>
+                      <selectable>block erase</selectable>
+                    </selectables></selectable>
+                    <selectable>that does not employ a wear-leveling algorithm, the destruction
+                      shall be executed by a <selectables linebreak="yes">
+                      <selectable><selectables>
+                        <selectable>single</selectable>
+                        <selectable><assignable>ST author defined multi-pass</assignable> overwrite consisting of zeros followed by a read-verify</selectable>
+                        </selectables></selectable>
+                      <selectable><selectables>
+                          <selectable>single</selectable>
+                          <selectable><assignable>ST author defined multi-pass</assignable> overwrite
+                            consisting of ones followed by a read-verify</selectable>
+                          </selectables></selectable>
+                      <selectable><selectables>
+                          <selectable>single</selectable>
+                          <selectable><assignable>ST author defined multi-pass</assignable>overwrite
+                            consisting of <assignable>some value that does not contain any CSP</assignable> followed by a read-verify</selectable>
+                          </selectables>block erase</selectable>
+                      </selectables></selectable>                  
+                </selectables>and if the read-verification of the overwritten data fails, the process shall
+                  be repeated again up to [assignment: number of times to attempt
+                  overwrite] times, whereupon an error is returned.</selectable>                  
+            </selectables>
+            that meets the following: [<h:i>no standard</h:i>].
+          </title>
+          <note role="application">
+            In the first selection, the ST Author is presented options for destroying a
+            key based on the memory or storage technology where keys are stored within the TOE.<h:br/><h:br/>
+            If non-volatile memory is used to store keys, the ST Author selects whether the memory
+            storage algorithm uses wear-leveling or not. Storage technologies or memory types that use
+            wear-leveling are not required to perform a read verify. The selection for destruction
+            includes block erase as an option, and this option applies only to flash memory. A block erase
+            does not require a read verify, since the mappings of logical addresses to the erased memory
+            locations are erased as well as the data itself.<h:br/><h:br/>    
+            Within the selections is the option to overwrite a disused key with a new value of a key. The
+            intent is that a new value of a key (as specified in another SFR within the PP) can be used to
+            “replace” an existing key.<h:br/><h:br/>
+            If a selection for read verify is chosen, it should generate an audit record upon failures.<h:br/><h:br/>
+            Several selections allow assignment of a ‘value that does not contain any CSP’. This means
+            that the TOE uses some other specified data not drawn from an RBG meeting
+            FCS_RBG_EXT requirements, and not being any of the particular values listed as other
+            selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the
+            overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain
+            current or residual data that itself requires confidentiality protection.<h:br/><h:br/>
+            Key destruction does not apply to the public component of asymmetric key pairs.
+          </note>
+          <aactivity>
+            <TSS>
+              (Key Management Description may be used if necessary details describe proprietary information)<h:br/><h:br/>
+              The evaluator examines the TSS to ensure it describes how the keys are managed in volatile memory.
+              This description includes details of how each identified key is introduced into volatile memory (e.g.,
+              by derivation from user input, or by unwrapping a wrapped key stored in non-volatile memory) and how 
+              they are overwritten.<h:br/><h:br/>
+              The evaluator shall examine the TSS to ensure it describes the method that is used by the memory 
+              controller to write and read memory from each type of memory listed. The purpose here is to provide
+              a description of how the memory controller works so one can determine exactly how keys are written 
+              to memory. The description would include how the data is written to and read from memory (e.g., block
+              level, cell level), mechanisms for copies of the key that could potentially exist (e.g., a copy with 
+              parity bits, a copy without parity bits, any mechanisms that are used for redundancy).<h:br/><h:br/>
+              The evaluator shall examine the TSS to ensure it describes the destruction procedure for each key that
+              has been identified. If different types of memory are used to store the key(s), the evaluator shall 
+              check to ensure that the TSS identifies the destruction procedure for each memory type where keys are
+              stored (e.g., key X stored in flash memory is destroyed by overwriting once with zeros, key X’ stored
+              in EEPROM is destroyed by a overwrite consisting of a pseudo random pattern – the EEPROM used in the 
+              TOE uses a wear-leveling scheme as described).<h:br/><h:br/>
+              If the ST makes use of the open assignment and fills in the type of pattern that is used, the evaluator
+              examines the TSS to ensure it describes how that pattern is obtained and used. The evaluator shall verify
+              that the pattern does not contain any CSPs.<h:br/><h:br/>
+              The evaluator shall check that the TSS identifies any configurations or circumstances that may not strictly
+              conform to the key destruction requirement.<h:br/><h:br/>
+              Upon completion of the TSS examination, the evaluator understands how all the keys
+              (and potential copies) are destroyed.
+                            
+            </TSS>
+            <Guidance>
+              There are a variety of concerns that may prevent or delay key destruction in some cases. The evaluator
+              shall check that the guidance documentation identifies configurations or circumstances that may not 
+              strictly conform to the key destruction requirement, and that this description is consistent with 
+              the relevant parts of the TSS and any other relevant Required Supplementary Information. The evaluator 
+              shall check that the guidance documentation provides guidance on situations where key destruction may 
+              be delayed at the physical layer.<h:br/><h:br/>
+              For example, when the TOE does not have full access to the physical memory, it is possible that the 
+              storage may be implementing wear-leveling and garbage collection. This may create additional copies
+              of the key that are logically inaccessible but persist physically. In this case, it is assumed the 
+              drive supports the TRIM command and implements garbage collection to destroy these persistent copies
+              when not actively engaged in other tasks.<h:br/><h:br/>
+              Drive vendors implement garbage collection in a variety of different ways, as such there is a variable
+              amount of time until data is truly removed from these solutions. There is a risk that data may persist
+              for a longer amount of time if it is contained in a block with other data not ready for erasure. It is
+              assumed the operating system and file system of the OE support TRIM, instructing the non-volatile memory
+              to erase copies via garbage collection upon their deletion.<h:br/><h:br/>
+              It is assumed that if a RAID array is being used, only set-ups that support TRIM are utilized. It is 
+              assumed if the drive is connected via PCI-Express, the operating system supports TRIM over that channel.
+              It is assumed the drive is healthy and contains minimal corrupted data and will be end of life before a 
+              significant amount of damage to drive health occurs, it is assumed there is a risk small amounts of 
+              potentially recoverable data may remain in damaged areas of the drive.<h:br/><h:br/>
+              Finally, it is assumed the keys are not stored using a method that would be inaccessible to TRIM, such 
+              as being contained in a file less than 982 bytes which would be completely contained in the master file
+              table.<h:br/><h:br/>
+              For destruction on wear-leveled memory, if a time period is required before is processed destruction the
+              ST author shall provide an estimated range.
+            </Guidance>
+            <Tests>
+              For these tests the evaluator shall use appropriate development environment (e.g. a Virtual Machine) and
+              development tools (debuggers, simulators, etc.) to test that keys are cleared, including all copies of 
+              the key that may have been created internally by the TOE during normal cryptographic processing with that
+              key.<h:br/><h:br/>
+              For destruction on wear-leveled memory, if a time period is required before is evaluator shall wait that 
+              amount of time after clearing the key in tests 2 and 3.
+              <testlist>
+                <test>Applied to each key held as plaintext in volatile memory and subject to destruction by overwrite
+                  by the TOE (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
+                  non-volatile memory). In the case where the only selection made for the destruction method key was 
+                  removal of power, then this test is unnecessary. The evaluator shall:<h:ol type="1">
+                    <h:li>Record the value of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>
+                    <h:li>Cause the TOE to stop the execution but not exit.</h:li>
+                    <h:li>Cause the TOE to dump the entire memory of the TOE into a binary file.</h:li>
+                    <h:li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</h:li>
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each piece.</h:li>
+                  </h:ol>
+                  Steps 1-6 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found,
+                  then the test fails.<h:br/><h:br/>
+                  Step 7 ensures that partial key fragments do not remain in memory. If a fragment is found, there is a 
+                  miniscule chance that it is not within the context of a key (e.g., some random bits that happen to match).
+                  If this is the case the test should be repeated with a different key in Step #1. If a fragment is found 
+                  the test fails.
+                </test>
+                
+                <test>
+                  Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
+                  evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to view the key storage location:<h:ol type="1">
+                    <h:li>Record the value of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>                    
+                    <h:li>Search the non-volatile memory the key was stored in for instances of the known key value from Step #1. If a copy is found, then the test fails.</h:li>
+                    <h:li>Break the key value from Step #1 into three similar sized pieces and perform a search using each 
+                      piece. If a fragment is found then the test is repeated (as described for Use
+                      test 1 above), and if a fragment is found in the repeated test then the test fails.</h:li>
+                  </h:ol>
+                </test>
+                <test>
+                  Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. 
+                  The evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to view the key storage location:<h:ol type="1">
+                    <h:li>Record the logical storage location of the key in the TOE subject to clearing.</h:li>
+                    <h:li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</h:li>
+                    <h:li>Cause the TOE to clear the key.</h:li>
+                    <h:li>Read the logical storage location in Step #1 of non-volatile memory to
+                      ensure the appropriate pattern is used.</h:li>
+                  </h:ol>
+                  The test succeeds if the correct pattern is used to overwrite the key in the
+                  memory location. If the pattern is not found, the test fails. 
+                </test>
+              </testlist>              
+            </Tests>
+          </aactivity>
+        </f-element>
+      </f-component>
+      
+      <f-component name="Cryptographic Key Destruction Types" cc-id="fcs_ckm_ext.6" id="fcs-ckm-ext-6">
+        <f-element id="fcs_ckm-ext-6">
+          <title>
+            The TSF shall use <selectables>
+              <selectable>FCS_CKM.4<h:b>/TOEHW</h:b></selectable>
+              <selectable>FCS_CKM.4<h:b>/GENHW</h:b></selectable>
+              <selectable>FCS_CKM.4<h:b>/SW</h:b></selectable>
+            </selectables>
+            key destruction methods.
+          </title>
+          
+          <ext-comp-def-title>
+            <title>
+              The TSF shall use <assignable>one or more iterations of FCS_CKM.4 defined elsewhere in
+                the Security Target </assignable> key destruction methods.
+            </title>
+          </ext-comp-def-title>
+          
+          <note role="application">
+            If multiple selections are made, the TSS should identify which keys are destroyed
+            according to which selections.
+          </note>
+         <aactivity>
+            <TSS>
+              (Key Management Description may be used if necessary details describe proprietary information)<h:br/><h:br/>
+              The evaluator shall examine the TOE’s keychain in the TSS/KMD and verify all keys subject to destruction 
+              are destroyed according to one of the specified methods.
+            </TSS>
+            <Guidance/>
+            <Tests/>
+          </aactivity>
+        </f-element>
+      </f-component>
       
         
             <f-component cc-id="fcs_cop.1" iteration="Hash" name="Cryptographic Operation (Hash Algorithm)" id="fcs-cop-1-hash">
@@ -2949,6 +3357,143 @@
             </f-component>
       </section>
     
+    <section title="User Data Protection" id="FDP">
+      <ext-comp-def title="Protection of Data on Disk" fam-id="FPT_DSK_EXT">
+        <fam-behavior>This family specifies methods for ensuring that data residing in permanent storage on disk is
+          not subject to unauthorized disclosure.
+        </fam-behavior>
+      </ext-comp-def>
+      
+    <f-component cc-id="fdp_dsk_ext.1" name="Protection of Data on Disk" id="fdp-dsk-ext-1">
+      <consistency-rationale/>
+      <comp-lev>requires the TSF to validate submasks and BEVs by one or
+        more of the specified methods.</comp-lev>
+      <management/>
+      <audit/>
+      <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
+      <f-element id="fdp-dsk-ext-1-1">
+        <title>
+          The TSF shall perform full drive encryption in accordance with FCS_COP.1<h:b>/SKC</h:b>, such 
+          that the drive contains no plaintext protected data.
+        </title>
+        <ext-comp-def-title>
+          <title>
+            The TSF shall perform Full Drive Encryption in accordance with
+            FCS_COP.1, such that the drive contains no plaintext protected data.
+          </title>
+        </ext-comp-def-title>
+      </f-element>
+      
+      <f-element id="fdp-dsk-ext-1-2">
+        <title>
+          The TSF shall encrypt all protected data without user intervention.
+        </title>
+        <note role="application">
+          The intent of this requirement is to specify that encryption of any protected
+          data will not depend on a user electing to protect that data. The drive encryption specified in
+          FDP_DSK_EXT.1 occurs transparently to the user and the decision to protect the data is
+          outside the discretion of the user, which is a characteristic that distinguishes it from file
+          encryption. The definition of protected data can be found in the glossary.<h:br/><h:br/>
+          The cryptographic functions that perform the encryption/decryption of the data may be
+          provided by the Operational Environment. Note that if this is the case, it is assumed that the
+          environmental implementation of AES is consistent with the behavior described in
+          FCS_COP.1/SKC. If the TOE provides the cryptographic functions to encrypt/decrypt the data,
+          the ST author includes FCS_COP.1/SKC as defined in Appendix B in the main body of the ST.
+        </note>
+        <aactivity>
+          <TSS>
+            The evaluator shall examine the TSS to ensure that the description is comprehensive in how the
+            data is written to the disk and the point at which the encryption function is applied. The TSS
+            must make the case that standard methods of accessing the disk drive via the host platforms 
+            operating system will pass through these functions.<h:br/><h:br/>
+            For the cryptographic functions that are provided by the Operational Environment, the evaluator
+            shall check the TSS to ensure it describes, for each platform identified in the ST, the interfaces
+            used by the TOE to invoke this functionality.<h:br/><h:br/>
+            66 The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
+            The evaluator shall ensure the comprehensiveness of the description, confirms how the TOE writes the
+            data to the disk drive, and the point at which it applies the encryption function.<h:br/><h:br/>
+            The evaluator shall verify that the TSS describes the initialization of the TOE and the activities 
+            the TOE performs to ensure that it encrypts all the storage devices entirely when a user or 
+            administrator first provisions the TOE. The evaluator shall verify the TSS describes areas of the 
+            disk that it does not encrypt (e.g., portions associated with the Master Boot Records (MBRs), boot
+            loaders, partition tables, etc.). If the TOE supports multiple disk encryptions, the evaluator shall
+            examine the administration guidance to ensure the initialization procedure encrypts all storage devices
+            on the platform.
+          </TSS>
+          <Guidance>
+            The evaluator shall review the AGD guidance to determine that it describes the initial steps needed to 
+            enable the FDE function, including any necessary preparatory steps. The guidance shall provide instructions 
+            that are sufficient, on all platforms, to ensure that all hard drive devices will be encrypted when encryption
+            is enabled.
+          </Guidance>
+          <KMD>
+            The evaluator shall verify the KMD includes a description of the data encryption engine, its components, and 
+            details about its implementation (e.g. for hardware: integrated within the device’s main SOC or separate 
+            co-processor, for software: initialization of the product, drivers, libraries (if applicable), logical interfaces 
+            for encryption/decryption, and areas which are not encrypted (e.g. boot loaders, portions associated with the Master 
+            Boot Record (MBRs), partition tables, etc.)). The evaluator shall verify the KMD provides a functional (block) diagram 
+            showing the main components (such as memories and processors) and the data path between, for hardware, the device’s 
+            host interface and the device’s persistent media storing the data, or for software, the initial steps needed to the
+            activities the TOE performs to ensure it encrypts the storage device entirely when a user or administrator first 
+            provisions the product. The hardware encryption diagram shall show the location of the data encryption engine within 
+            the data path. The evaluator shall validate that the hardware encryption diagram contains enough detail showing the 
+            main components within the data path and that it clearly identifies the data encryption engine.<h:br/><h:br/>
+            The evaluator shall verify the KMD provides sufficient instructions for all platforms to ensure that when the user 
+            enables encryption, the product encrypts all hard storage devices. The evaluator shall verify that the KMD describes
+            the data flow from the device’s host interface to the device’s persistent media storing the data. The evaluator shall 
+            verify that the KMD provides information on those conditions in which the data bypasses the data encryption engine 
+            (e.g., read-write operations to an unencrypted Master Boot Record area).<h:br/><h:br/>
+            The evaluator shall verify that the KMD provides a description of the platform’s boot initialization, the encryption 
+            initialization process, and at what moment the product enables the encryption. The evaluator shall validate that the 
+            product does not allow for the transfer of user data before it fully initializes the encryption. The evaluator shall
+            ensure the software developer provides special tools which allow inspection of the encrypted drive either in-band or
+            out-of-band, and may allow provisioning with a known key.
+          </KMD>
+          <Tests>
+            The evaluator shall perform the following tests:
+            <testlist>
+              <test>
+                Write data to random locations, perform required actions and compare:<h:ul>
+                <h:li>Ensure TOE is initialized and, if hardware, encryption engine is ready</h:li>
+                <h:li>Provision TOE to encrypt the storage device. For SW Encryption products, or hybrid products use a known 
+                  key and the developer tools.</h:li>
+                <h:li>Determine a random character pattern of at least 64 KB</h:li>
+                <h:li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</h:li>
+                </h:ul>
+              </test>
+              <test>
+                Write pattern to storage device in multiple locations:<h:ul>
+                <h:li>For HW Encryption, randomly select several logical address locations within the device’s lowest to highest address 
+                  range and write pattern to those addresses</h:li>
+                <h:li>For SW Encryption, write the pattern using multiple files in multiple logical locations.</h:li>
+                </h:ul>              
+              </test>
+              <test>
+                Verify data is encrypted:<h:ul>
+                <h:li>For HW Encryption:<h:ul>
+                  <h:li>engage device’s functionality for generating a new encryption key, thus
+                    performing an erase of the key per FCS_CKM.4/Power</h:li>
+                  <h:li>Read from the same locations at which the data was written</h:li>
+                  <h:li>Compare the retrieved data to the written data and ensure they do not
+                    match</h:li>
+                </h:ul></h:li>
+                
+                <h:li>For SW Encryption, using developer tools:<h:ul>
+                  <h:li>Review the encrypted storage device for the plaintext pattern at each location where the file was written
+                    and confirm plaintext pattern cannot be found.</h:li>
+                  <h:li>Using the known key, verify that each location where the file was written, the plaintext pattern can be 
+                    correctly decrypted using the key.</h:li>
+                  <h:li>If available in the developer tools, verify there are no plaintext files
+                    present in the encrypted range.</h:li></h:ul></h:li>                
+                </h:ul>
+              </test>
+            </testlist>
+          </Tests>
+        </aactivity>
+      </f-element>      
+    </f-component>
+    </section>
+    
       <section title="Security Management (FMT)" id="FMT">        
         
         <f-component cc-id="fmt_smf.1" name="Specification of Management Functions" id="fmt-smf-1">
@@ -3036,6 +3581,15 @@
       </section>
     
       <section title="Protection of the TSF (FPT)" id="fpt">
+        <ext-comp-def title="Firmware Access Control" fam-id="FPT_FAC_EXT">
+          <fam-behavior>This family requires that a valid authentication factor be provided prior to the TSF authorizing
+            an update of its firmware.</fam-behavior>
+        </ext-comp-def>
+        
+        <ext-comp-def title="Firmware Update Authentication" fam-id="FPT_FUA_EXT">
+          <fam-behavior>This family requires that firmware updates be authenticated by the TSF prior to being applied.</fam-behavior>
+        </ext-comp-def>
+        
         <ext-comp-def title="Key and Key Material Protection" fam-id="FPT_KYP_EXT">
           <fam-behavior>This family requires that key and key material be protected if and when written to non-volatile storage.
             </fam-behavior>
@@ -3045,10 +3599,68 @@
             </fam-behavior>
         </ext-comp-def>
         
+        <ext-comp-def title="Rollback Protection" fam-id="FPT_RBP_EXT">
+          <fam-behavior>This family requires that the TSF protects against rollbacks or downgrades
+            to its firmware.</fam-behavior>
+        </ext-comp-def>
+        
         <ext-comp-def title="Trusted Update" fam-id="FPT_TUD_EXT">
           <fam-behavior>Components in this family address the requirements for updating the TOE firmware and/or software.
             </fam-behavior>
         </ext-comp-def>
+        
+        <f-component name="Firmware Access Control" cc-id="fpt_fac_ext.1" id="fpt-fac-ext" status="optional">
+          <consistency-rationale/>
+          <comp-lev>requires the TSF to require an authentication factor prior to allowing a
+            firmware update to be performed.</comp-lev>
+          <management>
+            The following actions could be considered for the management functions in FMT:
+            <h:ul>
+              <h:li>management of the password used to authorize the firmware update</h:li>
+            </h:ul>
+          </management>
+          <audit/>
+          <dependencies>No dependencies.</dependencies>
+          <f-element id="fpt_fac-1-1">
+            <title>
+              The TSF shall require <selectables>
+                <selectable>a password</selectable>
+                <selectable>a known unique value printed on the device</selectable>
+                <selectable>a privileged user action</selectable>
+              </selectables>before the firmware update proceeds.
+            </title>
+            <note role="application">
+              Before an update takes place, the drive owner will authorize the update by providing either a known unique 
+              value (for example, a serial number) that is printed on the collaborative Protection Profile for Full Drive 
+              Encryption - Encryption Engine drive, a password (which should be administratively configurable as defined 
+              in FMT_SMF.1) or perform the operation as a privileged user. It is assumed that physical presence to the drive
+              is limited to authorized personnel. If the correct value is not provided, the update will not take place. The
+              values are intended to be unique per drive so they cannot be easily exhausted.<h:br/><h:br/>
+              The same requirements for cleaning up a password still apply.
+            </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
+                process takes place along with a description of the values that are used.
+              </TSS>
+              <Guidance>
+                The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
+                the authorization process.
+              </Guidance>
+              <KMD/>
+              <Tests>
+                The evaluator shall perform the following test.
+                <testlist>
+                  <test>
+                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
+                    value is necessary for the update to continue.
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
         
         <f-component cc-id="fpt_fls.1" name="Failure with Preservation of Secure State" status="sel-based">
           <depends on-sel="external-seed"/>
@@ -3067,8 +3679,95 @@
               <Tests/>
             </aactivity>
           </f-element>
-          
         </f-component>
+        
+        <f-component name="Firmware Update Authentication" cc-id="fpt_fua_ext.1" id="fpt-fua-1" status="sel-based">
+          <depends on-sel="fpt-tud-ext-1"/>
+          <consistency-rationale/>
+          <comp-lev>requires the TSF to authenticate firmware updates using a specified method.</comp-lev>
+          <management/>
+          <audit/>
+          <dependencies>
+            FCS_COP.1 Cryptographic Operation
+          </dependencies>
+          <f-element id="fpt_fua-ext-1-1">
+            <title>
+              The TSF shall authenticate the source of the firmware update using the
+              digital signature algorithm specified in FCS_COP.1<h:b>/SigVer</h:b> using the RTU
+              that contains <selectables>
+                <selectable>the public key</selectable>
+                <selectable>hash value of the public key as specified in FCS_COP.1<h:b>/Hash</h:b></selectable>
+              </selectables>              
+            </title>
+            <ext-comp-def-title>
+              <title>The TSF shall authenticate the source of the firmware update using the
+                digital signature algorithm specified in FCS_COP.1 using the RTU
+                that contains <selectables>
+                  <selectable>the public key</selectable>
+                  <selectable>hash value of the public key as specified in FCS_COP.1</selectable>
+                </selectables></title>
+            </ext-comp-def-title>
+          </f-element>
+            <f-element id="fpt_fua-ext-1-2">
+              <title>
+                The TSF shall only allow installation of update if the digital signature
+                has been successfully verified as specified in FCS_COP.1<h:b>/SigVer</h:b>.
+              </title>
+              <ext-comp-def-title>
+                <title>The TSF shall only allow installation of update if the digital signature
+                  has been successfully verified as specified in FCS_COP.1.</title>
+              </ext-comp-def-title>
+            </f-element>
+              <f-element id="fpt_fua-ext-1-3">
+                <title>
+                  The TSF shall only allow modification of the existing firmware after
+                  the successful validation of the digital signature, using a mechanism as described in
+                  FPT_TUD_EXT.1.2.
+                </title>
+                <note role="application">
+                  The firmware portion of the TOE (e.g., RTU (key store and the signature
+                  verification algorithm)) is expected to be stored in a write protected area on the TOE. It is
+                  expected that the firmware only be modifiable in a post-manufacturing state using the
+                  authenticated update mechanism described in FPT_FUA_EXT.1. The TSF is modifiable only
+                  by using the mechanisms specified in FPT_TUD_EXT.
+                </note>
+              </f-element>
+                <f-element id="fpt_fua-ext-1-4">
+                  <title>
+                    The TSF shall return an error code if any part of the firmware update process
+                    fails.
+                  </title>
+                  <note role="application">
+                    These requirements are for a SED in an operational state – not a drive in manufacturing.<h:br/><h:br/>
+                    The authenticated firmware update mechanism employs digital signatures to ensure the
+                    authenticity of the firmware update image. The TSF provides a RTU that contains a signature
+                    verification algorithm and a key store that includes the public key needed to verify the signature
+                    on the update image. The key store in the RTU should include a public key used to verify the
+                    signature on an update image or a hash of the public key if a copy of the public key is provided
+                    with the update image. In the latter case, the update mechanism should hash the public key
+                    provided with the update image, and ensure that it matches a hash which appears in the key
+                    store before using the provided public key to verify the signature on the update image. If the
+                    hash of the public key is selected, the ST author may iterate the FCS_COP.1(b) requirement -
+                    to specify the hashing functions used.<h:br/><h:br/>
+                    The intent of this requirement is to specify that the authenticated update mechanism should
+                    ensure that the new image has been digitally signed; and that the digital signature can be
+                    verified by using a public key before the update takes place. The requirement also specifies
+                    that the authenticated update mechanism only allows installation of updates when the digital
+                    signature has been successfully verified by the TSF.
+                  </note>
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS to ensure that it describes how the TOE uses the RTU, what type
+                of key or hash value, and where the value is stored on the RTU. The evaluator shall also verify that
+                the TSS contains a description (storage location) of where the original firmware exists.
+              </TSS>
+              <Guidance/>
+              <KMD/>
+              <Tests/>
+            </aactivity>
+          </f-element>
+        </f-component>
+        
         
         <f-component cc-id="fpt_kyp_ext.1" name="Protection of Key and Key Material " id="fpt-kyp-ext-1">
           <consistency-rationale/>
@@ -3241,8 +3940,65 @@
                     the selection in FCS_CKM_EXT.6.</Tests>
               </aactivity>
           </f-element>
+        </f-component>
+        
+        <f-component name="Rollback Protection" cc-id="fpt_rbp_ext.1" id="fpt-rbp-ext-1" status="optional">
+          <consistency-rationale/>
+          <comp-lev>requires the TSF to detect and prevent unauthorized rollback.</comp-lev>
+          <management/>
+          <audit/>
+          <dependencies>No dependencies.</dependencies>
+          <f-element id="fpt_rbp-ext-1-1">
+            <title>
+              The TSF shall verify that the new firmware package is not downgrading to a lower
+              security version number by <assignable>method of verifying the security version number
+              is the same as or higher than the currently installed version</assignable>.
+            </title>
+          </f-element>
+          
+            <f-element id="fpt_rbp-ext-1-2">
+              <title>
+                The TSF shall generate and return an error code if the attempted firmware
+                update package is detected to be an invalid version.
+              </title>
+              <note role="application">
+                This requirement prevents an unauthorized rollback of the firmware to an
+                earlier authentic version. This mitigates against unknowing installation of an earlier authentic
+                firmware version that may have a security weakness. It is expected that vendors will increase
+                security version numbers with each new update package.<h:br/><h:br/>
+                For FPT_RBP_EXT.1.1 the purpose is to verify that the new package has a security version
+                number equal to or larger than the security version number of currently installed firmware
+                package.<h:br/><h:br/>
+                The administrator guidance would include instructions for the administrator to configure the
+                rollback prevention mechanism, if appropriate.
+              </note>
+                        
+            <aactivity>
+              <TSS>
+                The evaluator shall examine the TSS to ensure that it describes at a high level the process for verifying
+                that security version checking is performed before an upgrade is installed. The evaluator shall verify that
+                a high level description of the types of error codes are provided and when an error would be triggered.
+              </TSS>
+              <Guidance>
+                The evaluator ensures that a description is provided on how the user should interpret the error codes.
+              </Guidance>
+              <KMD/>
+              <Tests>
+                The evaluator shall perform the following test:
+                <testlist>
+                  <test>
+                    The evaluator shall try installing a lower security version number upgrade (either by just modifying the
+                    version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
+                    be installed and an error is presented to the user.
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
+          </f-element>
+          
           
         </f-component>
+        
         
         <f-component cc-id="fpt_tst.1" name="TSF Self-Testing" status="sel-based">
           <depends on-sel="external-seed"/>
