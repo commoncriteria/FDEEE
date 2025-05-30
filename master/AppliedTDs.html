@@ -1649,7 +1649,7 @@ The following sections list Common Criteria and technology terms used in this do
 		      handling of salts, nonces, and initialization vectors.</td></tr>
 <tr><td><a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> (selection-based)</td><td>Mitigates this threat by
 		      ensuring the proper choice of encryption algorithm and mode.</td></tr>
-<tr class="major-row"><td rowspan="32"><a href="#T.KEYING_MATERIAL_COMPROMISE">T.KEYING_​MATERIAL_​COMPROMISE</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-5-">TBD</span></td></tr>
+<tr class="major-row"><td rowspan="31"><a href="#T.KEYING_MATERIAL_COMPROMISE">T.KEYING_​MATERIAL_​COMPROMISE</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-5-">TBD</span></td></tr>
 <tr><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
 <tr><td><a href="#FCS_CKM.6/Power">FCS_CKM.6/Power</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
 <tr><td><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></td><td>Mitigates this threat by performing cryptographic hashing services.</td></tr>
@@ -1664,9 +1664,8 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.6/GENHW">FCS_CKM.6/GENHW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction in general hardware.</td></tr>
 <tr><td><a href="#FCS_CKM.6/SW">FCS_CKM.6/SW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction within the software <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and 3rd party storage.</td></tr>
-<tr><td><a href="#FCS_CKM.6/TOEHW">FCS_CKM.6/TOEHW</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
-<tr><td>FCS_CKM.1/KeyedHash (selection-based)</td><td>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</td></tr>
-<tr><td><a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></td><td>Mitigates this threat by mandating the use of a specified key destruction method.</td></tr>
+<tr><td><a href="#FCS_CKM.6/TOEHW">FCS_CKM.6/TOEHW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
+<tr><td><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a> (selection-based)</td><td>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a> (selection-based)</td><td>Mitigates this threat by performing key encryption and decryption.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a> (selection-based)</td><td>Mitigates this threat by performing key transport.</td></tr>
 <tr><td><a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a> (selection-based)</td><td>Mitigates this threat by performing key wrapping.</td></tr>
@@ -2123,7 +2122,7 @@ The following sections list Common Criteria and technology terms used in this do
             <li>the evaluator shall report all exploitable vulnerabilities and residual vulnerabilities, detailing for each:
               <ol type="a">
               <li>its source (e.g. <abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr> activity being undertaken when it was conceived, known to the evaluator, read in a publication)</li>
-              <li>the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>(s) not met;</li>
+              <li>the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> not met;</li>
               <li>a description;</li>
               <li>whether it is exploitable in its operational environment or not (i.e. exploitable or residual).</li>
               <li>the amount of time, level of expertise, level of knowledge of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, level of opportunity and the equipment 
@@ -2884,7 +2883,7 @@ The following sections list Common Criteria and technology terms used in this do
       Note:
     </span><span class="note">The intent of this requirement is to ensure that cryptographic services requiring random bit generation cannot be performed if a failure of a self-test defined in <a href="#FPT_TST.1">FPT_TST.1</a> occurs.</span></div></div></div>
         </div><div class="comp" id="FPT_FUA_EXT.1"><h4>FPT_FUA_EXT.1 Firmware Update Authentication</h4><div class="statustag"></div>
-          
+                    
           
           
           
@@ -2918,7 +2917,9 @@ The following sections list Common Criteria and technology terms used in this do
                   <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                    These requirements are for a <abbr class="dyn-abbr"><a href="#abbr_SED">SED</a></abbr> in an operational state – not a drive in manufacturing.<br/><br/>
+                    This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if "authenticated firmware update mechanism as
+                    described in <a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a>" is claimed in <a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a>.<br/><br/>
+                    These requirements are for an <abbr class="dyn-abbr"><a href="#abbr_SED">SED</a></abbr> in an operational state – not a drive in manufacturing.<br/><br/>
                     The authenticated firmware update mechanism employs digital signatures to ensure the
                     authenticity of the firmware update image. The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> provides a RTU that contains a signature
                     verification algorithm and a key store that includes the public key needed to verify the signature
