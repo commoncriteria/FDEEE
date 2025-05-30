@@ -561,9 +561,8 @@
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
 		    <addressed-by>FCS_CKM.6/GENHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction in general hardware.</rationale>		    
 		    <addressed-by>FCS_CKM.6/SW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction within the software TOE and 3rd party storage.</rationale>
-		    <addressed-by>FCS_CKM.6/TOEHW</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
-		    <addressed-by>FCS_CKM.1/KeyedHash (selection-based)</addressed-by><rationale>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</rationale>
-		    <addressed-by>FCS_CKM_EXT.6</addressed-by><rationale>Mitigates this threat by mandating the use of a specified key destruction method.</rationale>
+		    <addressed-by>FCS_CKM.6/TOEHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
+		    <addressed-by>FCS_COP.1/KeyedHash (selection-based)</addressed-by><rationale>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</rationale>		    
 		    <addressed-by>FCS_COP.1/KeyEnc (selection-based)</addressed-by><rationale>Mitigates this threat by performing key encryption and decryption.</rationale>
 		    <addressed-by>FCS_COP.1/KeyEncap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key transport.</rationale>
 		    <addressed-by>FCS_COP.1/KeyWrap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key wrapping.</rationale>			  
@@ -1422,9 +1421,9 @@
               and how they are overwritten.<h:br/><h:br/>
               The evaluator shall check to ensure the TSS lists each type of key that is stored, and identifies 
               the memory type (volatile or non-volatile) where key material is stored.<h:br/><h:br/>
-              The TSS identifies and describes the interface(s) that is used to service commands to read/write 
+              The TSS identifies and describes the interfaces that is used to service commands to read/write 
               memory. The evaluator examines the interface description for each different media type to ensure
-              that the interface supports the selection(s) made by the ST Author.<h:br/><h:br/>
+              that the interface supports the selections made by the ST Author.<h:br/><h:br/>
               If the ST makes use of the open assignment and fills in the type of pattern that is used, the 
               evaluator examines the TSS to ensure it describes how that pattern is obtained and used. The 
               evaluator shall verify that the pattern does not contain any CSPs.<h:br/><h:br/>
@@ -1691,7 +1690,7 @@
               platform, including an identification and description of the interfaces it uses to manage keys (e.g.,
               file system APIs, platform key store APIs).<h:br/><h:br/>
               The evaluator examines the interface description for each different media type to ensure that the 
-              interface supports the selection(s) and description in the TSS.<h:br/><h:br/>
+              interface supports the selections and description in the TSS.<h:br/><h:br/>
               The evaluator shall check that the TSS identifies any configurations or circumstances that may not
               strictly conform to the key destruction requirement. If the ST makes use of the open assignment and
               fills in the type of pattern that is used, the evaluator examines the TSS to ensure it describes how
@@ -1879,7 +1878,7 @@
               level, cell level), mechanisms for copies of the key that could potentially exist (e.g., a copy with 
               parity bits, a copy without parity bits, any mechanisms that are used for redundancy).<h:br/><h:br/>
               The evaluator shall examine the TSS to ensure it describes the destruction procedure for each key that
-              has been identified. If different types of memory are used to store the key(s), the evaluator shall 
+              has been identified. If different types of memory are used to store the keys, the evaluator shall 
               check to ensure that the TSS identifies the destruction procedure for each memory type where keys are
               stored (e.g., key X stored in flash memory is destroyed by overwriting once with zeros, key X’ stored
               in EEPROM is destroyed by a overwrite consisting of a pseudo random pattern – the EEPROM used in the 
@@ -3732,7 +3731,7 @@
         </f-component>
         
         <f-component name="Firmware Update Authentication" cc-id="fpt_fua_ext.1" id="fpt-fua-1" status="sel-based">
-          <depends on-sel="fpt-tud-ext-1-3"/>
+          <depends on-sel="fpt-tud-ext-1-3"/>          
           <consistency-rationale/>
           <comp-lev>requires the TSF to authenticate firmware updates using a specified method.</comp-lev>
           <management/>
@@ -3788,7 +3787,9 @@
                     fails.
                   </title>
                   <note role="application">
-                    These requirements are for a SED in an operational state – not a drive in manufacturing.<h:br/><h:br/>
+                    This SFR must be claimed if "authenticated firmware update mechanism as
+                    described in FPT_FUA_EXT.1" is claimed in FPT_TUD_EXT.1.3.<h:br/><h:br/>
+                    These requirements are for an SED in an operational state – not a drive in manufacturing.<h:br/><h:br/>
                     The authenticated firmware update mechanism employs digital signatures to ensure the
                     authenticity of the firmware update image. The TSF provides a RTU that contains a signature
                     verification algorithm and a key store that includes the public key needed to verify the signature
@@ -4584,7 +4585,7 @@
             appropriate for use in developing applications for the developer’s platform. For each
             of these development environments, the developer shall provide information on how to
             configure the environment to ensure that buffer overflow protection mechanisms in the
-            environment(s) are invoked (e.g., compiler flags). The evaluator shall ensure that
+            environments are invoked (e.g., compiler flags). The evaluator shall ensure that
             this documentation also includes an indication of whether such protections are on by
             default, or have to be specifically enabled. The evaluator shall ensure that the 
             TSF is uniquely identified (with respect to other products from the 
@@ -5036,7 +5037,7 @@
             <h:li>the evaluator shall report all exploitable vulnerabilities and residual vulnerabilities, detailing for each:
               <h:ol type="a">
               <h:li>its source (e.g. CEM activity being undertaken when it was conceived, known to the evaluator, read in a publication)</h:li>
-              <h:li>the SFR(s) not met;</h:li>
+              <h:li>the SFRs not met;</h:li>
               <h:li>a description;</h:li>
               <h:li>whether it is exploitable in its operational environment or not (i.e. exploitable or residual).</h:li>
               <h:li>the amount of time, level of expertise, level of knowledge of the TOE, level of opportunity and the equipment 
