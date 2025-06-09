@@ -112,7 +112,7 @@
 	 <!-- Indicates that the document is using CC:2022. -->
 	 <!-- This setting has already been deprecated, but is still allowed for backward compatiblity -->
 	 <!-- New douments shoudl use the <CClaimsInfo> element to specify CC:2022 --> 
- 
+ <suppress-niap-logo/>
   </pp-preferences>
 
 
