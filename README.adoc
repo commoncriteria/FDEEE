@@ -3,33 +3,31 @@
 * Edit the README contents below, replacing QQQQ with the name of your requirements document, and replacing all occurrences of "pp-template" with the name of your new repo.
 * And then delete this part, leaving everything below here.
 
-== Protection Profile for QQQQ
+== Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition
 
 [cols="1,1,1,1,1,1,1,1"]
 |===
-8+|pp-template
-| https://github.com/commoncriteria/pp-template/tree/master[master] 
-a| https://commoncriteria.github.io/pp-template/master/pp-template-release.html[📄]
-a|[link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/ValidationReport.txt]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/validation.svg[Validation]
-a|[link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/SanityChecksOutput.md]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/warnings.svg[SanityChecks]
-a|[link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/SpellCheckReport.txt]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/spell-badge.svg[SpellCheck]
-a|[link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/TDValidationReport.txt]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/tds.svg[TDs]
-a|image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/transforms.svg[transforms,150]
-a| [link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/HTMLs.adoc]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/html_count.svg[HTML Count]
-[link=https://github.com/commoncriteria/pp-template/blob/gh-pages/master/PDFs.adoc]
-image::https://raw.githubusercontent.com/commoncriteria/pp-template/gh-pages/master/pdf_count.svg[PDF Count]
+8+|FDEEE
+| https://github.com/commoncriteria/FDEEE/tree/master[master] 
+a| https://commoncriteria.github.io/pp-template/master/FDEEE-release.html[📄]
+a|[link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/ValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/validation.svg[Validation]
+a|[link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/SanityChecksOutput.md]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/warnings.svg[SanityChecks]
+a|[link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/SpellCheckReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/spell-badge.svg[SpellCheck]
+a|[link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/TDValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/tds.svg[TDs]
+a|image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/transforms.svg[transforms,150]
+a| [link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/HTMLs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/html_count.svg[HTML Count]
+[link=https://github.com/commoncriteria/FDEEE/blob/gh-pages/master/PDFs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/pdf_count.svg[PDF Count]
 |===
 
 === Draft Version (latest build of master branch)
-* https://commoncriteria.github.io/pp-template/master/pp-template-release-linkable.html[Protection
-Profile for QQQQ] (html)
-* https://commoncriteria.github.io/pp-template/master/pp-template-release-linkable.pdf[Protection
-Profile for QQQQ] (pdf)
+* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/pp-template/master/FDEEE-release-linkable.pdf[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (pdf)
 
 === Release Version
 
