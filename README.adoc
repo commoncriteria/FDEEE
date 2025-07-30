@@ -3,7 +3,7 @@
 * Edit the README contents below, replacing QQQQ with the name of your requirements document, and replacing all occurrences of "pp-template" with the name of your new repo.
 * And then delete this part, leaving everything below here.
 
-== Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition
+== Collaborative Protection Profile for Full-Disk Encryption - Encryption Engine
 
 [cols="1,1,1,1,1,1,1,1"]
 |===
@@ -26,8 +26,8 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/master/pd
 |===
 
 === Draft Version (latest build of master branch)
-* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (html)
-* https://commoncriteria.github.io/pp-template/master/FDEEE-release-linkable.pdf[Collaborative Protection Profile for Full-Disk Encryption - Authorization Acquisition] (pdf)
+* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full-Disk Encryption - Encryption Engine] (html)
+* https://commoncriteria.github.io/pp-template/master/FDEEE-release-linkable.pdf[Collaborative Protection Profile for Full-Disk Encryption - Encryption Engine] (pdf)
 
 === Release Version
 
