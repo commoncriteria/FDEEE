@@ -573,7 +573,8 @@
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.4 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
-		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by obscuring the submasks via a XOR or hashing operation..</rationale>
+		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat
+		      by obscuring the submasks via a XOR or hashing operation.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FPT_FLS.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that a malfunctioning DRBG function cannot be used to generate potentially insecure keys.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</rationale>
@@ -1684,7 +1685,7 @@
               This description includes details of how each identified key is introduced into volatile memory (e.g.,
               by derivation from user input, or by unwrapping a wrapped key stored in non-volatile memory) and how 
               they are overwritten.<h:br/><h:br/>
-              The evaluator shall check to ensure the TSS lists each type of key that is stored in in non-volatile
+              The evaluator shall check to ensure the TSS lists each type of key that is stored in non-volatile
               memory, and identifies how the TOE interacts with the underlying platform to manage keys (e.g., store,
               retrieve, destroy). The description includes details on the method of how the TOE interacts with the 
               platform, including an identification and description of the interfaces it uses to manage keys (e.g.,
@@ -2561,11 +2562,13 @@
                       <h:p><h:b>AES-CBC Multi-Block Message Test</h:b></h:p>
                       <h:p>The evaluator shall test the encrypt functionality by encrypting nine i-block messages
                         for each selected key size, for 2 ≤ i ≤ 10. For each test, the evaluator shall supply a key,
-                        an IV, and a plaintext message of length i blocks, and encrypt the message using AESCBC. The resulting ciphertext values shall be compared to the results of encrypting the
+                        an IV, and a plaintext message of length i blocks, and encrypt the message
+                        using AES*CBC. The resulting ciphertext values shall be compared to the results of encrypting the
                         plaintext messages using a known good implementation</h:p>
                       <h:p>The evaluator shall test the decrypt functionality by decrypting nine i-block messages
                         for each selected key size, for 2 ≤ i ≤ 10. For each test, the evaluator shall supply a key,
-                        an IV, and a ciphertext message of length i blocks, and decrypt the message using AESCBC. The resulting plaintext values shall be compared to the results of decrypting the
+                        an IV, and a ciphertext message of length i blocks, and decrypt the message
+                        using AES*CBC. The resulting plaintext values shall be compared to the results of decrypting the
                         ciphertext messages using a known good implementation.</h:p>
                       <h:p><h:b>AES-CBC Monte Carlo Tests</h:b></h:p>
                       <h:p>The evaluator shall test the encrypt functionality for each selected key size using 100
@@ -5191,7 +5194,7 @@
     <description>
         <!-- todo: update hyperlink when PP published -->
         <h:a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1,
-          MMMM DD, 2025</h:a></description> 
+          MMMM DD, 2025</h:a><comment>Adjust date once finalized</comment></description> 
 </entry>
  </bibliography>
 
