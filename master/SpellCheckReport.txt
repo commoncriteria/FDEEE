@@ -18,7 +18,6 @@ output/FDEEE-release-linkable.html: AAD
 output/FDEEE-release-linkable.html: ACPI
 output/FDEEE-release-linkable.html: ACPV
 output/FDEEE-release-linkable.html: AESAVS
-output/FDEEE-release-linkable.html: AESCBC
 output/FDEEE-release-linkable.html: AFA
 output/FDEEE-release-linkable.html: Adleman
 output/FDEEE-release-linkable.html: BEVs
@@ -201,7 +200,6 @@ output/FDEEE-sd.html: 90A
 output/FDEEE-sd.html: AAD
 output/FDEEE-sd.html: ACPV
 output/FDEEE-sd.html: AESAVS
-output/FDEEE-sd.html: AESCBC
 output/FDEEE-sd.html: C0
 output/FDEEE-sd.html: C1
 output/FDEEE-sd.html: CAVS
@@ -269,7 +267,6 @@ output/FDEEE.html: AAD
 output/FDEEE.html: ACPI
 output/FDEEE.html: ACPV
 output/FDEEE.html: AESAVS
-output/FDEEE.html: AESCBC
 output/FDEEE.html: AFA
 output/FDEEE.html: Adleman
 output/FDEEE.html: BEVs
