@@ -350,9 +350,8 @@
       for multiple users on an individual basis.<h:br/><h:br/>
        
       Figure 2 illustrates the components within EE and its relationship with AA.
-       
-      <comment>Need to update figure for FDE EE (this is for FDE AA)</comment>      
-      <figure entity="images/fde-authorization_acquisition.png" title="Authorization Acquisition Details" id="toe"/>    
+          
+      <figure entity="images/fde-encryption_engine.png" title="Encryption Engine Details" id="toe"/>
      </section>
        
      <section title="Encryption Engine Security Capabilities" id="sec-TOEencryption-engine_security_capabilities">
