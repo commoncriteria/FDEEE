@@ -144,7 +144,6 @@
         Since the FDE cPPs support a variety of solutions, two cPPs describe the requirements for the
         FDE components shown in Figure 1.  
         
-        <comment>Need to update figure for FDE EE (this is for FDE AA)</comment>
         <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe"/></h:p>
 
           The FDE cPP - Authorization Acquisition describes the requirements for the Authorization Acquisition
