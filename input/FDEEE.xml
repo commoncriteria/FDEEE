@@ -401,7 +401,7 @@
       The EE TOE may include or leverage features and functions within the operational
       environment.
       
-      <comment>Add Figure here (from published version)</comment>
+      <figure entity="images/fde-operating-env.png" title="Operational Environment" id="toe-oe"/>
     </section>
     </section>
     
