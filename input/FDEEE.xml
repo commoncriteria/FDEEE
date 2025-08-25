@@ -415,7 +415,6 @@
         </h:p>
         <h:p>The Pre-Boot environment is much more constrained with limited capabilities. This environment turns on the minimum number of peripherals and loads only those drivers necessary to bring the platform from a cold start to executing a fully functional operating system with running applications.</h:p>
         <h:p>The AA TOE may include or leverage features and functions within the operational environment.</h:p>
-        <figure entity="images/fde-operating-env.png" title="Operational Environment" id="toe-oe"/>
       </section>
       
     </section>  <!-- Compliant TOEs -->
