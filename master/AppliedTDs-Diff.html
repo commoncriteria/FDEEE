@@ -34,12 +34,6 @@
             <br>
             <a href="#Comment-8-">Comment: Comment-8-</a>
             <br>
-            <a href="#Comment-9-">Comment: Comment-9-</a>
-            <br>
-            <a href="#Comment-10-">Comment: Comment-10-</a>
-            <br>
-            <a href="#Comment-11-">Comment: Comment-11-</a>
-            <br>
         </div>
         <h1 class="title" style="page-break-before:auto;">collaborative Protection Profile for Full Drive Encryption &ndash; Encryption Engine</h1>
         <h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1>
@@ -101,7 +95,7 @@
          Full Drive Encryption encrypts all data (with certain exceptions) on the storage device and permits access to the data only after successful authorization to the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> solution. The exceptions include the necessity to leave a portion of the storage device (the size may vary based on implementation) unencrypted for such things as the Master Boot Record (<abbr class="dyn-abbr"><a href="#abbr_MBR">MBR</a></abbr>) or other <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> pre-authentication software. These <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> interpret the term &ldquo;full drive encryption&rdquo; to allow <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> solutions to leave a portion of the storage device unencrypted so long as it contains plaintext user or plaintext authorization data.
         <br>
         <br>
-         Since the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> support a variety of solutions, two <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> describe the requirements for the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> components shown in Figure 1. <span style="" class="comment " id="Comment-1-">Need to update figure for <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> (this is for <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>)</span> 
+         Since the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> support a variety of solutions, two <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> describe the requirements for the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> components shown in Figure 1. 
         <p></p>
         <div class="figure" id="figure-toe">
             <img id="toe" src="images/fde-components.png" width="" height="">
@@ -226,7 +220,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <div id="Border_Encryption_Value">Border Encryption Value (BEV)</div>
+                        <div id="Border_Encryption_Valu">Border Encryption Valu (BEV)</div>
                     </td><td>A value passed from the FDE Authorization Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains of the two components.</td>
                 </tr>
                 <tr>
@@ -345,11 +339,11 @@
              The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> determines whether to allow or deny a requested action based on the <abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_KRK">KRK</a></abbr> provided by the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>. Possible requested actions include but are not limited to changing of encryption keys, decryption of data, and key sanitization of encryption keys (including the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>). The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> may offer additional policy enforcement 1 to prevent access to ciphertext or the unencrypted portion of the storage device. Additionally the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> may provide encryption support for multiple users on an individual basis.
             <br>
             <br>
-             Figure 2 illustrates the components within <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> and its relationship with <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>. <span style="" class="comment " id="Comment-2-">Need to update figure for <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> (this is for <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>)</span> 
+             Figure 2 illustrates the components within <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> and its relationship with <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>. 
             <div class="figure" id="figure-toe">
-                <img id="toe" src="images/fde-authorization_acquisition.png" width="" height="">
+                <img id="toe" src="images/fde-encryption_engine.png" width="" height="">
                 <br>
-                <span class="ctr" data-myid="toe" data-counter-type="ct-figure">Figure <span class="counter">2</span></span>: Authorization Acquisition Details
+                <span class="ctr" data-myid="toe" data-counter-type="ct-figure">Figure <span class="counter">2</span></span>: Encryption Engine Details
             </div>
             <h3 class="indexable" data-level="3" id="sec-TOEencryption-engine_security_capabilities">1.4.2 Encryption Engine Security Capabilities</h3>
              The Encryption Engine is ultimately responsible for ensuring that the data is encrypted using a prescribed set of algorithms. The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> manages the decryption of the data on the storage device through decryption of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> based on the validity of the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> provided by the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>. It also manages administrative functions, such as changing the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, managing the BEVs required for decrypting or releasing the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, managing the intermediate wrapping keys under its control, and performing a key sanitization.
@@ -363,10 +357,15 @@
             <br>
              This version of the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> includes additional security features, included advanced power saving requirements and firmware signing requirements. 
             <h3 class="indexable" data-level="3" id="sec-the-toe-and-the-operational-and-pre-boot-environments">1.4.3 The TOE and the Operational and Pre-Boot Environments</h3>
-             The environment in which the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> functions may differ depending on the boot stage of the platform in which it operates; see Figure 3. Aspects of initialization, and perhaps authorization may be performed in the Pre-Boot environment, while provisioning, encryption, decryption and management functionality are likely performed in the Operating System environment. Some of these aspects may occur in both environments. The Operating System environment may make a full range of services available to the Encryption Engine, including hardware drivers, cryptographic libraries, and perhaps other services external to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The Pre-Boot environment is much more constrained with limited capabilities. This environment turns on the minimum number of peripherals and loads only those drivers necessary to bring the platform from a cold start to executing a fully functional operating system with running applications. The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may include or leverage features and functions within the operational environment. <span style="" class="comment " id="Comment-3-">Add Figure here (from published version)</span> 
+             The environment in which the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> functions may differ depending on the boot stage of the platform in which it operates; see Figure 3. Aspects of initialization, and perhaps authorization may be performed in the Pre-Boot environment, while provisioning, encryption, decryption and management functionality are likely performed in the Operating System environment. Some of these aspects may occur in both environments. The Operating System environment may make a full range of services available to the Encryption Engine, including hardware drivers, cryptographic libraries, and perhaps other services external to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The Pre-Boot environment is much more constrained with limited capabilities. This environment turns on the minimum number of peripherals and loads only those drivers necessary to bring the platform from a cold start to executing a fully functional operating system with running applications. The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may include or leverage features and functions within the operational environment. 
+            <div class="figure" id="figure-toe-oe">
+                <img id="toe-oe" src="images/fde-operating-env.png" width="" height="">
+                <br>
+                <span class="ctr" data-myid="toe-oe" data-counter-type="ct-figure">Figure <span class="counter">3</span></span>: Operational Environment
+            </div>
             <h2 class="indexable" data-level="2" id="sec-TOEdescription">1.5 Functionality Deferred Until the Next cPP</h2>
             <h3 class="indexable" data-level="3" id="TOEboundary">1.5.1 TOE Boundary</h3>
-             <span style="" class="comment " id="Comment-4-">NIAP: Does this still need to be incorporated?</span> 
+             <span style="" class="comment " id="Comment-1-">NIAP: Does this still need to be incorporated?</span> 
             <p>
                  The environment in which the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution&rsquo;s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre30 <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> environment and continues into <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> present environment.
             </p>
@@ -377,11 +376,6 @@
             <p>
                 The <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may include or leverage features and functions within the operational environment.
             </p>
-            <div class="figure" id="figure-toe-oe">
-                <img id="toe-oe" src="images/fde-operating-env.png" width="" height="">
-                <br>
-                <span class="ctr" data-myid="toe-oe" data-counter-type="ct-figure">Figure <span class="counter">3</span></span>: Operational Environment
-            </div>
             <h2 class="indexable" data-level="2" id="sec-usecases">1.6 Use Cases</h2>
              The use case for a product conforming to the <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> is to protect data-at-rest on a device that is lost or stolen while powered off without any prior access by an adversary. The use case where an adversary obtains a device that is in a powered state and is able to make modifications to the environment or the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself (e.g., evil maid attacks) is not addressed by these <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> (i.e., <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>-AA and <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>- <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>). 
             <h1 class="indexable" data-level="1" id="sec-cclaims">2 Conformance Claims</h1>
@@ -1197,7 +1191,7 @@
                         <td><a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> (selection-based)</td><td>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</td>
                     </tr>
                     <tr class="major-row">
-                        <td rowspan="31"><a href="#T.KEYING_MATERIAL_COMPROMISE">T.KEYING_​MATERIAL_​COMPROMISE</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-5-">TBD</span></td>
+                        <td rowspan="31"><a href="#T.KEYING_MATERIAL_COMPROMISE">T.KEYING_​MATERIAL_​COMPROMISE</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-2-">TBD</span></td>
                     </tr>
                     <tr>
                         <td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td>Mitigates this threat by ensuring proper key material destruction.</td>
@@ -1290,7 +1284,7 @@
                         <td><a href="#FPT_TST.1">FPT_TST.1</a> (selection-based)</td><td>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</td>
                     </tr>
                     <tr class="major-row">
-                        <td rowspan="11"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_​EXHAUST</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-6-">TBD</span></td>
+                        <td rowspan="11"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_​EXHAUST</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-3-">TBD</span></td>
                     </tr>
                     <tr>
                         <td><a href="#FCS_KYC_EXT.2">FCS_KYC_EXT.2</a></td><td>Mitigates this threat by ensuring all keys accepting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are of the same strength.</td>
@@ -1353,7 +1347,7 @@
                         <td><a href="#FPT_TST.1">FPT_TST.1</a> (selection-based)</td><td>Mitigates by testing the behavior of the cryptographic functions through the use of the self-tests.</td>
                     </tr>
                     <tr class="major-row">
-                        <td rowspan="2"><a href="#T.UNAUTHORIZED_FIRMWARE_MODIFY">T.UNAUTHORIZED_​FIRMWARE_​MODIFY</a></td><td><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-7-">TBD</span></td>
+                        <td rowspan="2"><a href="#T.UNAUTHORIZED_FIRMWARE_MODIFY">T.UNAUTHORIZED_​FIRMWARE_​MODIFY</a></td><td><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td>Mitigates this threat by <span style="" class="comment " id="Comment-4-">TBD</span></td>
                     </tr>
                     <tr>
                         <td><a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a> (selection-based)</td><td>Mitigates this threat by ensuring existing firmware cannot be modified unless replaced with a valid update initiated as part of <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td>
@@ -1377,7 +1371,7 @@
                         <td><a href="#FPT_RBP_EXT.1">FPT_RBP_EXT.1</a> (optional)</td><td>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</td>
                     </tr>
                     <tr>
-                        <td><a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a> (selection-based)</td><td>Mitigates this threat by <span style="" class="comment " id="Comment-8-">TBD</span></td>
+                        <td><a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a> (selection-based)</td><td>Mitigates this threat by <span style="" class="comment " id="Comment-5-">TBD</span></td>
                     </tr>
                     <tr class="major-row">
                         <td rowspan="3"><a href="#T.UNAUTHORIZED_UPDATE">T.UNAUTHORIZED_​UPDATE</a></td><td><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></td><td>Mitigates this threat by defining the signature function that is used to verify updates.</td>
@@ -1815,7 +1809,7 @@
              For the current generation of this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>, the iTC is expected to survey open sources to discover what vulnerabilities have been discovered in these types of products and provide that content into the AVA_VAN discussion. In most cases, these vulnerabilities will require sophistication beyond that of a basic attacker. This information will be used in the development of future Protection Profiles.
             <br>
             <br>
-             <span style="" class="comment " id="Comment-10-">Added to address TD0606.</span>
+             <span style="" class="comment " id="Comment-7-">Added to address TD0606.</span>
             <br>
             <br>
              If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is a Network Attached Storage (NAS) device, the evaluator shall verify as part of the vulnerability assessment that remote management services are either not present or can be fully disabled.
@@ -2328,7 +2322,7 @@
                         <a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a>
                     </div>
                     <div class="reqdesc">
-                         <span style="" class="comment " id="Comment-9-">Reminder - Update all crypto <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> with the crypto catalog versions when available.</span> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>asymmetric</b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: <b>[<b>selection</b>: 
+                         <span style="" class="comment " id="Comment-6-">Reminder - Update all crypto <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> with the crypto catalog versions when available.</span> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>asymmetric</b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: <b>[<b>selection</b>: 
                             <ul>
                                 <li style="">
                                     <span class="selectable-content" id="_s_1"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_2">2048-bit</span>, <span class="selectable-content" id="_s_3">3072-bit</span>, <span class="selectable-content" id="_s_4">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, &ldquo;Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)&rdquo;, Appendix B.3</span>
@@ -4149,7 +4143,7 @@
                     <td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td>
                 </tr>
                 <tr>
-                    <td><span class="term" id="abbr_BEV"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span></td><td><span id="long_abbr_BEV">Border Encryption Value</span></td>
+                    <td><span class="term" id="abbr_BEV"><abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr></span></td><td><span id="long_abbr_BEV">Border Encryption Valu</span></td>
                 </tr>
                 <tr>
                     <td><span class="term" id="abbr_BIOS"><abbr class="dyn-abbr"><a href="#abbr_BIOS">BIOS</a></abbr></span></td><td><span id="long_abbr_BIOS">Basic Input Output System</span></td>
@@ -4383,7 +4377,7 @@
                         </span></td>
                 </tr>
                 <tr>
-                    <td><span id="bibfdeiee">[<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>&ndash;<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>]</span></td><td><span class="description"> <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption &ndash; Encryption Engine, Version 2.1, MMMM DD, 2025</a><span style="" class="comment " id="Comment-11-">Adjust date once finalized</span></span></td>
+                    <td><span id="bibfdeiee">[<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>&ndash;<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>]</span></td><td><span class="description"> <a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption &ndash; Encryption Engine, Version 2.1, MMMM DD, 2025</a><span style="" class="comment " id="Comment-8-">Adjust date once finalized</span></span></td>
                 </tr>
             </table>
         </table>

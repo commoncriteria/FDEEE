@@ -76,6 +76,7 @@ output/FDEEE-release-linkable.html: TD0606
 output/FDEEE-release-linkable.html: TPMs
 output/FDEEE-release-linkable.html: Tweakable
 output/FDEEE-release-linkable.html: VAN1
+output/FDEEE-release-linkable.html: Valu
 output/FDEEE-release-linkable.html: XCCDF
 output/FDEEE-release-linkable.html: XEX
 output/FDEEE-release-linkable.html: XORing
@@ -160,6 +161,7 @@ output/FDEEE-release.html: TD0606
 output/FDEEE-release.html: TPMs
 output/FDEEE-release.html: Tweakable
 output/FDEEE-release.html: VAN1
+output/FDEEE-release.html: Valu
 output/FDEEE-release.html: XCCDF
 output/FDEEE-release.html: XEX
 output/FDEEE-release.html: XORing
@@ -220,6 +222,7 @@ output/FDEEE-sd.html: RTU
 output/FDEEE-sd.html: SHAVS
 output/FDEEE-sd.html: SP800
 output/FDEEE-sd.html: Sanitization
+output/FDEEE-sd.html: Valu
 output/FDEEE-sd.html: X’
 output/FDEEE-sd.html: acvp
 output/FDEEE-sd.html: cLen
@@ -315,6 +318,7 @@ output/FDEEE.html: TD0606
 output/FDEEE.html: TPMs
 output/FDEEE.html: Tweakable
 output/FDEEE.html: VAN1
+output/FDEEE.html: Valu
 output/FDEEE.html: XCCDF
 output/FDEEE.html: XEX
 output/FDEEE.html: XORing
