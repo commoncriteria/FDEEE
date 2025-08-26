@@ -174,7 +174,7 @@
         that these values may or may not be used to establish the particular
         identity of the user. </term>
         
-      <term abbr='BEV' full="Border Encryption Valu">A value passed from the FDE Authorization
+      <term abbr='BEV' full="Border Encryption Value">A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</term>
       <term abbr='BIOS' full="Basic Input Output System"></term>
