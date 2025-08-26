@@ -24,7 +24,6 @@ output/FDEEE-release-linkable.html: BEVs
 output/FDEEE-release-linkable.html: C0
 output/FDEEE-release-linkable.html: C1
 output/FDEEE-release-linkable.html: CAVS
-output/FDEEE-release-linkable.html: CC1
 output/FDEEE-release-linkable.html: CCDB
 output/FDEEE-release-linkable.html: CCL
 output/FDEEE-release-linkable.html: CMAC
@@ -123,7 +122,6 @@ output/FDEEE-release.html: ACPI
 output/FDEEE-release.html: AFA
 output/FDEEE-release.html: Adleman
 output/FDEEE-release.html: BEVs
-output/FDEEE-release.html: CC1
 output/FDEEE-release.html: CCDB
 output/FDEEE-release.html: CCL
 output/FDEEE-release.html: CMAC
@@ -197,7 +195,6 @@ output/FDEEE-sd.html: AESAVS
 output/FDEEE-sd.html: C0
 output/FDEEE-sd.html: C1
 output/FDEEE-sd.html: CAVS
-output/FDEEE-sd.html: CC1
 output/FDEEE-sd.html: CCDB
 output/FDEEE-sd.html: CMAC
 output/FDEEE-sd.html: CSP
@@ -267,7 +264,6 @@ output/FDEEE.html: BEVs
 output/FDEEE.html: C0
 output/FDEEE.html: C1
 output/FDEEE.html: CAVS
-output/FDEEE.html: CC1
 output/FDEEE.html: CCDB
 output/FDEEE.html: CCL
 output/FDEEE.html: CMAC
