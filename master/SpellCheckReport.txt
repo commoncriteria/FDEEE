@@ -90,7 +90,6 @@ output/FDEEE-release-linkable.html: chipsets
 output/FDEEE-release-linkable.html: crypto
 output/FDEEE-release-linkable.html: decryptions
 output/FDEEE-release-linkable.html: enquiries
-output/FDEEE-release-linkable.html: fcs
 output/FDEEE-release-linkable.html: fulfils
 output/FDEEE-release-linkable.html: href
 output/FDEEE-release-linkable.html: iTC
@@ -102,8 +101,6 @@ output/FDEEE-release-linkable.html: nmap
 output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: reinstantiating
 output/FDEEE-release-linkable.html: sanitization
-output/FDEEE-release-linkable.html: sel
-output/FDEEE-release-linkable.html: sni
 output/FDEEE-release-linkable.html: subkey
 output/FDEEE-release-linkable.html: un
 output/FDEEE-release-linkable.html: uninstantiating
@@ -176,7 +173,6 @@ output/FDEEE-release.html: checksums
 output/FDEEE-release.html: chipsets
 output/FDEEE-release.html: crypto
 output/FDEEE-release.html: enquiries
-output/FDEEE-release.html: fcs
 output/FDEEE-release.html: fulfils
 output/FDEEE-release.html: iTC
 output/FDEEE-release.html: nmap
@@ -184,8 +180,6 @@ output/FDEEE-release.html: pool’
 output/FDEEE-release.html: preauthentication
 output/FDEEE-release.html: reinstantiating
 output/FDEEE-release.html: sanitization
-output/FDEEE-release.html: sel
-output/FDEEE-release.html: sni
 output/FDEEE-release.html: un
 output/FDEEE-release.html: uninstantiating
 output/FDEEE-release.html: unpowered
@@ -342,7 +336,6 @@ output/FDEEE.html: chipsets
 output/FDEEE.html: crypto
 output/FDEEE.html: decryptions
 output/FDEEE.html: enquiries
-output/FDEEE.html: fcs
 output/FDEEE.html: fulfils
 output/FDEEE.html: iTC
 output/FDEEE.html: lifecycle
@@ -354,8 +347,6 @@ output/FDEEE.html: pool’
 output/FDEEE.html: preauthentication
 output/FDEEE.html: reinstantiating
 output/FDEEE.html: sanitization
-output/FDEEE.html: sel
-output/FDEEE.html: sni
 output/FDEEE.html: subkey
 output/FDEEE.html: un
 output/FDEEE.html: uninstantiating
