@@ -2187,7 +2187,7 @@
               <CustomEA name="KMD">The evaluator shall examine the vendor’s KMD to verify that it includes a description
                 of how key encryption will be used as part of the key chain.</CustomEA>
               <Tests>The AES test should be followed in FCS_COP.1/SKC Cryptographic Operation (AES
-                Data Encryption/Decryption.</Tests>
+                Data Encryption/Decryption).</Tests>
             </aactivity>
           </f-element>
           
