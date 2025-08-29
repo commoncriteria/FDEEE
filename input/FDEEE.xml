@@ -1806,7 +1806,7 @@
           
           <ext-comp-def-title>
             <title>
-              The TSF shall use <assignable>one or more iterations of FCS_CKM.4 defined elsewhere in
+              The TSF shall use <assignable>one or more iterations of FCS_CKM.6 defined elsewhere in
                 the Security Target </assignable> key destruction methods.
             </title>
           </ext-comp-def-title>
@@ -3331,7 +3331,7 @@
                 Verify data is encrypted:<h:ul>
                 <h:li>For HW Encryption:<h:ul>
                   <h:li>engage device’s functionality for generating a new encryption key, thus
-                    performing an erase of the key per FCS_CKM.4/Power</h:li>
+                    performing an erase of the key per FCS_CKM.6/Power</h:li>
                   <h:li>Read from the same locations at which the data was written</h:li>
                   <h:li>Compare the retrieved data to the written data and ensure they do not
                     match</h:li>
