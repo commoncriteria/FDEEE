@@ -1364,8 +1364,7 @@
             that meets the following: [<h:i>no standard</h:i>].
           </title>
           <note role="application">
-            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.<h:br/><h:br/>
-            This SFR should be 
+            This SFR must be included in the ST if selected in FCS_CKM_EXT.6.<h:br/><h:br/> 
             In the first selection, the ST Author is presented options for destroying disused cryptographic
             keys based on whether they are in volatile memory or non-volatile storage within the TOE. The 
             selection of block erase for non-volatile storage applies only to flash memory. A block erase
