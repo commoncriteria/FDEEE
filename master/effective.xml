@@ -1781,9 +1781,8 @@
                     <selectable>single overwrite consisting of zeroes</selectable>
                     <selectable>single overwrite consisting of ones</selectable>
                     <selectable>overwrite with a new value of a key of the same size</selectable>
-                    <selectable>single overwrite consisting of <assignable>some value that does not
-                      29 contain any CSP</assignable></selectable>
-                      <selectable>block erase</selectable>
+                    <selectable>single overwrite consisting of <assignable>some value that does not contain any CSP</assignable></selectable>
+                    <selectable>block erase</selectable>
                     </selectables></selectable>
                     <selectable>that does not employ a wear-leveling algorithm, the destruction
                       shall be executed by a <selectables linebreak="yes">
