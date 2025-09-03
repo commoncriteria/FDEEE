@@ -15,12 +15,6 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[8]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to uses-toehw from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[9]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to fcs-pcc-ext-1-2-sel-2 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/depends[2]""/on-sel[1]""
-* Error: Detected dangling id-reference to fcs-pcc-ext-1-2-sel-2 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[14]""/depends[2]""/on-sel[1]""
-* Error: Detected dangling id-reference to submask-derived from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[17]""/depends[3]""/on-sel[1]""
 * Error: Detected dangling id-reference to windows from attribute
         ref/PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:div[1]""/depends[1]""/ref[1]""
 * Error: Detected dangling id-reference to linux from attribute

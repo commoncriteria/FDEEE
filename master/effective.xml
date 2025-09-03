@@ -488,7 +488,7 @@
 		      in which it discloses protected data to unauthorized users. 
 		    </description>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring
+		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
 		      several options for enforcing validation, such as key sanitization of the DEK or when a
 		      configurable number of failed validation attempts is reached within a 24 hour period. This
 		      mitigates brute force attacks against authorization factors such as passwords and PINs.</rationale>
@@ -502,10 +502,11 @@
 		      with the chosen plaintext could allow attackers to recover the effective DEK, thus providing
 		      unauthorized access to the previously unknown plaintext on the storage device.
 		    </description>
+		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by
+		      ensuring the proper choice of encryption algorithm and mode.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper
 		      handling of salts, nonces, and initialization vectors.</rationale>
-		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by
-		      ensuring the proper choice of encryption algorithm and mode.</rationale>
+		    
       </threat>
 		  
 		  <threat id="t-keying_material_compromise" name="T.KEYING_MATERIAL_COMPROMISE">
@@ -518,11 +519,13 @@
 		      (OE), (e.g., BIOS configuration, SPI flash, or TPMs).
 		    </description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by ensuring that a sufficiently strong DEK is used to prevent its value from being determined.</rationale>
+		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by performing data encryption and encryption.</rationale>
 		    <addressed-by>FCS_CKM.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>		    
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>		    
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to accept a BEV.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating</rationale>
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
 		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key materials.</rationale>
@@ -537,7 +540,7 @@
 		    <addressed-by>FCS_COP.1/KeyEnc (selection-based)</addressed-by><rationale>Mitigates this threat by performing key encryption and decryption.</rationale>
 		    <addressed-by>FCS_COP.1/KeyEncap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key transport.</rationale>
 		    <addressed-by>FCS_COP.1/KeyWrap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key wrapping.</rationale>			  
-		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by performing data encryption and encryption.</rationale>
+
 		    <addressed-by>FCS_KDF_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by requiring a password that is not subject to a brute force attack.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by randomizing the generated keys in order to reduce the likelihood of guessing the future keys.</rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
@@ -546,7 +549,6 @@
 		    <addressed-by>FCS_RBG.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_SMC_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat
 		      by obscuring the submasks via a XOR or hashing operation.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FPT_FLS.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that a malfunctioning DRBG function cannot be used to generate potentially insecure keys.</rationale>
 		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality.</rationale>
 		  </threat>
@@ -577,9 +579,10 @@
 		      and initialization vectors along with known plaintext could allow an attacker to recover the
 		      effective DEK, thus providing unauthorized access to the previously unknown plaintext on the
 		      storage device.
-		    </description>		    
+		    </description>		
+		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper handling of salts, nonces, and initialization vectors.</rationale>
-		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</rationale>
+		    
 		  </threat>
 		  
 		  <threat id="t-unauth-data-access" name="T.UNAUTHORIZED_DATA_ACCESS">
@@ -589,15 +592,15 @@
 				  contained in a laptop or a portable external storage device), they may attempt to connect a 
 				  targeted storage device to a host of which they have complete control and have raw access to
 				  the storage device (e.g., to specified disk sectors, to specified blocks).
-				</description>				
+				</description>		
+		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by defining proper AES encryption.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper nonces and IVs are used in the encryption of data.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by verifying the correct authentication and limits attempts to decrypt the data.</rationale>
 		    <addressed-by>FDP_DSK_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring the TOE performs full drive encryption, which includes all protected data.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
 			  <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by defining what power states are compliant for the TOE.</rationale>
-			  <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by defining conditions in which the TOE will enter a compliant power state. These requirements ensure the device is secure if lost in a compliant power state.</rationale>        
-		    <addressed-by>FCS_COP.1/SKC (selection-based)</addressed-by><rationale>Mitigates this threat by defining proper AES encryption.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by verifying the correct authentication and limits attempts to decrypt the data.</rationale>
-		    <addressed-by>FPT_TST.1 (selection-based)</addressed-by><rationale>Mitigates by testing the behavior of the cryptographic functions through the use of the self-tests.</rationale>			            
+			  <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by defining conditions in which the TOE will enter a compliant power state. These requirements ensure the device is secure if lost in a compliant power state.</rationale>
+		  
       </threat>
 
 		  <threat id="t-unauth-firmware-modify" name="T.UNAUTHORIZED_FIRMWARE_MODIFY">
@@ -1043,7 +1046,7 @@
                   cryptographic key generation <h:s>algorithm</h:s> <h:b>method</h:b> <selectables>
                     <selectable id="tsf-rbg-dek">generate a DEK using the RBG as specified in FCS_RBG.1</selectable>
                     <selectable>accept a DEK that is generated by the RBG provided by the host platform</selectable>
-                    <selectable>accept a DEK that is wrapped as specified in FCS_COP.1/<h:b>KeyWrap</h:b></selectable>
+                    <selectable id="tsf-wrapped-dek">accept a DEK that is wrapped as specified in FCS_COP.1/<h:b>KeyWrap</h:b></selectable>
                   </selectables>
                   and specified cryptographic key sizes <selectables>
                     <selectable>128 bits</selectable>
@@ -1798,7 +1801,7 @@
                             consisting of <assignable>some value that does not contain any CSP</assignable> followed by a read-verify</selectable>
                           </selectables>block erase</selectable>
                       </selectables></selectable>                  
-                </selectables>and if the read-verification of the overwritten data fails, the process shall
+                </selectables> and if the read-verification of the overwritten data fails, the process shall
                   be repeated again up to [assignment: number of times to attempt
                   overwrite] times, whereupon an error is returned.</selectable>                  
             </selectables>
@@ -2060,8 +2063,8 @@
             </f-component>
         
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" name="Cryptographic Operation (Keyed Hash Algorithm)" id="fcs-cop-1-keyhash" status="sel-based">
-          <depends on-sel="fcs-val-ext-1-1-keyhash"/>
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+          <depends on-sel="fcs-val-ext-1-1-keyhash"/>
           <f-element id="fcs_cop-1-1-keyhash">
             <title>
               The TSF shall perform  [<h:i>cryptographic keyed-hash message authentication</h:i>] in accordance with a specified cryptographic
@@ -2083,7 +2086,7 @@
               example for SHA-256 L1 = 512, L2 =256) where L2 ≤ k ≤ L1.<h:br/><h:br/>
               
               This SFR is required when the TSF performs a key derivation operation as part of maintaining and deriving a key chain (FCS_KDF_EXT.1, 
-              FCS_KYC_EXT.1) or when the TSF performs validation of a submask, intermediate key, or BEV using a keyed hash operation (FCS_VAL_EXT.1).
+              FCS_KYC_EXT.1) or when the TSF performs validation of a BEV using a keyed hash operation (FCS_VAL_EXT.1).
             </note>
             <aactivity>
               <TSS>
@@ -2128,13 +2131,12 @@
         </f-component>
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEnc" name="Cryptographic Operation (Key Encryption)" id="fcs-cop-1-kE" status="sel-based">
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-          <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
-          <f-element id="fcs_cop-1-1-kE">
+          <f-element id="fcs_cop-1-1-ke">
             <title>
               The TSF shall perform [<h:i>key encryption and decryption</h:i>] in accordance with a specified cryptographic algorithm [<h:i>AES used in <selectables><selectable>CBC</selectable><selectable>GCM</selectable></selectables> mode</h:i>] and cryptographic key sizes <selectables><selectable>128 bits</selectable><selectable>256 bits</selectable></selectables> that meet the following: [<h:i>AES as specified in ISO /IEC 18033-3,</h:i> <selectables><selectable>CBC as specified in ISO/IEC 10116</selectable><selectable>GCM as specified in ISO/IEC 19772</selectable></selectables>].
             </title>
@@ -2161,8 +2163,8 @@
         </f-component>
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation (Key Transport)" id="fcs-cop-1-keyencap" status="sel-based">
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
-          <depends on-sel="fcs-pcc-ext-1-2-sel-2"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-3"/>
+          
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
@@ -2285,7 +2287,8 @@
         
             
             <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation (Key Wrapping)" id="fcs-cop-1-keywrap" status="sel-based">
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+              <depends on-sel="tsf-wrapped-dek"/>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
@@ -2415,11 +2418,7 @@
           
         </f-component>
         
-        <f-component cc-id="fcs_cop.1" iteration="SKC" name="Cryptographic Operation (AES Data Encryption/Decryption)" id="fcs-cop-1-skc" status="sel-based">
-              <depends on-sel="fcs-val-ext-1-1-decr"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-              <depends on-sel="submask-derived"/>
-              <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>          
+        <f-component cc-id="fcs_cop.1" iteration="SKC" name="Cryptographic Operation (AES Data Encryption/Decryption)" id="fcs-cop-1-skc">     
 
               <f-element id="fcs_cop-1-1-skc">
                 <title>
@@ -2816,8 +2815,8 @@
                 <selectable>asymmetric key generation as specified in FCS_CKM.1<h:b>/AKG</h:b></selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1<h:b>/SKG</h:b></selectable>
                 <selectable>key derivation as specified in FCS_KDF_EXT.1</selectable>
-                <selectable>key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
-                <selectable>key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-4">key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-3">key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
               </selectables> while maintaining an effective strength of <selectables>
                 <selectable>128 bits</selectable>
@@ -3128,8 +3127,7 @@
           
             </f-component>
         
-            <f-component cc-id="fcs_smc_ext.1" name="Submask Combining " id="fcs-smc-ext-1" status="sel-based">
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-5"/>
+            <f-component cc-id="fcs_smc_ext.1" name="Submask Combining" id="fcs-smc-ext-1" status="sel-based">
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3c"/>
               <consistency-rationale/>
               <comp-lev>requires the TSF to combine the submasks in a predictable fashion.</comp-lev>
@@ -3259,7 +3257,7 @@
                     as specified in <selectables>
                       <selectable id="fcs-val-ext-1-1-hash">FCS_COP.1<h:b>/Hash</h:b></selectable>
                       <selectable id="fcs-val-ext-1-1-keyhash">FCS_COP.1<h:b>/KeyedHash</h:b></selectable>
-                    </selectables> and compare it to a stored hashed [<h:b>value</h:b>&gt;];</selectable>
+                    </selectables> and compare it to a stored hashed [<h:b>value</h:b>];</selectable>
                     <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1<h:b>/SKC</h:b> and compare it against a stored known value </selectable>
                   </selectables>.
                 </title>
