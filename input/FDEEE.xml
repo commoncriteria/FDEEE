@@ -316,7 +316,7 @@
         <h:td>Hybrid</h:td>
         <h:td>AA + EE</h:td>
         <h:td>A single vendor’s combination of hardware (e.g., hardware encryption engine,
-          cryptographic co-processor) and software</h:td>
+          cryptographic co-processor) and software / firmware</h:td>
       </h:tr>
   </h:table>
 
