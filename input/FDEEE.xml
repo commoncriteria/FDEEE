@@ -552,7 +552,7 @@
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
 		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key materials.</rationale>
 		    <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by requiring the TOE to enter into a safe state based on each condition. </rationale>
-		    <addressed-by>FCS_CKM.1/AKG (optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>		    		    
+		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.6/KEK (optional)</addressed-by><rationale>Mitigates this threat by ensuring proper key cryptographic erase.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
 		    <addressed-by>FCS_CKM.6/GENHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction in general hardware.</rationale>		    
@@ -582,7 +582,7 @@
 		      and give them unauthorized access to the data.</description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the DEK is computationally infeasible.</rationale>
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys accepting the BEV are of the same strength.</rationale>        
-		    <addressed-by>FCS_CKM.1/AKG (optional)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
+		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure DRBG. </rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
@@ -932,7 +932,7 @@
             </fam-behavior>
         </ext-comp-def>
        
-            <f-component cc-id="fcs_ckm.1" iteration="AKG" name="Cryptographic Key Generation (Asymmetric Keys)" id="fcs-ckm-1-akg" status="optional">                            
+            <f-component cc-id="fcs_ckm.1" iteration="AKG" name="Cryptographic Key Generation (Asymmetric Keys)" id="fcs-ckm-1-akg" status="sel-based">
               <f-element id="fcs_ckm-1-1-akg">
                 <title>
                   <comment>Reminder - Update all crypto SFRs with the crypto catalog versions when available.</comment>
