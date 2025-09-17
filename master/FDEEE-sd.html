@@ -1125,7 +1125,62 @@ The following sections list Common Criteria and technology terms used in this do
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.2.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-1-AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/AKG</div>
+                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.2.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-6-KEK"><h4>FCS_CKM.6/KEK Cryptographic Key Destruction (Key Cryptographic Erase)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6/KEK</div>
+            
+            
+            
+            
+          <div class="eacategory">TSS</div><div class="ea">
+			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
+              The evaluator shall examine the TOE’s keychain in the TSS/KMD and identify each instance a
+              key is destroyed by this method. In each instance the evaluator shall verify all keys capable
+              of decrypting the target key are destroyed in accordance with a specified key destruction method.
+            </div></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></span></div><h2 class="indexable" data-level="2" id="fpt">2.2.2 Protection of the TSF (FPT)</h2><div class="comp" id="FPT-FAC-EXT"><h4>FPT_FAC_EXT.1 Firmware Access Control</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FAC_EXT.1</div>
+              
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
+                process takes place along with a description of the values that are used.
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
+                the authorization process.
+              </div></div><div class="eacategory">KMD</div><div class="ea">
+			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The evaluator shall perform the following test.
+                <span class="testlist-"><ul>
+                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_FAC_EXT.1:1</a>:
+      
+                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
+                    value is necessary for the update to continue.
+                  </li>
+                </ul></span>
+              </div></div></span></div><div class="comp" id="FPT-RBP-EXT-1"><h4>FPT_RBP_EXT.1 Rollback Protection</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_RBP_EXT.1</div>
+              
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                The evaluator shall examine the TSS to ensure that it describes at a high level the process for verifying
+                that security version checking is performed before an upgrade is installed. The evaluator shall verify that
+                a high level description of the types of error codes are provided and when an error would be triggered.
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator ensures that a description is provided on how the user should interpret the error codes.
+              </div></div><div class="eacategory">KMD</div><div class="ea">
+			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The evaluator shall perform the following test:
+                <span class="testlist-"><ul>
+                  <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_RBP_EXT.1:1</a>:
+      
+                    The evaluator shall try installing a lower security version number upgrade (either by just modifying the
+                    version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
+                    be installed and an error is presented to the user.
+                  </li>
+                </ul></span>
+              </div></div></span></div><h2 class="indexable" data-level="1" id="sel-sfrs">2.3 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.3.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-1-AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/AKG</div>
                     
                     
                     
@@ -1220,62 +1275,7 @@ The following sections list Common Criteria and technology terms used in this do
                                   </ul>
                                   for each FFC parameter set and key pair </p>
                                 <p></p>
-                          </div></div></span></div><div class="comp" id="FCS-CKM-6-KEK"><h4>FCS_CKM.6/KEK Cryptographic Key Destruction (Key Cryptographic Erase)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6/KEK</div>
-            
-            
-            
-            
-          <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
-              The evaluator shall examine the TOE’s keychain in the TSS/KMD and identify each instance a
-              key is destroyed by this method. In each instance the evaluator shall verify all keys capable
-              of decrypting the target key are destroyed in accordance with a specified key destruction method.
-            </div></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><h2 class="indexable" data-level="2" id="fpt">2.2.2 Protection of the TSF (FPT)</h2><div class="comp" id="FPT-FAC-EXT"><h4>FPT_FAC_EXT.1 Firmware Access Control</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FAC_EXT.1</div>
-              
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
-                process takes place along with a description of the values that are used.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.
-              </div></div><div class="eacategory">KMD</div><div class="ea">
-			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall perform the following test.
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_FAC_EXT.1:1</a>:
-      
-                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
-                    value is necessary for the update to continue.
-                  </li>
-                </ul></span>
-              </div></div></span></div><div class="comp" id="FPT-RBP-EXT-1"><h4>FPT_RBP_EXT.1 Rollback Protection</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_RBP_EXT.1</div>
-              
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                The evaluator shall examine the TSS to ensure that it describes at a high level the process for verifying
-                that security version checking is performed before an upgrade is installed. The evaluator shall verify that
-                a high level description of the types of error codes are provided and when an error would be triggered.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator ensures that a description is provided on how the user should interpret the error codes.
-              </div></div><div class="eacategory">KMD</div><div class="ea">
-			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall perform the following test:
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_RBP_EXT.1:1</a>:
-      
-                    The evaluator shall try installing a lower security version number upgrade (either by just modifying the
-                    version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
-                    be installed and an error is presented to the user.
-                  </li>
-                </ul></span>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="sel-sfrs">2.3 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="fcs">2.3.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS-CKM-1-B"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/SKG</div>
+                          </div></div></span></div><div class="comp" id="FCS-CKM-1-B"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.1/SKG</div>
                   
                     
                     

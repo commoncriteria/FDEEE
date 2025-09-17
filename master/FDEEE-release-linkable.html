@@ -2274,7 +2274,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_KYP_EXT.1">FPT_KYP_EXT.1</a></td><td>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory<a id="period_620" href="#period_620">. </a></td></tr>
 <tr><td><a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to meet a compliant power saving state that protects and/or destroys key materials<a id="period_621" href="#period_621">. </a></td></tr>
 <tr><td><a href="#FPT_PWR_EXT.2">FPT_PWR_EXT.2</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to enter into a safe state based on each condition<a id="period_622" href="#period_622">. </a></td></tr>
-<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (optional)</td><td>Mitigates this threat by requiring asymmetric key generation<a id="period_623" href="#period_623">. </a></td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation<a id="period_623" href="#period_623">. </a></td></tr>
 <tr><td><a href="#FCS_CKM.6/KEK">FCS_CKM.6/KEK</a> (optional)</td><td>Mitigates this threat by ensuring proper key cryptographic erase<a id="period_624" href="#period_624">. </a></td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation<a id="period_625" href="#period_625">. </a></td></tr>
 <tr><td><a href="#FCS_CKM.6/GENHW">FCS_CKM.6/GENHW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction in general hardware<a id="period_626" href="#period_626">. </a></td></tr>
@@ -2296,7 +2296,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FPT_TST.1">FPT_TST.1</a> (selection-based)</td><td>Mitigates this threat by verifying the cryptographic functionality through the self testing functionality<a id="period_641" href="#period_641">. </a></td></tr>
 <tr class="major-row"><td rowspan="11"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_&#8203;EXHAUST</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> is computationally infeasible<a id="period_642" href="#period_642">. </a></td></tr>
 <tr><td><a href="#FCS_KYC_EXT.2">FCS_KYC_EXT.2</a></td><td>Mitigates this threat by ensuring all keys accepting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are of the same strength<a id="period_643" href="#period_643">. </a></td></tr>
-<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (optional)</td><td>Mitigates this threat by requiring asymmetric key generation<a id="period_644" href="#period_644">. </a></td></tr>
+<tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation<a id="period_644" href="#period_644">. </a></td></tr>
 <tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation<a id="period_645" href="#period_645">. </a></td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_646" href="#period_646">. </a></td></tr>
 <tr><td><a href="#FCS_RBG.2">FCS_RBG.2</a> (selection-based)</td><td>Mitigates this threat by ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with sufficient entropy to ensure the generation of strong cryptographic keys<a id="period_647" href="#period_647">. </a></td></tr>
@@ -3046,9 +3046,133 @@ The following sections list Common Criteria and technology terms used in this do
           <p>
             The evaluator shall inspect the guidance document and verify it describes how to access the flaw remediation guidance<a id="period_934" href="#period_934">. </a>          </p>
            
-        </div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.2 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4>                            
+        </div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.2 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.6/KEK"><h4>FCS_CKM.6/KEK Cryptographic Key Destruction (Key Cryptographic Erase)</h4>
+        <div class="element"><div class="reqid" id="FCS_CKM.6.1/KEK"><a href="#FCS_CKM.6.1/KEK" class="abbr">FCS_CKM.6.1/KEK</a></div><div class="reqdesc">
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy [<b>assignment</b>: 
+     <span class="assignable-content">list of cryptographic keys (including keying material)</span>]
+            when [<i>no longer needed</i>]<a id="period_935" href="#period_935">. </a>          </div></div>
+        
+        <div class="element"><div class="reqid" id="FCS_CKM.6.2/KEK"><a href="#FCS_CKM.6.2/KEK" class="abbr">FCS_CKM.6.2/KEK</a></div><div class="reqdesc">
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1">FCS_CKM.6.1</a> in accordance
+            with a specified cryptographic key destruction method [<i>by using the appropriate method to destroy
+            all encryption keys encrypting the key intended for destruction</i>] that meets the following: 
+            [<i>no standard</i>]<a id="period_936" href="#period_936">. </a>          <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+            A key can be considered destroyed by destroying the key that protects the
+            key<a id="period_937" href="#period_937">. </a>If a key is wrapped or encrypted it is not necessary to &#8220;overwrite&#8221; that key, overwriting
+            the key that is used to wrap or encrypt the key used to encrypt/decrypt data, using the
+            appropriate method for the memory type involved, will suffice<a id="period_938" href="#period_938">. </a>For example, if a product uses
+            a Key Encryption Key (<abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr>) to encrypt a Data Encryption Key (<abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>), destroying the <abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr>
+            using one of the methods in FCS_CKM.EXT.6.1 is sufficient, since the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> would no longer
+            be usable (of course, presumes the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> is still encrypted<a id="period_939" href="#period_939">. </a>          </span></div></div></div>
+      <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.6/KEK">FCS_CKM.6/KEK</a></div>
+            
+            
+            
+            
+          <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
+			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component<a id="period_940" href="#period_940">. </a><br></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component<a id="period_941" href="#period_941">. </a><br></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
+              The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&#8217;s keychain in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> and identify each instance a
+              key is destroyed by this method<a id="period_942" href="#period_942">. </a>In each instance the evaluator shall verify all keys capable
+              of decrypting the target key are destroyed in accordance with a specified key destruction method<a id="period_943" href="#period_943">. </a>            </div></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component<a id="period_944" href="#period_944">. </a><br></div></div></div></div><h3 id="fpt-optional" class="indexable" data-level="3">A.1.3 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_FAC_EXT.1"><h4>FPT_FAC_EXT.1 Firmware Access Control</h4>
+          
+          
+          
+          
+          
+          <div class="element"><div class="reqid" id="FPT_FAC_EXT.1.1"><a href="#FPT_FAC_EXT.1.1" class="abbr">FPT_FAC_EXT.1.1</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_320">a password</span>, <span class="selectable-content" id="_s_321">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_322">a privileged user action</span>] before the firmware update proceeds<a id="period_945" href="#period_945">. </a>            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              Before an update takes place, the drive owner will authorize the update by providing either a known unique 
+              value (for example, a serial number) that is printed on the collaborative Protection Profile for Full Drive 
+              Encryption - Encryption Engine drive, a password (which should be administratively configurable as defined 
+              in <a href="#FMT_SMF.1">FMT_SMF.1</a>) or perform the operation as a privileged user<a id="period_946" href="#period_946">. </a>It is assumed that physical presence to the drive
+              is limited to authorized personnel<a id="period_947" href="#period_947">. </a>If the correct value is not provided, the update will not take place<a id="period_948" href="#period_948">. </a>The
+              values are intended to be unique per drive so they cannot be easily exhausted<a id="period_949" href="#period_949">. </a><br><br>
+              The same requirements for cleaning up a password still apply<a id="period_950" href="#period_950">. </a>            </span></div></div></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_FAC_EXT.1">FPT_FAC_EXT.1</a></div>
+              
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes information stating how the Access Control 
+                process takes place along with a description of the values that are used<a id="period_951" href="#period_951">. </a>              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
+                the authorization process<a id="period_952" href="#period_952">. </a>              </div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
+			There are no additional <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this component<a id="period_953" href="#period_953">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The evaluator shall perform the following test<a id="period_954" href="#period_954">. </a>                <span class="testlist-"><ul>
+                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_FAC_EXT.1:1</a>:
+      
+                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
+                    value is necessary for the update to continue<a id="period_955" href="#period_955">. </a>                  </li>
+                </ul></span>
+              </div></div></div></div></div><div class="comp" id="FPT_RBP_EXT.1"><h4>FPT_RBP_EXT.1 Rollback Protection</h4>
+          
+          
+          
+          
+          
+          <div class="element"><div class="reqid" id="FPT_RBP_EXT.1.1"><a href="#FPT_RBP_EXT.1.1" class="abbr">FPT_RBP_EXT.1.1</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall verify that the new firmware package is not downgrading to a lower
+              security version number by [<b>assignment</b>: 
+     <span class="assignable-content">method of verifying the security version number
+              is the same as or higher than the currently installed version</span>]<a id="period_956" href="#period_956">. </a>            </div></div>
+          
+            <div class="element"><div class="reqid" id="FPT_RBP_EXT.1.2"><a href="#FPT_RBP_EXT.1.2" class="abbr">FPT_RBP_EXT.1.2</a></div><div class="reqdesc">
+                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate and return an error code if the attempted firmware
+                update package is detected to be an invalid version<a id="period_957" href="#period_957">. </a>              <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+                This requirement prevents an unauthorized rollback of the firmware to an
+                earlier authentic version<a id="period_958" href="#period_958">. </a>This mitigates against unknowing installation of an earlier authentic
+                firmware version that may have a security weakness<a id="period_959" href="#period_959">. </a>It is expected that vendors will increase
+                security version numbers with each new update package<a id="period_960" href="#period_960">. </a><br><br>
+                For <a href="#FPT_RBP_EXT.1.1">FPT_RBP_EXT.1.1</a> the purpose is to verify that the new package has a security version
+                number equal to or larger than the security version number of currently installed firmware
+                package<a id="period_961" href="#period_961">. </a><br><br>
+                The administrator guidance would include instructions for the administrator to configure the
+                rollback prevention mechanism, if appropriate<a id="period_962" href="#period_962">. </a>              </span></div></div></div>
+          
+          
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_RBP_EXT.1">FPT_RBP_EXT.1</a></div>
+              
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes at a high level the process for verifying
+                that security version checking is performed before an upgrade is installed<a id="period_963" href="#period_963">. </a>The evaluator shall verify that
+                a high level description of the types of error codes are provided and when an error would be triggered<a id="period_964" href="#period_964">. </a>              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator ensures that a description is provided on how the user should interpret the error codes<a id="period_965" href="#period_965">. </a>              </div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
+			There are no additional <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this component<a id="period_966" href="#period_966">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The evaluator shall perform the following test:
+                <span class="testlist-"><ul>
+                  <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_RBP_EXT.1:1</a>:
+      
+                    The evaluator shall try installing a lower security version number upgrade (either by just modifying the
+                    version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
+                    be installed and an error is presented to the user<a id="period_967" href="#period_967">. </a>                  </li>
+                </ul></span>
+              </div></div></div></div></div><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Objective requirements<a id="period_968" href="#period_968">. </a></p><h2 id="feat-based-reqs" class="indexable" data-level="2">A.3 Implementation-dependent  Requirements
+    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
+            Implementation-dependent requirements<a id="period_969" href="#period_969">. </a></p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
+    </h1><span class="description">
+	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
+        the baseline requirements
+        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
+        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_970" href="#period_970">. </a>        There are additional requirements based on selections in the body of 
+        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
+        if certain selections are made, then additional requirements below must be included<a id="period_971" href="#period_971">. </a> 	</p>
+		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation (Asymmetric Keys)</h4><div class="statustag"></div>
               <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">
-                  <span style="" class="comment " id="Comment-2-">Reminder - Update all crypto <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> with the crypto catalog versions when available<a id="period_935" href="#period_935">. </a></span>
+                  <span style="" class="comment " id="Comment-2-">Reminder - Update all crypto <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> with the crypto catalog versions when available<a id="period_972" href="#period_972">. </a></span>
                 The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate <b>asymmetric</b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: <b>[<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_1"><abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> schemes using cryptographic key sizes of [<b>selection</b>: <span class="selectable-content" id="_s_2">2048-bit</span>, <span class="selectable-content" id="_s_3">3072-bit</span>, <span class="selectable-content" id="_s_4">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, &#8220;Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)&#8221;, Appendix B.3</span></li><li style=""><span class="selectable-content" id="_s_5"><abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> schemes using &#8220;<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curves&#8221; of [<b>selection</b>: <span class="selectable-content" id="_s_6">P-256</span>, <span class="selectable-content" id="_s_7">P-384</span>, <span class="selectable-content" id="_s_8">P-521</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, &#8220;Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)&#8221;, Appendix  B.4</span></li><li style=""><span class="selectable-content" id="_s_9"><abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> schemes using cryptographic key sizes of 
                     [<b>selection</b>: <span class="selectable-content" id="_s_10">2048-bit</span>, <span class="selectable-content" id="_s_11">3072-bit</span>, <span class="selectable-content" id="_s_12">4096-bit</span>] that meet the following: <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4, &#8220;Digital Signature Standard (<abbr class="dyn-abbr"><a href="#abbr_DSS">DSS</a></abbr>)&#8221;, Appendix B.1</span></li></ul>]</b> 
                   <s>and specified cryptographic key sizes 
@@ -3056,11 +3180,11 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content">cryptographic key sizes</span>] 
                     that meet the following: 
                     [<b>assignment</b>: 
-     <span class="assignable-content">list of standards</span>]<a id="period_936" href="#period_936">. </a></s>
+     <span class="assignable-content">list of standards</span>]<a id="period_973" href="#period_973">. </a></s>
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                  Asymmetric keys may be used to &#8220;wrap&#8221; a key or submask<a id="period_937" href="#period_937">. </a>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in FCS_COP<a id="period_938" href="#period_938">. </a>                                   
+                  Asymmetric keys may be used to &#8220;wrap&#8221; a key or submask<a id="period_974" href="#period_974">. </a>This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in FCS_COP<a id="period_975" href="#period_975">. </a>                                   
                 </span></div></div></div>
               
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
@@ -3068,19 +3192,19 @@ The following sections list Common Criteria and technology terms used in this do
                     
                     
                     
-                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_939" href="#period_939">. </a>                      If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> specifies more than one scheme, the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify
-                      that it identifies the usage for each scheme<a id="period_940" href="#period_940">. </a></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
+                <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the key sizes supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_976" href="#period_976">. </a>                      If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> specifies more than one scheme, the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify
+                      that it identifies the usage for each scheme<a id="period_977" href="#period_977">. </a></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">The evaluator shall verify that the AGD guidance instructs the administrator how to
                       configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key generation schemes and key sizes for all
-                      uses specified by the AGD documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr><a id="period_941" href="#period_941">. </a></div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses an asymmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail
-                      how the asymmetric key is used as part of the key chain<a id="period_942" href="#period_942">. </a></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p>The following tests require the developer to provide access to a test platform that
-                      provides the evaluator with tools that are typically not found on factory products<a id="period_943" href="#period_943">. </a></p>
+                      uses specified by the AGD documentation and defined in this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr><a id="period_978" href="#period_978">. </a></div></div><div class="ea"><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses an asymmetric key as part of the key chain, the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> should detail
+                      how the asymmetric key is used as part of the key chain<a id="period_979" href="#period_979">. </a></div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea"> <p>The following tests require the developer to provide access to a test platform that
+                      provides the evaluator with tools that are typically not found on factory products<a id="period_980" href="#period_980">. </a></p>
                       <p><b><i>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4 <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Schemes</i></b></p>
                       <p>The evaluator shall verify the implementation of <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Key Generation by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                        using the Key Generation test<a id="period_944" href="#period_944">. </a>This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly
+                        using the Key Generation test<a id="period_981" href="#period_981">. </a>This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly
                         produce values for the key components including the public verification exponent e,
                         the private prime factors p and q, the public modulus n and the calculation of the private
-                        signature exponent d<a id="period_945" href="#period_945">. </a></p>
-                        <p>Key Pair generation specifies 5 ways (or methods) to generate the primes p and q<a id="period_946" href="#period_946">. </a>These
+                        signature exponent d<a id="period_982" href="#period_982">. </a></p>
+                        <p>Key Pair generation specifies 5 ways (or methods) to generate the primes p and q<a id="period_983" href="#period_983">. </a>These
                           include:</p>
                         <p>
                           <ol type="1">
@@ -3096,30 +3220,30 @@ The following sections list Common Criteria and technology terms used in this do
                           </ol></p>
                           <p>To test the key generation method for the Random Provable primes method and for all
                             the Primes with Conditions methods, the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation
-                            routine with sufficient data to deterministically generate the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key pair<a id="period_947" href="#period_947">. </a>This
+                            routine with sufficient data to deterministically generate the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key pair<a id="period_984" href="#period_984">. </a>This
                             includes the random seeds, the public exponent of the <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> key, and the desired key
-                            length<a id="period_948" href="#period_948">. </a>For each key length supported, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25
-                            key pairs<a id="period_949" href="#period_949">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s implementation by
+                            length<a id="period_985" href="#period_985">. </a>For each key length supported, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25
+                            key pairs<a id="period_986" href="#period_986">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s implementation by
                             comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated from a known good
-                            implementation<a id="period_950" href="#period_950">. </a></p>
+                            implementation<a id="period_987" href="#period_987">. </a></p>
                       <p><b><i>Key Generation for <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-4 <abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr> Schemes</i></b></p>
                             <p><i><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-4 <abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr> Key Generation Test</i></p>
                             <p>For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-256, P-384 and P-521, the evaluator shall
-                              require the implementation under test (IUT) to generate 10 private/public key pairs<a id="period_951" href="#period_951">. </a>                              The private key shall be generated using an approved random bit generator (<abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>)<a id="period_952" href="#period_952">. </a>To
+                              require the implementation under test (IUT) to generate 10 private/public key pairs<a id="period_988" href="#period_988">. </a>                              The private key shall be generated using an approved random bit generator (<abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>)<a id="period_989" href="#period_989">. </a>To
                               determine correctness, the evaluator shall submit the generated key pairs to the public
-                              key verification (PKV) function of a known good implementation<a id="period_953" href="#period_953">. </a>                              </p>
+                              key verification (PKV) function of a known good implementation<a id="period_990" href="#period_990">. </a>                              </p>
                             <p><i><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 186-4 Public Key Verification (PKV) Test</i></p>
                             <p>For each supported <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> curve, i.e., P-256, P-384 and P-521, the evaluator shall
                               generate 10 private/public key pairs using the key generation function of a known good
                               implementation and modify five of the public key values so that they are incorrect,
-                              leaving five values unchanged (i.e., correct)<a id="period_954" href="#period_954">. </a>The evaluator shall obtain in response a
-                              set of 10 PASS/FAIL values<a id="period_955" href="#period_955">. </a></p>
+                              leaving five values unchanged (i.e., correct)<a id="period_991" href="#period_991">. </a>The evaluator shall obtain in response a
+                              set of 10 PASS/FAIL values<a id="period_992" href="#period_992">. </a></p>
                             <p><b><i>Key Generation for Finite-Field Cryptography (<abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr>)</i></b></p>
                             <p>The evaluator shall verify the implementation of the Parameters Generation and the
                               Key Generation for <abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> using the Parameter Generation and Key
-                              Generation test<a id="period_956" href="#period_956">. </a>This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly produce values for
+                              Generation test<a id="period_993" href="#period_993">. </a>This test verifies the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly produce values for
                               the field prime p, the cryptographic prime q (dividing p-1), the cryptographic group
-                              generator g, and the calculation of the private key x and public key y<a id="period_957" href="#period_957">. </a></p>
+                              generator g, and the calculation of the private key x and public key y<a id="period_994" href="#period_994">. </a></p>
                               <p>The Parameter generation specifies 2 ways (or methods) to generate the cryptographic
                                 prime q and the field prime p:</p>
                                 <p>Cryptographic and Field Primes:<ul>
@@ -3129,24 +3253,24 @@ The following sections list Common Criteria and technology terms used in this do
                                 and two ways to generate the cryptographic group generator g:</p>
                                 <p>Cryptographic Group Generator:<ul>
                                   <li>Generator g constructed through a verifiable process</li>
-                                  <li>Generator g constructed through an unverifiable process<a id="period_958" href="#period_958">. </a></li>
+                                  <li>Generator g constructed through an unverifiable process<a id="period_995" href="#period_995">. </a></li>
                                 </ul></p>
                                 <p>The Key generation specifies 2 ways to generate the private key x:</p>
                                 <p>Private Key:<ul>
                                   <li>len(q) bit output of <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> where 1 &lt;=x &lt;= q-1</li>
                                   <li>len(q) + 64 bit output of <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>, followed by a mod q-1 operation and +1
-                                    operation where 1&lt;= x&lt;=q-1<a id="period_959" href="#period_959">. </a></li>
+                                    operation where 1&lt;= x&lt;=q-1<a id="period_996" href="#period_996">. </a></li>
                                 </ul></p>
                                 <p>The security strength of the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> must be at least that of the security offered by the
-                                  <abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> parameter set<a id="period_960" href="#period_960">. </a></p>
+                                  <abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> parameter set<a id="period_997" href="#period_997">. </a></p>
                                 <p>To test the cryptographic and field prime generation method for the provable primes
                                   method and/or the group generator g for a verifiable process, the evaluator must seed
                                   the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> parameter generation routine with sufficient data to deterministically generate
-                                  the parameter set<a id="period_961" href="#period_961">. </a></p>
+                                  the parameter set<a id="period_998" href="#period_998">. </a></p>
                                 <p>For each key length supported, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 parameter
-                                  sets and key pairs<a id="period_962" href="#period_962">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s
+                                  sets and key pairs<a id="period_999" href="#period_999">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s
                                   implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated from
-                                  a known good implementation<a id="period_963" href="#period_963">. </a>Verification must also confirm<a id="period_964" href="#period_964">. </a><ul>
+                                  a known good implementation<a id="period_1000" href="#period_1000">. </a>Verification must also confirm<a id="period_1001" href="#period_1001">. </a><ul>
                                     <li>g != 0,1</li>
                                     <li>q divides p-1</li>
                                     <li>g^q mod p = 1</li>
@@ -3155,131 +3279,7 @@ The following sections list Common Criteria and technology terms used in this do
                                   </ul>
                                   for each <abbr class="dyn-abbr"><a href="#abbr_FFC">FFC</a></abbr> parameter set and key pair </p>
                                 <p></p>
-                          </div></div></div></div></div><div class="comp" id="FCS_CKM.6/KEK"><h4>FCS_CKM.6/KEK Cryptographic Key Destruction (Key Cryptographic Erase)</h4>
-        <div class="element"><div class="reqid" id="FCS_CKM.6.1/KEK"><a href="#FCS_CKM.6.1/KEK" class="abbr">FCS_CKM.6.1/KEK</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy [<b>assignment</b>: 
-     <span class="assignable-content">list of cryptographic keys (including keying material)</span>]
-            when [<i>no longer needed</i>]<a id="period_965" href="#period_965">. </a>          </div></div>
-        
-        <div class="element"><div class="reqid" id="FCS_CKM.6.2/KEK"><a href="#FCS_CKM.6.2/KEK" class="abbr">FCS_CKM.6.2/KEK</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1">FCS_CKM.6.1</a> in accordance
-            with a specified cryptographic key destruction method [<i>by using the appropriate method to destroy
-            all encryption keys encrypting the key intended for destruction</i>] that meets the following: 
-            [<i>no standard</i>]<a id="period_966" href="#period_966">. </a>          <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-            A key can be considered destroyed by destroying the key that protects the
-            key<a id="period_967" href="#period_967">. </a>If a key is wrapped or encrypted it is not necessary to &#8220;overwrite&#8221; that key, overwriting
-            the key that is used to wrap or encrypt the key used to encrypt/decrypt data, using the
-            appropriate method for the memory type involved, will suffice<a id="period_968" href="#period_968">. </a>For example, if a product uses
-            a Key Encryption Key (<abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr>) to encrypt a Data Encryption Key (<abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>), destroying the <abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr>
-            using one of the methods in FCS_CKM.EXT.6.1 is sufficient, since the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> would no longer
-            be usable (of course, presumes the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> is still encrypted<a id="period_969" href="#period_969">. </a>          </span></div></div></div>
-      <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.6/KEK">FCS_CKM.6/KEK</a></div>
-            
-            
-            
-            
-          <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component<a id="period_970" href="#period_970">. </a><br></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component<a id="period_971" href="#period_971">. </a><br></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">
-              The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&#8217;s keychain in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>/<abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> and identify each instance a
-              key is destroyed by this method<a id="period_972" href="#period_972">. </a>In each instance the evaluator shall verify all keys capable
-              of decrypting the target key are destroyed in accordance with a specified key destruction method<a id="period_973" href="#period_973">. </a>            </div></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component<a id="period_974" href="#period_974">. </a><br></div></div></div></div><h3 id="fpt-optional" class="indexable" data-level="3">A.1.3 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_FAC_EXT.1"><h4>FPT_FAC_EXT.1 Firmware Access Control</h4>
-          
-          
-          
-          
-          
-          <div class="element"><div class="reqid" id="FPT_FAC_EXT.1.1"><a href="#FPT_FAC_EXT.1.1" class="abbr">FPT_FAC_EXT.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_320">a password</span>, <span class="selectable-content" id="_s_321">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_322">a privileged user action</span>] before the firmware update proceeds<a id="period_975" href="#period_975">. </a>            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              Before an update takes place, the drive owner will authorize the update by providing either a known unique 
-              value (for example, a serial number) that is printed on the collaborative Protection Profile for Full Drive 
-              Encryption - Encryption Engine drive, a password (which should be administratively configurable as defined 
-              in <a href="#FMT_SMF.1">FMT_SMF.1</a>) or perform the operation as a privileged user<a id="period_976" href="#period_976">. </a>It is assumed that physical presence to the drive
-              is limited to authorized personnel<a id="period_977" href="#period_977">. </a>If the correct value is not provided, the update will not take place<a id="period_978" href="#period_978">. </a>The
-              values are intended to be unique per drive so they cannot be easily exhausted<a id="period_979" href="#period_979">. </a><br><br>
-              The same requirements for cleaning up a password still apply<a id="period_980" href="#period_980">. </a>            </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_FAC_EXT.1">FPT_FAC_EXT.1</a></div>
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes information stating how the Access Control 
-                process takes place along with a description of the values that are used<a id="period_981" href="#period_981">. </a>              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process<a id="period_982" href="#period_982">. </a>              </div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this component<a id="period_983" href="#period_983">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall perform the following test<a id="period_984" href="#period_984">. </a>                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_FAC_EXT.1:1</a>:
-      
-                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
-                    value is necessary for the update to continue<a id="period_985" href="#period_985">. </a>                  </li>
-                </ul></span>
-              </div></div></div></div></div><div class="comp" id="FPT_RBP_EXT.1"><h4>FPT_RBP_EXT.1 Rollback Protection</h4>
-          
-          
-          
-          
-          
-          <div class="element"><div class="reqid" id="FPT_RBP_EXT.1.1"><a href="#FPT_RBP_EXT.1.1" class="abbr">FPT_RBP_EXT.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall verify that the new firmware package is not downgrading to a lower
-              security version number by [<b>assignment</b>: 
-     <span class="assignable-content">method of verifying the security version number
-              is the same as or higher than the currently installed version</span>]<a id="period_986" href="#period_986">. </a>            </div></div>
-          
-            <div class="element"><div class="reqid" id="FPT_RBP_EXT.1.2"><a href="#FPT_RBP_EXT.1.2" class="abbr">FPT_RBP_EXT.1.2</a></div><div class="reqdesc">
-                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall generate and return an error code if the attempted firmware
-                update package is detected to be an invalid version<a id="period_987" href="#period_987">. </a>              <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-                This requirement prevents an unauthorized rollback of the firmware to an
-                earlier authentic version<a id="period_988" href="#period_988">. </a>This mitigates against unknowing installation of an earlier authentic
-                firmware version that may have a security weakness<a id="period_989" href="#period_989">. </a>It is expected that vendors will increase
-                security version numbers with each new update package<a id="period_990" href="#period_990">. </a><br><br>
-                For <a href="#FPT_RBP_EXT.1.1">FPT_RBP_EXT.1.1</a> the purpose is to verify that the new package has a security version
-                number equal to or larger than the security version number of currently installed firmware
-                package<a id="period_991" href="#period_991">. </a><br><br>
-                The administrator guidance would include instructions for the administrator to configure the
-                rollback prevention mechanism, if appropriate<a id="period_992" href="#period_992">. </a>              </span></div></div></div>
-          
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_RBP_EXT.1">FPT_RBP_EXT.1</a></div>
-              
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes at a high level the process for verifying
-                that security version checking is performed before an upgrade is installed<a id="period_993" href="#period_993">. </a>The evaluator shall verify that
-                a high level description of the types of error codes are provided and when an error would be triggered<a id="period_994" href="#period_994">. </a>              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                The evaluator ensures that a description is provided on how the user should interpret the error codes<a id="period_995" href="#period_995">. </a>              </div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
-			There are no additional <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this component<a id="period_996" href="#period_996">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall perform the following test:
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_RBP_EXT.1:1</a>:
-      
-                    The evaluator shall try installing a lower security version number upgrade (either by just modifying the
-                    version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
-                    be installed and an error is presented to the user<a id="period_997" href="#period_997">. </a>                  </li>
-                </ul></span>
-              </div></div></div></div></div><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Objective requirements<a id="period_998" href="#period_998">. </a></p><h2 id="feat-based-reqs" class="indexable" data-level="2">A.3 Implementation-dependent  Requirements
-    </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
-            Implementation-dependent requirements<a id="period_999" href="#period_999">. </a></p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
-    </h1><span class="description">
-	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
-        the baseline requirements
-        (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
-        are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_1000" href="#period_1000">. </a>        There are additional requirements based on selections in the body of 
-        the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
-        if certain selections are made, then additional requirements below must be included<a id="period_1001" href="#period_1001">. </a> 	</p>
-		 </span><h2 id="fcs-sel-based" class="indexable" data-level="2">B.1 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+                          </div></div></div></div></div><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FCS_KDF_EXT.1.1">FCS_KDF_EXT.1.1</a>, <a href="#FCS_SNI_EXT.1.1">FCS_SNI_EXT.1.1</a>, <a href="#FCS_SNI_EXT.1.3">FCS_SNI_EXT.1.3</a>, <a href="#FCS_VAL_EXT.1.1">FCS_VAL_EXT.1.1</a>, <a href="#FPT_KYP_EXT.1.1">FPT_KYP_EXT.1.1</a><a id="period_1002" href="#period_1002">. </a>           </i></b></div>
               
               
