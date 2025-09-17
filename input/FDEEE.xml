@@ -820,7 +820,7 @@
 	    
 		 <SOE name="OE.PASSPHRASE_STRENGTH">
 			  <description>
-			    An authorized administrator will be responsible for ensuring that the passphrase authorization factor 
+			    An authorized user will be responsible for ensuring that the passphrase authorization factor 
 			    conforms to guidance from the Enterprise using the TOE.<h:br/><h:br/>
 			    Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to
 			    administrative guidance.
