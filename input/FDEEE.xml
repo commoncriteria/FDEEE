@@ -1393,7 +1393,7 @@
               </f-element>
               <f-element id="fcs-ckm-6e2-pwr">
                 <title>
-                  The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in
+                  The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1/Power in
                   accordance with a specified cryptographic key destruction method <h:b><selectables>
                     <selectable>instruct the operational environment to clear</selectable>
                     <selectable>erase</selectable>
