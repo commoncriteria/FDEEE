@@ -526,10 +526,10 @@ The following sections list Common Criteria and technology terms used in this do
                           encrypted for storage in volatile or non-volatile memory). In the case where the only
                           selection made for the destruction method key was removal of power, then this test is
                           unnecessary. The evaluator shall:<ol type="1">
-                            <li>Record the value of the key in the TOE subject to clearing.</li>
+                            <li>Record the value of the key in the TOE subject to erasure.</li>
                             <li>Cause the TOE to perform a normal cryptographic processing with the key
                               from Step #1.</li>
-                            <li>Cause the TOE to clear the key.</li>
+                            <li>Cause the TOE to erase the key.</li>
                             <li>Cause the TOE to stop the execution but not exit.</li>
                             <li>Cause the TOE to dump the entire memory of the TOE into a binary file.</li>
                             <li>Search the content of the binary file created in Step #5 for instances of the
@@ -554,9 +554,9 @@ The following sections list Common Criteria and technology terms used in this do
                           <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_CKM.6.2:2</a>:
       
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media (e.g., MBR file system):<ol type="1">
-                              <li>Record the value of the key in the TOE subject to clearing.</li>
+                              <li>Record the value of the key in the TOE subject to erasure.</li>
                               <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                              <li>Cause the TOE to clear the key.</li>
+                              <li>Cause the TOE to erase the key.</li>
                               <li>Search the logical view that the key was stored in for instances of the known
                                 key value from Step #1. If a copy is found, then the test fails.</li>
                               <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a
@@ -570,10 +570,10 @@ The following sections list Common Criteria and technology terms used in this do
                           <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:3</a>:
       
                             Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
-                              <li>Record the logical storage location of the key in the TOE subject to clearing</li>
+                              <li>Record the logical storage location of the key in the TOE subject to erasure</li>
                               <li>Cause the TOE to perform a normal cryptographic processing with the key
                                 from Step #1.</li>
-                              <li>Cause the TOE to clear the key.</li>
+                              <li>Cause the TOE to erase the key.</li>
                               <li>Read the logical storage location in Step #1 of non-volatile memory to ensure
                                 the appropriate pattern is utilized.</li>
                             </ol>
@@ -603,9 +603,9 @@ The following sections list Common Criteria and technology terms used in this do
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
                       <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div>
+                      <li>details of the interface used for key erasure when relying on the OE for memory erasure.</li></ul></div>
                   <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div>
+                    Operational Environment for memory erasure and how that is achieved.</div>
                   <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
                 </span></div><div class="comp" id="FCS-CKM-EXT-6"><h4>FCS_CKM_EXT.6 Cryptographic Key Destruction Types</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM_EXT.6</div>
@@ -1085,7 +1085,7 @@ The following sections list Common Criteria and technology terms used in this do
                   which the TOE enters a Compliant power saving state. Additionally, the evaluator shall 
                   verify that the guidance documentation provides information on how long it is expected
                   to take for the TOE to fully transition into the Compliant power saving state (e.g. how
-                  many seconds for the volatile memory to be completely cleared).</div></div><div class="eacategory">KMD</div><div class="ea">
+                  many seconds for the volatile memory to be completely erased).</div></div><div class="eacategory">KMD</div><div class="ea">
 			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall trigger each condition in the list of identified conditions and ensure
                     the TOE ends up in a compliant power saving state by using the test indicated by
                     the selection in FCS_CKM_EXT.6.</div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
@@ -1333,7 +1333,7 @@ The following sections list Common Criteria and technology terms used in this do
               master file table.
             </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
               For these tests the evaluator shall utilize appropriate development environment (e.g. a Virtual Machine)
-              and development tools (debuggers, simulators, etc.) to test that keys are cleared, including all copies 
+              and development tools (debuggers, simulators, etc.) to test that keys are erased, including all copies 
               of the key that may have been created internally by the TOE during normal cryptographic processing with
               that key.
               <span class="testlist-"><ul>
@@ -1342,9 +1342,9 @@ The following sections list Common Criteria and technology terms used in this do
                   by the TOE (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Cause the TOE to stop the execution but not exit.</li>
                     <li>Cause the TOE to dump the entire memory of the TOE into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -1362,9 +1362,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
                   evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to view the 
                   key storage location:<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>                    
+                    <li>Cause the TOE to erase the key.</li>                    
                     <li>Search the non-volatile memory the key was stored in for instances of the known key value from 
                       Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
@@ -1377,9 +1377,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. 
                   The evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to 
                   view the key storage location:<ol type="1">
-                    <li>Record the storage location of the key in the TOE subject to clearing.</li>
+                    <li>Record the storage location of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Search the storage location in Step #1 of non-volatile memory to ensure
                       the appropriate pattern is used.</li>
                   </ol>
@@ -1441,9 +1441,9 @@ The following sections list Common Criteria and technology terms used in this do
                   by the TOE (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Cause the TOE to stop the execution but not exit.</li>
                     <li>Cause the TOE to dump the entire memory of the TOE into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -1467,9 +1467,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
                   evaluator shall use a tool that provides a logical view of the media (e.g., MBR
                   file system):<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>                    
+                    <li>Cause the TOE to erase the key.</li>                    
                     <li>Search the logical view that the key was stored in for instances of the known key value from 
                       Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
@@ -1481,9 +1481,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. 
                   The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
-                    <li>Record the logical storage location of the key in the TOE subject to clearing.</li>
+                    <li>Record the logical storage location of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Read the logical storage location in Step #1 of non-volatile memory to
                       ensure the appropriate pattern is used.</li>
                   </ol>
@@ -1550,20 +1550,20 @@ The following sections list Common Criteria and technology terms used in this do
               ST author shall provide an estimated range.
             </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
               For these tests the evaluator shall use appropriate development environment (e.g. a Virtual Machine) and
-              development tools (debuggers, simulators, etc.) to test that keys are cleared, including all copies of 
+              development tools (debuggers, simulators, etc.) to test that keys are erased, including all copies of 
               the key that may have been created internally by the TOE during normal cryptographic processing with that
               key.<br/><br/>
               For destruction on wear-leveled memory, if a time period is required before is evaluator shall wait that 
-              amount of time after clearing the key in tests 2 and 3.
+              amount of time after erasing the key in tests 2 and 3.
               <span class="testlist-"><ul>
                 <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_CKM.6/TOEHW:1</a>:
       Applied to each key held as plaintext in volatile memory and subject to destruction by overwrite
                   by the TOE (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Cause the TOE to stop the execution but not exit.</li>
                     <li>Cause the TOE to dump the entire memory of the TOE into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -1581,9 +1581,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
                   evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to view the key storage location:<ol type="1">
-                    <li>Record the value of the key in the TOE subject to clearing.</li>
+                    <li>Record the value of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>                    
+                    <li>Cause the TOE to erase the key.</li>                    
                     <li>Search the non-volatile memory the key was stored in for instances of the known key value from Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
                       piece. If a fragment is found then the test is repeated (as described for Use
@@ -1594,9 +1594,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the TOE. 
                   The evaluator shall use special tools (as needed), provided by the TOE developer if necessary, to view the key storage location:<ol type="1">
-                    <li>Record the logical storage location of the key in the TOE subject to clearing.</li>
+                    <li>Record the logical storage location of the key in the TOE subject to erasure.</li>
                     <li>Cause the TOE to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the TOE to clear the key.</li>
+                    <li>Cause the TOE to erase the key.</li>
                     <li>Read the logical storage location in Step #1 of non-volatile memory to
                       ensure the appropriate pattern is used.</li>
                   </ol>

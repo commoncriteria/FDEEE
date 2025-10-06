@@ -1066,7 +1066,7 @@ The following sections list Common Criteria and technology terms used in this do
           </span></dd><dt class="assumption defined" id="A.POWER_DOWN">A.POWER_DOWN</dt><dd><span class="description">
         The user does not leave the platform or storage device unattended
         until the device is in a compliant power saving state or has fully powered off. This properly
-        clears memories and locks down the device. Authorized users do not leave the platform or
+        erase memories and locks down the device. Authorized users do not leave the platform or
         storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock
         screen or sleep state). Users power the platform or storage device down or place it into a
         power managed state, such as a “hibernation mode”.
@@ -1139,7 +1139,7 @@ The following sections list Common Criteria and technology terms used in this do
 			    Rationale: A platform free of malware [<a href="#A.PLATFORM_STATE">A.PLATFORM_STATE</a>] prevents an attack vector that could 
 			    potentially interfere with the correct operation of the product.
 			  </span></dd><dt class="SOE defined" id="OE.POWER_DOWN">OE.POWER_DOWN</dt><dd><span class="description">
-			    Volatile memory is cleared after entering a compliant power-saving state or turned off so
+			    Volatile memory is erased after entering a compliant power-saving state or turned off so
 			    memory remnant attacks are infeasible.<br/><br/>
 			    Rationale: Users are properly trained [<a href="#A.TRAINED_USER">A.TRAINED_USER</a>] to not leave the storage device unattended
 			    until it is in a compliant power-saving state or fully turned off. 
@@ -1372,10 +1372,10 @@ The following sections list Common Criteria and technology terms used in this do
                           encrypted for storage in volatile or non-volatile memory). In the case where the only
                           selection made for the destruction method key was removal of power, then this test is
                           unnecessary. The evaluator shall:<ol type="1">
-                            <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                            <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                             <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key
                               from Step #1.</li>
-                            <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                            <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                             <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to stop the execution but not exit.</li>
                             <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to dump the entire memory of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> into a binary file.</li>
                             <li>Search the content of the binary file created in Step #5 for instances of the
@@ -1400,9 +1400,9 @@ The following sections list Common Criteria and technology terms used in this do
                           <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FCS_CKM.6.2:2</a>:
       
                             Applied to each key held in non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall use a tool that provides a logical view of the media (e.g., <abbr class="dyn-abbr"><a href="#abbr_MBR">MBR</a></abbr> file system):<ol type="1">
-                              <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                              <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                               <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                              <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                              <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                               <li>Search the logical view that the key was stored in for instances of the known
                                 key value from Step #1. If a copy is found, then the test fails.</li>
                               <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a
@@ -1416,10 +1416,10 @@ The following sections list Common Criteria and technology terms used in this do
                           <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FCS_CKM.6.2:3</a>:
       
                             Applied to each key held as non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
-                              <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing</li>
+                              <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure</li>
                               <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key
                                 from Step #1.</li>
-                              <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                              <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                               <li>Read the logical storage location in Step #1 of non-volatile memory to ensure
                                 the appropriate pattern is utilized.</li>
                             </ol>
@@ -1446,10 +1446,10 @@ The following sections list Common Criteria and technology terms used in this do
                   state indistinguishable from a compliant power state (e.g. as result of sudden or
                   unexpected power loss). Guidance documentation must state what conditions result in clear text keys
                   or key materials to stay in volatile memory and identify mitigation measures that result in
-                  clearing of volatile memory.
+                  erasure of volatile memory.
                 </span></div></div></div>
          <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">                  
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_57">instruct the operational environment to clear</span>, <span class="selectable-content" id="_s_58">erase</span>]</b> [<i>cryptographic keys and key material from volatile
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_57">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_58">erase</span>]</b> [<i>cryptographic keys and key material from volatile
                     memory</i>] when [<i>transitioning to a compliant power saving state as
                       defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>] that meets the following: [<i>a key
                         destruction method specified in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i>].
@@ -1458,10 +1458,10 @@ The following sections list Common Criteria and technology terms used in this do
     </span><span class="note">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<br/><br/>
+                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<br/><br/>
                   
                   Self-encrypting drives do not store keys in the Operational Environment and are unable to instruct the Operational Environment to 
-                  clear keys so they are not expected to select “instruct the Operational Environment to clear”.
+                  erase keys so they are not expected to select “instruct the Operational Environment to erase”.
                 </span></div></div></div>  
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_CKM.6.1/Power">FCS_CKM.6.1/Power</a></div>
                     <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a description of what keys and key material
@@ -1483,9 +1483,9 @@ The following sections list Common Criteria and technology terms used in this do
                     The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> outlines: <ul>
                       <li>if and when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory clearing.</li></ul></div>
+                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory erasure.</li></ul></div>
                   <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> depends on the
-                    Operational Environment for memory clearing and how that is achieved.</div>
+                    Operational Environment for memory erasure and how that is achieved.</div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> lists each type of key, its origin, possible memory locations in volatile memory.</div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
                 </div></div></div>
@@ -2274,7 +2274,7 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_362">no other conditions</span>].
             <div class="appnote"><span class="note-header">Application
       Note:
-    </span><span class="note">If volatile memory is not cleared as part of an unexpected power shutdown sequence then guidance documentation must define mitigation activities (e.g. how long users should wait after an unexpected power-down before volatile memory can be considered cleared).</span></div></div></div>
+    </span><span class="note">If volatile memory is not erased as part of an unexpected power shutdown sequence then guidance documentation must define mitigation activities (e.g. how long users should wait after an unexpected power-down before volatile memory can be considered erased).</span></div></div></div>
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_PWR_EXT.2">FPT_PWR_EXT.2</a></div>
                 
                 
@@ -2285,7 +2285,7 @@ The following sections list Common Criteria and technology terms used in this do
                   which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> enters a Compliant power saving state. Additionally, the evaluator shall 
                   verify that the guidance documentation provides information on how long it is expected
                   to take for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to fully transition into the Compliant power saving state (e.g. how
-                  many seconds for the volatile memory to be completely cleared).</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
+                  many seconds for the volatile memory to be completely erased).</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall trigger each condition in the list of identified conditions and ensure
                     the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ends up in a compliant power saving state by using the test indicated by
                     the selection in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a>.</div></div></div></div></div>
@@ -3587,7 +3587,7 @@ The following sections list Common Criteria and technology terms used in this do
               master file table.
             </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
               For these tests the evaluator shall utilize appropriate development environment (e.g. a Virtual Machine)
-              and development tools (debuggers, simulators, etc.) to test that keys are cleared, including all copies 
+              and development tools (debuggers, simulators, etc.) to test that keys are erased, including all copies 
               of the key that may have been created internally by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> during normal cryptographic processing with
               that key.
               <span class="testlist-"><ul>
@@ -3596,9 +3596,9 @@ The following sections list Common Criteria and technology terms used in this do
                   by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to stop the execution but not exit.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to dump the entire memory of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -3616,9 +3616,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The 
                   evaluator shall use special tools (as needed), provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> developer if necessary, to view the 
                   key storage location:<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>                    
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>                    
                     <li>Search the non-volatile memory the key was stored in for instances of the known key value from 
                       Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
@@ -3631,9 +3631,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
                   The evaluator shall use special tools (as needed), provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> developer if necessary, to 
                   view the key storage location:<ol type="1">
-                    <li>Record the storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Search the storage location in Step #1 of non-volatile memory to ensure
                       the appropriate pattern is used.</li>
                   </ol>
@@ -3734,9 +3734,9 @@ The following sections list Common Criteria and technology terms used in this do
                   by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to stop the execution but not exit.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to dump the entire memory of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -3760,9 +3760,9 @@ The following sections list Common Criteria and technology terms used in this do
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The 
                   evaluator shall use a tool that provides a logical view of the media (e.g., <abbr class="dyn-abbr"><a href="#abbr_MBR">MBR</a></abbr>
                   file system):<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>                    
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>                    
                     <li>Search the logical view that the key was stored in for instances of the known key value from 
                       Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
@@ -3774,9 +3774,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
                   The evaluator shall use a tool that provides a logical view of the media:<ol type="1">
-                    <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Read the logical storage location in Step #1 of non-volatile memory to
                       ensure the appropriate pattern is used.</li>
                   </ol>
@@ -3892,20 +3892,20 @@ The following sections list Common Criteria and technology terms used in this do
               <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author shall provide an estimated range.
             </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
               For these tests the evaluator shall use appropriate development environment (e.g. a Virtual Machine) and
-              development tools (debuggers, simulators, etc.) to test that keys are cleared, including all copies of 
+              development tools (debuggers, simulators, etc.) to test that keys are erased, including all copies of 
               the key that may have been created internally by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> during normal cryptographic processing with that
               key.<br/><br/>
               For destruction on wear-leveled memory, if a time period is required before is evaluator shall wait that 
-              amount of time after clearing the key in tests 2 and 3.
+              amount of time after erasing the key in tests 2 and 3.
               <span class="testlist-"><ul>
                 <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_CKM.6/TOEHW:1</a>:
       Applied to each key held as plaintext in volatile memory and subject to destruction by overwrite
                   by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (whether or not the plaintext value is subsequently encrypted for storage in volatile or 
                   non-volatile memory). In the case where the only selection made for the destruction method key was 
                   removal of power, then this test is unnecessary. The evaluator shall:<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to stop the execution but not exit.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to dump the entire memory of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> into a binary file.</li>
                     <li>Search the content of the binary file created in Step #5 for instances of the known key value from Step #1.</li>
@@ -3923,9 +3923,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The 
                   evaluator shall use special tools (as needed), provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> developer if necessary, to view the key storage location:<ol type="1">
-                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the value of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>                    
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>                    
                     <li>Search the non-volatile memory the key was stored in for instances of the known key value from Step #1. If a copy is found, then the test fails.</li>
                     <li>Break the key value from Step #1 into 3 or 4 similar sized pieces and perform a search using each 
                       piece. If a fragment is found then the test is repeated (as described for Use
@@ -3936,9 +3936,9 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Applied to each key held as non-volatile memory and subject to destruction by overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. 
                   The evaluator shall use special tools (as needed), provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> developer if necessary, to view the key storage location:<ol type="1">
-                    <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to clearing.</li>
+                    <li>Record the logical storage location of the key in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> subject to erasure.</li>
                     <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform a normal cryptographic processing with the key from Step #1.</li>
-                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to clear the key.</li>
+                    <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to erase the key.</li>
                     <li>Read the logical storage location in Step #1 of non-volatile memory to
                       ensure the appropriate pattern is used.</li>
                   </ol>

@@ -1066,7 +1066,7 @@ The following sections list Common Criteria and technology terms used in this do
           </span></dd><dt class="assumption defined" id="A.POWER_DOWN">A.POWER_DOWN</dt><dd><span class="description">
         The user does not leave the platform or storage device unattended
         until the device is in a compliant power saving state or has fully powered off. This properly
-        clears memories and locks down the device. Authorized users do not leave the platform or
+        erase memories and locks down the device. Authorized users do not leave the platform or
         storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock
         screen or sleep state). Users power the platform or storage device down or place it into a
         power managed state, such as a “hibernation mode”.
@@ -1139,7 +1139,7 @@ The following sections list Common Criteria and technology terms used in this do
 			    Rationale: A platform free of malware [<a href="#A.PLATFORM_STATE">A.PLATFORM_STATE</a>] prevents an attack vector that could 
 			    potentially interfere with the correct operation of the product.
 			  </span></dd><dt class="SOE defined" id="OE.POWER_DOWN">OE.POWER_DOWN</dt><dd><span class="description">
-			    Volatile memory is cleared after entering a compliant power-saving state or turned off so
+			    Volatile memory is erased after entering a compliant power-saving state or turned off so
 			    memory remnant attacks are infeasible.<br/><br/>
 			    Rationale: Users are properly trained [<a href="#A.TRAINED_USER">A.TRAINED_USER</a>] to not leave the storage device unattended
 			    until it is in a compliant power-saving state or fully turned off. 
@@ -1293,10 +1293,10 @@ The following sections list Common Criteria and technology terms used in this do
                   state indistinguishable from a compliant power state (e.g. as result of sudden or
                   unexpected power loss). Guidance documentation must state what conditions result in clear text keys
                   or key materials to stay in volatile memory and identify mitigation measures that result in
-                  clearing of volatile memory.
+                  erasure of volatile memory.
                 </span></div></div></div>
          <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">                  
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_57">instruct the operational environment to clear</span>, <span class="selectable-content" id="_s_58">erase</span>]</b> [<i>cryptographic keys and key material from volatile
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_57">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_58">erase</span>]</b> [<i>cryptographic keys and key material from volatile
                     memory</i>] when [<i>transitioning to a compliant power saving state as
                       defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>] that meets the following: [<i>a key
                         destruction method specified in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i>].
@@ -1305,10 +1305,10 @@ The following sections list Common Criteria and technology terms used in this do
     </span><span class="note">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<br/><br/>
+                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<br/><br/>
                   
                   Self-encrypting drives do not store keys in the Operational Environment and are unable to instruct the Operational Environment to 
-                  clear keys so they are not expected to select “instruct the Operational Environment to clear”.
+                  erase keys so they are not expected to select “instruct the Operational Environment to erase”.
                 </span></div></div></div>  
             </div>
       
@@ -1629,7 +1629,7 @@ The following sections list Common Criteria and technology terms used in this do
      <span class="assignable-content">other conditions</span>]</span>, <span class="selectable-content" id="_s_362">no other conditions</span>].
             <div class="appnote"><span class="note-header">Application
       Note:
-    </span><span class="note">If volatile memory is not cleared as part of an unexpected power shutdown sequence then guidance documentation must define mitigation activities (e.g. how long users should wait after an unexpected power-down before volatile memory can be considered cleared).</span></div></div></div>
+    </span><span class="note">If volatile memory is not erased as part of an unexpected power shutdown sequence then guidance documentation must define mitigation activities (e.g. how long users should wait after an unexpected power-down before volatile memory can be considered erased).</span></div></div></div>
         </div>
         
         
