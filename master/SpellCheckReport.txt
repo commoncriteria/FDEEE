@@ -262,7 +262,6 @@ output/FDEEE-sd.html: SHAVS
 output/FDEEE-sd.html: SP800
 output/FDEEE-sd.html: Sanitization
 output/FDEEE-sd.html: Subclause
-output/FDEEE-sd.html: XORing
 output/FDEEE-sd.html: X’
 output/FDEEE-sd.html: acvp
 output/FDEEE-sd.html: cLen
