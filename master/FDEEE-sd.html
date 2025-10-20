@@ -966,7 +966,7 @@ The following sections list Common Criteria and technology terms used in this do
           </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
             The evaluator shall perform the following tests:
             <span class="testlist-"><ul>
-              <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FDP_DSK_EXT.1:1</a>:
+              <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FDP_DSK_EXT.1:1</a>:
       
                 Write data to random locations, perform required actions and compare:<ul>
                 <li>Ensure TOE is initialized and, if hardware, encryption engine is ready</li>
@@ -976,7 +976,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</li>
                 </ul>
               </li>
-              <li class="test-"><a id="_t_26" class="defined" href="#_t_26">Test FDP_DSK_EXT.1:2</a>:
+              <li class="test-"><a id="_t_25" class="defined" href="#_t_25">Test FDP_DSK_EXT.1:2</a>:
       
                 Write pattern to storage device in multiple locations:<ul>
                 <li>For HW Encryption, randomly select several logical address locations within the device’s lowest to highest address 
@@ -984,7 +984,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <li>For SW Encryption, write the pattern using multiple files in multiple logical locations.</li>
                 </ul>              
               </li>
-              <li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FDP_DSK_EXT.1:3</a>:
+              <li class="test-"><a id="_t_26" class="defined" href="#_t_26">Test FDP_DSK_EXT.1:3</a>:
       
                 Verify data is encrypted:<ul>
                 <li>For HW Encryption:<ul>
@@ -1115,12 +1115,12 @@ The following sections list Common Criteria and technology terms used in this do
                     different combinations of authentic and unauthentic digital signatures and hashes, as
                     well as for digital signature alone): </p>
                     <span class="testlist-"><ul>
-                      <li class="test-"><a id="_t_30" class="defined" href="#_t_30">Test FPT_TUD_EXT.1:1</a>:
+                      <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_TUD_EXT.1:1</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
                         the update.</li>
-                      <li class="test-"><a id="_t_31" class="defined" href="#_t_31">Test FPT_TUD_EXT.1:2</a>:
+                      <li class="test-"><a id="_t_30" class="defined" href="#_t_30">Test FPT_TUD_EXT.1:2</a>:
       The evaluator performs the version verification activity to determine the current
                         version of the TOE. After the update tests described in the following tests, the evaluator
                         performs this activity again to verify that the version correctly corresponds to that of
@@ -1152,7 +1152,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall perform the following test.
                 <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_FAC_EXT.1:1</a>:
+                  <li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FPT_FAC_EXT.1:1</a>:
       
                     The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
                     value is necessary for the update to continue.
@@ -1173,7 +1173,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall perform the following test:
                 <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_29" class="defined" href="#_t_29">Test FPT_RBP_EXT.1:1</a>:
+                  <li class="test-"><a id="_t_28" class="defined" href="#_t_28">Test FPT_RBP_EXT.1:1</a>:
       
                     The evaluator shall try installing a lower security version number upgrade (either by just modifying the
                     version number or by using an upgrade provided by the vendor) and will verify that the lower version cannot
@@ -2136,21 +2136,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <div class="eacategory">TSS</div><div class="ea">
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-SMC-EXT-1"><h4>FCS_SMC_EXT.1 Submask Combining</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_SMC_EXT.1</div>
-                    
-                      
-                      
-                      
-                  <div class="eacategory">TSS</div><div class="ea"><div class="ea">If the submasks produced from the authorization factors are XORed together to form
-                      the BEV or intermediate key, the TSS section shall identify how this is performed (e.g.,
-                      if there are ordering requirements, checks performed, etc.). The evaluator shall also
-                      confirm that the TSS describes how the length of the output produced is at least the
-                      same as that of the BEV.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="ea"><div class="eacategory">KMD</div><div class="ea">The evaluator shall review the KMD to ensure that an approved combination is used
-                        and does not result in the weakening or exposure of key material.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall perform the following test:<span class="testlist-"><ul>
-                        <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FCS_SMC_EXT.1:1</a>:
-      (conditional): If there is more than one authorization factor, ensure that failure
-                          to supply a required authorization factor does not result in access to the encrypted data.</li>
-                      </ul></span></div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation </h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.1</div>
                       <div class="eacategory">TSS</div><div class="ea">
                         <p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</p>
@@ -2174,14 +2160,14 @@ The following sections list Common Criteria and technology terms used in this do
                       <div class="eacategory">Tests</div><div class="ea">
                         The evaluator shall perform the following tests:
                         <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FCS_VAL_EXT.1.1:1</a>:
+                          <li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FCS_VAL_EXT.1.1:1</a>:
       The evaluator shall determine the limit on the average rate of the number of
                             consecutive failed authorization attempts. The evaluator will test the TOE by entering
                             that number of incorrect authorization factors in consecutive attempts to access the
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</li>
-                          <li class="test-"><a id="_t_24" class="defined" href="#_t_24">Test FCS_VAL_EXT.1.1:2</a>:
+                          <li class="test-"><a id="_t_23" class="defined" href="#_t_23">Test FCS_VAL_EXT.1.1:2</a>:
       For each validated authorization factor, ensure that when the user provides an
                             incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
                             the TOE (e.g., to the EE).</li>

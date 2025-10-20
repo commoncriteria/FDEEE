@@ -69,7 +69,6 @@ output/FDEEE-release-linkable.html: MBRs
 output/FDEEE-release-linkable.html: MMMM
 output/FDEEE-release-linkable.html: NAS
 output/FDEEE-release-linkable.html: OEAP
-output/FDEEE-release-linkable.html: P9
 output/FDEEE-release-linkable.html: PCI
 output/FDEEE-release-linkable.html: PINs
 output/FDEEE-release-linkable.html: PRFs
@@ -169,7 +168,6 @@ output/FDEEE-release.html: Labelling
 output/FDEEE-release.html: MBRs
 output/FDEEE-release.html: MMMM
 output/FDEEE-release.html: NAS
-output/FDEEE-release.html: P9
 output/FDEEE-release.html: PINs
 output/FDEEE-release.html: PRFs
 output/FDEEE-release.html: PSS
@@ -350,7 +348,6 @@ output/FDEEE.html: MBRs
 output/FDEEE.html: MMMM
 output/FDEEE.html: NAS
 output/FDEEE.html: OEAP
-output/FDEEE.html: P9
 output/FDEEE.html: PCI
 output/FDEEE.html: PINs
 output/FDEEE.html: PRFs
