@@ -509,7 +509,7 @@
 		      Successful guessing of the authorization factors may cause the TOE to release DEKs or otherwise put it in a state
 		      in which it discloses protected data to unauthorized users. 
 		    </description>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
+		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by requiring  proper salts, which will prevent pre-computed attacks.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
 		      several options for enforcing validation, such as key sanitization of the DEK or when a
 		      configurable number of failed validation attempts is reached within a 24 hour period. This
@@ -526,7 +526,7 @@
 		    </description>
 		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by
 		      ensuring the proper choice of encryption algorithm and mode.</rationale>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper
+		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper
 		      handling of salts, nonces, and initialization vectors.</rationale>
 		    
       </threat>
@@ -546,7 +546,7 @@
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>		    
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>		    
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to accept a BEV.</rationale>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
+		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating</rationale>
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
@@ -603,7 +603,7 @@
 		      storage device.
 		    </description>		
 		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by ensuring the proper choice of encryption algorithm and mode.</rationale>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper handling of salts, nonces, and initialization vectors.</rationale>
+		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper handling of salts, nonces, and initialization vectors.</rationale>
 		    
 		  </threat>
 		  
@@ -616,7 +616,7 @@
 				  the storage device (e.g., to specified disk sectors, to specified blocks).
 				</description>		
 		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by defining proper AES encryption.</rationale>
-		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper nonces and IVs are used in the encryption of data.</rationale>
+		    <addressed-by>FCS_OTV_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring proper nonces and IVs are used in the encryption of data.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by verifying the correct authentication and limits attempts to decrypt the data.</rationale>
 		    <addressed-by>FDP_DSK_EXT.1</addressed-by><rationale>Mitigates this threat by ensuring the TOE performs full drive encryption, which includes all protected data.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
@@ -924,7 +924,7 @@
         <ext-comp-def title="Submask Combining" fam-id="FCS_SMC_EXT">
           <fam-behavior>This family specifies the means by which submasks are combined, if the TOE supports more than one submask being used to derive or protect the BEV.</fam-behavior>
         </ext-comp-def>
-        <ext-comp-def title="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" fam-id="FCS_SNI_EXT">
+        <ext-comp-def title="Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)" fam-id="FCS_OTV_EXT">
           <fam-behavior>This family ensures that salts, nonces, and IVs are well formed.</fam-behavior>
         </ext-comp-def>
         <ext-comp-def title="Validation of Cryptographic Elements" fam-id="FCS_VAL_EXT">
@@ -1115,8 +1115,7 @@
             </f-component>
       
       <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
-              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fcs-sni-ext-1-3-sel-2"/>
+              <depends on-sel="fcs-otv-sels"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
@@ -1134,7 +1133,7 @@
                 </title>
                 <note role="application">
                   Symmetric keys may be used to generate keys along the key chain. Any instance in where the TSF DRBG is referenced for key generation (as in 
-                  FCS_SNI_EXT.1 and FCS_CKM.5), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
+                  FCS_OTV_EXT.1 and FCS_CKM.5), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
                   an authorization factor (as in FPT_KYP_EXT.1 and FCS_VAL_EXT.1)                  
                 </note>
                 <aactivity>
@@ -3279,7 +3278,7 @@
             <f-component cc-id="fcs_rbg.1" name="Cryptographic Operation (Random Bit Generation)"
               id="fcs-rbg-1" status="sel-based">
               <depends on-sel="tsf-rbg-dek"/>
-              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+              <depends on-sel="fcs-otv-sels"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
@@ -3414,7 +3413,7 @@
                 </title>
                 <note role="application">
                   This SFR is claimed when the TSF requires the use of random bit generation for submask generation (FCS_AFA_EXT.1,
-                  FCS_CKM.5) or salt generation (FCS_SNI_EXT.1).
+                  FCS_CKM.5) or salt generation (FCS_OTV_EXT.1).
                 </note>
                 <aactivity level="element">              
                   <TSS>
@@ -4129,7 +4128,7 @@
         
         <f-component cc-id="fpt_fls.1" name="Failure with Preservation of Secure State" status="sel-based">
           <depends on-sel="tsf-rbg-dek"/>
-          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+          <depends on-sel="fcs-otv-sels"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
@@ -4465,7 +4464,7 @@
         
         <f-component cc-id="fpt_tst.1" name="TSF Self-Testing" status="sel-based">
           <depends on-sel="tsf-rbg-dek"/>
-          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+          <depends on-sel="fcs-otv-sels"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
           <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
