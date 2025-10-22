@@ -17,6 +17,7 @@ output/FDEEE-release-linkable.html: 5C
 output/FDEEE-release-linkable.html: 6C
 output/FDEEE-release-linkable.html: 7C
 output/FDEEE-release-linkable.html: 8C
+output/FDEEE-release-linkable.html: 8s
 output/FDEEE-release-linkable.html: 90A
 output/FDEEE-release-linkable.html: 9C
 output/FDEEE-release-linkable.html: ACPI
@@ -45,8 +46,6 @@ output/FDEEE-release-linkable.html: G2
 output/FDEEE-release-linkable.html: G3
 output/FDEEE-release-linkable.html: GFSBox
 output/FDEEE-release-linkable.html: IUT
-output/FDEEE-release-linkable.html: K1
-output/FDEEE-release-linkable.html: K2
 output/FDEEE-release-linkable.html: KDF
 output/FDEEE-release-linkable.html: KDF2
 output/FDEEE-release-linkable.html: KDF3
@@ -57,8 +56,6 @@ output/FDEEE-release-linkable.html: KPF3
 output/FDEEE-release-linkable.html: KPF4
 output/FDEEE-release-linkable.html: KRKs
 output/FDEEE-release-linkable.html: KeySbox
-output/FDEEE-release-linkable.html: L1
-output/FDEEE-release-linkable.html: L2
 output/FDEEE-release-linkable.html: Labelling
 output/FDEEE-release-linkable.html: MBRs
 output/FDEEE-release-linkable.html: MMMM
@@ -76,7 +73,6 @@ output/FDEEE-release-linkable.html: S4
 output/FDEEE-release-linkable.html: S5
 output/FDEEE-release-linkable.html: SATA
 output/FDEEE-release-linkable.html: SHAVS
-output/FDEEE-release-linkable.html: SP800
 output/FDEEE-release-linkable.html: Sanitization
 output/FDEEE-release-linkable.html: Subclause
 output/FDEEE-release-linkable.html: TD0606
@@ -107,7 +103,6 @@ output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: pseudocode
 output/FDEEE-release-linkable.html: reinstantiating
 output/FDEEE-release-linkable.html: sanitization
-output/FDEEE-release-linkable.html: subkey
 output/FDEEE-release-linkable.html: un
 output/FDEEE-release-linkable.html: uninstantiating
 output/FDEEE-release-linkable.html: unpowered
@@ -159,8 +154,6 @@ output/FDEEE-release.html: KPF2
 output/FDEEE-release.html: KPF3
 output/FDEEE-release.html: KPF4
 output/FDEEE-release.html: KRKs
-output/FDEEE-release.html: L1
-output/FDEEE-release.html: L2
 output/FDEEE-release.html: Labelling
 output/FDEEE-release.html: MBRs
 output/FDEEE-release.html: MMMM
@@ -213,6 +206,7 @@ output/FDEEE-sd.html: 38A
 output/FDEEE-sd.html: 38D
 output/FDEEE-sd.html: 38E
 output/FDEEE-sd.html: 56C
+output/FDEEE-sd.html: 8s
 output/FDEEE-sd.html: 90A
 output/FDEEE-sd.html: AESAVS
 output/FDEEE-sd.html: AFTs
@@ -225,8 +219,6 @@ output/FDEEE-sd.html: DRBGs
 output/FDEEE-sd.html: FB
 output/FDEEE-sd.html: GFSBox
 output/FDEEE-sd.html: IUT
-output/FDEEE-sd.html: K1
-output/FDEEE-sd.html: K2
 output/FDEEE-sd.html: KDF
 output/FDEEE-sd.html: KDF2
 output/FDEEE-sd.html: KDF3
@@ -244,7 +236,6 @@ output/FDEEE-sd.html: PP’s
 output/FDEEE-sd.html: PRFs
 output/FDEEE-sd.html: RTU
 output/FDEEE-sd.html: SHAVS
-output/FDEEE-sd.html: SP800
 output/FDEEE-sd.html: Sanitization
 output/FDEEE-sd.html: Subclause
 output/FDEEE-sd.html: VarKey
@@ -260,7 +251,6 @@ output/FDEEE-sd.html: nonrepeating
 output/FDEEE-sd.html: pass’
 output/FDEEE-sd.html: preauthentication
 output/FDEEE-sd.html: pseudocode
-output/FDEEE-sd.html: subkey
 output/FDEEE.html: 0s
 output/FDEEE.html: 0x00007A4B
 output/FDEEE.html: 10C
@@ -280,6 +270,7 @@ output/FDEEE.html: 5C
 output/FDEEE.html: 6C
 output/FDEEE.html: 7C
 output/FDEEE.html: 8C
+output/FDEEE.html: 8s
 output/FDEEE.html: 90A
 output/FDEEE.html: 9C
 output/FDEEE.html: ACPI
@@ -309,8 +300,6 @@ output/FDEEE.html: G2
 output/FDEEE.html: G3
 output/FDEEE.html: GFSBox
 output/FDEEE.html: IUT
-output/FDEEE.html: K1
-output/FDEEE.html: K2
 output/FDEEE.html: KDF
 output/FDEEE.html: KDF2
 output/FDEEE.html: KDF3
@@ -321,8 +310,6 @@ output/FDEEE.html: KPF3
 output/FDEEE.html: KPF4
 output/FDEEE.html: KRKs
 output/FDEEE.html: KeySbox
-output/FDEEE.html: L1
-output/FDEEE.html: L2
 output/FDEEE.html: Labelling
 output/FDEEE.html: MBRs
 output/FDEEE.html: MMMM
@@ -340,7 +327,6 @@ output/FDEEE.html: S4
 output/FDEEE.html: S5
 output/FDEEE.html: SATA
 output/FDEEE.html: SHAVS
-output/FDEEE.html: SP800
 output/FDEEE.html: Sanitization
 output/FDEEE.html: Subclause
 output/FDEEE.html: TD0606
@@ -372,7 +358,6 @@ output/FDEEE.html: preauthentication
 output/FDEEE.html: pseudocode
 output/FDEEE.html: reinstantiating
 output/FDEEE.html: sanitization
-output/FDEEE.html: subkey
 output/FDEEE.html: un
 output/FDEEE.html: uninstantiating
 output/FDEEE.html: unpowered
