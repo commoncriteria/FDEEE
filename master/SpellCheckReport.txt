@@ -6,7 +6,10 @@ output/FDEEE-release-linkable.html: 10C
 output/FDEEE-release-linkable.html: 11C
 output/FDEEE-release-linkable.html: 1S
 output/FDEEE-release-linkable.html: 2S
+output/FDEEE-release-linkable.html: 38A
 output/FDEEE-release-linkable.html: 38B
+output/FDEEE-release-linkable.html: 38C
+output/FDEEE-release-linkable.html: 38D
 output/FDEEE-release-linkable.html: 38E
 output/FDEEE-release-linkable.html: 38F
 output/FDEEE-release-linkable.html: 4C
@@ -69,6 +72,7 @@ output/FDEEE-release-linkable.html: MBRs
 output/FDEEE-release-linkable.html: MMMM
 output/FDEEE-release-linkable.html: NAS
 output/FDEEE-release-linkable.html: OEAP
+output/FDEEE-release-linkable.html: PBKDFs
 output/FDEEE-release-linkable.html: PCI
 output/FDEEE-release-linkable.html: PINs
 output/FDEEE-release-linkable.html: PRFs
@@ -83,6 +87,7 @@ output/FDEEE-release-linkable.html: S4
 output/FDEEE-release-linkable.html: S5
 output/FDEEE-release-linkable.html: SATA
 output/FDEEE-release-linkable.html: SHAVS
+output/FDEEE-release-linkable.html: SNI
 output/FDEEE-release-linkable.html: SP800
 output/FDEEE-release-linkable.html: Sanitization
 output/FDEEE-release-linkable.html: Subclause
@@ -124,7 +129,11 @@ output/FDEEE-release.html: 10C
 output/FDEEE-release.html: 11C
 output/FDEEE-release.html: 1S
 output/FDEEE-release.html: 2S
+output/FDEEE-release.html: 38A
 output/FDEEE-release.html: 38B
+output/FDEEE-release.html: 38C
+output/FDEEE-release.html: 38D
+output/FDEEE-release.html: 38E
 output/FDEEE-release.html: 38F
 output/FDEEE-release.html: 4C
 output/FDEEE-release.html: 56B
@@ -168,6 +177,7 @@ output/FDEEE-release.html: Labelling
 output/FDEEE-release.html: MBRs
 output/FDEEE-release.html: MMMM
 output/FDEEE-release.html: NAS
+output/FDEEE-release.html: PBKDFs
 output/FDEEE-release.html: PINs
 output/FDEEE-release.html: PRFs
 output/FDEEE-release.html: PSS
@@ -178,6 +188,7 @@ output/FDEEE-release.html: S3
 output/FDEEE-release.html: S4
 output/FDEEE-release.html: S5
 output/FDEEE-release.html: SATA
+output/FDEEE-release.html: SNI
 output/FDEEE-release.html: Sanitization
 output/FDEEE-release.html: Subclause
 output/FDEEE-release.html: TD0606
@@ -283,7 +294,10 @@ output/FDEEE.html: 10C
 output/FDEEE.html: 11C
 output/FDEEE.html: 1S
 output/FDEEE.html: 2S
+output/FDEEE.html: 38A
 output/FDEEE.html: 38B
+output/FDEEE.html: 38C
+output/FDEEE.html: 38D
 output/FDEEE.html: 38E
 output/FDEEE.html: 38F
 output/FDEEE.html: 4C
@@ -348,6 +362,7 @@ output/FDEEE.html: MBRs
 output/FDEEE.html: MMMM
 output/FDEEE.html: NAS
 output/FDEEE.html: OEAP
+output/FDEEE.html: PBKDFs
 output/FDEEE.html: PCI
 output/FDEEE.html: PINs
 output/FDEEE.html: PRFs
@@ -362,6 +377,7 @@ output/FDEEE.html: S4
 output/FDEEE.html: S5
 output/FDEEE.html: SATA
 output/FDEEE.html: SHAVS
+output/FDEEE.html: SNI
 output/FDEEE.html: SP800
 output/FDEEE.html: Sanitization
 output/FDEEE.html: Subclause
