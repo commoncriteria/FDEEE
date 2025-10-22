@@ -560,7 +560,6 @@
 		    <addressed-by>FCS_CKM.6/TOEHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_COP.1/KeyedHash (selection-based)</addressed-by><rationale>Mitigates this threat by performing	cryptographic keyed-hash message authentication.</rationale>		    
 		    <addressed-by>FCS_COP.1/KeyEnc (selection-based)</addressed-by><rationale>Mitigates this threat by performing key encryption and decryption.</rationale>
-		    <addressed-by>FCS_COP.1/KeyEncap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key transport.</rationale>
 		    <addressed-by>FCS_COP.1/KeyWrap (selection-based)</addressed-by><rationale>Mitigates this threat by performing key wrapping.</rationale>			  
 
 		    <addressed-by>FCS_CKM.5 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring strong key derivation methods.</rationale>
@@ -3106,7 +3105,6 @@
                       <selectable>intermediate keys originating from one or more submasks to the BEV using the following methods:
                         <selectables linebreak="yes">
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b>,</selectable>
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b>,</selectable>
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in FCS_CKM.5</selectable>                          
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in FCS_SMC_EXT.1,</selectable>
@@ -3186,8 +3184,8 @@
                   
                   The method the TOE uses to chain keys and manage/protect them is described in the Key Management Description; see Appendix E for more information.<h:br/><h:br/>
                 
-                  The TOE’s use of key encryption, key encapsulation, key wrapping, key derivation, or submask combining determines whether the selection-based requirements 
-                  FCS_COP.1/KeyEnc, FCS_COP.1/KeyEncap, FCS_COP.1/KeyWrap, FCS_CKM.5, and FCS_SMC_EXT.1 are claimed. Additionally, the TOE’s use of key encryption or key
+                  The TOE’s use of key encryption or key wrapping, key derivation, or submask combining determines whether the selection-based requirements 
+                  FCS_COP.1/KeyEnc or FCS_COP.1/KeyWrap, FCS_CKM.5, and FCS_SMC_EXT.1 are claimed. Additionally, the TOE’s use of key encryption or key
                   wrapping for key chaining requires FCS_CKM.1/SKG and FCS_RBG.1 (for key generation) and FCS_COP.1/SKC (for symmetric encryption) to be claimed.
                   
                 </note>
@@ -3231,7 +3229,6 @@
                 <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1<h:b>/SKG</h:b></selectable>
                 <selectable>key derivation as specified in FCS_CKM.5</selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-4">key wrapping as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
-                <selectable id="fcs-kyc-ext-2-2-sel-3">key transport as specified in FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
               </selectables> while maintaining an effective strength of <selectables>
                 <selectable>128 bits</selectable>
@@ -4283,13 +4280,13 @@
             <title>
               The TSF shall <selectables linebreak="yes">
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-1">not store keys in non-volatile memory</selectable>
-                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1<h:b>/KeyWrap</h:b>, or encrypted, as specified in FCS_COP.1<h:b>/KeyEnc</h:b> or FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
+                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1<h:b>/KeyWrap</h:b>, or encrypted, as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-3">only store plaintext keys that meet any one of the following criteria <selectables>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3a">the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.2</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ci">wrapped as specified in FCS_COP.1<h:b>/KeyWrap</h:b></selectable>
-                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1<h:b>/KeyEnc</h:b> or FCS_COP.1<h:b>/KeyEncap</h:b></selectable>
+                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1<h:b>/KeyEnc</h:b></selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
@@ -4307,7 +4304,8 @@
                 <selectable>only store plaintext keys that meet any one of the following criteria <selectables>
                   <selectable>the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.2</selectable>
                   <selectable>the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
-                  <selectable>the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
+                  <selectable>the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half ofkas
+				  the key split is <selectables linebreak="yes">
                     <selectable>wrapped as specified in FCS_COP.1</selectable>
                     <selectable>encrypted as specified in FCS_COP.1 or FCS_COP.1</selectable>
                     <selectable>derived and not stored in non-volatile memory</selectable>
@@ -4327,8 +4325,7 @@
               or OE, the only methods that allow it to play a security relevant role for protecting the BEV or the DEK are if it is a key split or providing additional layers 
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
-              If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
-              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
+              If the TSF implements key wrapping or key encryption to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap or FCS_COP.1/KeyEnc must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
               support generation, encryption, and decryption of symmetric keys used in support of these operations. If the TSF implements submask combining to maintain protected
               cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.
             </note>
