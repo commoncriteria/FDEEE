@@ -3,7 +3,9 @@ output/FDEEE-release-linkable.html: 0x00007A4B
 output/FDEEE-release-linkable.html: 10C
 output/FDEEE-release-linkable.html: 10x
 output/FDEEE-release-linkable.html: 11C
+output/FDEEE-release-linkable.html: 1GB
 output/FDEEE-release-linkable.html: 1S
+output/FDEEE-release-linkable.html: 2GB
 output/FDEEE-release-linkable.html: 2S
 output/FDEEE-release-linkable.html: 38A
 output/FDEEE-release-linkable.html: 38B
@@ -12,6 +14,7 @@ output/FDEEE-release-linkable.html: 38D
 output/FDEEE-release-linkable.html: 38E
 output/FDEEE-release-linkable.html: 38F
 output/FDEEE-release-linkable.html: 4C
+output/FDEEE-release-linkable.html: 4GB
 output/FDEEE-release-linkable.html: 56A
 output/FDEEE-release-linkable.html: 56B
 output/FDEEE-release-linkable.html: 56C
@@ -19,6 +22,7 @@ output/FDEEE-release-linkable.html: 5C
 output/FDEEE-release-linkable.html: 6C
 output/FDEEE-release-linkable.html: 7C
 output/FDEEE-release-linkable.html: 8C
+output/FDEEE-release-linkable.html: 8GB
 output/FDEEE-release-linkable.html: 8s
 output/FDEEE-release-linkable.html: 90A
 output/FDEEE-release-linkable.html: 9C
@@ -85,7 +89,7 @@ output/FDEEE-release-linkable.html: S3
 output/FDEEE-release-linkable.html: S4
 output/FDEEE-release-linkable.html: S5
 output/FDEEE-release-linkable.html: SATA
-output/FDEEE-release-linkable.html: SHAVS
+output/FDEEE-release-linkable.html: SHA3
 output/FDEEE-release-linkable.html: Sanitization
 output/FDEEE-release-linkable.html: Stateful
 output/FDEEE-release-linkable.html: Subclause
@@ -197,6 +201,7 @@ output/FDEEE-release.html: S3
 output/FDEEE-release.html: S4
 output/FDEEE-release.html: S5
 output/FDEEE-release.html: SATA
+output/FDEEE-release.html: SHA3
 output/FDEEE-release.html: Sanitization
 output/FDEEE-release.html: Stateful
 output/FDEEE-release.html: Subclause
@@ -233,12 +238,16 @@ output/FDEEE-release.html: v2
 output/FDEEE-sd.html: 0s
 output/FDEEE-sd.html: 0x00007A4B
 output/FDEEE-sd.html: 10x
+output/FDEEE-sd.html: 1GB
 output/FDEEE-sd.html: 1S
+output/FDEEE-sd.html: 2GB
 output/FDEEE-sd.html: 2S
 output/FDEEE-sd.html: 38A
 output/FDEEE-sd.html: 38D
 output/FDEEE-sd.html: 38E
+output/FDEEE-sd.html: 4GB
 output/FDEEE-sd.html: 56C
+output/FDEEE-sd.html: 8GB
 output/FDEEE-sd.html: 8s
 output/FDEEE-sd.html: 90A
 output/FDEEE-sd.html: AESAVS
@@ -271,7 +280,7 @@ output/FDEEE-sd.html: PCI
 output/FDEEE-sd.html: PP’s
 output/FDEEE-sd.html: PRFs
 output/FDEEE-sd.html: RTU
-output/FDEEE-sd.html: SHAVS
+output/FDEEE-sd.html: SHA3
 output/FDEEE-sd.html: Sanitization
 output/FDEEE-sd.html: Subclause
 output/FDEEE-sd.html: VarKey
@@ -294,7 +303,9 @@ output/FDEEE.html: 0x00007A4B
 output/FDEEE.html: 10C
 output/FDEEE.html: 10x
 output/FDEEE.html: 11C
+output/FDEEE.html: 1GB
 output/FDEEE.html: 1S
+output/FDEEE.html: 2GB
 output/FDEEE.html: 2S
 output/FDEEE.html: 38A
 output/FDEEE.html: 38B
@@ -303,6 +314,7 @@ output/FDEEE.html: 38D
 output/FDEEE.html: 38E
 output/FDEEE.html: 38F
 output/FDEEE.html: 4C
+output/FDEEE.html: 4GB
 output/FDEEE.html: 56A
 output/FDEEE.html: 56B
 output/FDEEE.html: 56C
@@ -310,6 +322,7 @@ output/FDEEE.html: 5C
 output/FDEEE.html: 6C
 output/FDEEE.html: 7C
 output/FDEEE.html: 8C
+output/FDEEE.html: 8GB
 output/FDEEE.html: 8s
 output/FDEEE.html: 90A
 output/FDEEE.html: 9C
@@ -377,7 +390,7 @@ output/FDEEE.html: S3
 output/FDEEE.html: S4
 output/FDEEE.html: S5
 output/FDEEE.html: SATA
-output/FDEEE.html: SHAVS
+output/FDEEE.html: SHA3
 output/FDEEE.html: Sanitization
 output/FDEEE.html: Stateful
 output/FDEEE.html: Subclause
