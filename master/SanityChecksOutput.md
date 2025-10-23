@@ -1,8 +1,4 @@
 * Error: Found a "assignable" element that is buried under stricken text:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[1]""/f-element[1]""/title[1]""/h:s[1]"and speci"/assignable[1]"cryptogra"
-* Error: Found a "assignable" element that is buried under stricken text:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[1]""/f-element[1]""/title[1]""/h:s[1]"and speci"/assignable[2]"list of s"
-* Error: Found a "assignable" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[2]""/f-element[1]""/title[1]"The TSF s"/h:s[2]"that meet"/assignable[1]"list of s"
 * Error: Found a "assignable" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[11]""/f-element[1]""/title[1]"The TSF s"/h:s[1]"and crypt"/assignable[1]"cryptogra"
@@ -95,7 +91,6 @@
 * Error: Detected multiple elements with an id of 'sel-fpt-kyp-ext-1-1-sel-3e'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
 * Error: Detected multiple elements with an id of 'fpt-pwr-ext-2-1'.
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[1]""/f-element[1]""/aactivity[1]""/Tests[1]""/h:p[22]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"The follo"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"The follo"/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[12]""/f-element[1]""/note[1]"The HMAC "/h:p[1]""
