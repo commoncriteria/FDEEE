@@ -169,11 +169,12 @@
       <term full="Advanced Encryption Standard" abbr="AES"></term>
       <term full="Authorization Factor">A value that a user knows, has, or is (e.g. password, token, etc.)
         submitted to the TOE to establish that the user is in the community
-        authorized to use the hard disk. This value is used in the derivation or
+        authorized to use the drive. This value is used in the derivation or
         decryption of the BEV and eventual decryption of the DEK. Note
         that these values may or may not be used to establish the particular
         identity of the user. </term>
-        
+      <term full="Authorized User">A user who has a valid Authorization Factor or 
+        legitimate physical possession of the drive.</term>
       <term abbr='BEV' full="Border Encryption Value">A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</term>
