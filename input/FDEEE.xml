@@ -3909,7 +3909,7 @@
         
         <f-component name="Firmware Access Control" cc-id="fpt_fac_ext.1" id="fpt-fac-ext" status="optional">
           <consistency-rationale/>
-          <comp-lev>requires the TSF to require an authentication factor prior to allowing a
+          <comp-lev>requires the TSF to require an authentication factor or action prior to allowing a
             firmware update to be performed.</comp-lev>
           <management>
             The following actions could be considered for the management functions in FMT:
@@ -3924,22 +3924,20 @@
               The TSF shall require <selectables>
                 <selectable>a password</selectable>
                 <selectable>a known unique value printed on the device</selectable>
-                <selectable>a privileged user action</selectable>
-              </selectables> before the firmware update proceeds.
+                <selectable>a authorized user action</selectable>
+              </selectables>before the firmware update proceeds.
             </title>
             <note role="application">
               Before an update takes place, the drive owner will authorize the update by providing either a known unique 
-              value (for example, a serial number) that is printed on the collaborative Protection Profile for Full Drive 
-              Encryption - Encryption Engine drive, a password (which should be administratively configurable as defined 
-              in FMT_SMF.1) or perform the operation as a privileged user. It is assumed that physical presence to the drive
+              value (for example, a serial number) that is printed on the drive, a password (which should be administratively configurable as defined 
+              in FMT_SMF.1), or perform a specific action as an authorized user. It is assumed that physical presence to the drive
               is limited to authorized personnel. If the correct value is not provided, the update will not take place. The
-              values are intended to be unique per drive so they cannot be easily exhausted.<h:br/><h:br/>
-              The same requirements for cleaning up a password still apply.
+              values are intended to be unique per drive so they cannot be easily guessed.<h:br/><h:br/>
             </note>
             <aactivity>
               <TSS>
                 The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
-                process takes place along with a description of the values that are used.
+                process takes place along with a description of the values or actions that are used.
               </TSS>
               <Guidance>
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
@@ -3951,7 +3949,7 @@
                 <testlist>
                   <test>
                     The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
-                    value is necessary for the update to continue.
+                    value or action is necessary for the update to continue.
                   </test>
                 </testlist>
               </Tests>
