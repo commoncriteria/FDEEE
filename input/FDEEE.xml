@@ -3108,40 +3108,29 @@
           <audit/>
           <dependencies>No dependencies</dependencies>
           <f-element id="fcs-kyc-ext-2-1">
-            <title>The TSF shall accept a BEV of at least <selectables><selectable>128 bits</selectable><selectable>256 bits</selectable></selectables> from <assignable>one or more external entities</assignable>.</title>
+            <title>The TSF shall accept a BEV of at least 256 bits.</title>
             
           </f-element>
           <f-element id="fcs-kyc-ext-2-2">
             <title>
               The TSF shall maintain a chain of intermediary keys originating from the BEV to the DEK using the following methods: <selectables linebreak="yes">
-                <selectable>asymmetric key generation as specified in FCS_CKM.1/AKG</selectable>
-                <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1/SKG</selectable>
-                <selectable>key derivation as specified in FCS_CKM.5</selectable>
-                <selectable id="fcs-kyc-ext-2-2-sel-4">key wrapping as specified in FCS_COP.1/KeyWrap</selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1/KeyEnc</selectable>
-              </selectables> while maintaining an effective strength of <selectables>
-                <selectable>128 bits</selectable>
-                <selectable>256 bits</selectable>
-              </selectables>
-              while maintaining an effective strength of <selectables><selectable>128 bits</selectable>
-                <selectable>256 bits</selectable></selectables> for symmetric keys and an effective strength of <selectables><selectable>not applicable</selectable><selectable>112 bits</selectable><selectable>128 bits</selectable><selectable>192 bits</selectable><selectable>256 bits</selectable></selectables> for asymmetric keys.
+                <selectable id="fcs-kyc-ext-2-2-sel-4">key wrapping as specified in FCS_COP.1/KeyWrap</selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-3">key derivation as specified in FCS_CKM.5</selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-2">key combining as specified in FCS_SMC_EXT.1</selectable>
+              </selectables> while maintaining an effective strength of [256 bits]
+              while maintaining an effective strength of [256 bits] for symmetric keys and an effective strength of <selectables><selectable>not applicable</selectable><selectable>128 bits</selectable><selectable>192 bits</selectable><selectable>256 bits</selectable></selectables> for asymmetric keys.
             </title>
             
             <ext-comp-def-title>
               <title>
                 The TSF shall maintain a chain of intermediary keys originating from the BEV to the DEK using the following methods: <selectables linebreak="yes">
-                  <selectable>asymmetric key generation as specified in FCS_CKM.1</selectable>
-                  <selectable id="fcs-kyc-ext-2-2-sel-2">symmetric key generation as specified in FCS_CKM.1</selectable>
                   <selectable>key derivation as specified in FCS_CKM.5</selectable>
                   <selectable>key wrapping as specified in FCS_COP.1</selectable>
-                  <selectable>key transport as specified in FCS_COP.1</selectable>
                   <selectable>key encryption as specified in FCS_COP.1</selectable>
-                </selectables> while maintaining an effective strength of <selectables>
-                  <selectable>128 bits</selectable>
-                  <selectable>256 bits</selectable>
-                </selectables>
-                while maintaining an effective strength of <selectables><selectable>128 bits</selectable>
-                  <selectable>256 bits</selectable></selectables> for symmetric keys and an effective strength of <selectables><selectable>not applicable</selectable><selectable>112 bits</selectable><selectable>128 bits</selectable><selectable>192 bits</selectable><selectable>256 bits</selectable></selectables> for asymmetric keys.
+				  <selectable>key combining as specified in FCS_SMC_EXT.1</selectable>
+                </selectables> 
+                while maintaining an effective strength of [256 bits] for symmetric keys and an effective strength of <selectables><selectable>not applicable</selectable><selectable>128 bits</selectable><selectable>192 bits</selectable><selectable>256 bits</selectable></selectables> for asymmetric keys.
               </title>
             </ext-comp-def-title>
             <note role="application">
