@@ -723,10 +723,12 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Authorization_Factor">Authorization Factor</div></td><td>A value that a user knows, has, or is (e.g. password, token, etc.)
         submitted to the TOE to establish that the user is in the community
-        authorized to use the hard disk. This value is used in the derivation or
+        authorized to use the drive. This value is used in the derivation or
         decryption of the BEV and eventual decryption of the DEK. Note
         that these values may or may not be used to establish the particular
         identity of the user. </td></tr>
+<tr><td><div id="Authorized_User">Authorized User</div></td><td>A user who has a valid Authorization Factor or 
+        legitimate physical possession of the drive.</td></tr>
 <tr><td><div id="Border_Encryption_Value">Border Encryption Value (BEV)</div></td><td>A value passed from the FDE Authorization
         Acquisition (AA) to the FDE Encryption Engine (EE) intended to link the key chains
         of the two components.</td></tr>
