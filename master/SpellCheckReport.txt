@@ -62,6 +62,7 @@ output/FDEEE-release-linkable.html: KPF2
 output/FDEEE-release-linkable.html: KPF3
 output/FDEEE-release-linkable.html: KPF4
 output/FDEEE-release-linkable.html: KRKs
+output/FDEEE-release-linkable.html: KeyEncap
 output/FDEEE-release-linkable.html: KeyGen
 output/FDEEE-release-linkable.html: KeySbox
 output/FDEEE-release-linkable.html: LMS
@@ -174,6 +175,7 @@ output/FDEEE-release.html: KPF2
 output/FDEEE-release.html: KPF3
 output/FDEEE-release.html: KPF4
 output/FDEEE-release.html: KRKs
+output/FDEEE-release.html: KeyEncap
 output/FDEEE-release.html: LMS
 output/FDEEE-release.html: Labelling
 output/FDEEE-release.html: M24
@@ -355,6 +357,7 @@ output/FDEEE.html: KPF2
 output/FDEEE.html: KPF3
 output/FDEEE.html: KPF4
 output/FDEEE.html: KRKs
+output/FDEEE.html: KeyEncap
 output/FDEEE.html: KeyGen
 output/FDEEE.html: KeySbox
 output/FDEEE.html: LMS
