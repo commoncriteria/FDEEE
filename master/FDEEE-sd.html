@@ -985,39 +985,33 @@ The following sections list Common Criteria and technology terms used in this do
               
                 
             <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                  <p>If item a) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes
                     how the TOE changes the DEK.</p>
-                  <p>If item b) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes
                     how the TOE cryptographically erase the DEK.</p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <p>The evaluator shall ensure the TSS describes
                     the process to initiate TOE firmware/software updates.</p>
                   <p>If item d) is selected in FMT_SMF.1.1: If additional management functions
                   are claimed in the ST, the evaluator shall verify that the TSS describes those
                   functions.</p>                  
                 </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                  <p>If item a) is selected in FMT_SMF.1.1: The evaluator shall review the AGD guidance
+                  <p>The evaluator shall review the AGD guidance
                     and shall determine that the instructions for changing a DEK exist. The instructions must
                     cover all environments on which the TOE is claiming conformance, and include any 
                     preconditions that must exist in order to successfully generate or re-generate the DEK.</p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall examine the operational 
+                  <p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</p>
-                  <p>If item d) is selected in FMT_SMF.1.1: Default Authorization Factors: It may be the
-                    case that the TOE arrives with default authorization factors in place. If it does, then the
-                    selection in item D must be made so that there is a mechanism to change these authorization
-                    factors. The operational guidance shall describe the method by which the user changes these
-                    factors when they are taking ownership of the device. The TSS shall describe the default 
-                    authorization factors that exist.</p>                  
-                  <p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
                     the AGD documentation.</p>                  
                 </div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">If item d)) is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
                 an encrypted DEK, the evaluator shall ensure the KMD describes how the TOE imports a wrapped
                 DEK and performs the decryption of the wrapped DEK.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   <p>
-                    If item a) and/or b) is selected in FMT_SMF.1.1: The evaluator shall verify that the 
+                    The evaluator shall verify that the 
                     TOE has the functionality to change and cryptographically erase the DEK (effectively removing
                     the ability to retrieve previous user data).
                   </p>
-                  <p>If item c) is selected in FMT_SMF.1.1: The evaluator shall verify that the TOE has the
+                  <p>The evaluator shall verify that the TOE has the
                     functionality to initiate TOE firmware/software updates.</p>
                   <p>If item d) is selected in FMT_SMF.1.1: If additional 
                     management functions are claimed, the evaluator shall verify

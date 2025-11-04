@@ -2125,8 +2125,7 @@ The following sections list Common Criteria and technology terms used in this do
               cryptographic functionality” could include key management functions; for example, the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> will be 
               wrapped or encrypted, and the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> will need to unwrap or decrypt the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>. In item (d), if no other
               management functions are provided (or claimed), then “no other functions” should be
-              selected. Default Authorization factors are the initial values that are used to
-              manipulate the drive.<br/><br/>            
+              selected. <br/><br/>            
               For the purposes of this document, key sanitization means to destroy the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, using one of the 
               approved destruction methods. This applies to instances of the protected key that
               exist in non-volatile storage.
@@ -2137,39 +2136,33 @@ The following sections list Common Criteria and technology terms used in this do
               
                 
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                  <p>If item a) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
+                  <p>The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
                     how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> changes the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</p>
-                  <p>If item b) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
+                  <p>The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
                     how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> cryptographically erase the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</p>
-                  <p>If item c) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
+                  <p>The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes
                     the process to initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates.</p>
                   <p>If item d) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: If additional management functions
                   are claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes those
                   functions.</p>                  
                 </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                  <p>If item a) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall review the AGD guidance
+                  <p>The evaluator shall review the AGD guidance
                     and shall determine that the instructions for changing a <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> exist. The instructions must
                     cover all environments on which the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is claiming conformance, and include any 
                     preconditions that must exist in order to successfully generate or re-generate the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</p>
-                  <p>If item c) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall examine the operational 
+                  <p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates.</p>
-                  <p>If item d) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: Default Authorization Factors: It may be the
-                    case that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> arrives with default authorization factors in place. If it does, then the
-                    selection in item D must be made so that there is a mechanism to change these authorization
-                    factors. The operational guidance shall describe the method by which the user changes these
-                    factors when they are taking ownership of the device. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall describe the default 
-                    authorization factors that exist.</p>                  
-                  <p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
                     the AGD documentation.</p>                  
                 </div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">If item d)) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> offers the functionality to import 
                 an encrypted <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>, the evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> imports a wrapped
                 <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> and performs the decryption of the wrapped <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                   <p>
-                    If item a) and/or b) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall verify that the 
+                    The evaluator shall verify that the 
                     <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the functionality to change and cryptographically erase the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> (effectively removing
                     the ability to retrieve previous user data).
                   </p>
-                  <p>If item c) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the
+                  <p>The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has the
                     functionality to initiate <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware/software updates.</p>
                   <p>If item d) is selected in <a href="#FMT_SMF.1.1">FMT_SMF.1.1</a>: If additional 
                     management functions are claimed, the evaluator shall verify
