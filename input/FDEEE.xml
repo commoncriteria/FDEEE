@@ -3831,38 +3831,31 @@
               cryptographic functionality” could include key management functions; for example, the BEV will be 
               wrapped or encrypted, and the EE will need to unwrap or decrypt the BEV. In item (d), if no other
               management functions are provided (or claimed), then “no other functions” should be
-              selected. Default Authorization factors are the initial values that are used to
-              manipulate the drive.<h:br/><h:br/>            
+              selected. <h:br/><h:br/>            
               For the purposes of this document, key sanitization means to destroy the DEK, using one of the 
               approved destruction methods. This applies to instances of the protected key that
               exist in non-volatile storage.
           </note>
             <aactivity>
                 <TSS>
-                  <h:p>If item a&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes
                     how the TOE changes the DEK.</h:p>
-                  <h:p>If item b&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes
                     how the TOE cryptographically erase the DEK.</h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall ensure the TSS describes
+                  <h:p>The evaluator shall ensure the TSS describes
                     the process to initiate TOE firmware/software updates.</h:p>
                   <h:p>If item d&#41; is selected in FMT_SMF.1.1: If additional management functions
                   are claimed in the ST, the evaluator shall verify that the TSS describes those
                   functions.</h:p>                  
                 </TSS>
                 <Guidance>
-                  <h:p>If item a&#41; is selected in FMT_SMF.1.1: The evaluator shall review the AGD guidance
+                  <h:p>The evaluator shall review the AGD guidance
                     and shall determine that the instructions for changing a DEK exist. The instructions must
                     cover all environments on which the TOE is claiming conformance, and include any 
                     preconditions that must exist in order to successfully generate or re-generate the DEK.</h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall examine the operational 
+                  <h:p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
-                  <h:p>If item d&#41; is selected in FMT_SMF.1.1: Default Authorization Factors: It may be the
-                    case that the TOE arrives with default authorization factors in place. If it does, then the
-                    selection in item D must be made so that there is a mechanism to change these authorization
-                    factors. The operational guidance shall describe the method by which the user changes these
-                    factors when they are taking ownership of the device. The TSS shall describe the default 
-                    authorization factors that exist.</h:p>                  
-                  <h:p>Disable Key Recovery: The guidance for disabling this capability shall be described in
+                  <h:p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
                     the AGD documentation.</h:p>                  
                 </Guidance>
               <KMD>If item d)&#41; is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
@@ -3870,11 +3863,11 @@
                 DEK and performs the decryption of the wrapped DEK.</KMD>
                 <Tests>
                   <h:p>
-                    If item a&#41; and/or b&#41; is selected in FMT_SMF.1.1: The evaluator shall verify that the 
+                    The evaluator shall verify that the 
                     TOE has the functionality to change and cryptographically erase the DEK (effectively removing
                     the ability to retrieve previous user data).
                   </h:p>
-                  <h:p>If item c&#41; is selected in FMT_SMF.1.1: The evaluator shall verify that the TOE has the
+                  <h:p>The evaluator shall verify that the TOE has the
                     functionality to initiate TOE firmware/software updates.</h:p>
                   <h:p>If item d&#41; is selected in FMT_SMF.1.1: If additional 
                     management functions are claimed, the evaluator shall verify
