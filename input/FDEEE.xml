@@ -2976,7 +2976,10 @@
 			<audit-event/>
 		</f-component>
         
-            <f-component cc-id="fcs_kyc_ext.1" name="Key Chaining (Initiator)" id="fcs-kyc-ext-1" status="invisible">
+            <!--
+			Not sure why this is invisible so I am commenting it out
+			
+			<f-component cc-id="fcs_kyc_ext.1" name="Key Chaining (Initiator)" id="fcs-kyc-ext-1" status="invisible">
               <consistency-rationale/>
               <comp-lev>requires the TSF to maintain a key chain for a BEV that is provided to a component external to the TOE.
                 Note that this cPP does not include FCS_KYC_EXT.1; it is only included here to provide a complete definition of the FCS_KYC_EXT family.
@@ -3098,6 +3101,7 @@
               </f-element>
           
             </f-component>
+			!-->
         
         <f-component cc-id="fcs_kyc_ext.2" name="Key Chaining (Recipient) " id="fcs-kyc-ext-2">
           <consistency-rationale/>
@@ -3115,6 +3119,7 @@
             <title>
               The TSF shall maintain a chain of intermediary keys originating from the BEV to the DEK using the following methods: <selectables linebreak="yes">
                 <selectable id="fcs-kyc-ext-2-2-sel-1">key encryption as specified in FCS_COP.1/KeyEnc</selectable>
+                <selectable id="fcs-kyc-ext-2-2-sel-5">key transport as specified in FCS_COP.1/KeyEncap</selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-4">key wrapping as specified in FCS_COP.1/KeyWrap</selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-3">key derivation as specified in FCS_CKM.5</selectable>
                 <selectable id="fcs-kyc-ext-2-2-sel-2">key combining as specified in FCS_SMC_EXT.1</selectable>
