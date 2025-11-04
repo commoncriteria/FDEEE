@@ -470,16 +470,16 @@ The following sections list Common Criteria and technology terms used in this do
                           <p>The evaluator shall verify the KMD includes a key lifecycle that includes a description
                             where key material resides, how the key material is used, and how the material is
                             destroyed once it is not needed and that the documentation in the KMD follows
-                            FCS_CKM.6 for the destruction.</p></div>
+                            FCS_CKM_EXT.6 for the destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
                   <div class="element-activity-header">FCS_CKM.6.2/Power</div>
                   <div class="eacategory">TSS</div><div class="ea">
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <ul>
                       <li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the OE for memory erasure.</li></ul></div>
+                      <li>details of the interface used for key erasure when relying on the OE for memory clearing.</li></ul></div>
                   <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory erasure and how that is achieved.</div>
+                    Operational Environment for memory clearing and how that is achieved.</div>
                   <div class="eacategory">KMD</div><div class="ea">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this SFR.</div>
                 </span></div><div class="comp" id="FCS-CKM-EXT-6"><h4>FCS_CKM_EXT.6 Cryptographic Key Destruction Types</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM_EXT.6</div>
@@ -963,7 +963,7 @@ The following sections list Common Criteria and technology terms used in this do
                 Verify data is encrypted:<ul>
                 <li>For HW Encryption:<ul>
                   <li>engage device’s functionality for generating a new encryption key, thus
-                    performing an erase of the key per FCS_CKM.4/Power</li>
+                    performing an erase of the key per FCS_CKM.6/Power</li>
                   <li>Read from the same locations at which the data was written</li>
                   <li>Compare the retrieved data to the written data and ensure they do not
                     match</li>

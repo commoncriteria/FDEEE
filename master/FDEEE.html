@@ -1269,7 +1269,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no test activities for this component.<br/></div></div></div></div>
       
       
-      
+
       
       
                   
@@ -1297,11 +1297,12 @@ The following sections list Common Criteria and technology terms used in this do
     </span><span class="note">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<br/><br/>
-                  
-                  Self-encrypting drives do not store keys in the Operational Environment and are unable to instruct the Operational Environment to 
-                  erase keys so they are not expected to select “instruct the Operational Environment to erase”.
-                </span></div></div></div>  
+                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<br/><br/>
+
+                  Self-encrypting drives do not store keys in the Operational Environment and cannot instruct
+                  the Operational Environment to perform functionality so they are not expected to select
+                  “instruct the Operational Environment to clear”.
+                </span></div></div></div>
             <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="element-activity-header"><a href="#FCS_CKM.6.1/Power">FCS_CKM.6.1/Power</a></div>
                     <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a description of what keys and key material
                       are destroyed when entering any compliant power saving state.</div>
@@ -1315,16 +1316,16 @@ The following sections list Common Criteria and technology terms used in this do
                           <p>The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> includes a key lifecycle that includes a description
                             where key material resides, how the key material is used, and how the material is
                             destroyed once it is not needed and that the documentation in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> follows
-                            FCS_CKM.6 for the destruction.</p></div>
+                            <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a> for the destruction.</p></div>
                       <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
                   <div class="element-activity-header"><a href="#FCS_CKM.6.2/Power">FCS_CKM.6.2/Power</a></div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">
                     The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> outlines: <ul>
                       <li>if and when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory erasure.</li></ul></div>
+                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory clearing.</li></ul></div>
                   <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> depends on the
-                    Operational Environment for memory erasure and how that is achieved.</div>
+                    Operational Environment for memory clearing and how that is achieved.</div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> lists each type of key, its origin, possible memory locations in volatile memory.</div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</div>
                 </div></div></div>
@@ -2083,7 +2084,7 @@ The following sections list Common Criteria and technology terms used in this do
                 Verify data is encrypted:<ul>
                 <li>For <abbr class="dyn-abbr"><a href="#abbr_HW">HW</a></abbr> Encryption:<ul>
                   <li>engage device’s functionality for generating a new encryption key, thus
-                    performing an erase of the key per FCS_CKM.4/Power</li>
+                    performing an erase of the key per <a href="#FCS_CKM.6/Power">FCS_CKM.6/Power</a></li>
                   <li>Read from the same locations at which the data was written</li>
                   <li>Compare the retrieved data to the written data and ensure they do not
                     match</li>
@@ -4991,7 +4992,7 @@ The following sections list Common Criteria and technology terms used in this do
 	<h3 id="ext-comp-FCS_CKM_EXT" class="indexable" data-level="4">C.2.1.1 FCS_CKM_EXT Cryptographic Key Destruction Types</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family is intended to support the ability to specify the implementation of multiple key destruction methods.
           </div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FCS_CKM_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">6</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a>,
              Cryptographic Key Destruction Types,
-             provides the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with the ability to select between multiple methods of key destruction.</p><h4>Management: FCS_CKM_EXT.6</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_CKM_EXT.6</h4><p>There are no audit events foreseen.</p><h4>FCS_CKM_EXT.6 Cryptographic Key Destruction Types</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FCS_CKM.6 Cryptographic Key and Key Material Destruction</td></tr></table><h4 id="ext-comp-FCS_CKM_EXT.6.1">FCS_CKM_EXT.6.1</h4>
+             provides the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with the ability to select between multiple methods of key destruction.</p><h4>Management: FCS_CKM_EXT.6</h4><p>There are no management functions foreseen.</p><h4>Audit: FCS_CKM_EXT.6</h4><p>There are no audit events foreseen.</p><h4>FCS_CKM_EXT.6 Cryptographic Key Destruction Types</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td></td></tr></table><h4 id="ext-comp-FCS_CKM_EXT.6.1">FCS_CKM_EXT.6.1</h4>
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall use [<b>assignment</b>: 
      <span class="assignable-content">one or more iterations of FCS_CKM.6 defined elsewhere in
                 the Security Target </span>] key destruction methods.
