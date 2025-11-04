@@ -1101,7 +1101,7 @@
               </f-element>
               
             </f-component>
-      
+
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6"
         iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
         <depends on-sel="uses-genhw"/>
@@ -1328,7 +1328,7 @@
                           <h:p>The evaluator shall verify the KMD includes a key lifecycle that includes a description
                             where key material resides, how the key material is used, and how the material is
                             destroyed once it is not needed and that the documentation in the KMD follows
-                            FCS_CKM.6 for the destruction.</h:p></CustomEA>
+                            FCS_CKM_EXT.6 for the destruction.</h:p></CustomEA>
                       <Tests>There are no test evaluation activities for this SFR.</Tests>
                   </aactivity>
               </f-element>
@@ -1345,23 +1345,24 @@
                 <note role="application">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<h:br/><h:br/>
-                  
-                  Self-encrypting drives do not store keys in the Operational Environment and are unable to instruct the Operational Environment to 
-                  erase keys so they are not expected to select “instruct the Operational Environment to erase”.
+                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<h:br/><h:br/>
+
+                  Self-encrypting drives do not store keys in the Operational Environment and cannot instruct
+                  the Operational Environment to perform functionality so they are not expected to select
+                  “instruct the Operational Environment to clear”.
                 </note>
                 <aactivity level="element">
                   <TSS>
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <h:ul>
                       <h:li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</h:li>
                       <h:li>if and how memory locations for (temporary) keys are tracked;</h:li>
-                      <h:li>details of the interface used for key erasure when relying on the OE for memory erasure.</h:li></h:ul></TSS>
+                      <h:li>details of the interface used for key erasure when relying on the OE for memory clearing.</h:li></h:ul></TSS>
                   <Guidance>The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory erasure and how that is achieved.</Guidance>
+                    Operational Environment for memory clearing and how that is achieved.</Guidance>
                   <CustomEA name="KMD">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</CustomEA>
                   <Tests>There are no test evaluation activities for this SFR.</Tests>
                 </aactivity>
-              </f-element>  
+              </f-element>
             </f-component>
       
       <f-component name="Cryptographic Key Destruction (Software TOE, 3rd Party Storage)" cc-id="fcs_ckm.6"
@@ -1731,7 +1732,7 @@
         <comp-lev>provides the TOE with the ability to select between multiple methods of key destruction.</comp-lev>
         <management/>
         <audit/>
-        <dependencies>FCS_CKM.6 Cryptographic Key and Key Material Destruction</dependencies>
+        <dependencies/>
         
         <f-element id="fcs_ckm-ext-6">
           <title>
@@ -3777,7 +3778,7 @@
                 Verify data is encrypted:<h:ul>
                 <h:li>For HW Encryption:<h:ul>
                   <h:li>engage device’s functionality for generating a new encryption key, thus
-                    performing an erase of the key per FCS_CKM.4/Power</h:li>
+                    performing an erase of the key per FCS_CKM.6/Power</h:li>
                   <h:li>Read from the same locations at which the data was written</h:li>
                   <h:li>Compare the retrieved data to the written data and ensure they do not
                     match</h:li>
