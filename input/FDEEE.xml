@@ -957,7 +957,7 @@
 								<selectable id="fcs_ckm.1.1_AK_18" >LMS_SHA256_M32_H10</selectable>
 								<selectable id="fcs_ckm.1.1_AK_19" >LMS_SHA256_M32_H15</selectable>
 								<selectable id="fcs_ckm.1.1_AK_20" >LMS_SHA256_M32_H25</selectable>
-							</selectables> that meet the following [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+							</selectables>
 						</selectable>
 						<selectable id="fcs_ckm.1.1_AK_21"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> using the parameter sets 
 							<selectables>
@@ -973,19 +973,26 @@
 								<selectable id="fcs_ckm.1.1_AK_31" >XMSS-SHAKE_10_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_32" >XMSS-SHAKE_16_256</selectable>
 								<selectable id="fcs_ckm.1.1_AK_33" >XMSS-SHAKE_20_256</selectable>
-							</selectables> that meets the following: [NIST SP 800-208, "Recommendation for Stateful Hash-Based Signature Schemes"]
+							</selectables>
 						</selectable>
-						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism Standard</h:b> using the parameter set ML-KEM-1024 that meets the following: [FIPS 203, Module-Lattice-Based Key-Encapsulation Mechanism Standard]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter set ML-DSA-87 that meets the following [FIPS 204, Module-Lattice-Based Digital Signature Standard]</selectable>
+						<selectable id="fcs_ckm.1.1_AK_34" ><h:b>Module-Lattice-Based Key-Encapsulation Mechanism Standard</h:b> using the parameter set ML-KEM-1024</selectable>
+						<selectable id="fcs_ckm.1.1_AK_35" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter set ML-DSA-87</selectable>
 					</selectables> 
 				</selectable>
 				<selectable id="fcs_ckm.1.1_AK_36">CNSA 1.0 Compliant Algorithms: 
 					<selectables linebreak="yes">
-						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables> that meet the following: [<h:i>FIPS PUB 186-5, "Digital Signature Standard (DSS)," Appendix A.1</h:i>]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_38"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_39" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_40" >no other curves</selectable></selectables> </h:i>] that meet the following: [<h:i>FIPS PUB 186-5, “Digital Signature Standard (DSS),” Appendix A.2</h:i>]</selectable>
-						<selectable id="fcs_ckm.1.1_AK_41"><h:b>[FFC Schemes]</h:b> using [<h:i>“safe-prime” groups</h:i>] <selectables><selectable id="fcs_ckm.1.1_AK_42" >MODP-3072</selectable><selectable id="fcs_ckm.1.1_AK_43" >MODP-4096</selectable><selectable id="fcs_ckm.1.1_AK_44" >MODP-6144</selectable><selectable id="fcs_ckm.1.1_AK_45" >MODP-8192</selectable><selectable id="fcs_ckm.1.1_AK_46" >ffdhe-3072</selectable><selectable id="fcs_ckm.1.1_AK_47" >ffdhe-4096</selectable><selectable id="fcs_ckm.1.1_AK_48" >ffdhe-6144</selectable><selectable id="fcs_ckm.1.1_AK_49" >ffdhe-8192</selectable></selectables> that meet the following: [<h:i>NIST Special Publication 800-56A Revision 3, “Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography” and <selectables><selectable id="fcs_ckm.1.1_AK_50" >RFC 3526</selectable><selectable id="fcs_ckm.1.1_AK_51" >RFC 7919</selectable></selectables> </h:i>]</selectable>
+						<selectable id="fcs_ckm.1.1_AK_37" ><h:b>[RSA schemes]</h:b> using cryptographic key sizes of <selectables><selectable>3072</selectable><selectable>4096</selectable></selectables></selectable>
+						<selectable id="fcs_ckm.1.1_AK_38"><h:b>[ECC schemes]</h:b> using [<h:i>“NIST curves” P-384 and <selectables><selectable id="fcs_ckm.1.1_AK_39" >P-521</selectable><selectable id="fcs_ckm.1.1_AK_40" >no other curves</selectable></selectables> </h:i>]</selectable>
 					</selectables> 
 				</selectable> 
+				</selectables>
+				that meet the following:
+				<selectables>
+				<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
+				<selectable>FIPS PUB 203 [ML-KEM]</selectable>
+				<selectable>FIPS PUB 204 [ML-DSA]</selectable>
+				<selectable>FIPS PUB 186-5 Appendix A.1 [RSA]</selectable>
+				<selectable>FIPS PUB 186-5 Appendix A.2 [ECC]</selectable>
 				</selectables>.</title>
            
 			  
@@ -3830,7 +3837,9 @@
               This means that the TOE must be able to perform the listed functions. “Configure
               cryptographic functionality” could include key management functions; for example, the BEV will be 
               wrapped or encrypted, and the EE will need to unwrap or decrypt the BEV. In item (d), if no other
-              management functions are provided (or claimed), then “no other functions” should be
+          1=````````````````````````````````````````````````````
++
+		  management functions are provided (or claimed), then “no other functions” should be
               selected. <h:br/><h:br/>            
               For the purposes of this document, key sanitization means to destroy the DEK, using one of the 
               approved destruction methods. This applies to instances of the protected key that
@@ -4335,9 +4344,9 @@
               </selectables>.
             </title>
             <note role="application">This SFR is a required dependency of FCS_RBG.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
+			
 			<h:p>The tests regarding cryptographic functions implemented in the TOE can be deferred, as long as the tests are performed before the function is invoked.</h:p>
 			<h:p>If any FCS_COP functions are implemented by the TOE, the TSS should describe the known answer self-tests for those functions.</h:p></note>
-            
             <aactivity>
               <TSS>
                 <h:p>
