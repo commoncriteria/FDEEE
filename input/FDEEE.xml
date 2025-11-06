@@ -3785,8 +3785,7 @@
                   in accordance with <assignable>list of standards</assignable>.
                 </title>
                 <note role="application">
-                  This SFR is claimed when the TSF requires the use of random bit generation for submask generation (FCS_AFA_EXT.1,
-                  FCS_CKM.5.1) or salt generation (FCS_SNI_EXT.1).
+                  This SFR is claimed when the TSF requires the use of random bit generation for submask generation (FCS_CKM.5.1) or salt generation (FCS_SNI_EXT.1).
                 </note>
                 <aactivity level="element">              
                   <TSS>
