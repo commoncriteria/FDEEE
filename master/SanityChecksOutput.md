@@ -43,14 +43,6 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[18]""/depends[11]""/on-sel[1]""
 * Error: Detected dangling id-reference to fcs-kyc-ext-1-2-sel-2a from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[25]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[7]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[8]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[9]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-1 from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-2 from attribute
