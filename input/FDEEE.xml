@@ -2133,45 +2133,248 @@
         </f-component>
         
             
-            <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation (Key Wrapping)" id="fcs-cop-1-keywrap" status="sel-based">
-              <depends on-sel="tsf-wrapped-dek"/>
-              <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
+            <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation - Key Wrapping" id="fcs-cop-1-keywrap" status="sel-based">
+              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
               <f-element id="fcs_cop-1-1-keywrap">
                 
-                <title>
-                  The TSF shall perform [<h:i>key wrapping</h:i>] in accordance with a specified cryptographic algorithm [<h:i>AES</h:i>] <h:b>in the following modes <selectables>
-                    <selectable>KW</selectable>
-                    <selectable>KWP</selectable>
-                    <selectable>GCM</selectable>
-                    <selectable>CCM</selectable>
+				<title>
+					The TSF shall perform [key wrapping] in accordance with a specified cryptographic algorithm
+					<selectables>
+						<tabularize id="fcs-cop-kw-sels" title="Allowed choices for FCS_COP.1/KeyWrap">
+							<textcol>Identifier</textcol>
+							<reqtext></reqtext>
+							<selectcol>Cryptographic algorithm</selectcol>
+							<reqtext>and cryptographic key sizes</reqtext>
+							<selectcol>Cryptographic key sizes</selectcol>
+							<reqtext>that meet the following:</reqtext>
+							<selectcol>List of standards</selectcol>
+							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+								completion of the selection operations of FCS_COP.1/KeyWrap.</reqtext>
+						</tabularize>
 
-                  </selectables></h:b> and cryptographic key size <selectables><selectable>128 bits</selectable><selectable>256 bits</selectable></selectables> that meet the following: [<h:i>AES as specified in ISO/IEC 18033-3, <selectables>
-                    <selectable>NIST SP 800-38F</selectable>
-                    <selectable>ISO/IEC 19772</selectable>
-                    <selectable>no other standards</selectable>
-                  </selectables></h:i>].
-                </title>
+						<!-- AES-KW  -->
+						<selectable id="sel-fcs-cop-kw-aes-kw">
+							<col>AES-KW</col>
+							<col>AES in KW mode</col>
+							<col>256 bits</col>
+							<col><selectables>
+								<selectable>ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable>
+								<selectable>FIPS PUB 197</selectable></selectables> [AES]<h:p/>
+								<selectables>
+								<selectable>ISO/IEC 19772:2020 (clause 6)</selectable>
+								<selectable>NIST SP 800-38F (Section 6.2)</selectable>
+							</selectables> [KW mode]</col>
+						</selectable>
+
+						<!-- KWP mode -->
+						<selectable id="sel-fcs-cop-kw-aes-kwp">
+							<col>AES-KWP</col>
+							<col>AES in KWP mode</col>
+							<col>256 bits</col>
+							<col><selectables>
+								<selectable>ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable>
+								<selectable>FIPS PUB 197</selectable></selectables> [AES]<h:p/>
+								NIST SP 800-38F (Section 6.3) [KWP mode]</col>
+						</selectable>
+
+						<selectable id="sel-fcs-cop-kw-aes-ccm">
+						<col>AES-CCM</col>
+						<col>AES in CCM mode with unpredictable, non-repeating nonce, minimum size of 64 bits</col>
+						<col>256 bits</col>
+						<col><selectables>
+							<selectable>ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable>
+							<selectable>FIPS PUB 197</selectable></selectables> [AES]<h:p/>
+							<selectables>
+							<selectable>ISO/IEC 19772:2020 (Clause 7)</selectable>
+							<selectable>NIST SP 800-38C</selectable></selectables> [CCM]
+						</col></selectable>
+
+						<selectable id="sel-fcs-cop-kw-aes-gcm">
+						<col>AES-GCM</col>
+						<col>AES in GCM mode with non-repeating IVs using <selectables>
+							<selectable>deterministic</selectable>
+							<selectable>RBG-based</selectable></selectables>,
+							IV construction; the tag must be of length
+							<selectables>
+								<selectable>96</selectable>
+								<selectable>104</selectable>
+								<selectable>112</selectable>
+								<selectable>120</selectable>
+								<selectable>128</selectable>
+							</selectables> bits.
+						</col>
+						<col>256 bits</col>
+						<col><selectables>
+							<selectable>ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable>
+							<selectable>FIPS PUB 197</selectable></selectables> [AES]<h:p/>
+							<selectables>
+							<selectable>ISO/IEC 19772:2020 (Clause 10)</selectable>
+							<selectable>NIST SP 800-38D</selectable></selectables> [GCM]
+						</col></selectable>
+					</selectables>
+				</title>
                 <note role="application">
-                  This requirement is used in the body of the ST if the ST author chooses to use key wrapping in the key chaining approach that is specified in 
-                  FCS_KYC_EXT.1.<h:br/><h:br/>
-                  
-                  This SFR is required when the TSF performs key wrapping as part of maintaining and deriving a key chain (FCS_CKM.5, FCS_KYC_EXT.1) or
-                  when the TSF performs validation of a submask, intermediate key, or BEV using a key wrap operation (FCS_VAL_EXT.1).                
+                  This SFR is required when the TSF performs key wrapping as part of maintaining and deriving a key chain (FCS_KYC_EXT.1) or
+                  when the TSF performs validation of a submask, intermediate key, or BEV using a key wrap operation (FCS_VAL_EXT.1).<h:br/><h:br/>
+                  NIST 800-57p1rev5 sec. 5.6.2 specifies that the size of key used to protect the key being
+                  transported should be at least the security strength of the key it is protecting.
                 </note>
-                <aactivity>
-                    <TSS>The evaluator shall verify the TSS includes a description of the key wrap functions
-                      and shall verify the key wrap uses an approved key wrap algorithm according to the
-                      appropriate specification.</TSS>
-                    <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
-                    <CustomEA name="KMD">The evaluator shall review the KMD to ensure that all keys are wrapped using the
-                      approved method and a description of when the key wrapping occurs.</CustomEA>                      
-                    <Tests>There are no test evaluation activities for this SFR.</Tests>
-                </aactivity>
+				<aactivity>
+					<TSS>
+						The evaluator shall ensure that the TSS documents that the selection of the key size is
+						sufficient for the security strength of the key wrapped.<h:p/>
+						The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
+						nonces, and MACs in conformance with the relevant specifications.<h:p/>
+						If a CCM mode algorithm is selected, then the evaluator shall examine the TOE summary
+						specification to confirm that it describes how the nonce is generated and that the same nonce is
+						never reused to encrypt different plaintext pairs under the same key.<h:p/>
+						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
+						specification to confirm that it describes how the IV is generated and that the same IV is never
+						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
+						that for each invocation of GCM, the length of the plaintext is at most (2<h:sup>32</h:sup>)-2 blocks.
+					</TSS>
+					<Guidance/>
+					<KMD>
+						The evaluator shall review the KMD to ensure that all keys are wrapped using the
+						approved method and a description of when the key wrapping occurs.
+					</KMD>
+					<Tests>
+						For tests of AES-GCM, see testing for FCS_COP.1/SKC.<h:p/>
+						The following tests are conditional based upon the selections made in the SFR. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the TOE itself, the test platform shall be identified and the differences
+						between test environment and TOE execution environment shall be described.<h:p/>
+
+						<!-- AES-KW -->
+						<h:br/><h:b>AES-KW</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">AES-KW</h:td>
+								<h:td valign="top">AES in KW mode</h:td>
+								<h:td valign="top">256 bits</h:td>
+								<h:td valign="top">[<h:b>selection:</h:b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+														FIPS PUB 197] [AES]<h:p/>
+													[<h:b>selection:</h:b> ISO/IEC 19772:2020 (clause 6),
+														NIST SP 800-38F (Section 6.2)] [KW mode] </h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s ability to wrap keys using AES in Key Wrap mode the evaluator shall perform
+						the Algorithm Functional Tests using the following input parameters:<h:ul>
+						<h:li>Key size [256] bits</h:li>
+						<h:li>Keyword cipher type [cipher, inverse]</h:li>
+						<h:li>Payload sizes [128-4096] bits by 64s</h:li></h:ul><h:p/>
+						<h:br/><h:b>Algorithm Functional Test</h:b><h:p/>
+						The evaluator shall generate 100 encryption test cases using random data for each combination
+						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
+						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
+						divisible by 128.<h:p/>
+						The results shall be compared with those generated by a known-good implementation using the
+						same inputs.<h:p/>
+						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
+						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
+						determine correctness, the evaluator shall confirm that the results correspond as expected for
+						both the modified and unmodified values.<h:p/>
+
+						<!-- AES-KWP -->
+						<h:br/><h:b>AES-KWP</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">AES-KWP</h:td>
+								<h:td valign="top">AES in KWP mode</h:td>
+								<h:td valign="top">256 bits</h:td>
+								<h:td valign="top">[<h:b>selection:</h:b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+														FIPS PUB 197] [AES]<h:p/>
+													NIST SP 800-38F (Section 6.3) [KWP mode] </h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s ability to wrap keys using AES in Key Wrap with Padding mode with padding
+						the evaluator shall perform the Algorithm Functional Tests using the following input parameters:<h:ul>
+						<h:li>Key size [256] bits</h:li>
+						<h:li>Keyword cipher type [cipher, inverse]</h:li>
+						<h:li>Payload sizes [8-4096] bits by 8s</h:li></h:ul><h:p/>
+						<h:br/><h:b>Algorithm Functional Test</h:b><h:p/>
+						The evaluator shall generate 100 encryption test cases using random data for each combination
+						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
+						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
+						divisible by 128.<h:p/>
+						The results shall be compared with those generated by a known-good implementation using the
+						same inputs.<h:p/>
+						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
+						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
+						determine correctness, the evaluator shall confirm that the results correspond as expected for
+						both the modified and unmodified values.<h:p/>
+
+						<!-- AES-CCM -->
+						<h:br/><h:b>AES-CCM</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">AES-CCM </h:td>
+								<h:td valign="top">AES in CCM mode with non-repeating nonce, minimum size
+									of 64 bits</h:td>
+								<h:td valign="top">256 bits</h:td>
+								<h:td valign="top">
+									[<h:b>selection:</h:b> ISO/IEC 18033-3:2010 (Subclause 5.2),
+									FIPS PUB 197] [AES]<h:p/>
+									[<h:b>selection:</h:b>  ISO/IEC 19772:2020 (Clause 7), NIST SP 800-38C] [CCM]</h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s implementation of AES-CCM authenticated encryption functionality the
+						evaluator shall perform the Algorithm Functional Tests described below using the following
+						input parameters:<h:ul>
+						<h:li>Key Size [256] bits</h:li>
+						<h:li>Associated data size [0-65536] bits in increments of 8</h:li>
+						<h:li>Payload size [0-256] bits in increments of 8</h:li>
+						<h:li>IV/Nonce size [64-104] bits in increments of 8</h:li>
+						<h:li>Tag size [32-128] bits in increments of 16</h:li></h:ul><h:p/>
+						<h:br/><h:b>Algorithm Functional Tests</h:b><h:p/>
+						Unless otherwise specified, the following tests should use random data, a tag size of 128 bits,
+						IV/Nonce size of 104 bits, payload size of 256 bits, and associated data size of 256 bits. If any of
+						these values are not supported, any supported value may be used. The evaluator shall compare
+						the output from each test case against results generated by a known-good implementation with
+						the same input parameters.<h:p/>
+						<h:br/><h:b><h:i>Variable Associated Data Test</h:i></h:b><h:p/>
+						For each claimed key size, and for each supported associated data size from 0 through 256 bits in
+						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.
+						In addition, for each key size, the TOE must be tested by encrypting 10 cases with associated
+						data lengths of 65536 bits, if supported.<h:p/>
+						<h:br/><h:b><h:i>Variable Payload Test</h:i></h:b><h:p/>
+						For each claimed key size, and for each supported payload size from 0 through 256 bits in
+						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.<h:p/>
+						<h:br/><h:b><h:i>Variable Nonce Test</h:i></h:b><h:p/>
+						For each claimed key size, and for each supported IV/Nonce size from 64 through 104 bits in
+						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.<h:p/>
+						<h:br/><h:b><h:i>Variable Tag Test</h:i></h:b><h:p/>
+						For each claimed key size, and for each supported tag size from 32 through 128 bits in
+						increments of 16 bits, the TOE must be tested by encrypting 10 test cases using all random data.<h:p/>
+						<h:br/><h:b><h:i>Decryption Verification Test</h:i></h:b><h:p/>
+						For each claimed key size, for each supported associated data size from 0 through 256 bits in
+						increments of 8 bits, for each supported payload size from 0 through 256 bits in increments of 8
+						bits, for each supported IV/Nonce size from 64 through 104 bits in increments of 8 bits, and for
+						each supported tag size from 32 through 128 bits in increments of 16 bits, the TOE must be
+						tested by decrypting 10 test cases using all random data.<h:p/>
+					</Tests>
+				</aactivity>
               </f-element>
           
             </f-component>
