@@ -706,14 +706,7 @@
         </assumption>
         
       <assumption name="A.POWER_DOWN">
-      <description>
-        The user does not leave the platform or storage device unattended
-        until the device is in a compliant power saving state or has fully powered off. This properly
-        erase memories and locks down the device. Authorized users do not leave the platform or
-        storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock
-        screen or sleep state). Users power the platform or storage device down or place it into a
-        power managed state, such as a “hibernation mode”.
-      </description>
+      <description><h:p>The user does not leave the platform and/or storage device unattended until all volatile memory is erased after a power-off, so memory remnant attacks are infeasible.</h:p><h:p>Authorized users do not leave the platform and/or storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock screen). Users power the platform and/or storage device down or place it into a power managed state, such as a “hibernation mode”.</h:p></description>
       <objective-refer ref="OE.POWER_DOWN">
         <rationale>The operational environment objective OE.POWER_DOWN is realized through A.POWER_DOWN.</rationale>
       </objective-refer>
