@@ -3190,29 +3190,35 @@
         
             <f-component cc-id="fcs_rbg.1" name="Cryptographic Operation (Random Bit Generation)"
               id="fcs-rbg-1" status="sel-based">
-              <depends on-sel="tsf-rbg-dek"/>
+              <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
+              <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
+              <depends on-sel="sel-fcs-kdf-ext-1-1-sel-1a"/>
+			  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-dirgen"/>
+              <depends on-sel="sel-fcs-ckm-5-kdf-fb-dirgen"/>
+              <depends on-sel="sel-fcs-ckm-5-kdf-dpi-dirgen"/>
+              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
+              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
               <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ei"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
-                
+              <depends on-sel="rbg-overwrite-single"/>
+              <depends on-sel="rbg-overwrite-multi"/>
               
               <f-element id="fcs-rbg-1-1">
                 <title>
                   The TSF shall perform deterministic random bit generation services using
                   <selectables>
-                    <selectable><h:i>Hash_DRBG (any)</h:i></selectable>
-                    <selectable><h:i>HMAC_DRBG (any)</h:i></selectable>
-                    <selectable><h:i>CTR_DRBG (AES)</h:i></selectable>
+                    <selectable><h:i>Hash_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
+                    <selectable><h:i>HMAC_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
+                    <selectable><h:i>CTR_DRBG (AES-128, AES-192, AES-256)</h:i></selectable>
                   </selectables> in accordance with <selectables>
                     <selectable><h:i>ISO/IEC 18031:2011</h:i></selectable>
                     <selectable id='fcs-rbg-1-1-nist'><h:i>NIST SP 800-90A</h:i></selectable>
                   </selectables> after initialization with a seed.
                 </title> 
+                <note role="application">
+                  <h:p>
+                    For Hash_DRBG and HMAC_DRBG, all allowed choices support a 256-bit security strength. For CTR_DRBG, the supported security strength is equal to the AES size. The TOE is expected to use a DRBG function that can support the security strength of the keys and random values to be generated. For example, an AES-192 CTR_DRBG can be used to generate 128-bit and 192-bit symmetric keys, but can not be used to generate 256-bit symmetric keys. More information is provided in Section 8.4 of NIST SP 800-90A.
+                  </h:p>
+                </note>
                 
                 <aactivity level="element">
                   <TSS>The evaluator shall verify that the TSS identifies the DRBGs used by the TOE.</TSS>
@@ -3326,7 +3332,7 @@
                 </title>
                 <note role="application">
                   This SFR is claimed when the TSF requires the use of random bit generation for submask generation (FCS_AFA_EXT.1,
-                  FCS_CKM.5) or salt generation (FCS_SNI_EXT.1).
+                  FCS_CKM.5.1) or salt generation (FCS_SNI_EXT.1).
                 </note>
                 <aactivity level="element">              
                   <TSS>
