@@ -926,6 +926,8 @@
        
             <f-component cc-id="fcs_ckm.1" iteration="AKG" name="Cryptographic Key Generation (Asymmetric Keys)" id="fcs-ckm-1-akg" status="sel-based">
               <f-element id="fcs_ckm-1-1-akg">
+			  <depends on-sel="fcs-kyc-ext-2-2-sel-5"/>
+			  
 			  
 			  <title>The TSF  shall generate <h:b>asymmetric</h:b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
 			  <selectables linebreak="yes">
