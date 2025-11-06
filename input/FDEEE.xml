@@ -738,8 +738,8 @@
             authorization factors are securely stored separately from the storage device or platform.
             The user should also be trained on how to power off their system.
           </description>
-            <objective-refer ref="OE.PASSPHRASE_STRENGTH">
-              <rationale>The operational environment objective OE.PASSPHRASE_STRENGTH is realized through A.TRAINED_USER.</rationale>
+            <objective-refer ref="OE.PASSWORD_STRENGTH">
+              <rationale>The operational environment objective OE.PASSWORD_STRENGTH is realized through A.TRAINED_USER.</rationale>
             </objective-refer>
             <objective-refer ref="OE.POWER_DOWN">
               <rationale>The operational environment objective OE.POWER_DOWN is realized through A.TRAINED_USER.</rationale>
@@ -818,9 +818,9 @@
          </description>
 		  </SOE>
 	    
-		 <SOE name="OE.PASSPHRASE_STRENGTH">
+		 <SOE name="OE.PASSWORD_STRENGTH">
 			  <description>
-			    An authorized user will be responsible for ensuring that the passphrase authorization factor 
+			    An authorized user will be responsible for ensuring that the password authorization factor 
 			    conforms to guidance from the Enterprise using the TOE.<h:br/><h:br/>
 			    Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to
 			    administrative guidance.
