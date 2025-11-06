@@ -77,9 +77,7 @@ output/FDEEE-release-linkable.html: NAS
 output/FDEEE-release-linkable.html: PCI
 output/FDEEE-release-linkable.html: PINs
 output/FDEEE-release-linkable.html: PRFs
-output/FDEEE-release-linkable.html: PSS
 output/FDEEE-release-linkable.html: Pre30
-output/FDEEE-release-linkable.html: RSASSA
 output/FDEEE-release-linkable.html: RTU
 output/FDEEE-release-linkable.html: S3
 output/FDEEE-release-linkable.html: S4
@@ -121,8 +119,6 @@ output/FDEEE-release-linkable.html: sanitization
 output/FDEEE-release-linkable.html: un
 output/FDEEE-release-linkable.html: uninstantiating
 output/FDEEE-release-linkable.html: unpowered
-output/FDEEE-release-linkable.html: v1
-output/FDEEE-release-linkable.html: v2
 output/FDEEE-release.html: 10C
 output/FDEEE-release.html: 11C
 output/FDEEE-release.html: 1S
@@ -182,9 +178,7 @@ output/FDEEE-release.html: Micali
 output/FDEEE-release.html: NAS
 output/FDEEE-release.html: PINs
 output/FDEEE-release.html: PRFs
-output/FDEEE-release.html: PSS
 output/FDEEE-release.html: Pre30
-output/FDEEE-release.html: RSASSA
 output/FDEEE-release.html: RTU
 output/FDEEE-release.html: S3
 output/FDEEE-release.html: S4
@@ -219,8 +213,6 @@ output/FDEEE-release.html: sanitization
 output/FDEEE-release.html: un
 output/FDEEE-release.html: uninstantiating
 output/FDEEE-release.html: unpowered
-output/FDEEE-release.html: v1
-output/FDEEE-release.html: v2
 output/FDEEE-sd.html: 0s
 output/FDEEE-sd.html: 0x00007A4B
 output/FDEEE-sd.html: 10x
@@ -364,9 +356,7 @@ output/FDEEE.html: NAS
 output/FDEEE.html: PCI
 output/FDEEE.html: PINs
 output/FDEEE.html: PRFs
-output/FDEEE.html: PSS
 output/FDEEE.html: Pre30
-output/FDEEE.html: RSASSA
 output/FDEEE.html: RTU
 output/FDEEE.html: S3
 output/FDEEE.html: S4
@@ -409,5 +399,3 @@ output/FDEEE.html: sanitization
 output/FDEEE.html: un
 output/FDEEE.html: uninstantiating
 output/FDEEE.html: unpowered
-output/FDEEE.html: v1
-output/FDEEE.html: v2
