@@ -88,7 +88,6 @@ output/FDEEE-release-linkable.html: SATA
 output/FDEEE-release-linkable.html: SHA3
 output/FDEEE-release-linkable.html: Sanitization
 output/FDEEE-release-linkable.html: Subclause
-output/FDEEE-release-linkable.html: TD0606
 output/FDEEE-release-linkable.html: TPMs
 output/FDEEE-release-linkable.html: Tweakable
 output/FDEEE-release-linkable.html: VAN1
@@ -194,7 +193,6 @@ output/FDEEE-release.html: SATA
 output/FDEEE-release.html: SHA3
 output/FDEEE-release.html: Sanitization
 output/FDEEE-release.html: Subclause
-output/FDEEE-release.html: TD0606
 output/FDEEE-release.html: TPMs
 output/FDEEE-release.html: Tweakable
 output/FDEEE-release.html: VAN1
@@ -377,7 +375,6 @@ output/FDEEE.html: SATA
 output/FDEEE.html: SHA3
 output/FDEEE.html: Sanitization
 output/FDEEE.html: Subclause
-output/FDEEE.html: TD0606
 output/FDEEE.html: TPMs
 output/FDEEE.html: Tweakable
 output/FDEEE.html: VAN1
