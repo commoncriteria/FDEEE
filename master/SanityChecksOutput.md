@@ -45,14 +45,14 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[8]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[2]""/depends[9]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
+* Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-1 from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[4]""/on-sel[1]""
+* Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-2 from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[5]""/on-sel[1]""
+* Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-3 from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
+* Error: Detected dangling id-reference to sel-fcs-kyc-ext-1-1-sel-4 from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[7]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[8]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[9]""/on-sel[1]""
 * Error: Detected dangling id-reference to windows from attribute
         ref/PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:div[1]""/depends[1]""/ref[1]""
 * Error: Detected dangling id-reference to linux from attribute
