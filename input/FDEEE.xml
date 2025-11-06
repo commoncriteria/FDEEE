@@ -3974,15 +3974,9 @@
         
         
         <f-component cc-id="fpt_fls.1" name="Failure with Preservation of Secure State" status="sel-based">
-          <depends on-sel="tsf-rbg-dek"/>
-          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ei"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
+          <depends on-sel="internal-seed"/>
+          <depends on-sel="internal-seeds"/>
+          <depends on-sel="external-seed"/>
           <f-element id="fel-pres-sec-state">
             <title>
               The TSF shall preserve a secure state when the following types of failures occur: [<h:i>DRBG self-test failure</h:i>].              
@@ -3995,9 +3989,12 @@
               <Guidance>
                 The evaluator shall verify that the guidance documentation describes the error state that results from a DRBG self-test failure and the actions that a user or administrator should take in response to attempt to resolve the error state.
               </Guidance>
-              <Tests/>
+			  <Tests>
+			  There is no Test for this activity.
+              </Tests>
             </aactivity>
           </f-element>
+          
         </f-component>
         
         <f-component name="Firmware Update Authentication" cc-id="fpt_fua_ext.1" id="fpt-fua-1" status="sel-based">
