@@ -1790,7 +1790,6 @@
                 </title>
                 <note role="application">
 					In accordance with CNSA 1.0 and 2.0:<h:ul>
-					<h:li>SHA-1 hash is no longer permitted to be used as a hash function, </h:li>
 					<h:li>SHA3 hashes may be used only for internal hardware functionality such as
 						boot integrity checks, and</h:li>
 					<h:li>SHA-256 is permitted only for use as a PRF or MAC as part of a key derivation function,
@@ -2180,28 +2179,52 @@
            
         <f-component cc-id="fcs_cop.1" iteration="SigVer" name="Cryptographic Operation (Signature Verification)" id="fcs-cop-1-sigver">
           
-          <f-element id="fcs_cop-1-1-sigver">            
-            <title>The TSF shall perform [<h:i>cryptographic signature services
-              (verification)</h:i>] in accordance with a specified cryptographic
-                algorithm <h:b><selectables linebreak='yes'>
-              <selectable>RSA Digital Signature Algorithm with a key size (modulus) of <selectables><selectable>2048-bit</selectable><selectable>3072-bit</selectable><selectable>4096-bit</selectable></selectables></selectable>
-              <selectable>Elliptic Curve Digital Signature Algorithm with a key size of [<h:i>256 bits or greater</h:i>]</selectable>
-            </selectables></h:b> 
-              that meet the following: <selectables linebreak='yes'>
-                <selectable>FIPS PUB 186-4, “Digital Signature Standard (DSS)”, Section 5.5, using PKCS #1 v2.1 Signature Schemes RSASSA-PSS and/or RSASSA-PKCS1-v1_5; ISO/IEC 9796-2, Digital signature scheme 2 or Digital Signature scheme 3, for RSA schemes</selectable>
-                <selectable>FIPS PUB 186-4, “Digital Signature Standard (DSS)”, Section 6 and Appendix D, Implementing “NIST curves” <selectables>
-                  <selectable>P-256</selectable>
-                  <selectable>P-384</selectable>
-                  <selectable>P-521</selectable></selectables> ISO/IEC 14888-3, Section 6.4, for ECDSA schemes
-                </selectable>
-              </selectables>.
-            </title>
+          <f-element id="fcs_cop-1-1-sigver">
+			<title>The TSF shall perform [<h:i>cryptographic signature services (verification)</h:i>] 
+			in accordance with a specified cryptographic algorithm  
+			<selectables linebreak="yes">
+			<selectable id="fcs_cop.1.1_SigVer_1">CNSA 2.0 Compliant Algorithms: 
+				<selectables linebreak="yes">
+				<selectable id="fcs_cop.1.1_SigVer_2"><h:b>Leighton-Micali Signature Algorithm</h:b> for verification using cryptographic key sizes of 
+					<selectables>
+						<selectable id="fcs_cop.1.1_SigVer_3" >192</selectable><selectable id="fcs_cop.1.1_SigVer_4" >256</selectable>
+					</selectables> bits
+				</selectable>
+				<selectable id="fcs_cop.1.1_SigVer_5"><h:b>eXtended Merkle Signature Scheme Algorithm</h:b> for verification using cryptographic key sizes of 
+					<selectables>
+						<selectable id="fcs_cop.1.1_SigVer_6" >192</selectable><selectable id="fcs_cop.1.1_SigVer_7" >256</selectable>
+					</selectables> bits
+				</selectable>
+				<selectable id="fcs_cop.1.1_SigVer_8" ><h:b>Module-Lattice-Based Digital Signature Standard</h:b> using the parameter 
+				set ML-DSA-87
+				</selectable>
+				</selectables> 
+			</selectable>
+			<selectable id="fcs_cop.1.1_SigVer_9">CNSA 1.0 Compliant Algorithms: 
+				<selectables linebreak="yes">
+				<selectable id="fcs_cop.1.1_SigVer_10" ><h:b>RSA schemes</h:b> using cryptographic key sizes of 
+					<selectables><selectable>3072-bits</selectable><selectable>4096-bits</selectable></selectables>
+				</selectable>
+				<selectable id="fcs_cop.1.1_SigVer_11"><h:b>ECDSA schemes</h:b> using [“NIST curves” 
+					<selectables><selectable id="fcs_cop.1.1_SigVer_12" >P-384</selectable><selectable id="fcs_cop.1.1_SigVer_13" >P-521</selectable></selectables> 
+					]
+				</selectable>
+				</selectables> 
+			</selectable> 
+			</selectables>
+			that meet the following:
+			<selectables>
+			<selectable>NIST SP 800-208 [LMS, XMSS]</selectable>
+			<selectable>FIPS PUB 204 [ML-DSA]</selectable>
+			<selectable>FIPS PUB 186-5 Section 5 [RSA]</selectable>
+			<selectable>FIPS PUB 186-5 Section 6 [ECDSA]</selectable>
+			</selectables>.</title>
+            
             <note role="application">
               The selection should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example, 
               SHA-256 should be chosen for 2048-bit RSA or ECC with P-256, SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
               be chosen for ECC with P-521. The selection of the standard is made based on the algorithms selected.<h:br/><h:br/>
-              This SFR is mandatory for its use in verification of digital signatures for TOE updates. It may also be used when the TSF performs validation of a submask,
-              intermediate key, or BEV by using a digital signature operation (FCS_VAL_EXT.1).
+              This SFR is mandatory for its use in verification of digital signatures for TOE updates. <h:p/>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </note>
             <aactivity>
               <h:p>This requirement is used to verify digital signatures attached to updates from the TOE
@@ -2245,21 +2268,22 @@
                 <h:p>The following tests are conditional based upon the selections made within the SFR.</h:p>
                 <h:p>The following tests may require the developer to provide access to a test platform that
                   provides the evaluator with tools that are typically not found on factory products.</h:p>
-                <h:p><h:u>ECDSA Algorithm Tests</h:u></h:p>
-                <h:p><h:b>ECDSA FIPS 186-4 Signature Verification Test</h:b></h:p>
-                <h:p>For each supported NIST curve (i.e., P-256, P-384 and P-521) and SHA function pair,
-                  the evaluator shall generate a set of 10 1024-bit message, public key and signature
-                  tuples and modify one of the values (message, public key or signature) in five of the 10
-                  tuples. The evaluator shall obtain in response a set of 10 PASS/FAIL values.</h:p>
-                <h:p><h:u>RSA Signature Algorithm Tests</h:u></h:p>
-                <h:p><h:b>Signature Verification Test</h:b></h:p>
-                <h:p>The evaluator shall perform the Signature Verification test to verify the ability of the
-                  TOE to recognize another party’s authentic and unauthentic signatures. The evaluator
-                  shall inject errors into the test vectors produced during the Signature Verification Test
-                  by introducing errors in some of the public keys e, messages, IR format, and/or
-                  signatures. The TOE attempts to verify the signatures and returns success or failure.</h:p>
-                <h:p>The evaluator shall use these test vectors to emulate the signature verification test using
-                  the corresponding parameters and verify that the TOE detects these errors.</h:p>
+                <testlist>
+                   <h:p style="text-align: left">ECDSA Algorithm Test</h:p> 
+                  <test>ECDSA FIPS 186-5 Signature Verification Test. For each supported NIST curve (i.e., P-384 and P-521) and SHA function pair, the evaluator shall generate a set of 10 1024-bit message, public key and signature tuples and modify one of the values (message, public key or signature) in five of the 10 tuples. The evaluator shall obtain in response a set of 10 PASS/FAIL values.</test>
+                </testlist>
+                <testlist>
+                   <h:p style="text-align: left">RSA Signature Algorithm Test</h:p> 
+                  <test>Signature Verification Test. The evaluator shall perform the Signature Verification test to verify the ability of the TOE to recognize another party’s valid and invalid signatures. The evaluator shall inject errors into the test vectors produced during the Signature Verification Test by introducing errors in some of the public keys, e, messages, IR format, and/or signatures. The TOE attempts to verify the signatures and returns success or failure.</test>
+                </testlist>
+                <testlist>
+                   <h:p style="text-align: left">LMS/XMSS Signature Algorithm Test</h:p> 
+                  <test>For each supported LMS/LMSOTS pair, the evaluator generates a private/public key pair. With the private key, the evaluator generates 4 messages of length 1024 bits. The messages and public key are provided to the TOE. The signature for each message is generated with the following error types "none", “modify message”, “modify signature”, “modify header”. For "none" the message is unmodified and the signature is correct. For "modify message" the signature is for a modified message where a single bit is flipped. For "modify signature", one bit of the signature is flipped. For "modify header" the signature uses a different LMS/LMSOTS pair. Each error type is represented. For each message, signature pair the TOE returns "true" or "false" depending on whether the signature verifies or not.</test>
+                </testlist>
+                <testlist>
+                   <h:p style="text-align: left">ML-DSA Test</h:p> 
+                  <test>The evaluator shall 10x input to the internal SigVer function, a public key, message and signature. Verify the signature. Tests should involve a mix of good and bad signatures generated using different messages, keys, etc. Here internal SigVer refers to the TOE’s implementation of the function ML-DSA.Verify_internal(-,-,-) as described in FIPS.204.</test>
+                </testlist>
               </Tests>
             </aactivity>
           </f-element>
