@@ -4297,8 +4297,6 @@
               This means that the TOE must be able to perform the listed functions. “Configure
               cryptographic functionality” could include key management functions; for example, the BEV will be 
               wrapped or encrypted, and the EE will need to unwrap or decrypt the BEV. In item (d), if no other
-          1=````````````````````````````````````````````````````
-+
 		  management functions are provided (or claimed), then “no other functions” should be
               selected. <h:br/><h:br/>            
               For the purposes of this document, key sanitization means to destroy the DEK, using one of the 
