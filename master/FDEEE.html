@@ -1065,14 +1065,7 @@ The following sections list Common Criteria and technology terms used in this do
     </span></dd><dt class="assumption defined" id="A.PLATFORM_STATE">A.PLATFORM_STATE</dt><dd><span class="description">
             The platform in which the storage device resides (or an external storage device is connected)
             is free of malware that could interfere with the correct operation of the product.
-          </span></dd><dt class="assumption defined" id="A.POWER_DOWN">A.POWER_DOWN</dt><dd><span class="description">
-        The user does not leave the platform or storage device unattended
-        until the device is in a compliant power saving state or has fully powered off. This properly
-        erase memories and locks down the device. Authorized users do not leave the platform or
-        storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock
-        screen or sleep state). Users power the platform or storage device down or place it into a
-        power managed state, such as a “hibernation mode”.
-      </span></dd><dt class="assumption defined" id="A.STRONG_CRYPTO">A.STRONG_CRYPTO</dt><dd><span class="description">
+          </span></dd><dt class="assumption defined" id="A.POWER_DOWN">A.POWER_DOWN</dt><dd><span class="description"><p>The user does not leave the platform and/or storage device unattended until all volatile memory is erased after a power-off, so memory remnant attacks are infeasible.</p><p>Authorized users do not leave the platform and/or storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock screen). Users power the platform and/or storage device down or place it into a power managed state, such as a “hibernation mode”.</p></span></dd><dt class="assumption defined" id="A.STRONG_CRYPTO">A.STRONG_CRYPTO</dt><dd><span class="description">
       All cryptography implemented in the Operational Environment and used by the product
       meets the requirements listed in the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>. This includes generation of external token authorization
       factors by an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
