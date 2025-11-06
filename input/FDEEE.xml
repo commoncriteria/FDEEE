@@ -1912,6 +1912,247 @@
             </f-element>
             </f-component>
         
+		<f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation - Key Encapsulation" id="fcs-cop-1-keyencap" status="sel-based">
+          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
+          <f-element id="fcs_cop-1-1-keyencap">
+				<title> The TSF shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
+					<selectables>
+						<tabularize id="tab-fcs-cop-keyencap-sels" title="Allowed choices for FCS_COP.1/KeyEncap">
+							<textcol>Identifier</textcol>
+							<reqtext></reqtext>
+							<selectcol>Cryptographic algorithm</selectcol>
+							<reqtext>and cryptographic key sizes</reqtext>
+							<selectcol>Cryptographic key sizes</selectcol>
+							<reqtext>that meet the following:</reqtext>
+							<selectcol>List of standards</selectcol>
+							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
+										completion of the selection operations of FCS_COP.1/KeyEncap.</reqtext>
+						</tabularize>
+
+						<selectable id="sel-fcs-cop-keyencap-kas1">
+							<col>KAS1</col>
+							<col>RSASVE</col>
+						<col><selectables>
+							<selectable>3072</selectable>
+							<selectable>4096</selectable>
+							<selectable>6144</selectable>
+							<selectable>8192</selectable>
+						</selectables> bits</col>
+						<col>NIST SP 800-56B Revision 2 (Section 7.2.1)</col>
+						</selectable>
+
+						<selectable id="sel-fcs-cop-keyencap-kts">
+							<col>KTS-OAEP</col>
+							<col>RSA-OAEP</col>
+						<col><selectables>
+							<selectable>3072</selectable>
+							<selectable>4096</selectable>
+							<selectable>6144</selectable>
+							<selectable>8192</selectable>
+						</selectables> bits</col>
+						<col>NIST SP 800-56B Revision 2 (Sections 6.3 and 9)</col>
+						</selectable>
+
+						<selectable id="sel-fcs-cop-keyencap-mlkem">
+							<col>ML-KEM</col>
+							<col>ML-KEM</col>
+							<col>Parameter set = ML-KEM-1024</col>
+							<col>NIST FIPS 203</col>
+						</selectable>
+
+					</selectables>
+				</title>
+            <note role="application">
+              This requirement is used in the body of the ST if the ST author chooses to use key transport in the key chaining approach that is specified in 
+              FCS_KYC_EXT.1.<h:br/><h:br/>
+              NIST SP 800-57 Part 1 Revision 5 Section 5.6.2 specifies that the size of key used to protect the
+              key being transported should be at least the security strength of the key it is protecting.<h:p/>
+              If this SFR is claimed, then FCS_CKM.1/AKG must also be claimed.<h:p/>
+              KAS1 and KTS-OAEP with the selectable parameters are CNSA 1.0 compliant. ML-KEM-1024 is CNSA 2.0 compliant.
+            </note>
+				<aactivity>
+					<TSS>The evaluator shall ensure that the TSS documents that the selection of the key size is
+						sufficient for the security strength of the key encapsulated.<h:p/>
+						The evaluator shall examine the TSS to verify that any one-time values such as nonces or masks
+						are constructed and used in accordance with the relevant standards.
+					</TSS>
+					<Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
+					<KMD>There are no KMD evaluation activities for this SFR.</KMD>
+					<Tests>
+						The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.<h:p/>
+						The following tests are conditional based upon the selections made in the SFR. The
+						evaluator shall perform the following test or witness respective tests executed by
+						the developer. The tests must be executed on a platform that is as close as practically
+						possible to the operational platform (but which may be instrumented in terms of,
+						for example, use of a debug mode). Where the test is not carried out on the TOE
+						itself, the test platform shall be identified and the differences between test
+						environment and TOE execution environment shall be described.<h:p/>
+
+						<!-- KAS1 -->
+						<h:br/><h:b>KAS1 [RSASVE single-party]</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">KAS1</h:td>
+								<h:td valign="top">RSASVE</h:td>
+								<h:td valign="top">[<h:b>selection:</h:b> 3072, 4096, 6144, 8192] bits</h:td>
+								<h:td valign="top">NIST SP 800-56B Revision 2 (Section 7.2.1)</h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s implementation of the of KAS1 RSASVE Single-Party Key Encapsulation, the
+						evaluator shall perform the Algorithm Functional Test and Validation Test using the following
+						input parameters:<h:ul>
+						<h:li>RSA Private key format [Basic with fixed public exponent, Prime Factor with fixed
+							public exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
+							random public exponent, Prime Factor with random public exponent, Chinese
+							Remainder Theorem with random public exponent]</h:li>
+						<h:li>Modulo value [3072, 4096, 6144, 8192]</h:li>
+						<h:li>Role [initiator, responder]</h:li>
+						<h:li>Key confirmation supported [yes, no]</h:li></h:ul><h:p/>
+						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
+						parameter type with the largest number of supported values. For example, if the TOE supports all
+						six key formats, then the evaluator shall generate six test groups. Each of the above supported
+						parameter values must be included in at least one test group.<h:p/>
+						Regardless of how many parameter values are supported, there must be at least two test groups.<h:p/>
+						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
+						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
+						group is designated randomly as either AFT or VAT.<h:p/>
+						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
+						other as a responder, if supported.<h:p/>
+						<h:br/><h:b>Algorithm Functional Test</h:b><h:p/>
+						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
+						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
+						compared with those generated by a known-good implementation using the same inputs.<h:p/>
+						<h:br/><h:b>Validation Test</h:b><h:p/>
+						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
+						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<h:ul>
+						<h:li>Two test cases must have a shared secret with a leading nibble of 0s,</h:li>
+						<h:li>Two test cases have modified derived key material,</h:li>
+						<h:li>Two test cases have modified tags, if key confirmation is supported,</h:li>
+						<h:li>Two test cases have modified MACs, if key confirmation is supported, and</h:li>
+						<h:li>The remaining test cases are not modified.</h:li></h:ul><h:p/>
+						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
+						correspond as expected for both the modified and unmodified values.<h:p/>
+
+						<!-- KTS-OAEP  -->
+						<h:br/><h:b>KTS-OAEP [RSA-OAEP]</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">KTS-OAEP</h:td>
+								<h:td valign="top">RSA-OAEP</h:td>
+								<h:td valign="top">[<h:b>selection:</h:b> 3072, 4096, 6144, 8192] bits</h:td>
+								<h:td valign="top">NIST SP 800-56B Revision 2 (Sections 6.3 &amp; 9)</h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s implementation of the of KTS-OAEP, the evaluator shall perform the
+						Algorithm Functional Test and Validation Test using the following input parameters:<h:ul>
+						<h:li>Roles [initiator, receiver]</h:li>
+						<h:li>Private Key format [Basic with fixed public exponent, Prime Factor with fixed public
+							exponent, Chinese Remainder Theorem with fixed public exponent, Basic with
+							random public exponent, Prime Factor with random public exponent, Chinese
+							Remainder Theorem with random public exponent]</h:li>
+						<h:li>Supported modulus values [3072, 4096, 6144, 8192]</h:li>
+						<h:li>Key confirmation supported [yes, no]</h:li></h:ul><h:p/>
+						The evaluator shall generate a test group (i.e. set of tests) for each parameter value of the above
+						parameter type with the largest number of supported values. For example, if the TOE supports all
+						six key formats, then the evaluator shall generate six test groups. Each of the above supported
+						parameter values must be included in at least one test group.<h:p/>
+						Regardless of how many parameter values are supported, there must be at least two test groups.<h:p/>
+						Half of the test groups are designated as Algorithm Functional Tests (AFT) and the remainder
+						are designated as Validation Tests (VAT). If there is an odd number of groups, then the extra
+						group is designated randomly as either AFT or VAT.<h:p/>
+						If there are only two test groups, in addition to the above, one shall act as an initiator, and the
+						other as a responder, if supported.<h:p/>
+						<h:br/><h:b>Algorithm Functional Test</h:b><h:p/>
+						For each test group designated as AFT, the evaluator shall generate 10 test cases using random
+						data (except for a fixed public exponent, if supported). The resulting shared secrets shall be
+						compared with those generated by a known-good implementation using the same inputs.<h:p/>
+						<h:br/><h:b>Validation Test</h:b><h:p/>
+						For each test group designated as VAT, the evaluator shall generate 25 test cases are using
+						random data (except for a fixed public exponent, if supported). Of the 25 test cases:<h:ul>
+						<h:li>Two test cases must have a shared secret with a leading nibble of 0s,</h:li>
+						<h:li>Two test cases have modified derived key material,</h:li>
+						<h:li>Two test cases have modified tags, if key confirmation is supported,</h:li>
+						<h:li>Two test cases have modified MACs, if key confirmation is supported, and</h:li>
+						<h:li>The remaining test cases are not modified.</h:li></h:ul><h:p/>
+						To determine correctness, the evaluator shall confirm that the resulting 25 shared secrets
+						correspond as expected for both the modified and unmodified values.<h:p/>
+
+						<!-- ML-KEM  -->
+						<h:br/><h:b>ML-KEM Key Encapsulation</h:b><h:p/>
+						<h:table border="1">
+							<h:tr class="header" bgcolor="#cccccc">
+								<h:td valign="top">Identifier</h:td>
+								<h:td valign="top">Cryptographic Algorithm</h:td>
+								<h:td valign="top">Cryptographic Key Sizes</h:td>
+								<h:td valign="top">List of Standards</h:td>
+							</h:tr>
+							<h:tr>
+								<h:td valign="top">ML-KEM</h:td>
+								<h:td valign="top">ML-KEM</h:td>
+								<h:td valign="top">Parameter set = ML-KEM-1024</h:td>
+								<h:td valign="top">NIST FIPS PUB 203</h:td>
+							</h:tr>
+						</h:table><h:p/>
+						To test the TOE’s implementation of ML-KEM key encapsulation/decapsulation, the evaluator
+						shall perform the Encapsulation Test and the Decapsulation Test using the following input
+						parameters:<h:ul>
+						<h:li>Encapsulation Parameters:<h:ul>
+							<h:li>Parameter set [ML-KEM-1024]</h:li>
+							<h:li>Previously generated encapsulation key (<h:i>ek</h:i>)</h:li>
+							<h:li>Random value (<h:i>m</h:i>) [32 bytes]</h:li></h:ul></h:li>
+						<h:li>Decapsulation Parameters:<h:ul>
+							<h:li>Parameter set [ML-KEM-1024]</h:li>
+							<h:li>Previously generated decapsulation key (<h:i>dk</h:i>)</h:li>
+							<h:li>Previously generated ciphertext (<h:i>c</h:i>) [32 bytes]</h:li></h:ul></h:li>
+						</h:ul><h:p/>
+						<h:br/><h:b>Encapsulation Test</h:b><h:p/>
+						For each supported parameter set the evaluator shall generate 25 test cases consisting of an
+						encapsulation key ek and random value m. For each test case the valuator shall require the
+						implementation under test to generate the corresponding shared secret k and ciphertext c. To
+						determine correctness, the evaluator shall compare the resulting values with those generated
+						using a known-good implementation using the same inputs.<h:p/>
+						<h:br/><h:b>Encapsulation Key Check (if supported)</h:b><h:p/>
+						The evaluator shall generate 10 encapsulation keys such that:<h:ul>
+						<h:li>Five of the encapsulation keys are valid, and</h:li>
+						<h:li>Five of the encapsulation keys are modified such that a value in the noisy linear
+						system is encoded into the key as a value greater than Q.</h:li></h:ul><h:p/>
+						The evaluator shall invoke the TOE’s Encapsulation Key Check functionality to determine the
+						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
+						should be determined invalid. <h:p/>
+						<h:br/><h:b>Decapsulation Key Check (if supported)</h:b><h:p/>
+						The evaluator shall generate 10 decapsulation keys such that:<h:ul>
+						<h:li>Five of the decapsulation keys are valid, and</h:li>
+						<h:li>Five of the decapsulation keys are modified such that the concatenated
+						values ek||H(ek) will no longer match by modifying H(ek) to be a different value.</h:li></h:ul><h:p/>
+						The evaluator shall invoke the TOE’s Decapsulation Key Check functionality to determine the
+						validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys
+						should be determined invalid.<h:p/>
+						<h:br/><h:b>Decapsulation Test</h:b><h:p/>
+						For each supported parameter set the evaluator shall use a single previously generated
+						decapsulation key <h:i>dk</h:i> and generate 10 test cases consisting of valid and invalid ciphertexts c. For
+						each test case the evaluator shall require the implementation under test to generate the
+						corresponding shared secret <h:i>k</h:i> whether or not the ciphertext is valid. To determine correctness,
+						the evaluator shall compare the resulting values with those generated using a known-good
+						implementation using the same inputs.<h:p/>
+					</Tests>
+				</aactivity>
+          </f-element>
+          
+        </f-component>
+		
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" name="Cryptographic Operation (Keyed Hash Algorithm)" id="fcs-cop-1-keyhash" status="sel-based">
           <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
           <depends on-sel="fcs-val-ext-1-1-keyhash"/>
