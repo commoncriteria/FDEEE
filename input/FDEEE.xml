@@ -405,7 +405,6 @@
     
     <section title="Functionality Deferred Until the Next cPP" id="sec-TOEdescription">
       <section title="TOE Boundary" id="TOEboundary">
-        <comment>NIAP: Does this still need to be incorporated?</comment>
         <h:p>
         The environment in which the AA functions may differ depending on the boot stage of the platform in which it operates, see Figure 3. Depending on the solution’s architecture, aspects of provisioning, initialization, and authorization may be performed in the Pre-Boot environment, while encryption, decryption and management functionality are likely performed in the Operating System environment. In non-software solutions, encryption/decryption starts in Pre30 OS environment and continues into OS present environment.</h:p>
         <h:p>
@@ -5143,7 +5142,6 @@
     discovered in these types of products and provide that content into the AVA_VAN discussion. In most cases, these vulnerabilities
     will require sophistication beyond that of a basic attacker. This information will be used in the development of future Protection
     Profiles.<h:br/><h:br/>
-    <comment>Added to address TD0606.</comment><h:br/><h:br/>
     If the TOE is a Network Attached Storage (NAS) device, the evaluator shall verify as part of the vulnerability assessment that 
     remote management services are either not present or can be fully disabled.<h:br/><h:br/>
     
