@@ -811,7 +811,7 @@
 			    The OE provides a newly provisioned or initialized storage device free of protected data in 
 			    areas not targeted for encryption.<h:br/><h:br/>
           Rationale: Since the cPP requires all protected data to encrypted, A.INITIAL_DRIVE_STATE assumes
-          that the initial state of the device targeted for FDE is free of protected data in those areas of
+          that the initial state of the device targeted 	 FDE is free of protected data in those areas of
           the drive where encryption will not be invoked (e.g., MBR and AA and EE pre-authentication software).
           Given this known start state, the product (once installed and operational) ensures partitions of 
           logical blocks of user accessible data is protected.
@@ -4165,6 +4165,9 @@
                   keys in non-volatile memory and plaintext keys in non-volatile memory meet one of the criteria
                   for storage.
                 </KMD>
+				<Tests>
+				<test>If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the Evaluator shall verify that TOE protects key material in a way consistent with SFR selection and description in the TSS and KMD. This can be achieved by inspecting non-volatile location where TOE stores key material, by inspecting TOE memory when loading those materials from non-volatile storage using debug mode of TOE execution. 
+				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test.</test>
                 <Tests/>                  
                 </aactivity>
           </f-element>
