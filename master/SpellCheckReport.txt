@@ -13,7 +13,6 @@ output/FDEEE-release-linkable.html: 38E
 output/FDEEE-release-linkable.html: 38F
 output/FDEEE-release-linkable.html: 4C
 output/FDEEE-release-linkable.html: 4GB
-output/FDEEE-release-linkable.html: 56A
 output/FDEEE-release-linkable.html: 56C
 output/FDEEE-release-linkable.html: 5C
 output/FDEEE-release-linkable.html: 6C
@@ -88,7 +87,6 @@ output/FDEEE-release-linkable.html: S5
 output/FDEEE-release-linkable.html: SATA
 output/FDEEE-release-linkable.html: SHA3
 output/FDEEE-release-linkable.html: Sanitization
-output/FDEEE-release-linkable.html: Stateful
 output/FDEEE-release-linkable.html: Subclause
 output/FDEEE-release-linkable.html: TD0606
 output/FDEEE-release-linkable.html: TPMs
@@ -108,7 +106,6 @@ output/FDEEE-release-linkable.html: crypto
 output/FDEEE-release-linkable.html: decapsulation
 output/FDEEE-release-linkable.html: eXtended
 output/FDEEE-release-linkable.html: enquiries
-output/FDEEE-release-linkable.html: ffdhe
 output/FDEEE-release-linkable.html: fulfils
 output/FDEEE-release-linkable.html: href
 output/FDEEE-release-linkable.html: iTC
@@ -136,7 +133,6 @@ output/FDEEE-release.html: 38D
 output/FDEEE-release.html: 38E
 output/FDEEE-release.html: 38F
 output/FDEEE-release.html: 4C
-output/FDEEE-release.html: 56A
 output/FDEEE-release.html: 56C
 output/FDEEE-release.html: 5C
 output/FDEEE-release.html: 6C
@@ -197,7 +193,6 @@ output/FDEEE-release.html: S5
 output/FDEEE-release.html: SATA
 output/FDEEE-release.html: SHA3
 output/FDEEE-release.html: Sanitization
-output/FDEEE-release.html: Stateful
 output/FDEEE-release.html: Subclause
 output/FDEEE-release.html: TD0606
 output/FDEEE-release.html: TPMs
@@ -214,7 +209,6 @@ output/FDEEE-release.html: chipsets
 output/FDEEE-release.html: crypto
 output/FDEEE-release.html: eXtended
 output/FDEEE-release.html: enquiries
-output/FDEEE-release.html: ffdhe
 output/FDEEE-release.html: fulfils
 output/FDEEE-release.html: iTC
 output/FDEEE-release.html: keyspace
@@ -307,7 +301,6 @@ output/FDEEE.html: 38E
 output/FDEEE.html: 38F
 output/FDEEE.html: 4C
 output/FDEEE.html: 4GB
-output/FDEEE.html: 56A
 output/FDEEE.html: 56C
 output/FDEEE.html: 5C
 output/FDEEE.html: 6C
@@ -383,7 +376,6 @@ output/FDEEE.html: S5
 output/FDEEE.html: SATA
 output/FDEEE.html: SHA3
 output/FDEEE.html: Sanitization
-output/FDEEE.html: Stateful
 output/FDEEE.html: Subclause
 output/FDEEE.html: TD0606
 output/FDEEE.html: TPMs
@@ -404,7 +396,6 @@ output/FDEEE.html: crypto
 output/FDEEE.html: decapsulation
 output/FDEEE.html: eXtended
 output/FDEEE.html: enquiries
-output/FDEEE.html: ffdhe
 output/FDEEE.html: fulfils
 output/FDEEE.html: iTC
 output/FDEEE.html: keyspace
