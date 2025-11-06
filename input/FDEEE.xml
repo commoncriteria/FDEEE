@@ -4307,15 +4307,13 @@
         
         
         <f-component cc-id="fpt_tst.1" name="TSF Self-Testing" status="sel-based">
-          <depends on-sel="tsf-rbg-dek"/>
-          <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ei"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
+          <depends on-sel="internal-seed"/>
+          <depends on-sel="internal-seeds"/>
+          <depends on-sel="external-seed"/>
+          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
+          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
+          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
+          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
