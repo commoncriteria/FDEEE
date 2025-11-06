@@ -3899,7 +3899,7 @@
               <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
               <f-element id="fcs-smc-ext-1-1">
                 <title>
-                  The TSF shall combine submasks using the following method <selectables><selectable>exclusive OR (XOR)</selectable><selectable>SHA-256</selectable><selectable>SHA-384</selectable><selectable>SHA-521</selectable></selectables> to generate an [<h:i>intermediary key or BEV</h:i>].
+                  The TSF shall combine submasks using the following method <selectables><selectable>exclusive OR (XOR)</selectable><selectable>SHA-256</selectable><selectable>SHA-384</selectable><selectable>SHA-521</selectable></selectables> to generate an [<h:i>intermediary key</h:i>].
                 </title>
                 <ext-comp-def-title>
                   <title>The TSF shall combine submasks using the following method <selectables>
