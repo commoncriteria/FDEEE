@@ -4496,7 +4496,7 @@
                   verification algorithm)) is expected to be stored in a write protected area on the TOE. It is
                   expected that the firmware only be modifiable in a post-manufacturing state using the
                   authenticated update mechanism described in FPT_FUA_EXT.1. The TSF is modifiable only
-                  by using the mechanisms specified in FPT_TUD_EXT.
+                  by using the mechanisms specified in FPT_TUD_EXT.1.
                 </note>
               </f-element>
                 <f-element id="fpt_fua-ext-1-4">
