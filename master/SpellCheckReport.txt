@@ -28,7 +28,6 @@ output/FDEEE-release-linkable.html: 90A
 output/FDEEE-release-linkable.html: 9C
 output/FDEEE-release-linkable.html: ACPI
 output/FDEEE-release-linkable.html: AESAVS
-output/FDEEE-release-linkable.html: AFA
 output/FDEEE-release-linkable.html: AFTs
 output/FDEEE-release-linkable.html: Adleman
 output/FDEEE-release-linkable.html: BEVs
@@ -148,7 +147,6 @@ output/FDEEE-release.html: 8C
 output/FDEEE-release.html: 90A
 output/FDEEE-release.html: 9C
 output/FDEEE-release.html: ACPI
-output/FDEEE-release.html: AFA
 output/FDEEE-release.html: Adleman
 output/FDEEE-release.html: BEVs
 output/FDEEE-release.html: CCDB
@@ -329,7 +327,6 @@ output/FDEEE.html: 90A
 output/FDEEE.html: 9C
 output/FDEEE.html: ACPI
 output/FDEEE.html: AESAVS
-output/FDEEE.html: AFA
 output/FDEEE.html: AFTs
 output/FDEEE.html: Adleman
 output/FDEEE.html: BEVs
