@@ -21,8 +21,6 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[10]""/on-sel[1]""
 * Error: Detected dangling id-reference to rbg-overwrite-multi from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[11]""/on-sel[1]""
-* Error: Detected dangling id-reference to fcs-kyc-ext-1-2-sel-2a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[26]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-1 from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-2 from attribute
