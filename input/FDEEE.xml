@@ -4003,8 +4003,7 @@
              
             </f-component>
         
-            <f-component cc-id="fcs_val_ext.1" name="Validation " id="fcs-val-ext-1" status="sel-based">
-              <depends on-sel="fcs-kyc-ext-1-2-sel-2a"/>
+            <f-component cc-id="fcs_val_ext.1" name="Validation" id="fcs-val-ext-1">
               <consistency-rationale/>
               <comp-lev>requires the TSF to validate submasks and BEVs by one or more of the specified methods.</comp-lev>
               <management/>
