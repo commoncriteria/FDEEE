@@ -5,14 +5,8 @@
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[26]""/f-element[3]""
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ei from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[7]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiii from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[8]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3eiv from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[9]""/on-sel[1]""
+* Error: Detected dangling id-reference to tsf-rbg-de from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to uses-sw from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[7]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to uses-toehw from attribute
