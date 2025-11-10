@@ -1060,24 +1060,17 @@
             </f-component>
       
       <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
-              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fcs-sni-ext-1-3-sel-2"/>
-              <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ei"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiii"/>
-              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
-              
+              <depends on-sel="tsf-rbg-de"/>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
+			  <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
+			  <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
                 sizes [256 bit] that meet the following: [<h:i>no standard</h:i>].
                 </title>
                 <note role="application">
                   Symmetric keys may be used to generate keys along the key chain. Any instance in where the TSF DRBG is referenced for key generation (as in 
-                  FCS_SNI_EXT.1 and FCS_CKM.5), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating 
-                  an authorization factor (as in FPT_KYP_EXT.1 and FCS_VAL_EXT.1)                  
+                  FCS_SNI_EXT.1 and FCS_CKM.5), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating a key.                 
                 </note>
                 <aactivity>
                   <TSS>The evaluator shall review the TSS to determine that a symmetric key is supported by
