@@ -5,30 +5,6 @@
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[26]""/f-element[3]""
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to sel-fcs-afa-ext-1-1-sel-1b from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-afa-ext-1-1-sel-6a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[2]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kdf-ext-1-1-sel-1a from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[3]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-1 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[7]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-3 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[8]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-sni-ext-2-2-sel-2 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[9]""/on-sel[1]""
-* Error: Detected dangling id-reference to rbg-overwrite-single from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[10]""/on-sel[1]""
-* Error: Detected dangling id-reference to rbg-overwrite-multi from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/depends[11]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-1 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[4]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-2 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[5]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-3 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[6]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fcs-kyc-ext-2-2-sel-4 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[4]""/f-component[8]""/depends[7]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
