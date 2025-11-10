@@ -2145,8 +2145,20 @@
         </f-component>
 		
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" name="Cryptographic Operation (Keyed Hash Algorithm)" id="fcs-cop-1-keyhash" status="sel-based">
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+          
           <depends on-sel="fcs-val-ext-1-1-keyhash"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac256"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac384"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-ctr-hmac512"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac256"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac384"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-fb-hmac512"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac256"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac384"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-dpi-hmac512"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-mac-1S"/>
+          <depends on-sel="sel-fcs-ckm-5-kdf-mac-2S"/>
+          <depends on-sel="hmac-drbg"/>
           <f-element id="fcs-cop-1e1-keyedhash">
 				<title>The TSF shall perform [keyed hash message authentication] in accordance
 					with a specified cryptographic algorithm 
@@ -2161,7 +2173,7 @@
 										completion of the selection operations of FCS_COP.1/KeyedHash.</reqtext>
 						</tabularize>
 						
-						<selectable id="sel-fcs-cop-keyedhash-hmac-sha-256">
+						<selectable id="sel-fcs-cop-keyedhash-f-sha-256">
 							<col>HMAC-SHA-256</col>
 							<col>256 bits</col>
 							<col><selectables>
@@ -3037,7 +3049,7 @@
 							<col>KPF2 - KDF in Counter Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac512">HMAC-SHA-512</selectable>
 							</selectables> as the PRF</col>
 							<col><selectables>
@@ -3061,7 +3073,7 @@
 							<col>KPF3 - KDF in Feedback Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-fb-hmac512">HMAC-SHA-512</selectable>
 							</selectables> as the PRF</col>
 							<col><selectables>
@@ -3084,7 +3096,7 @@
 							<col>KDF in Double Pipeline Iteration Mode using <selectables>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-cmac">AES-256-CMAC</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac256">HMAC-SHA-256</selectable>
-								<selectable id="sel-fcs-ckm-5-kdf-ctr-hmac256">HMAC-SHA-384</selectable>
+								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac384">HMAC-SHA-384</selectable>
 								<selectable id="sel-fcs-ckm-5-kdf-dpi-hmac512">HMAC-SHA-512</selectable>
 								</selectables> as the PRF</col>
 							<col><selectables>
@@ -3653,9 +3665,9 @@
                 <title>
                   The TSF shall perform deterministic random bit generation services using
                   <selectables>
-                    <selectable><h:i>Hash_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
-                    <selectable><h:i>HMAC_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
-                    <selectable><h:i>CTR_DRBG (AES-128, AES-192, AES-256)</h:i></selectable>
+                    <selectable id="hash-drbg"><h:i>Hash_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
+                    <selectable id="hmac-drbg"><h:i>HMAC_DRBG (SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-384, SHA3-512)</h:i></selectable>
+                    <selectable id="ctr-drbg"><h:i>CTR_DRBG (AES-128, AES-192, AES-256)</h:i></selectable>
                   </selectables> in accordance with <selectables>
                     <selectable><h:i>ISO/IEC 18031:2011</h:i></selectable>
                     <selectable id='fcs-rbg-1-1-nist'><h:i>NIST SP 800-90A</h:i></selectable>
