@@ -2283,10 +2283,6 @@
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEnc" name="Cryptographic Operation (Key Encryption)" id="fcs-cop-1-kE" status="sel-based">
           <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eii"/>
-          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3eiv"/>
            <f-element id="fcs_cop-1-1-keyenc">
 				<title>
 					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
@@ -2374,7 +2370,7 @@
         
             
             <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation - Key Wrapping" id="fcs-cop-1-keywrap" status="sel-based">
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
               <f-element id="fcs_cop-1-1-keywrap">
                 
@@ -3655,9 +3651,9 @@
 			  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-fb-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-dpi-dirgen"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+              <depends on-sel="sel-fcs-kyc-ext-2-2-sel-1"/>
+              <depends on-sel="sel-fcs-kyc-ext-2-2-sel-3"/>
+              <depends on-sel="sel-fcs-sni-ext-2-2-sel-2"/>
               <depends on-sel="rbg-overwrite-single"/>
               <depends on-sel="rbg-overwrite-multi"/>
               
@@ -4769,10 +4765,10 @@
           <depends on-sel="internal-seed"/>
           <depends on-sel="internal-seeds"/>
           <depends on-sel="external-seed"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-1"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-2"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-3"/>
-          <depends on-sel="sel-fcs-kyc-ext-1-1-sel-4"/>
+          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-1"/>
+          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-2"/>
+          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-3"/>
+          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-4"/>
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
