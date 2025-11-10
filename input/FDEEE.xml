@@ -1104,7 +1104,7 @@
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
-                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable id="genhw-rbg-overwrite-vol">a pseudo-random pattern using the TSF’s RBG,</selectable>
                   <selectable>zeroes,</selectable>
                   <selectable>ones,</selectable> 
                   <selectable>a new value of a key,</selectable>
@@ -1120,7 +1120,7 @@
                     <selectable>single</selectable>
                     <selectable><assignable>ST author defined multi-pass</assignable></selectable>
                   </selectables> overwrite consisting of <selectables linebreak="yes">
-                    <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                    <selectable id="genhw-rbg-overwrite-nonvol">a pseudo-random pattern using the TSF’s RBG,</selectable>
                     <selectable>zeroes,</selectable>
                     <selectable>ones,</selectable>
                     <selectable>a new value of a key of the same size,</selectable>
@@ -1367,7 +1367,7 @@
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
-                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable id="sw-rbg-overwrite-vol">a pseudo-random pattern using the TSF’s RBG,</selectable>
                   <selectable>zeroes,</selectable>
                   <selectable>ones,</selectable> 
                   <selectable>a new value of a key,</selectable>
@@ -1384,7 +1384,7 @@
                     <selectable>single</selectable>
                     <selectable><assignable>ST author defined multi-pass</assignable></selectable></selectables>
                     overwrite consisting of <selectables linebreak="yes">
-                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable id="sw-rbg-overwrite-nonvol">a pseudo-random pattern using the TSF’s RBG,</selectable>
                   <selectable>zeroes,</selectable>
                   <selectable>ones,</selectable>
                   <selectable>a new value of a key of the same size,</selectable>
@@ -1534,7 +1534,7 @@
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
-                  <selectable>a pseudo-random pattern using the TSF’s RBG,</selectable>
+                  <selectable id="toe-rbg-overwrite-vol">a pseudo-random pattern using the TSF’s RBG,</selectable>
                   <selectable>zeroes,</selectable>
                   <selectable>ones,</selectable> 
                   <selectable>a new value of a key,</selectable>
@@ -1552,6 +1552,7 @@
                     <selectable>single overwrite consisting of ones</selectable>
                     <selectable>overwrite with a new value of a key of the same size</selectable>
                     <selectable>single overwrite consisting of <assignable>some value that does not contain any CSP</assignable></selectable>
+                    <selectable id="toe-rbg-overwrite-nonvol">a pseudo-random pattern using the TSF’s RBG</selectable>
                     <selectable>block erase</selectable>
                     </selectables></selectable>
                     <selectable>that does not employ a wear-leveling algorithm, the destruction
@@ -3645,17 +3646,19 @@
         
             <f-component cc-id="fcs_rbg.1" name="Cryptographic Operation (Random Bit Generation)"
               id="fcs-rbg-1" status="sel-based">
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-1b"/>
-              <depends on-sel="sel-fcs-afa-ext-1-1-sel-6a"/>
-              <depends on-sel="sel-fcs-kdf-ext-1-1-sel-1a"/>
 			  <depends on-sel="sel-fcs-ckm-5-kdf-ctr-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-fb-dirgen"/>
               <depends on-sel="sel-fcs-ckm-5-kdf-dpi-dirgen"/>
-              <depends on-sel="sel-fcs-kyc-ext-2-2-sel-1"/>
-              <depends on-sel="sel-fcs-kyc-ext-2-2-sel-3"/>
-              <depends on-sel="sel-fcs-sni-ext-2-2-sel-2"/>
-              <depends on-sel="rbg-overwrite-single"/>
-              <depends on-sel="rbg-overwrite-multi"/>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-3"/>
+              <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
+              <depends on-sel="genhw-rbg-overwrite-vol"/>
+              <depends on-sel="genhw-rbg-overwrite-nonvol"/>
+              <depends on-sel="sw-rbg-overwrite-vol"/>
+              <depends on-sel="sw-rbg-overwrite-nonvol"/>
+              <depends on-sel="toe-rbg-overwrite-vol"/>
+              <depends on-sel="toe-rbg-overwrite-nonvol"/>
+			  <depends on-sel="tsf-rbg-dek"/>
               
               <f-element id="fcs-rbg-1-1">
                 <title>
@@ -4764,10 +4767,10 @@
           <depends on-sel="internal-seed"/>
           <depends on-sel="internal-seeds"/>
           <depends on-sel="external-seed"/>
-          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-1"/>
-          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-2"/>
-          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-3"/>
-          <depends on-sel="sel-fcs-kyc-ext-2-2-sel-4"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-2"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-3"/>
+          <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
