@@ -1520,7 +1520,7 @@
       
       <f-component name="Cryptographic Key Destruction (TOE-Controlled Hardware)" cc-id="fcs_ckm.6"
         iteration="TOEHW" id="fcs-ckm-6-toehw" status="sel-based">
-        <depends on-sel="uses-toehw"/>
+        <depends on-sel="uses-toe-hw"/>
         <f-element id="fcs_ckm-6-1-toehw">
           <title>
             The TSF shall destroy <assignable>list of cryptographic keys (including keying material)</assignable>
@@ -1724,7 +1724,7 @@
           <title>
             The TSF shall use <selectables>
               <selectable id="uses-genhw">FCS_CKM.6/GENHW</selectable>
-              <selectable id="uess-sw">FCS_CKM.6/SW</selectable>
+              <selectable id="uses-sw">FCS_CKM.6/SW</selectable>
               <selectable id="uses-toe-hw">FCS_CKM.6/TOEHW</selectable>
               
             </selectables>
