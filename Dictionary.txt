@@ -101,6 +101,7 @@ Stateful
 Subclause
 TPMs
 Tweakable
+unpowered
 VAN1
 VarKey
 VarTxt
@@ -225,6 +226,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
