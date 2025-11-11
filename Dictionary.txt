@@ -83,6 +83,7 @@ MACs
 MBRs
 Merkle
 Micali
+miniscule
 NAS
 PBKDF2
 PCI
@@ -224,6 +225,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
