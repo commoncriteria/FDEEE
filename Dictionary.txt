@@ -88,6 +88,7 @@ PCI
 PINs
 PRFs
 RSASVE
+RTU
 S3
 S4
 S5
@@ -96,6 +97,7 @@ SHA3
 Sanitization
 Stateful
 Subclause
+TPMs
 Tweakable
 VAN1
 VarKey
@@ -221,6 +223,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
