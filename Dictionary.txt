@@ -36,6 +36,7 @@ AFs
 Adleman
 BEVs
 CCL
+CCDB
 CMAC
 CNSA
 CSP
@@ -216,6 +217,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
