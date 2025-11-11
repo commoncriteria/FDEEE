@@ -105,6 +105,7 @@ unpowered
 VAN1
 VarKey
 VarTxt
+X’
 XCCDF
 XEX
 XMSS
@@ -226,6 +227,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
