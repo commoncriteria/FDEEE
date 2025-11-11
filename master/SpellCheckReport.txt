@@ -1,9 +1,5 @@
-output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: unpowered
-output/FDEEE-release.html: preauthentication
 output/FDEEE-release.html: unpowered
 output/FDEEE-sd.html: X’
-output/FDEEE-sd.html: preauthentication
 output/FDEEE.html: X’
-output/FDEEE.html: preauthentication
 output/FDEEE.html: unpowered
