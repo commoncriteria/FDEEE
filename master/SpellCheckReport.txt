@@ -1,4 +1,3 @@
-output/FDEEE-release-linkable.html: CCDB
 output/FDEEE-release-linkable.html: D0
 output/FDEEE-release-linkable.html: D1
 output/FDEEE-release-linkable.html: D2
@@ -11,7 +10,6 @@ output/FDEEE-release-linkable.html: nonrepeating
 output/FDEEE-release-linkable.html: ofkas
 output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: unpowered
-output/FDEEE-release.html: CCDB
 output/FDEEE-release.html: D0
 output/FDEEE-release.html: D1
 output/FDEEE-release.html: D2
@@ -22,13 +20,11 @@ output/FDEEE-release.html: keyspace
 output/FDEEE-release.html: ofkas
 output/FDEEE-release.html: preauthentication
 output/FDEEE-release.html: unpowered
-output/FDEEE-sd.html: CCDB
 output/FDEEE-sd.html: RTU
 output/FDEEE-sd.html: X’
 output/FDEEE-sd.html: miniscule
 output/FDEEE-sd.html: nonrepeating
 output/FDEEE-sd.html: preauthentication
-output/FDEEE.html: CCDB
 output/FDEEE.html: D0
 output/FDEEE.html: D1
 output/FDEEE.html: D2
