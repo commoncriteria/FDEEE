@@ -206,7 +206,7 @@
         the data only after successful authorization to the FDE solution. The
         exceptions include the necessity to leave a portion of the storage device
         (the size may vary based on implementation) unencrypted for such
-        things as the Master Boot Record (MBR) or other AA/EE preauthentication software. These FDE cPPs interpret the term “full drive
+        things as the Master Boot Record (MBR) or other AA/EE pre-authentication software. These FDE cPPs interpret the term “full drive
         encryption” to allow FDE solutions to leave a portion of the storage
         device unencrypted so long as it contains no protected data.</term>
       <term abbr='FFC' full="Finite Field Cryptography"></term>
