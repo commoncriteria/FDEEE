@@ -1,4 +1,3 @@
-output/FDEEE-release-linkable.html: nonrepeating
 output/FDEEE-release-linkable.html: ofkas
 output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: unpowered
@@ -6,10 +5,8 @@ output/FDEEE-release.html: ofkas
 output/FDEEE-release.html: preauthentication
 output/FDEEE-release.html: unpowered
 output/FDEEE-sd.html: X’
-output/FDEEE-sd.html: nonrepeating
 output/FDEEE-sd.html: preauthentication
 output/FDEEE.html: X’
-output/FDEEE.html: nonrepeating
 output/FDEEE.html: ofkas
 output/FDEEE.html: preauthentication
 output/FDEEE.html: unpowered
