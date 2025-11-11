@@ -1,10 +1,8 @@
-output/FDEEE-release-linkable.html: keyspace
 output/FDEEE-release-linkable.html: miniscule
 output/FDEEE-release-linkable.html: nonrepeating
 output/FDEEE-release-linkable.html: ofkas
 output/FDEEE-release-linkable.html: preauthentication
 output/FDEEE-release-linkable.html: unpowered
-output/FDEEE-release.html: keyspace
 output/FDEEE-release.html: ofkas
 output/FDEEE-release.html: preauthentication
 output/FDEEE-release.html: unpowered
@@ -13,7 +11,6 @@ output/FDEEE-sd.html: miniscule
 output/FDEEE-sd.html: nonrepeating
 output/FDEEE-sd.html: preauthentication
 output/FDEEE.html: X’
-output/FDEEE.html: keyspace
 output/FDEEE.html: miniscule
 output/FDEEE.html: nonrepeating
 output/FDEEE.html: ofkas
