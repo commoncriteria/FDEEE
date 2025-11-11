@@ -1,5 +1,2 @@
-output/FDEEE-release-linkable.html: unpowered
-output/FDEEE-release.html: unpowered
 output/FDEEE-sd.html: X’
 output/FDEEE.html: X’
-output/FDEEE.html: unpowered
