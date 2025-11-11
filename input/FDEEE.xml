@@ -4581,7 +4581,7 @@
                 <selectable>only store plaintext keys that meet any one of the following criteria <selectables>
                   <selectable>the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.2</selectable>
                   <selectable>the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
-                  <selectable>the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half ofkas
+                  <selectable>the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of
 				  the key split is <selectables linebreak="yes">
                     <selectable>wrapped as specified in FCS_COP.1</selectable>
                     <selectable>encrypted as specified in FCS_COP.1</selectable>
