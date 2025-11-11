@@ -41,6 +41,10 @@ CMAC
 CNSA
 CSP
 CSPs
+D0
+D1
+D2
+D3
 DEKs
 DRBGs
 Decapsulation
@@ -217,6 +221,7 @@ evaluator's
 fail'
 pass'
 test
+
 
 
 
