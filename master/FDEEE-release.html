@@ -969,7 +969,7 @@ The following sections list Common Criteria and technology terms used in this do
         A threat consists of a threat agent, an asset and an adverse action of that threat agent on
         that asset. The threat agents are the entities that put the assets at risk if an adversary
         obtains a lost or stolen storage device. Threats drive the functional requirements for the 
-        target of evaluation (<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>). For instance, one threat below is <a href="#T.UNAUTHORIZED_DATA_ACCESS">T.UNAUTHORIZED_DATA_ACCESS</a>. 
+        Target of Evaluation (<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>). For instance, one threat below is <a href="#T.UNAUTHORIZED_DATA_ACCESS">T.UNAUTHORIZED_DATA_ACCESS</a>. 
         The threat agent is the possessor (unauthorized user) of a lost or stolen storage device.
         The asset is the data on the storage device, while the adverse action is to attempt to 
         obtain those data from the storage device. This threat drives the functional requirements
@@ -982,7 +982,7 @@ The following sections list Common Criteria and technology terms used in this do
       
         It is important to reemphasize at this point that this collaborative Protection Profile 
         does not expect the product (<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) to defend against the possessor of the lost or stolen
-        hard disk who can introduce malicious code or exploitable hardware components into the 
+        storage device who can introduce malicious code or exploitable hardware components into the 
         Target of Evaluation (<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) or the Operational Environment. It assumes that the user 
         physically protects the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and that the Operational Environment provides sufficient
         protection against logical attacks. One specific area where a conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> offers 
@@ -1011,7 +1011,7 @@ The following sections list Common Criteria and technology terms used in this do
 		      in unencrypted sectors of the storage device and on other peripherals in the operating environment
 		      (<abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>), (e.g., <abbr class="dyn-abbr"><a href="#abbr_BIOS">BIOS</a></abbr> configuration, <abbr class="dyn-abbr"><a href="#abbr_SPI">SPI</a></abbr> flash, or TPMs).
 		    </span></dd><dt class="threat defined" id="T.KEYSPACE_EXHAUST">T.KEYSPACE_EXHAUST</dt><dd><span class="description">
-		      Threat agents may perform a cryptographic exhaust against the key space. Poorly chosen
+		      Threat agents may perform a cryptographic exhaustive search against the key space. Poorly chosen
 		      encryption algorithms and parameters allow attackers to exhaust the key space through brute force
 		      and give them unauthorized access to the data.</span></dd><dt class="threat defined" id="T.KNOWN_PLAINTEXT">T.KNOWN_PLAINTEXT</dt><dd><span class="description">
 		      Threat agents know plaintext in regions of storage devices,
@@ -1027,11 +1027,11 @@ The following sections list Common Criteria and technology terms used in this do
 				  targeted storage device to a host of which they have complete control and have raw access to
 				  the storage device (e.g., to specified disk sectors, to specified blocks).
 				</span></dd><dt class="threat defined" id="T.UNAUTHORIZED_FIRMWARE_MODIFY">T.UNAUTHORIZED_FIRMWARE_MODIFY</dt><dd><span class="description">
-		      An attacker attempts to modify the firmware in the <abbr class="dyn-abbr"><a href="#abbr_SED">SED</a></abbr> via a command from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> or from the
+		      An attacker attempts to modify the firmware of the storage device via a command from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> or from the
 		      host platform that may compromise the security features of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 		    </span></dd><dt class="threat defined" id="T.UNAUTHORIZED_FIRMWARE_UPDATE">T.UNAUTHORIZED_FIRMWARE_UPDATE</dt><dd><span class="description">
 		      An attacker attempts to replace the firmware
-		      on the <abbr class="dyn-abbr"><a href="#abbr_SED">SED</a></abbr> via a command from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> or from the host platform with a malicious firmware
+		      on the storage device via a command from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> or from the host platform with a malicious firmware
 		      update that may compromise the security features of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
 		    </span></dd><dt class="threat defined" id="T.UNAUTHORIZED_UPDATE">T.UNAUTHORIZED_UPDATE</dt><dd><span class="description">
 				  Threat agents may attempt to perform an update of the product which compromises the security 
@@ -1062,7 +1062,7 @@ The following sections list Common Criteria and technology terms used in this do
             The platform in which the storage device resides (or an external storage device is connected)
             is free of malware that could interfere with the correct operation of the product.
           </span></dd><dt class="assumption defined" id="A.POWER_DOWN">A.POWER_DOWN</dt><dd><span class="description"><p>The user does not leave the platform and/or storage device unattended until all volatile memory is erased after a power-off, so memory remnant attacks are infeasible.</p><p>Authorized users do not leave the platform and/or storage device in a mode where sensitive information persists in non-volatile storage (e.g., lock screen). Users power the platform and/or storage device down or place it into a power managed state, such as a “hibernation mode”.</p></span></dd><dt class="assumption defined" id="A.STRONG_CRYPTO">A.STRONG_CRYPTO</dt><dd><span class="description">
-      All cryptography implemented in the Operational Environment and used by the product
+      All cryptography implemented in the Operational Environment and used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
       meets the requirements listed in the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>. This includes generation of external token authorization
       factors by an <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>.
     </span></dd><dt class="assumption defined" id="A.TRAINED_USER">A.TRAINED_USER</dt><dd><span class="description">
@@ -1075,7 +1075,7 @@ The following sections list Common Criteria and technology terms used in this do
             Communication among and between product components (e.g., <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>) is
             sufficiently protected to prevent information disclosure. In cases in which a single
             product fulfils both <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr>, the communication between the components does not 
-            extend beyond the boundary of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., communication path is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
+            extend beyond the boundary of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (i.e., communication path is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
             boundary) so this assumption is inherently met. In cases in which independent products satisfy the requirements of the
             <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>, the physically close proximity of the two products during their operation
             means that the threat agent has very little opportunity to interpose itself in the 
