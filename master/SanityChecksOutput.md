@@ -8,10 +8,12 @@
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
+* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-1'.
+* Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-2'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-3'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-4'.
 * Error: Detected multiple elements with an id of 'sel-fcs-kyc-ext-1-1-sel-5'.
