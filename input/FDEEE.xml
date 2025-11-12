@@ -1266,8 +1266,8 @@
             the key that is used to wrap or encrypt the key used to encrypt/decrypt data, using the
             appropriate method for the memory type involved, will suffice. For example, if a product uses
             a Key Encryption Key (KEK) to encrypt a Data Encryption Key (DEK), destroying the KEK
-            using one of the methods in FCS_CKM.EXT.6.1 is sufficient, since the DEK would no longer
-            be usable (of course, presumes the DEK is still encrypted.
+            using one of the methods in FCS_CKM_EXT.6.1 is sufficient, since the DEK would no longer
+            be usable (of course, presumes the DEK is still encrypted).
           </note>
           <aactivity>
             <TSS/>
