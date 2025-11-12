@@ -367,19 +367,14 @@ The following sections list Common Criteria and technology terms used in this do
         of the two components.</td></tr>
 <tr><td><div id="Data_Encryption_Key">Data Encryption Key (DEK)</div></td><td>A key used to encrypt data-at-rest.</td></tr>
 <tr><td><div id="Full_Drive_Encryption">Full Drive Encryption (FDE)</div></td><td>Refers to partitions of logical blocks of user accessible data as
-        managed by the host system that indexes and partitions and an
-        operating system that maps authorization to read or write data to blocks
-        in these partitions. For the sake of this Security Program Definition
-        (SPD) and cPP, FDE performs encryption and authorization on one
-        partition, so defined and supported by the OS and file system jointly,
-        under consideration. FDE products encrypt all data (with certain
+        managed by the host system. FDE products encrypt all data (with certain
         exceptions) on the partition of the storage device and permits access to
-        the data only after successful authorization to the FDE solution. The
-        exceptions include the necessity to leave a portion of the storage device
-        (the size may vary based on implementation) unencrypted for such
-        things as the Master Boot Record (MBR) or other AA/EE pre-authentication software. These FDE cPPs interpret the term “full drive
-        encryption” to allow FDE solutions to leave a portion of the storage
-        device unencrypted so long as it contains no protected data.</td></tr>
+        the data only after successful authorization. 
+        FDE solutions may leave a portion of the storage
+        device unencrypted, for such
+        things as the Master Boot Record (MBR) or other AA/EE pre-authentication software, 
+        so long as it contains no protected data.
+       </td></tr>
 <tr><td><div id="Host_Platform">Host Platform</div></td><td>The local hardware and software the TOE is running on, and does not
         include any peripheral devices (e.g. USB devices) that may be
         connected to the local hardware and software.</td></tr>
@@ -402,12 +397,12 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="Operating_System">Operating System (OS)</div></td><td>Software which runs at the highest privilege level and can directly
         control hardware resources.</td></tr>
 <tr><td><div id="Powered-Off_State">Powered-Off State</div></td><td>The device has been shut down.</td></tr>
-<tr><td><div id="Protected_Data">Protected Data</div></td><td>This refers to all data on the storage device with the exception of a
-        small portion required for the TOE to function correctly. It is all space
-        on the disk a user could write data to and includes the operating
-        system, applications, and user data. Protected data does not include the
-        Master Boot Record or Pre-authentication area of the drive – areas of
-        the drive that are necessarily unencrypted.</td></tr>
+<tr><td><div id="Protected_Data">Protected Data</div></td><td>This refers to all encrypted data on the storage device.
+        Protected data may exclude a
+        Master Boot Record or Pre-authentication area of the drive – areas 
+        that are sometimes necessarily unencrypted.</td></tr>
+<tr><td><div id="Root_of_Trust_for_Update">Root of Trust for Update (RTU)</div></td><td>A type of RoT that verifies the intergity and authenticity of an 
+        update payload before initiating the update process.</td></tr>
 <tr><td><div id="Submask">Submask</div></td><td>A submask is a bit string that can be generated and stored in a number
         of ways.</td></tr>
 </table></div><h1 id="sfr" class="indexable" data-level="0">2 Evaluation Activities for SFRs</h1><p>The EAs presented in this section capture the actions the evaluator performs 

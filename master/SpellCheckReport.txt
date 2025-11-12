@@ -1,0 +1,4 @@
+output/FDEEE-release-linkable.html: intergity
+output/FDEEE-release.html: intergity
+output/FDEEE-sd.html: intergity
+output/FDEEE.html: intergity
