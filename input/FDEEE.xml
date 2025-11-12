@@ -4153,10 +4153,9 @@
           outside the discretion of the user, which is a characteristic that distinguishes it from file
           encryption. The definition of protected data can be found in the glossary.<h:br/><h:br/>
           The cryptographic functions that perform the encryption/decryption of the data may be
-          provided by the Operational Environment. Note that if this is the case, it is assumed that the
-          environmental implementation of AES is consistent with the behavior described in
-          FCS_COP.1/SKC. If the TOE provides the cryptographic functions to encrypt/decrypt the data,
-          the ST author includes FCS_COP.1/SKC as defined in Appendix B in the main body of the ST.
+          provided by the Operational Environment (OE). Note that if this is the case, it is assumed that the
+          OE implementation of AES is consistent with the behavior described in
+          FCS_COP.1/SKC.
         </note>
         <aactivity>
           <TSS>
