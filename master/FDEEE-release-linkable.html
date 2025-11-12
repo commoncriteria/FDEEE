@@ -647,11 +647,11 @@ function showTarget(id){
     
 
     <h2 class="indexable" data-level="2" id="sec-ppoverview">1.1 PP Overview</h2>
-      	The purpose of the first set of Collaborative Protection Profiles (<abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr>) for Full Drive
+      	The purpose of the set of Collaborative Protection Profiles (<abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr>) for Full Drive
       	Encryption (<abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr>): Authorization Acquisition (<abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr>) and Encryption Engine (<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>) is to provide
-      	requirements for Data-at-Rest protection for a lost device that contains storage<a id="period_1" href="#period_1">. </a>These <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr>
-      	allow <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> solutions based in software and/or hardware to meet the requirements<a id="period_2" href="#period_2">. </a>The form
-      	factor for a storage device may vary, but could include: system hard drives/solid state
+      	requirements for Data-at-Rest protection against unauthorized access or disclosure of stored data on a lost device<a id="period_1" href="#period_1">. </a>
+        These <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> allow <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> solutions based in software and/or hardware to meet the requirements for Data-at-Rest protection<a id="period_2" href="#period_2">. </a>
+        The form factor for a storage device may vary, but could include: hard disk drives/solid state
       	drives in servers, workstations, laptops, mobile devices, tablets, and external media<a id="period_3" href="#period_3">. </a>A
       	hardware solution could be a Self-Encrypting Drive or other hardware-based solutions; the
       	interface (<abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>, SATA, etc.) used to connect the storage device to the host machine is outside
@@ -678,7 +678,7 @@ function showTarget(id){
           the necessary security requirements and assurance activities for the actual encryption and
           decryption of the data by the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr><a id="period_10" href="#period_10">. </a>Each <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> will also have a set of core requirements for management
           functions, proper handling of cryptographic keys, updates performed in a trusted manner, audit and self-tests<a id="period_11" href="#period_11">. </a><br><br> 
-          This <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> description defines the scope and functionality of the Encryption Engine, and
+          The Target of Evaluation (<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) description defines the scope and functionality of the Encryption Engine, and
           the Security Problem Definition describes the assumptions made about the operating
           environment and the threats to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> that the <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> requirements address<a id="period_12" href="#period_12">. </a>	  
 	
@@ -776,8 +776,8 @@ The following sections list Common Criteria and technology terms used in this do
 	
      <h2 class="indexable" data-level="2" id="sec-TOEimplementation">1.3 Implementation</h2>
        Full Drive Encryption solutions vary with implementation and vendor combinations<a id="period_63" href="#period_63">. </a><br><br> 
-       Therefore, vendors will evaluate products that provide both components of the Full Disk
-        Encryption Solution (<abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>) against both <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr> &#8211; could be done in a single evaluation
+       Vendors must evaluate products that provide both components of the Full Disk
+        Encryption Solution (<abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>) against both <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr>, although that could be done in a single evaluation
         with one <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr><a id="period_64" href="#period_64">. </a>A vendor that provides a single component of an <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> solution would only evaluate
         against the applicable <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr><a id="period_65" href="#period_65">. </a>The <abbr class="dyn-abbr"><a href="#abbr_FDE">FDE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> is divided into two documents to allow labs to
         independently evaluate solutions tailored to one <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> or the other<a id="period_66" href="#period_66">. </a>When a customer acquires
@@ -785,8 +785,7 @@ The following sections list Common Criteria and technology terms used in this do
         or two products, one of which meets the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr> and the other of which meets the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_cPP">cPPs</a></abbr><a id="period_67" href="#period_67">. </a><br><br>
        The table below illustrates a few examples for certification<br><br>
         
-        <head><b><span class="ctr" data-myid="atref-mandatory" data-counter-type="ct-Table" id="atref-mandatory">Table <span class="counter">1</span>: Examples of cPP Implementations</span></b></head>			
-        <tr class="header"><td>Event</td><td></td></tr>    	
+        <head><b><span class="ctr" data-myid="atref-mandatory" data-counter-type="ct-Table" id="atref-mandatory">Table <span class="counter">1</span>: Examples of cPP Implementations</span></b></head>   	
   <table border="1">
       <tr>
         <th>Implementation</th>
@@ -827,19 +826,19 @@ The following sections list Common Criteria and technology terms used in this do
      
      <h3 class="indexable" data-level="3" id="sec-TOEencryption-engine-introduction">1.4.1 Encryption Engine Introduction</h3>
       
-      The Encryption Engine objectives focus on data encryption, policy enforcement, and key
+      The Encryption Engine (<abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>) objectives focus on data encryption, policy enforcement, and key
       management<a id="period_70" href="#period_70">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> is responsible for the generation, update, archival, recovery, protection,
       and destruction of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> and other intermediate keys under its control<a id="period_71" href="#period_71">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> receives a
-      <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr><a id="period_72" href="#period_72">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> uses that <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> for the decryption of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> although other
-      intermediate keys may exist in between those two points<a id="period_73" href="#period_73">. </a>Key encryption keys (KEKs) wrap
-      other keys, notably the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> or other intermediary keys which chain to the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr><a id="period_74" href="#period_74">. </a>Key releasing
-      keys (KRKs) authorize the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> to release either the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> or other intermediary keys which chain
+      Border Encryption Value (<abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>) from the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr><a id="period_72" href="#period_72">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> uses that <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> for the decryption of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> although other
+      intermediate keys may exist in between those two points<a id="period_73" href="#period_73">. </a>Key Encryption Keys (KEKs) wrap
+      other keys, notably the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> or other intermediary keys which chain to the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr><a id="period_74" href="#period_74">. </a>Key Releasing
+      Keys (KRKs) authorize the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> to release either the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> or other intermediary keys which chain
       to the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr><a id="period_75" href="#period_75">. </a>These keys only differ in the functional use<a id="period_76" href="#period_76">. </a><br><br>
       
       The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> determines whether to allow or deny a requested action based on the <abbr class="dyn-abbr"><a href="#abbr_KEK">KEK</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_KRK">KRK</a></abbr>
       provided by the <abbr class="dyn-abbr"><a href="#abbr_AA">AA</a></abbr><a id="period_77" href="#period_77">. </a>Possible requested actions include but are not limited to changing of
       encryption keys, decryption of data, and key sanitization of encryption keys (including the 
-      <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>)<a id="period_78" href="#period_78">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> may offer additional policy enforcement 1 to prevent access to ciphertext or the
+      <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr>)<a id="period_78" href="#period_78">. </a>The <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> may offer additional policy enforcement to prevent access to ciphertext or the
       unencrypted portion of the storage device<a id="period_79" href="#period_79">. </a>Additionally the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr> may provide encryption support
       for multiple users on an individual basis<a id="period_80" href="#period_80">. </a><br><br>
        
