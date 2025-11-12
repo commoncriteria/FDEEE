@@ -979,12 +979,11 @@
 				<selectable>FIPS PUB 186-5 Appendix A.1 [RSA]</selectable>
 				<selectable>FIPS PUB 186-5 Appendix A.2 [ECC]</selectable>
 				</selectables>.</title>
-           
-			  
                 
-                <note role="application">
-                  Asymmetric keys may be used to “wrap” a key or submask. This SFR should be included by the ST author when making the appropriate selection in FCS_COP.
-<h:p>Note that ML-DSA and ML-KEM are not usable in any functions at the time of initial publication, they are added to this requirement in support of future protocol updates. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</h:p>				  
+        <note role="application">
+                  Asymmetric keys may be used to “wrap” a key or submask. This SFR should be included by the ST author when making the appropriate selection in FCS_COP.1/KeyEncap.
+                  <h:p>Note that ML-DSA and ML-KEM are not usable in any functions at the time of initial publication, they are added to this requirement in support of 
+                  future protocol updates. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</h:p>				  
                 </note>
                 <aactivity>
                     <TSS>The evaluator shall ensure that the TSS identifies the key sizes supported by the TOE.
@@ -1093,7 +1092,7 @@
         </f-element>
         <f-element id="fcs_ckm-6-2-genhw">
           <title>
-            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1/GENHW in accordance with a specified cryptographic
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
@@ -1255,7 +1254,7 @@
         
         <f-element id="fcs-ckm-6-2-kek">
           <title>
-            The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in accordance
+            The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1/KEK in accordance
             with a specified cryptographic key destruction method [<h:i>by using the appropriate method to destroy
             all encryption keys encrypting the key intended for destruction</h:i>] that meets the following: 
             [<h:i>no standard</h:i>].
@@ -1357,7 +1356,7 @@
         </f-element>
         <f-element id="fcs_ckm-6-2-sw">
           <title>
-            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1/SW in accordance with a specified cryptographic
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
@@ -1524,7 +1523,7 @@
         </f-element>
         <f-element id="fcs_ckm-6-2-toehw">
           <title>
-            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The TSF shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1/TOEHW in accordance with a specified cryptographic
             key destruction method <selectables linebreak="yes">
               <selectable>For volatile memory, the destruction shall be executed by a <selectables linebreak="yes">
                 <selectable>single overwrite consisting of <selectables linebreak="yes">
@@ -2287,7 +2286,7 @@
 					The TSF shall perform [symmetric-key encryption/decryption] in accordance with a
 					specified cryptographic algorithm
 					<selectables>
-						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/SKC">
+						<tabularize id="fcs-cop-keyenc-sels" title="Allowed choices for FCS_COP.1/KeyEnc">
 							<textcol>Identifier</textcol>
 							<reqtext></reqtext>
 							<selectcol>Cryptographic algorithm</selectcol>
@@ -2296,7 +2295,7 @@
 							<reqtext>that meet the following:</reqtext>
 							<selectcol>List of standards</selectcol>
 							<reqtext><h:p/><h:p/>The following table provides the allowed choices for
-								completion of the selection operations of FCS_COP.1/SKC.</reqtext>
+								completion of the selection operations of FCS_COP.1/KeyEnc.</reqtext>
 						</tabularize>
 
 						<!-- AES-CBC -->
@@ -4613,7 +4612,6 @@
                   <note role="application">
                     This SFR must be claimed if "authenticated firmware update mechanism as
                     described in FPT_FUA_EXT.1" is claimed in FPT_TUD_EXT.1.3.<h:br/><h:br/>
-                    These requirements are for an SED in an operational state – not a drive in manufacturing.<h:br/><h:br/>
                     The authenticated firmware update mechanism employs digital signatures to ensure the
                     authenticity of the firmware update image. The TSF provides a RTU that contains a signature
                     verification algorithm and a key store that includes the public key needed to verify the signature
