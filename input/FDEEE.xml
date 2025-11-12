@@ -790,7 +790,7 @@
   <!--   4.1 Security Objectives for the Operational Environment -->
   <section title="Security Objectives for the Operational Environment"
 	  id="SecurityObjectivesTOEorEnvironment">
-	  The Operational Environment of the TOE implements technical and procedural measures to assist
+	  The Operational Environment (OE) of the TOE implements technical and procedural measures to assist
 	  the TOE in correctly providing its security functionality. This part wise solution forms the 
 	  security objectives for the Operational Environment and consists of a set of statements describing
 	  the goals that the Operational Environment should achieve.
@@ -799,9 +799,9 @@
 			  <description>
 			    The OE provides a newly provisioned or initialized storage device free of protected data in 
 			    areas not targeted for encryption.<h:br/><h:br/>
-          Rationale: Since the cPP requires all protected data to encrypted, A.INITIAL_DRIVE_STATE assumes
-          that the initial state of the device targeted 	 FDE is free of protected data in those areas of
-          the drive where encryption will not be invoked (e.g., MBR and AA and EE pre-authentication software).
+          Rationale: Since the cPP requires all protected data to be encrypted, A.INITIAL_DRIVE_STATE assumes
+          that the initial state of the device targeted FDE is free of protected data in those areas of
+          the drive where encryption will not be invoked (e.g., MBR, AA, or EE pre-authentication software).
           Given this known start state, the product (once installed and operational) ensures partitions of 
           logical blocks of user accessible data is protected.
          </description>
@@ -810,7 +810,7 @@
 		 <SOE name="OE.PASSWORD_STRENGTH">
 			  <description>
 			    An authorized user will be responsible for ensuring that the password authorization factor 
-			    conforms to guidance from the Enterprise using the TOE.<h:br/><h:br/>
+			    conforms to guidance from the organization that uses or owns the TOE.<h:br/><h:br/>
 			    Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to
 			    administrative guidance.
         </description>
@@ -864,11 +864,7 @@
 			  <description>
 			    Authorized users will be properly trained and follow all guidance for securing the TOE and authorization factors.<h:br/><h:br/>
 			    Rationale: Users are properly trained [A.TRAINED_USER] to create authorization factors that conform to guidance,
-			    not store external token authorization factors with the device, and power down the TOE when required (OE.PLATFORM_STATE)
-			    The platform in which the storage device resides (or an external storage device is connected) is free of malware that 
-			    could interfere with the correct operation of the product.<h:br/><h:br/>
-          A platform free of malware [A.PLATFORM_STATE] prevents an attack vector that could potentially interfere with the correct 
-          operation of the product.
+			    not store external token authorization factors with the device, and power down the TOE when required (OE.PLATFORM_STATE).
 			  </description>
 		  </SOE>
 	    	    
