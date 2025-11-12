@@ -477,7 +477,7 @@
         A threat consists of a threat agent, an asset and an adverse action of that threat agent on
         that asset. The threat agents are the entities that put the assets at risk if an adversary
         obtains a lost or stolen storage device. Threats drive the functional requirements for the 
-        target of evaluation (TOE). For instance, one threat below is T.UNAUTHORIZED_DATA_ACCESS. 
+        Target of Evaluation (TOE). For instance, one threat below is T.UNAUTHORIZED_DATA_ACCESS. 
         The threat agent is the possessor (unauthorized user) of a lost or stolen storage device.
         The asset is the data on the storage device, while the adverse action is to attempt to 
         obtain those data from the storage device. This threat drives the functional requirements
@@ -490,7 +490,7 @@
       
         It is important to reemphasize at this point that this collaborative Protection Profile 
         does not expect the product (TOE) to defend against the possessor of the lost or stolen
-        hard disk who can introduce malicious code or exploitable hardware components into the 
+        storage device who can introduce malicious code or exploitable hardware components into the 
         Target of Evaluation (TOE) or the Operational Environment. It assumes that the user 
         physically protects the TOE and that the Operational Environment provides sufficient
         protection against logical attacks. One specific area where a conformant TOE offers 
@@ -576,7 +576,7 @@
 		  
 		  <threat id="t-keyspace-exhaust" name="T.KEYSPACE_EXHAUST">
 		    <description>
-		      Threat agents may perform a cryptographic exhaust against the key space. Poorly chosen
+		      Threat agents may perform a cryptographic exhaustive search against the key space. Poorly chosen
 		      encryption algorithms and parameters allow attackers to exhaust the key space through brute force
 		      and give them unauthorized access to the data.</description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the DEK is computationally infeasible.</rationale>
@@ -626,7 +626,7 @@
 
 		  <threat id="t-unauth-firmware-modify" name="T.UNAUTHORIZED_FIRMWARE_MODIFY">
 		    <description>
-		      An attacker attempts to modify the firmware in the SED via a command from the AA or from the
+		      An attacker attempts to modify the firmware of the storage device via a command from the AA or from the
 		      host platform that may compromise the security features of the TOE.
 		    </description>				
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by providing a mechanism used to initiate updates where the authenticity and integrity of the update can be verified as part of the update process.</rationale>        
@@ -636,7 +636,7 @@
 		  <threat id="t-unauth-firmware-update" name="T.UNAUTHORIZED_FIRMWARE_UPDATE">
 		    <description>
 		      An attacker attempts to replace the firmware
-		      on the SED via a command from the AA or from the host platform with a malicious firmware
+		      on the sttorage device via a command from the AA or from the host platform with a malicious firmware
 		      update that may compromise the security features of the TOE.
 		    </description>				
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
@@ -650,7 +650,7 @@
 
 		  <threat id="t-unauth_update" name="T.UNAUTHORIZED_UPDATE">
 				<description>
-				  Threat agents may attempt to perform an update of the product which compromises the security 
+				  Threat agents may attempt to perform an update of the products which compromises the security 
 				  features of the TOE. Poorly chosen update protocols, signature generation and verification 
 				  algorithms, and parameters may allow attackers to install software that bypasses the intended
 				  security features and provides them unauthorized access to data.
@@ -713,7 +713,7 @@
         
   <assumption name="A.STRONG_CRYPTO">
     <description>
-      All cryptography implemented in the Operational Environment and used by the product
+      All cryptography implemented in the Operational Environment and used by the TOE
       meets the requirements listed in the cPP. This includes generation of external token authorization
       factors by an RBG.
     </description>
@@ -748,7 +748,7 @@
             Communication among and between product components (e.g., AA and EE) is
             sufficiently protected to prevent information disclosure. In cases in which a single
             product fulfils both cPPs, the communication between the components does not 
-            extend beyond the boundary of the TOE (e.g., communication path is within the TOE
+            extend beyond the boundary of the TOE (i.e., communication path is within the TOE
             boundary) so this assumption is inherently met. In cases in which independent products satisfy the requirements of the
             AA and EE, the physically close proximity of the two products during their operation
             means that the threat agent has very little opportunity to interpose itself in the 
