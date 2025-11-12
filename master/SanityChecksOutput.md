@@ -1,9 +1,9 @@
 * Error: Found a "assignable" element that is buried under stricken text:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[2]""/f-element[1]""/title[1]"The TSF s"/h:s[2]"that meet"/assignable[1]"list of s"
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[27]""/f-element[2]""
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[2]""
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[27]""/f-element[3]""
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[3]""
 * Warning: This document still has at least one comment.
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
@@ -235,6 +235,21 @@
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[17]""/f-element[1]""/aactivity[1]""/Tests[1]"The evalu"/h:p[22]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[17]""/f-element[1]""/aactivity[1]""/Tests[1]"The evalu"/h:p[23]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[17]""/f-element[1]""/aactivity[1]""/Tests[1]"The evalu"/h:p[24]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[4]"The follo"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[4]"The follo"/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[1]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[3]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[1]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[4]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[5]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[6]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[7]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[8]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[9]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[10]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[11]""
  Failed to find a reference to bibCEM.
  Failed to find a reference to bibCEM.
  Failed to find a reference to entropyappendix.
