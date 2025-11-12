@@ -123,11 +123,11 @@
     <!-- PP or TOE Overview -->
 
     <section title="PP Overview" id="sec-ppoverview">
-      	The purpose of the first set of Collaborative Protection Profiles (cPPs) for Full Drive
+      	The purpose of the set of Collaborative Protection Profiles (cPPs) for Full Drive
       	Encryption (FDE): Authorization Acquisition (AA) and Encryption Engine (EE) is to provide
-      	requirements for Data-at-Rest protection for a lost device that contains storage. These cPPs
-      	allow FDE solutions based in software and/or hardware to meet the requirements. The form
-      	factor for a storage device may vary, but could include: system hard drives/solid state
+      	requirements for Data-at-Rest protection against unauthorized access or disclosure of stored data on a lost device. 
+        These cPPs allow FDE solutions based in software and/or hardware to meet the requirements for Data-at-Rest protection. 
+        The form factor for a storage device may vary, but could include: hard disk drives/solid state
       	drives in servers, workstations, laptops, mobile devices, tablets, and external media. A
       	hardware solution could be a Self-Encrypting Drive or other hardware-based solutions; the
       	interface (USB, SATA, etc.) used to connect the storage device to the host machine is outside
@@ -153,7 +153,7 @@
           the necessary security requirements and assurance activities for the actual encryption and
           decryption of the data by the DEK. Each cPP will also have a set of core requirements for management
           functions, proper handling of cryptographic keys, updates performed in a trusted manner, audit and self-tests.<h:br/><h:br/> 
-          This TOE description defines the scope and functionality of the Encryption Engine, and
+          The Target of Evaluation (TOE) description defines the scope and functionality of the Encryption Engine, and
           the Security Problem Definition describes the assumptions made about the operating
           environment and the threats to the EE that the cPP requirements address.
 	</section>  <!-- PP Overview -->
@@ -279,8 +279,8 @@
 		 TOE/PP Overview aove. -->
      <section title="Implementation" id="sec-TOEimplementation">
        Full Drive Encryption solutions vary with implementation and vendor combinations.<h:br/><h:br/> 
-       Therefore, vendors will evaluate products that provide both components of the Full Disk
-        Encryption Solution (AA and EE) against both cPPs – could be done in a single evaluation
+       Vendors must evaluate products that provide both components of the Full Disk
+        Encryption Solution (AA and EE) against both cPPs, although that could be done in a single evaluation
         with one ST. A vendor that provides a single component of an FDE solution would only evaluate
         against the applicable cPP. The FDE cPP is divided into two documents to allow labs to
         independently evaluate solutions tailored to one cPP or the other. When a customer acquires
@@ -288,8 +288,7 @@
         or two products, one of which meets the AA and the other of which meets the EE cPPs.<h:br/><h:br/>
        The table below illustrates a few examples for certification<h:br/><h:br/>
         
-        <h:head><h:b><ctr ctr-type="Table" pre="Table" id="atref-mandatory">: Examples of cPP Implementations</ctr></h:b></h:head>			
-        <h:tr class="header"><h:td>Event</h:td><h:td/></h:tr>    	
+        <h:head><h:b><ctr ctr-type="Table" pre="Table" id="atref-mandatory">: Examples of cPP Implementations</ctr></h:b></h:head>   	
   <h:table border='1'>
       <h:tr>
         <h:th>Implementation</h:th>
@@ -331,19 +330,19 @@
      
      <section title="Encryption Engine Introduction" id="sec-TOEencryption-engine-introduction">
       
-      The Encryption Engine objectives focus on data encryption, policy enforcement, and key
+      The Encryption Engine (EE) objectives focus on data encryption, policy enforcement, and key
       management. The EE is responsible for the generation, update, archival, recovery, protection,
       and destruction of the DEK and other intermediate keys under its control. The EE receives a
-      BEV from the AA. The EE uses that BEV for the decryption of the DEK although other
-      intermediate keys may exist in between those two points. Key encryption keys (KEKs) wrap
-      other keys, notably the DEK or other intermediary keys which chain to the DEK. Key releasing
-      keys (KRKs) authorize the EE to release either the DEK or other intermediary keys which chain
+      Border Encryption Value (BEV) from the AA. The EE uses that BEV for the decryption of the DEK although other
+      intermediate keys may exist in between those two points. Key Encryption Keys (KEKs) wrap
+      other keys, notably the DEK or other intermediary keys which chain to the DEK. Key Releasing
+      Keys (KRKs) authorize the EE to release either the DEK or other intermediary keys which chain
       to the DEK. These keys only differ in the functional use.<h:br/><h:br/>
       
       The EE determines whether to allow or deny a requested action based on the KEK or KRK
       provided by the AA. Possible requested actions include but are not limited to changing of
       encryption keys, decryption of data, and key sanitization of encryption keys (including the 
-      DEK). The EE may offer additional policy enforcement 1 to prevent access to ciphertext or the
+      DEK). The EE may offer additional policy enforcement to prevent access to ciphertext or the
       unencrypted portion of the storage device. Additionally the EE may provide encryption support
       for multiple users on an individual basis.<h:br/><h:br/>
        
