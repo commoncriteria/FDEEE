@@ -538,17 +538,17 @@
 		      (OE), (e.g., BIOS configuration, SPI flash, or TPMs).
 		    </description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by ensuring that a sufficiently strong DEK is used to prevent its value from being determined.</rationale>
-		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by performing data encryption and encryption.</rationale>
-		    <addressed-by>FCS_CKM.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
-		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>		    
+		    <addressed-by>FCS_COP.1/SKC</addressed-by><rationale>Mitigates this threat by performing data encryption and decryption.</rationale>
+		    <addressed-by>FCS_CKM_EXT.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
+		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction for system power states.</rationale>		    
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>		    
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to accept a BEV.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
-		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating</rationale>
+		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating new keys.</rationale>
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
-		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key materials.</rationale>
-		    <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by requiring the TOE to enter into a safe state based on each condition. </rationale>
+		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key material.</rationale>
+		    <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by requiring the TOE to enter into a safe power saving state based on each condition. </rationale>
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.6/KEK (optional)</addressed-by><rationale>Mitigates this threat by ensuring proper key cryptographic erase.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
@@ -580,7 +580,7 @@
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys accepting the BEV are of the same strength.</rationale>        
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
-		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for trusted communications are generated using a secure DRBG. </rationale>
+		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for data encryption are generated using a secure DRBG. </rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.4 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
@@ -640,7 +640,7 @@
 		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by defining a secure mechanism for updating the TOE firmware.</rationale>
-		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated if the initiator can provide information that would only be known to a trusted administrator.</rationale>
+		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated by an authorized user.</rationale>
 		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>
 		    <addressed-by>FPT_FUA_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by forcing the use of authenticated firmware so that no arbitrary replacement of the firmware is feasible.</rationale>		               
 		  </threat>
