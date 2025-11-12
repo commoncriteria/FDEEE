@@ -4226,7 +4226,7 @@
 			Ensure TOE is initialized and, if hardware, encryption engine is ready
 			<h:ul><h:li>Provision TOE to encrypt the storage device. Use a known key and the developer tools.</h:li>
 			<h:li>Determine a random character pattern of at least 64 KB</h:li>
-			<h:li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</h:li></h:li>
+			<h:li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</h:li></h:ul></h:li>
 			
 			<h:li>Step 2: Write pattern to storage device in multiple locations:
 			Randomly select several logical address locations within the device’s lowest to highest address range and write pattern to those addresses</h:li>
@@ -4237,11 +4237,11 @@
 			<h:li>Step 4: Re-encrypt data:
 			Evaluator shall enforce the TOE to re-encrypt data using new DEK by either:
 			<h:ul><h:li>changing the DEK and re-encrypting the data or</h:li>
-			<h:li>re-provisioning the device with new DEK and repeat step 2 by writing same data to same locations.</h:li></h:li>
+			<h:li>re-provisioning the device with new DEK and repeat step 2 by writing same data to same locations.</h:li></h:ul></h:li>
 			
 			<h:li>Step 5: Verify data is encrypted using new DEK:
 			<h:ul><h:li>Evaluator shall access storage using out-of-band tools bypassing encryption engine or inspecting the drive in a locked (secure encrypted) state to verify that data on storage media written to designated locations are not plaintext by comparing them with plaintext pattern.</h:li>
-			<h:li>Evaluator shall verify that obtained ciphertext is different from the one obtained in Step 3 above. If same ciphertext is obtained, test is considered failing.</h:li></h:li> </h:ul>
+			<h:li>Evaluator shall verify that obtained ciphertext is different from the one obtained in Step 3 above. If same ciphertext is obtained, test is considered failing.</h:li></h:ul></h:li> </h:ul>
 			</test>
               
             </testlist>
