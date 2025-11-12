@@ -94,7 +94,7 @@
     <entry>
         <version>3.0</version>
         <date>2025-11-04</date>
-        <subject>Updated for CC:2022, reviewing and applying modifications to the PP</subject>
+        <subject>Updated for CC:2022, reviewing and applying modifications to the cPP</subject>
       </entry>
   </RevisionHistory>
 
@@ -1131,7 +1131,7 @@
             does not require a read-verify, since the reference to the memory location is erased as well 
             as the data itself.<h:br/><h:br/>
             Within the selections is the option to overwrite the memory location with a new value of a key.
-            The intent is that a new value of a key (as specified in another SFR within the PP) can be used
+            The intent is that a new value of a key (as specified in another SFR within the cPP) can be used
             to “replace” an existing key.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
             that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
@@ -1583,7 +1583,7 @@
             does not require a read verify, since the mappings of logical addresses to the erased memory
             locations are erased as well as the data itself.<h:br/><h:br/>    
             Within the selections is the option to overwrite a disused key with a new value of a key. The
-            intent is that a new value of a key (as specified in another SFR within the PP) can be used to
+            intent is that a new value of a key (as specified in another SFR within the cPP) can be used to
             “replace” an existing key.<h:br/><h:br/>
             If a selection for read verify is chosen, it should generate an audit record upon failures.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
@@ -4760,7 +4760,7 @@
           <consistency-rationale/>
           <comp-lev>describes the situations that cause compliant power saving states to be entered.</comp-lev>
           <management/>
-          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP/ST:<h:ul>
+          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the cPP/ST:<h:ul>
             <h:li>Transition of the TSF into different power saving states</h:li>
           </h:ul></audit>
           <dependencies>FPT_PWR_EXT.1 Power Saving States</dependencies>
@@ -4924,7 +4924,7 @@
           <management>The following actions could be considered for the management functions in FMT:<h:ul>
             <h:li>Ability to update the TOE and to verify the updates</h:li>
           </h:ul></management>
-          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the PP/ST: <h:ul>
+          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is included in the cPP/ST: <h:ul>
             <h:li>Initiation of the update process</h:li>
             <h:li>Any failure to verify the integrity of the update</h:li>
           </h:ul></audit>
@@ -5270,7 +5270,7 @@
             <h:li>Instructions for initiating the update process, as well as discerning whether the process was 
               successful or unsuccessful. This includes generation of the digital signature. 
               The TOE will likely contain security functionality that does not 
-              fall in the scope of evaluation under this PP. The operational guidance shall make it 
+              fall in the scope of evaluation under this cPP. The operational guidance shall make it 
               clear to an administrator which security functionality is covered by the evaluation 
               activities.</h:li></h:ul>
           <!--	      </Guidance> -->
@@ -5372,7 +5372,7 @@
           for content and presentation of evidence.</title>
         <aactivity>
           <!-- <TSS> -->
-          The "evaluation evidence required by the SARs" in this PP is limited to the
+          The "evaluation evidence required by the SARs" in this cPP is limited to the
           information in the ST coupled with the guidance provided to administrators and users
           under the AGD requirements. By ensuring that the TOE is specifically
           identified and that this identification is consistent in the ST and in the AGD
@@ -5649,7 +5649,7 @@
             aspects of the system, including any application crashes during testing. The evaluator
             shall determine the root cause of any application crashes and include that information
             in the report. The test plan covers all of the testing actions contained in
-            the <xref to="bibCEM"/> and the body of this PP’s evaluation activities.
+            the <xref to="bibCEM"/> and the body of this cPP’s evaluation activities.
           </h:p><h:p>
             While it is not necessary to have one test case per test listed in an evaluation activity, the
             evaluator must document in the test plan that each applicable testing requirement in
@@ -5670,7 +5670,7 @@
           </h:p><h:p>
             This also includes the configuration of the
             cryptographic engine to be used. The cryptographic algorithms implemented by this
-            engine are those specified by this PP and used by the cryptographic protocols being
+            engine are those specified by this cPP and used by the cryptographic protocols being
             evaluated (e.g., SSH). The test plan identifies high-level test objectives
             as well as the test procedures to be followed to achieve those objectives. These
             procedures include expected results. 
@@ -5992,7 +5992,7 @@
     <tag>FDE–EE</tag>
     
     <description>
-        <!-- todo: update hyperlink when PP published -->
+        <!-- todo: update hyperlink when cPP published -->
         <h:a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1,
           MMMM DD, 2025</h:a><comment>Adjust date once finalized</comment></description> 
 </entry>
