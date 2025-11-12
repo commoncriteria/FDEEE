@@ -899,10 +899,11 @@
           <fam-behavior>This family is intended to support the ability to specify the implementation of multiple key destruction methods.
           </fam-behavior>
         </ext-comp-def>
+       <!-- Currently not used, was replaced by FCS_CKM.5 
         <ext-comp-def title="Cryptographic Key Derivation" fam-id="FCS_KDF_EXT">
           <fam-behavior>This family specifies the means by which an intermediate key is derived from a specified set of submasks.
-            </fam-behavior>
-        </ext-comp-def>
+          </fam-behavior>
+        </ext-comp-def> -->
         <ext-comp-def title="Key Chaining" fam-id="FCS_KYC_EXT">
           <fam-behavior>This family provides the specification to be used for using multiple layers of encryption keys to ultimately secure the protected data encrypted on the drive.</fam-behavior>
         </ext-comp-def>
@@ -1712,7 +1713,9 @@
         <comp-lev>provides the TOE with the ability to select between multiple methods of key destruction.</comp-lev>
         <management/>
         <audit/>
-        <dependencies/>
+        <dependencies>
+          FCS_CKM.6 Cryptographic Key and Key Material Destruction
+        </dependencies>
         
         <f-element id="fcs_ckm-ext-6">
           <title>
@@ -3444,8 +3447,12 @@
               <management/>
               <audit/>
               <dependencies>
-                FCS_CKM.1 Cryptographic Key Generation
-                </dependencies>
+                <h:p>FCS_CKM.1 Cryptographic Key Generation</h:p>
+                <h:p>FCS_COP.1 Cryptographic Operation</h:p>
+                <h:p>FCS_CKM.5 Cryptographic Key Derivation</h:p>
+                <h:p>FCS_SMC_EXT.1 Submask Combining</h:p>
+                <h:p>FCS_VAL_EXT.1 Validation</h:p>
+              </dependencies>
               <f-element id="fcs-kyc-ext-1-1">
                 <title>
                   The TSF shall maintain a key chain of: 
@@ -3454,10 +3461,10 @@
                       <selectable>intermediate keys originating from one or more submasks to the BEV using the following methods:
                         <selectables linebreak="yes">
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in FCS_COP.1/KeyEnc</selectable>
+                          <selectable id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in FCS_COP.1/KeyEncap,</selectable>
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in FCS_COP.1/KeyWrap,</selectable>
                           <selectable id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in FCS_CKM.5</selectable>                          
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in FCS_SMC_EXT.1,</selectable>
-                          
+                          <selectable id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in FCS_SMC_EXT.1,</selectable>            
                           
                       </selectables></selectable></selectables>
                   while maintaining an effective strength of 
@@ -3676,14 +3683,19 @@
 			<audit-event/>
 		</f-component>
 		
-        <f-component cc-id="fcs_kyc_ext.2" name="Key Chaining (Recipient) " id="fcs-kyc-ext-2">
+        <f-component cc-id="fcs_kyc_ext.2" name="Key Chaining (Recipient)" id="fcs-kyc-ext-2">
           <consistency-rationale/>
           <comp-lev>requires the TSF to be able to accept a BEV that is then chained to a DEK used
             by the TSF through some method. <h:br/><h:br/>
             </comp-lev>
           <management/>
           <audit/>
-          <dependencies>No dependencies</dependencies>
+          <dependencies>
+            <h:p>FCS_CKM.1 Cryptographic Key Generation</h:p>
+            <h:p>FCS_COP.1 Cryptographic Operation</h:p>
+            <h:p>FCS_CKM.5 Cryptographic Key Derivation</h:p>
+            <h:p>FCS_SMC_EXT.1 Submask Combining</h:p>
+          </dependencies>
           <f-element id="fcs-kyc-ext-2-1">
             <title>The TSF shall accept a BEV of at least 256 bits.</title>
             
@@ -4642,7 +4654,7 @@
         </f-component>
         
         
-        <f-component cc-id="fpt_kyp_ext.1" name="Protection of Key and Key Material " id="fpt-kyp-ext-1">
+        <f-component cc-id="fpt_kyp_ext.1" name="Protection of Key and Key Material" id="fpt-kyp-ext-1">
           <consistency-rationale/>
           <comp-lev>requires the TSF to ensure that no plaintext key or key material are written to non-volatile storage.</comp-lev>
           <management/>
@@ -4941,7 +4953,10 @@
             <h:li>Initiation of the update process</h:li>
             <h:li>Any failure to verify the integrity of the update</h:li>
           </h:ul></audit>
-          <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
+          <dependencies>
+            <h:p>FCS_COP.1 Cryptographic Operation</h:p>
+            <h:p>FPT_TUD_EXT.1 Trusted Update</h:p>
+          </dependencies>
           
           <f-element id="fpt-tud-ext-1-1">
             <title>
