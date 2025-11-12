@@ -1721,12 +1721,12 @@
               <selectable id="uses-genhw">FCS_CKM.6/GENHW</selectable>
               <selectable id="uses-sw">FCS_CKM.6/SW</selectable>
               <selectable id="uses-toe-hw">FCS_CKM.6/TOEHW</selectable>
+            </selectables>
 			  and <selectables>
 			  <selectable> id="uses-kek">FCS_CKM.6/KEK</selectable>
 			  <selectable>no other method</selectable>
 			  </selectables>
               
-            </selectables>
             key destruction methods.
           </title>
           
