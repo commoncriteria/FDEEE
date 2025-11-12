@@ -3436,8 +3436,6 @@
 			<audit-event/>
 		</f-component>
         
-            <!--
-			Not sure why this is invisible so I am commenting it out
 			
 			<f-component cc-id="fcs_kyc_ext.1" name="Key Chaining (Initiator)" id="fcs-kyc-ext-1" status="invisible">
               <consistency-rationale/>
@@ -3561,7 +3559,6 @@
               </f-element>
           
             </f-component>
-			!-->
         
         <f-component cc-id="fcs_kyc_ext.2" name="Key Chaining (Recipient) " id="fcs-kyc-ext-2">
           <consistency-rationale/>
