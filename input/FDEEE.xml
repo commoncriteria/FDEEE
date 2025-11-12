@@ -4365,7 +4365,7 @@
           The TSF shall be capable of performing the following management functions: [
             <h:i><h:ol type='a'>
               <h:li>change the DEK, as specified in FCS_CKM.1/DEK, when re-provisioning or when commanded</h:li>
-              <h:li>erase the DEK, as specified in FCS_CKM.6/Power</h:li>              
+              <h:li>erase the DEK, as specified in FCS_CKM_EXT.6</h:li>              
               <h:li>initiate TOE firmware/software updates</h:li>
               <h:li><selectables>
                 <selectable>no other functions</selectable>
