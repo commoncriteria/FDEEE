@@ -1,2 +1,0 @@
-/home/runner/work/FDEEE/FDEEE/input/FDEEE.xml:1724:10: error: text not allowed here; expected the element end-tag or element "not-selectable" or "selectable"
-/home/runner/work/FDEEE/FDEEE/input/FDEEE.xml:1724:23: error: element "selectables" not allowed here; expected the element end-tag or element "not-selectable" or "selectable"
