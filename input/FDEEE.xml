@@ -4213,48 +4213,37 @@
             (e.g., read-write operations to an unencrypted Master Boot Record area).<h:br/><h:br/>
             The evaluator shall verify that the KMD provides a description of the platform’s boot initialization, the encryption 
             initialization process, and at what moment the product enables the encryption. The evaluator shall validate that the 
-            product does not allow for the transfer of user data before it fully initializes the encryption. The evaluator shall
-            ensure the software developer provides special tools which allow inspection of the encrypted drive either in-band or
-            out-of-band, and may allow provisioning with a known key.
+            product does not allow for the transfer of user data before it fully initializes the encryption. 
           </KMD>
           <Tests>
             The evaluator shall perform the following tests:
             <testlist>
-              <test>
-                Write data to random locations, perform required actions and compare:<h:ul>
-                <h:li>Ensure TOE is initialized and, if hardware, encryption engine is ready</h:li>
-                <h:li>Provision TOE to encrypt the storage device. For SW Encryption products, or hybrid products use a known 
-                  key and the developer tools.</h:li>
-                <h:li>Determine a random character pattern of at least 64 KB</h:li>
-                <h:li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</h:li>
-                </h:ul>
-              </test>
-              <test>
-                Write pattern to storage device in multiple locations:<h:ul>
-                <h:li>For HW Encryption, randomly select several logical address locations within the device’s lowest to highest address 
-                  range and write pattern to those addresses</h:li>
-                <h:li>For SW Encryption, write the pattern using multiple files in multiple logical locations.</h:li>
-                </h:ul>              
-              </test>
-              <test>
-                Verify data is encrypted:<h:ul>
-                <h:li>For HW Encryption:<h:ul>
-                  <h:li>engage device’s functionality for generating a new encryption key, thus
-                    performing an erase of the key per FCS_CKM.6/Power</h:li>
-                  <h:li>Read from the same locations at which the data was written</h:li>
-                  <h:li>Compare the retrieved data to the written data and ensure they do not
-                    match</h:li>
-                </h:ul></h:li>
-                
-                <h:li>For SW Encryption, using developer tools:<h:ul>
-                  <h:li>Review the encrypted storage device for the plaintext pattern at each location where the file was written
-                    and confirm plaintext pattern cannot be found.</h:li>
-                  <h:li>Using the known key, verify that each location where the file was written, the plaintext pattern can be 
-                    correctly decrypted using the key.</h:li>
-                  <h:li>If available in the developer tools, verify there are no plaintext files
-                    present in the encrypted range.</h:li></h:ul></h:li>                
-                </h:ul>
-              </test>
+			<test>
+			<h:p>The evaluator may require the software developer provides special tools which allow inspection of the encrypted drive either in-band or out-of-band.</h:p>
+
+			<h:ul>
+                <h:li>Step 1 Initialize the TOE:
+			Ensure TOE is initialized and, if hardware, encryption engine is ready
+			<h:ul><h:li>Provision TOE to encrypt the storage device. Use a known key and the developer tools.</h:li>
+			<h:li>Determine a random character pattern of at least 64 KB</h:li>
+			<h:li>Retrieve information on what the device TOE’s lowest and highest logical address is for which encryption is enabled.</h:li></h:li>
+			
+			<h:li>Step 2: Write pattern to storage device in multiple locations:
+			Randomly select several logical address locations within the device’s lowest to highest address range and write pattern to those addresses</h:li>
+
+			<h:li>Step 3: Verify data is encrypted:
+			Evaluator shall access storage using out-of-band tools bypassing encryption engine or inspecting the drive in a locked (secure encrypted) state to verify that data on storage media written to designated locations are not plaintext by comparing them with plaintext pattern.</h:li>
+			
+			<h:li>Step 4: Re-encrypt data:
+			Evaluator shall enforce the TOE to re-encrypt data using new DEK by either:
+			<h:ul><h:li>changing the DEK and re-encrypting the data or</h:li>
+			<h:li>re-provisioning the device with new DEK and repeat step 2 by writing same data to same locations.</h:li></h:li>
+			
+			<h:li>Step 5: Verify data is encrypted using new DEK:
+			<h:ul><h:li>Evaluator shall access storage using out-of-band tools bypassing encryption engine or inspecting the drive in a locked (secure encrypted) state to verify that data on storage media written to designated locations are not plaintext by comparing them with plaintext pattern.</h:li>
+			<h:li>Evaluator shall verify that obtained ciphertext is different from the one obtained in Step 3 above. If same ciphertext is obtained, test is considered failing.</h:li></h:li> </h:ul>
+			</test>
+              
             </testlist>
           </Tests>
         </aactivity>
