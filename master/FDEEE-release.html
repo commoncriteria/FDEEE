@@ -2474,8 +2474,9 @@ The following sections list Common Criteria and technology terms used in this do
 				[<b>selection</b>: <span class="selectable-content" id="_s_41"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [LMS, XMSS]</span>, <span class="selectable-content" id="_s_42"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 203 [ML-KEM]</span>, <span class="selectable-content" id="_s_43"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 [ML-DSA]</span>, <span class="selectable-content" id="_s_44"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.1 [<abbr class="dyn-abbr"><a href="#abbr_RSA">RSA</a></abbr>]</span>, <span class="selectable-content" id="_s_45"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 Appendix A.2 [<abbr class="dyn-abbr"><a href="#abbr_ECC">ECC</a></abbr>]</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-                  Asymmetric keys may be used to “wrap” a key or submask. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in FCS_COP.
-<p>Note that ML-DSA and ML-KEM are not usable in any functions at the time of initial publication, they are added to this requirement in support of future protocol updates. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</p>				  
+                  Asymmetric keys may be used to “wrap” a key or submask. This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be included by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author when making the appropriate selection in <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
+                  <p>Note that ML-DSA and ML-KEM are not usable in any functions at the time of initial publication, they are added to this requirement in support of 
+                  future protocol updates. As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.</p>				  
                 </span></div></div></div>
               
             </div><div class="comp" id="FCS_CKM.1/SKG"><h4>FCS_CKM.1/SKG Cryptographic Key Generation (Symmetric Keys)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
@@ -2505,7 +2506,7 @@ The following sections list Common Criteria and technology terms used in this do
             when [<i>no longer needed</i>].
           </div></div>
         <div class="element"><div class="reqid" id="FCS_CKM.6.2/GENHW"><a href="#FCS_CKM.6.2/GENHW" class="abbr">FCS_CKM.6.2/GENHW</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in <a href="#FCS_CKM.6.1/GENHW">FCS_CKM.6.1/GENHW</a> in accordance with a specified cryptographic
             key destruction method [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_49">For volatile memory, the destruction shall be executed by a [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_50">single overwrite consisting of [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="genhw-rbg-overwrite-vol">a pseudo-random pattern using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>,</span></li><li style=""><span class="selectable-content" id="_s_52">zeroes,</span></li><li style=""><span class="selectable-content" id="_s_53">ones,</span></li><li style=""><span class="selectable-content" id="_s_54">a new value of a key,</span></li><li style=""><span class="selectable-content" id="_s_55">[<b>assignment</b>: 
      <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]
                 </span></li><li style=""><span class="selectable-content" id="_s_56">removal of power to the memory,</span></li><li style=""><span class="selectable-content" id="_s_57">destruction of reference to the key directly followed by a request for garbage collection</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_58">
@@ -2544,7 +2545,7 @@ The following sections list Common Criteria and technology terms used in this do
           </div></div>
         
         <div class="element"><div class="reqid" id="FCS_CKM.6.2/KEK"><a href="#FCS_CKM.6.2/KEK" class="abbr">FCS_CKM.6.2/KEK</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1 in accordance
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1/KEK">FCS_CKM.6.1/KEK</a> in accordance
             with a specified cryptographic key destruction method [<i>by using the appropriate method to destroy
             all encryption keys encrypting the key intended for destruction</i>] that meets the following: 
             [<i>no standard</i>].
@@ -2569,7 +2570,7 @@ The following sections list Common Criteria and technology terms used in this do
             when [<i>no longer needed</i>].
           </div></div>
         <div class="element"><div class="reqid" id="FCS_CKM.6.2/SW"><a href="#FCS_CKM.6.2/SW" class="abbr">FCS_CKM.6.2/SW</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in <a href="#FCS_CKM.6.1/SW">FCS_CKM.6.1/SW</a> in accordance with a specified cryptographic
             key destruction method [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_69">For volatile memory, the destruction shall be executed by a [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_70">single overwrite consisting of [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sw-rbg-overwrite-vol">a pseudo-random pattern using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>,</span></li><li style=""><span class="selectable-content" id="_s_72">zeroes,</span></li><li style=""><span class="selectable-content" id="_s_73">ones,</span></li><li style=""><span class="selectable-content" id="_s_74">a new value of a key,</span></li><li style=""><span class="selectable-content" id="_s_75">[<b>assignment</b>: 
      <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]
                 </span></li><li style=""><span class="selectable-content" id="_s_76">removal of power to the memory,</span></li><li style=""><span class="selectable-content" id="_s_77">destruction of reference to the key directly followed by a request for garbage collection</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_78">
@@ -2610,7 +2611,7 @@ The following sections list Common Criteria and technology terms used in this do
             when [<i>no longer needed</i>].
           </div></div>
         <div class="element"><div class="reqid" id="FCS_CKM.6.2/TOEHW"><a href="#FCS_CKM.6.2/TOEHW" class="abbr">FCS_CKM.6.2/TOEHW</a></div><div class="reqdesc">
-            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in FCS_CKM.6.1 in accordance with a specified cryptographic
+            The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified in <a href="#FCS_CKM.6.1/TOEHW">FCS_CKM.6.1/TOEHW</a> in accordance with a specified cryptographic
             key destruction method [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_88">For volatile memory, the destruction shall be executed by a [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_89">single overwrite consisting of [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="toe-rbg-overwrite-vol">a pseudo-random pattern using the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr>,</span></li><li style=""><span class="selectable-content" id="_s_91">zeroes,</span></li><li style=""><span class="selectable-content" id="_s_92">ones,</span></li><li style=""><span class="selectable-content" id="_s_93">a new value of a key,</span></li><li style=""><span class="selectable-content" id="_s_94">[<b>assignment</b>: 
      <span class="assignable-content">some value that does not contain any CSP</span>]</span></li></ul>]
                 </span></li><li style=""><span class="selectable-content" id="_s_95">removal of power to the memory,</span></li><li style=""><span class="selectable-content" id="_s_96">destruction of reference to the key directly followed by a request for garbage collection</span></li></ul>]</span></li><li style=""><span class="selectable-content" id="_s_97">
@@ -2824,9 +2825,9 @@ The following sections list Common Criteria and technology terms used in this do
     [<b>selection</b>: 
     <span class="selectable-content">List of standards</span>]
 							<p></p><p></p>The following table provides the allowed choices for
-								completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.
+								completion of the selection operations of <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a>.
 						
-				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+				<table><caption><span class="ctr" data-myid="fcs-cop-keyenc-sels" data-counter-type="ct-Table" id="fcs-cop-keyenc-sels">Table <span class="counter">8</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEnc">FCS_COP.1/KeyEnc</a></caption>
 						<tr>
 							<th>Identifier</th>
 							
@@ -3327,7 +3328,6 @@ The following sections list Common Criteria and technology terms used in this do
     </span><span class="note">
                     This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> must be claimed if "authenticated firmware update mechanism as
                     described in <a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a>" is claimed in <a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a>.<br/><br/>
-                    These requirements are for an <abbr class="dyn-abbr"><a href="#abbr_SED">SED</a></abbr> in an operational state – not a drive in manufacturing.<br/><br/>
                     The authenticated firmware update mechanism employs digital signatures to ensure the
                     authenticity of the firmware update image. The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> provides a RTU that contains a signature
                     verification algorithm and a key store that includes the public key needed to verify the signature
