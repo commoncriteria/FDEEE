@@ -1954,7 +1954,7 @@
 				</title>
             <note role="application">
               This requirement is used in the body of the ST if the ST author chooses to use key transport in the key chaining approach that is specified in 
-              FCS_KYC_EXT.1.<h:br/><h:br/>
+              FCS_KYC_EXT.2.<h:br/><h:br/>
               NIST SP 800-57 Part 1 Revision 5 Section 5.6.2 specifies that the size of key used to protect the
               key being transported should be at least the security strength of the key it is protecting.<h:p/>
               If this SFR is claimed, then FCS_CKM.1/AKG must also be claimed.<h:p/>
@@ -2338,7 +2338,7 @@
 					</selectables>
 				</title>
             <note role="application">
-              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain (FCS_CKM.5.1, FCS_KYC_EXT.1) or when the TSF
+              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain (FCS_CKM.5.1, FCS_KYC_EXT.2) or when the TSF
               uses key encryption as part of password conditioning.
             </note>
                 <aactivity>
@@ -2450,7 +2450,7 @@
 					</selectables>
 				</title>
                 <note role="application">
-                  This SFR is required when the TSF performs key wrapping as part of maintaining and deriving a key chain (FCS_KYC_EXT.1) or
+                  This SFR is required when the TSF performs key wrapping as part of maintaining and deriving a key chain (FCS_KYC_EXT.2) or
                   when the TSF performs validation of a submask, intermediate key, or BEV using a key wrap operation (FCS_VAL_EXT.1).<h:br/><h:br/>
                   NIST 800-57p1rev5 sec. 5.6.2 specifies that the size of key used to protect the key being
                   transported should be at least the security strength of the key it is protecting.
@@ -2805,7 +2805,7 @@
                   value and perform a comparison, this is the requirement used to specify the algorithm, modes, and key sizes the ST author can choose from.<h:br/><h:br/>
 
                   This SFR is required when the TSF performs any key wrapping, key encryption, or key derivation operation as part of maintaining and deriving a key chain
-                  (FCS_CKM.5.1, FCS_KYC_EXT.1), or when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
+                  (FCS_CKM.5.1, FCS_KYC_EXT.2), or when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
                   (FCS_VAL_EXT.1).
 
                 </note>
@@ -4086,7 +4086,7 @@
                 
                 <note role="application">
                     This SFR is claimed when the TSF validates an authentication factor as a prerequisite to unlocking the key chain as
-                    defined in FCS_KYC_EXT.1.
+                    defined in FCS_KYC_EXT.2.
                 </note>
                 
               </f-element>
@@ -4776,7 +4776,7 @@
                 <selectable>TSF</selectable>
               </selectables>.
             </title>
-            <note role="application">This SFR is a required dependency of FCS_RBG.1 and the cryptographic requirements that are selectable in FCS_KYC_EXT.1. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
+            <note role="application">This SFR is a required dependency of FCS_RBG.1 and the cryptographic requirements that are selectable in FCS_KYC_EXT.2. It is intended to require that any DRBG implemented by the TOE undergo health testing to ensure that the random bit generation functionality has not been degraded. If the TSF supports multiple DRBGs, this SFR should be iterated to describe the self-test behavior for each.
 			
 			<h:p>The tests regarding cryptographic functions implemented in the TOE can be deferred, as long as the tests are performed before the function is invoked.</h:p>
 			<h:p>If any FCS_COP functions are implemented by the TOE, the TSS should describe the known answer self-tests for those functions.</h:p></note>
