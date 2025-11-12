@@ -255,8 +255,6 @@
  Failed to find a reference to entropyappendix.
 * Warning: Since FCS_KYC_EXT.1.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
                        
-* Warning: Since FCS_KYC_EXT.2.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
 * Warning: Since FCS_SNI_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
                        
 * Warning: Since FCS_SNI_EXT.1.3 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
