@@ -5,8 +5,6 @@
 * Error: f-element FCS_VAL_EXT.1.3  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[26]""/f-element[3]""
 * Warning: This document still has at least one comment.
-* Error: Detected dangling id-reference to uses-kek from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[5]""/depends[1]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'toe'.
 * Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.

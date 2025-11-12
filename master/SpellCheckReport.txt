@@ -1,3 +1,0 @@
-output/FDEEE-release-linkable.html: kek
-output/FDEEE-release.html: kek
-output/FDEEE.html: kek
