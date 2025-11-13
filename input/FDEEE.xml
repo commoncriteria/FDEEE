@@ -3151,6 +3151,23 @@
 								</selectables> bits</col>
 							<col>NIST SP 800-56C Revision 2 (Section 5) [Two-Step Key Derivation]</col>
 						</selectable>
+						
+						<!-- KDF-PBKDF2 -->
+						<selectable id="sel-fcs-ckm-5-kdf-pbkdf2">
+							<col>PBKDF2</col>  
+							<col>P/password/input/BEV, S/salt, IV, kLEN/output length</col>
+							<col>PRF<selectables>
+								<selectable>HMAC-SHA-256</selectable>
+								<selectable>HMAC-SHA-384</selectable>
+								<selectable>HMAC-SHA-512</selectable></selectables>
+								</col>
+							<col><selectables>
+								<selectable>256</selectable>
+								<selectable>384</selectable>
+								<selectable>512</selectable>
+								</selectables> bits</col>
+							<col>NIST Special Publication 800-132 Recommendation for Password-Based Key Derivation</col>
+						</selectable>
 
 					</selectables>
 				</title>
@@ -3166,6 +3183,7 @@
 					The security strengths of the Pseudo-Random functions for the key derivation methods must be 
 					sufficient for the security strength of the keys derived through those methods. Since CNSA 1.0
 					permits keys no smaller than 256 bits, no 128- or 192-bit PRFs are permitted. 
+					If PBKDF2 is selected a salt must be generated per FCS_SNI_EXT.1.
 				</note>
 				<aactivity>
 					<TSS>
