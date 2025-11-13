@@ -3499,7 +3499,7 @@
                       <selectable>intermediate keys originating from one or more submasks to the BEV using the following methods:
                         <selectables linebreak="yes">
                           <selectable>key encryption as specified in FCS_COP.1</selectable>
-                          <selectable">key transport as specified in FCS_COP.1,</selectable>
+                          <selectable>key transport as specified in FCS_COP.1,</selectable>
                           <selectable>key wrapping as specified in FCS_COP.1,</selectable>
                           <selectable>key derivation as specified in FCS_CKM.5</selectable>                          
                           <selectable>key combining as specified in FCS_SMC_EXT.1,</selectable>
@@ -4229,8 +4229,7 @@
                   <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
                   <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
                 </note>
-              </f-element>
-             <aactivity level="element">
+				<aactivity level="element">
                       <TSS>
                         <h:p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</h:p>
@@ -4265,6 +4264,8 @@
                             the TOE (e.g., to the EE).</test>
                         </testlist></Tests>
                   </aactivity>
+              </f-element>
+             
             </f-component>
       </section>
     
