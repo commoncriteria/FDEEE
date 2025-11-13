@@ -4180,7 +4180,7 @@
                         <selectable>BEV</selectable>
                       </selectables>
                         as specified in <assignable>cryptographic operation requirement</assignable> and compare it to a stored hashed <selectables><selectable>submask</selectable><selectable> intermediate key</selectable><selectable>BEV</selectable></selectables>;</selectable>
-                      <selectable id="fcs-val-ext-1-1-decr">decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1 and compare it against a stored known value </selectable>
+                      <selectable>decrypt a known value using the <selectables><selectable>submask</selectable><selectable>intermediate key</selectable><selectable>BEV</selectable></selectables> specified in FCS_COP.1 and compare it against a stored known value </selectable>
                     </selectables>.
                   </title>
                 </ext-comp-def-title>
