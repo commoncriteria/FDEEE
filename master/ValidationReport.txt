@@ -1,1 +1,0 @@
-/home/runner/work/FDEEE/FDEEE/input/FDEEE.xml:6010:10: error: element "comment" not allowed here; expected the element end-tag or element "cc-entry" or "entry"
