@@ -1558,42 +1558,6 @@ The following sections list Common Criteria and technology terms used in this do
                   <p>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</p>
                 </span></div></div></div>
              
-                      
-                        <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine which authorization factors support
-                          validation.</p>
-                        <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to review a high-level description if multiple
-                          submasks are used within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</p>
-                      
-                        <p>(conditional) If the validation functionality is configurable, the evaluator shall examine
-                          the operational guidance to ensure it describes how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to ensure the
-                          limits regarding validation attempts can be established.</p>
-                        <p>(conditional) If the validation functionality is specified by the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author, the evaluator
-                          shall examine the operational guidance to ensure that it states the values that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                          uses for limits regarding validation attempts.</p>
-                      
-                        <p>The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to verify that it described the method the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
-                          employs to limit the number of consecutively failed authorization attempts.</p>
-                        <p>The evaluator shall examine the vendor’s <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> to ensure it describes how validation
-                          is performed. The description of the validation process in the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> provides detailed
-                          information how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> validates the submasks. The <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> describes how the process
-                          works, such that it does not expose any material that might compromise the submasks.</p>
-                      
-                        The evaluator shall perform the following tests:
-                        <span class="testlist-"><ul>
-                          <li class="test-"><a id="_t_15" class="defined" href="#_t_15"></a>:
-      The evaluator shall determine the limit on the average rate of the number of
-                            consecutive failed authorization attempts. The evaluator will test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> by entering
-                            that number of incorrect authorization factors in consecutive attempts to access the
-                            protected data. If the limit mechanism includes any “lockout” period, the time period
-                            tested should include at least one such period. Then the evaluator will verify that the
-                            <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> behaves as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</li>
-                          <li class="test-"><a id="_t_16" class="defined" href="#_t_16"></a>:
-      For each validated authorization factor, ensure that when the user provides an
-                            incorrect authorization factor, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prevents the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> from being forwarded outside
-                            the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., to the <abbr class="dyn-abbr"><a href="#abbr_EE">EE</a></abbr>).</li>
-                        </ul></span>
-                  
             </div>
       
     
@@ -3454,7 +3418,7 @@ The following sections list Common Criteria and technology terms used in this do
                 <p><a href="#FCS_VAL_EXT.1">FCS_VAL_EXT.1</a> Validation</p>
               </td></tr></table><h4 id="ext-comp-FCS_KYC_EXT.1.1">FCS_KYC_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a key chain of: 
                     [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_318">one, using a submask as the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr>;</span></li><li style=""><span class="selectable-content" id="_s_319">intermediate keys originating from one or more submasks to the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> using the following methods:
-                        [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in FCS_COP.1,</span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in FCS_COP.1,</span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in <a href="#FCS_CKM.5">FCS_CKM.5</a></span></li><li style=""><span class="selectable-content" id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>,</span></li></ul>]</span></li></ul>]
+                        [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="_s_320">key encryption as specified in FCS_COP.1</span></li><li style=""><span class="selectable-content" id="_s_321">key transport as specified in FCS_COP.1,</span></li><li style=""><span class="selectable-content" id="_s_322">key wrapping as specified in FCS_COP.1,</span></li><li style=""><span class="selectable-content" id="_s_323">key derivation as specified in <a href="#FCS_CKM.5">FCS_CKM.5</a></span></li><li style=""><span class="selectable-content" id="_s_324">key combining as specified in <a href="#FCS_SMC_EXT.1">FCS_SMC_EXT.1</a>,</span></li></ul>]</span></li></ul>]
                     while maintaining an effective strength of 
                     [<b>selection</b>: <span class="selectable-content" id="_s_325">128 bits</span>, <span class="selectable-content" id="_s_326">256 bits</span>] for symmetric keys and an effective strength of 
                     [<b>selection</b>: <span class="selectable-content" id="_s_327">not applicable</span>, <span class="selectable-content" id="_s_328">112 bits</span>, <span class="selectable-content" id="_s_329">128 bits</span>, <span class="selectable-content" id="_s_330">192 bits</span>, <span class="selectable-content" id="_s_331">256 bits</span>] for asymmetric keys.<h4 id="ext-comp-FCS_KYC_EXT.1.2">FCS_KYC_EXT.1.2</h4>
