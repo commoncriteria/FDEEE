@@ -144,7 +144,7 @@
         Since the FDE cPPs support a variety of solutions, two cPPs describe the requirements for the
         FDE components shown in Figure 1.  
         
-        <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe"/></h:p>
+        <h:p><figure entity="images/fde-components.png" title="FDE Components" id="toe-figure-1"/></h:p>
 
           The FDE cPP - Authorization Acquisition describes the requirements for the Authorization Acquisition
           piece and details the necessary security requirements and assurance activities necessary to interact with a user 
@@ -340,7 +340,7 @@
        
       Figure 2 illustrates the components within EE and its relationship with AA.
           
-      <figure entity="images/fde-encryption_engine.png" title="Encryption Engine Details" id="toe"/>
+      <figure entity="images/fde-encryption_engine.png" title="Encryption Engine Details" id="toe-figure-2"/>
      </section>
        
      <section title="Encryption Engine Security Capabilities" id="sec-TOEencryption-engine_security_capabilities">
