@@ -1,3 +1,0 @@
-output/FDEEE-release-linkable.html: kLEN
-output/FDEEE-release.html: kLEN
-output/FDEEE.html: kLEN
