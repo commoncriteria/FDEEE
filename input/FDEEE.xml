@@ -6007,13 +6007,14 @@
 <!-- Appendix I: Bibliography -->
 
 <bibliography>
-<comment>Update references before publication.</comment>
 <!--	  <cc-entry/>   -->
 <cc-entry/>
 <entry id="bibfdeiee">
     <tag>FDE–EE</tag>
     
     <description>
+	
+<comment>Update references before publication.</comment>
         <!-- todo: update hyperlink when cPP published -->
         <h:a href="https://commoncriteria.github.io/FDEEE/master/FDEEE-release.html">collaborative Protection Profile for Full Drive Encryption – Encryption Engine, Version 2.1,
           MMMM DD, 2025</h:a><comment>Adjust date once finalized</comment></description> 
