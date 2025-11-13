@@ -4397,7 +4397,7 @@
       <section title="Security Management (FMT)" id="FMT">        
         
         <f-component cc-id="fmt_smf.1" name="Specification of Management Functions" id="fmt-smf-1">
-        <f-element id="fmt-smf-1">
+        <f-element id="fmt-smf-1-1">
           <title>
           The TSF shall be capable of performing the following management functions: [
             <h:i><h:ol type='a'>
