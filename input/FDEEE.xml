@@ -1263,14 +1263,14 @@
             be usable (of course, presumes the DEK is still encrypted).
           </note>
           <aactivity>
-            <TSS/>
-            <Guidance/>
+            <TSS>These is no TSS for this activity.</TSS>
+            <Guidance>There is no AGD for this activity.</Guidance>
             <KMD>
               The evaluator shall examine the TOE’s keychain in the TSS/KMD and identify each instance a
               key is destroyed by this method. In each instance the evaluator shall verify all keys capable
               of decrypting the target key are destroyed in accordance with a specified key destruction method.
             </KMD>
-            <Tests/>
+            <Tests>There is no test for this activity.</Tests>
           </aactivity>
         </f-element>
       </f-component>            
@@ -3758,8 +3758,8 @@
               Management Description; see Appendix E for more information.  
             </note>
             <aactivity>
-              <TSS/>
-              <Guidance/>
+              <TSS>There is no TSS for this activity</TSS>
+			  <Guidance>There is no AGD for this activity.</Guidance>
               <KMD>
                 The evaluator shall examine the KMD to ensure it describes a high level key hierarchy and details of the key chain.
                 The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key 
@@ -3774,7 +3774,7 @@
                 
                 The evaluator shall verify the KMD includes a description of the strength of keys throughout the key chain.
               </KMD>
-              <Tests/>
+              <Tests>There is no test for this activity.</Tests>
             </aactivity>
           </f-element>
           
@@ -3902,9 +3902,10 @@
                     Assessment" and the <h:a href="https://niap-ccevs.org/Documents_and_Guidance/ccevs/Entropy%20Documentation%20and%20Assessment%20Clarification.pdf">,
                       Clarification to the Entropy Documentation and Assessment Annex</h:a>.
                   </h:p>
-                  <TSS/>
-                  <Guidance/>
-                  <Tests/>
+                  <TSS>There are no additional TSS required for this activity.</TSS> 
+				  <Guidance>There are no additional AGD required for this activity.</Guidance>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                   
                 </aactivity>
               </f-element>
@@ -3933,7 +3934,8 @@
                     The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.
                   </TSS>
                   <Guidance>If the ST claims that the DRBG state can be updated on demand, the evaluator shall verify that the operational guidance has instructions for how to perform this operation.</Guidance>
-                  <Tests/>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                 </aactivity>
               </f-element>
                         
@@ -3956,9 +3958,10 @@
                   <h:p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
-                  <TSS/>
-                  <Guidance/>
-                  <Tests/>
+                  <TSS>There are no additional TSS required for this activity.</TSS> 
+				  <Guidance>There are no additional AGD required for this activity.</Guidance>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                 </aactivity>
               </f-element>
                         
@@ -3979,9 +3982,11 @@
                   <h:p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
-                  <TSS/>
-                  <Guidance/>
-                  <Tests/>
+                  
+                  <TSS>There are no additional TSS required for this activity.</TSS> 
+				  <Guidance>There are no additional AGD required for this activity.</Guidance>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                 </aactivity>                  
               </f-element>
           
@@ -4001,9 +4006,11 @@
                   <h:p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.
                   </h:p>
-                  <TSS/>
-                  <Guidance/>
-                  <Tests/>
+                  
+                  <TSS>There are no additional TSS required for this activity.</TSS> 
+				  <Guidance>There are no additional AGD required for this activity.</Guidance>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                 </aactivity>
               </f-element>
          
@@ -4023,9 +4030,11 @@
                   <h:p>
                     Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source's relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </h:p>
-                  <TSS/>
-                  <Guidance/>
-                  <Tests/>
+                  
+                  <TSS>There are no additional TSS required for this activity.</TSS> 
+				  <Guidance>There are no additional AGD required for this activity.</Guidance>
+				  <KMD>There are no additional KMD required for this activity.</KMD>
+                  <Tests>There are no additional tests required for this activity.</Tests>
                 </aactivity>
               </f-element>
           
@@ -4535,9 +4544,9 @@
               </TSS>
               <Guidance>
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.
+                the authorization process.f
               </Guidance>
-              <KMD/>
+              <KMD>There is no KMD for this activity.</KMD>
               <Tests>
                 The evaluator shall perform the following test.
                 <testlist>
@@ -4657,9 +4666,9 @@
                 of key or hash value, and where the value is stored on the RTU. The evaluator shall also verify that
                 the TSS contains a description (storage location) of where the original firmware exists.
               </TSS>
-              <Guidance>
-              <KMD/>
-              <Tests/>
+              <Guidance>There is no AGD for this activity.</Guidance>
+              <KMD>There is no KMD for this activity.</KMD>
+              <Tests>There is no test for this activity</Tests>
             </aactivity>
           </f-element>
         </f-component>
