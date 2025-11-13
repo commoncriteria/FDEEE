@@ -4792,7 +4792,7 @@
               </aactivity></f-element>         
         </f-component>
         
-        <f-component cc-id="fpt_pwr_ext.2" name="Timing of Power Saving States" id="fpt-pwr-ext-2-1">
+        <f-component cc-id="fpt_pwr_ext.2" name="Timing of Power Saving States" id="fpt-pwr-ext-2">
           <consistency-rationale/>
           <comp-lev>describes the situations that cause compliant power saving states to be entered.</comp-lev>
           <management/>
