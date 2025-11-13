@@ -4156,7 +4156,7 @@
                   The TSF shall perform validation of the [<h:i>BEV</h:i>]
                   using the following methods: <selectables linebreak="yes">
                     <selectable id="sel-fcs-val-ext-1-1-sel-2a">key wrap as specified in FCS_COP.1/KeyWrap;</selectable>
-                    <selectable id="sel-fcs-val-ext-1-1-sel-2a">hash the [<h:i>BEV</h:i>]
+                    <selectable id="sel-fcs-val-ext-1-1-sel-2b">hash the [<h:i>BEV</h:i>]
                     as specified in <selectables>
                       <selectable id="fcs-val-ext-1-1-hash">FCS_COP.1/Hash</selectable>
                       <selectable id="fcs-val-ext-1-1-keyhash">FCS_COP.1/KeyedHash</selectable>
