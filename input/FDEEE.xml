@@ -245,7 +245,7 @@
       <term abbr='RNG' full="Random Number Generator"></term>
       <term abbr='RoT' full="Root of Trust"></term>
       <term abbr='RSA' full="Rivest Shamir Adleman Algorithm"></term>
-      <term abbr='RTU' full="Root of Trust for Update">A type of RoT that verifies the intergity and authenticity of an 
+      <term abbr='RTU' full="Root of Trust for Update">A type of RoT that verifies the integrity and authenticity of an 
         update payload before initiating the update process.</term>
       <term abbr='SAR' full="Security Assurance Requirements"></term>
       <term abbr='SED' full="Self-Encrypting Drive"></term>
