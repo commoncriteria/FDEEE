@@ -858,12 +858,10 @@ The following sections list Common Criteria and technology terms used in this do
 						such that approximately half of the cases are correct and half the cases contain errors.
 					</div></div></span></div><div class="comp" id="FCS-KYC-EXT-2"><h4>FCS_KYC_EXT.2 Key Chaining (Recipient)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_KYC_EXT.2</div>
               
+			  
               
               
-              
-            <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">There is no TSS for this activity</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
                 The evaluator shall examine the KMD to ensure it describes a high level key hierarchy and details of the key chain.
                 The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key 
                 derivation methods that meet FCS_CKM.5, FCS_COP.1(d), FCS_COP.1(e), and/or FCS_COP.1(g).<br/><br/>
@@ -876,18 +874,14 @@ The following sections list Common Criteria and technology terms used in this do
                 of the BEV and the effective strength of the DEK is maintained throughout the Key Chain.<br/><br/>
                 
                 The evaluator shall verify the KMD includes a description of the strength of keys throughout the key chain.
-              </div></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS_SNI_EXT.1"><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><span class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></div>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity.</div></div></span></div><div class="comp" id="FCS_SNI_EXT.1"><h4>FCS_SNI_EXT.1 Cryptographic Operation (Salt, Nonce, and Initialization Vector Generation)</h4><span class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SNI_EXT.1">FCS_SNI_EXT.1</a></div>
                     
                     
-                    
+					
                     
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                       <p>If salts are used, the evaluator shall ensure the TSS describes how salts are generated. The evaluator shall confirm that the salt is generating using an RBG described in FCS_RBG.1 or by the Operational Environment. If external function is used for this purpose, the TSS should include the specific API that is called with inputs.</p>
-                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea">
-			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.3</div>
+                      <p>If IVs or nonces are used, the evaluator shall ensure the TSS describes how nonces are created uniquely and how IVs and tweaks are handled (based on the AES mode). The evaluator shall confirm that the nonces are unique and the IVs and tweaks meet the stated requirements.</p></div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></span></div><div class="comp" id="FCS-VAL-EXT-1"><h4>FCS_VAL_EXT.1 Validation</h4><span class="activity_pane_body"><div class="element-activity-header">FCS_VAL_EXT.1.3</div>
                       <div class="eacategory">TSS</div><div class="ea">
                         <p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</p>
@@ -1128,9 +1122,8 @@ The following sections list Common Criteria and technology terms used in this do
                 process takes place along with a description of the values or actions that are used.
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.
-              </div></div><div class="eacategory">KMD</div><div class="ea">
-			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                the authorization process.f
+              </div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall perform the following test.
                 <span class="testlist-"><ul>
                   <li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FPT_FAC_EXT.1:1</a>:
@@ -1290,14 +1283,11 @@ The following sections list Common Criteria and technology terms used in this do
             
             
             
-          <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
+          <div class="eacategory">TSS</div><div class="ea"><div class="ea">These is no TSS for this activity.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
               The evaluator shall examine the TOE’s keychain in the TSS/KMD and identify each instance a
               key is destroyed by this method. In each instance the evaluator shall verify all keys capable
               of decrypting the target key are destroyed in accordance with a specified key destruction method.
-            </div></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-CKM-6-SW"><h4>FCS_CKM.6/SW Cryptographic Key Destruction (Software TOE, 3rd Party Storage)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6/SW</div>
+            </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity.</div></div></span></div><div class="comp" id="FCS-CKM-6-SW"><h4>FCS_CKM.6/SW Cryptographic Key Destruction (Software TOE, 3rd Party Storage)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_CKM.6/SW</div>
             
             
             
@@ -2322,61 +2312,54 @@ The following sections list Common Criteria and technology terms used in this do
                     Assessment" and the ,
                       Clarification to the Entropy Documentation and Assessment Annex.
                   
-                  <div class="eacategory">TSS</div>
-			There are no additional TSS evaluation activities for this element.<br/><br/>
-                  <div class="eacategory">Guidance</div>
-			There are no additional Guidance evaluation activities for this element.<br/><br/>
-                  <div class="eacategory">Tests</div>
-			There are no test activities for this element.<br/><br/>
+                  <div class="eacategory">TSS</div><div class="ea">There are no additional TSS required for this activity.</div> 
+				  <div class="eacategory">Guidance</div><div class="ea">There are no additional AGD required for this activity.</div>
+				  <div class="eacategory">KMD</div><div class="ea">There are no additional KMD required for this activity.</div>
+                  <div class="eacategory">Tests</div><div class="ea">There are no additional tests required for this activity.</div>
                   
                 <div class="element-activity-header">FCS_RBG.1.3</div>              
                   <div class="eacategory">TSS</div><div class="ea">
                     The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.
                   </div>
                   <div class="eacategory">Guidance</div><div class="ea">If the ST claims that the DRBG state can be updated on demand, the evaluator shall verify that the operational guidance has instructions for how to perform this operation.</div>
-                  <div class="eacategory">Tests</div>
-			There are no test activities for this element.<br/><br/>
+				  <div class="eacategory">KMD</div><div class="ea">There are no additional KMD required for this activity.</div>
+                  <div class="eacategory">Tests</div><div class="ea">There are no additional tests required for this activity.</div>
                 </span></div><div class="comp" id=""><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.2</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
+                   
+				  
+				  
                   
-                  
-                  
-                <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.3</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">There are no additional TSS required for this activity.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no additional AGD required for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no additional KMD required for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no additional tests required for this activity.</div></div></span></div><div class="comp" id=""><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.3</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
                   
+                   
+				  
+				  
                   
-                  
-                <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.4</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">There are no additional TSS required for this activity.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no additional AGD required for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no additional KMD required for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no additional tests required for this activity.</div></div></span></div><div class="comp" id=""><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.4</div>
                   <p>
                     The evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF noise source used to seed the TOE's DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.
                   </p>
                   
+                   
+				  
+				  
                   
-                  
-                <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FCS_RBG.5 Random Bit Generation (Combining Noise Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.5</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">There are no additional TSS required for this activity.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no additional AGD required for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no additional KMD required for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no additional tests required for this activity.</div></div></span></div><div class="comp" id=""><h4>FCS_RBG.5 Random Bit Generation (Combining Noise Sources)</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_RBG.5</div>
                   <p>
                     Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1.2 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source's relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.
                   </p>
                   
+                   
+				  
+				  
                   
-                  
-                <div class="eacategory">TSS</div><div class="ea">
-			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id="FCS-SMC-EXT-1"><h4>FCS_SMC_EXT.1 Submask Combining</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_SMC_EXT.1</div>
+                <div class="eacategory">TSS</div><div class="ea"><div class="ea">There are no additional TSS required for this activity.</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no additional AGD required for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no additional KMD required for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There are no additional tests required for this activity.</div></div></span></div><div class="comp" id="FCS-SMC-EXT-1"><h4>FCS_SMC_EXT.1 Submask Combining</h4><span class="activity_pane_body"><div class="component-activity-header">FCS_SMC_EXT.1</div>
                     
                       
                       
@@ -2409,10 +2392,7 @@ The following sections list Common Criteria and technology terms used in this do
                 The evaluator shall examine the TSS to ensure that it describes how the TOE uses the RTU, what type
                 of key or hash value, and where the value is stored on the RTU. The evaluator shall also verify that
                 the TSS contains a description (storage location) of where the original firmware exists.
-              </div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">KMD</div><div class="ea">
-			There are no additional KMD evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
               
               
               
