@@ -1,7 +1,3 @@
-output/FDEEE-release-linkable.html: intergity
 output/FDEEE-release-linkable.html: kLEN
-output/FDEEE-release.html: intergity
 output/FDEEE-release.html: kLEN
-output/FDEEE-sd.html: intergity
-output/FDEEE.html: intergity
 output/FDEEE.html: kLEN
