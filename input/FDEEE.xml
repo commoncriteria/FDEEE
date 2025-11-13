@@ -1235,6 +1235,7 @@
         </f-element>
       </f-component>
       
+	  <!-- FCS_CKM.6/KEK !-->
       <f-component name="Cryptographic Key Destruction (Key Cryptographic Erase)" cc-id="fcs_ckm.6"
         iteration="KEK" id="fcs-ckm-6-kek" status="sel-based">
 		<depends on-sel="uses-kek"/>
@@ -1248,7 +1249,7 @@
         <f-element id="fcs-ckm-6-2-kek">
           <title>
             The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1/KEK in accordance
-            with a specified cryptographic key destruction method [<h:i>by using the appropriate method to destroy
+            with a specified cryptographic key destruction method [<h:i>by using another method in FCS_CKM_EXT.6.1 to destroy
             all encryption keys encrypting the key intended for destruction</h:i>] that meets the following: 
             [<h:i>no standard</h:i>].
           </title>
