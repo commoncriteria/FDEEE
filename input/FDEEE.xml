@@ -3498,11 +3498,11 @@
                       <selectable>one, using a submask as the BEV;</selectable>
                       <selectable>intermediate keys originating from one or more submasks to the BEV using the following methods:
                         <selectables linebreak="yes">
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-1">key encryption as specified in FCS_COP.1</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-2">key transport as specified in FCS_COP.1,</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-3">key wrapping as specified in FCS_COP.1,</selectable>
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-4">key derivation as specified in FCS_CKM.5</selectable>                          
-                          <selectable id="sel-fcs-kyc-ext-1-1-sel-5">key combining as specified in FCS_SMC_EXT.1,</selectable>
+                          <selectable>key encryption as specified in FCS_COP.1</selectable>
+                          <selectable">key transport as specified in FCS_COP.1,</selectable>
+                          <selectable>key wrapping as specified in FCS_COP.1,</selectable>
+                          <selectable>key derivation as specified in FCS_CKM.5</selectable>                          
+                          <selectable>key combining as specified in FCS_SMC_EXT.1,</selectable>
                           
                           
                         </selectables></selectable></selectables>
