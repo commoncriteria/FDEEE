@@ -5,8 +5,6 @@
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[2]""
 * Warning: This document still has at least one comment.
-* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
-* Error: Detected multiple elements with an id of 'sel-fcs-val-ext-1-1-sel-2a'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fcs-val-ext-1-1-decr'.
 * Error: Detected multiple elements with an id of 'fmt-smf-1'.
