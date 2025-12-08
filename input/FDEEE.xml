@@ -4458,8 +4458,8 @@
                     preconditions that must exist in order to successfully generate or re-generate the DEK.</h:p>
                   <h:p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
-                  <h:p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
-                    the AGD documentation.</h:p>                  
+                  <h:p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
+                    the AGD documentation.</h:p>
                 </Guidance>
               <KMD>If item d)&#41; is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
                 an encrypted DEK, the evaluator shall ensure the KMD describes how the TOE imports a wrapped
