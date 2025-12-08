@@ -4973,10 +4973,7 @@
             <h:li>Initiation of the update process</h:li>
             <h:li>Any failure to verify the integrity of the update</h:li>
           </h:ul></audit>
-          <dependencies>
-            <h:p>FCS_COP.1 Cryptographic Operation</h:p>
-            <h:p>FPT_TUD_EXT.1 Trusted Update</h:p>
-          </dependencies>
+          <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
           
           <f-element id="fpt-tud-ext-1-1">
             <title>
