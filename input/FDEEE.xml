@@ -367,7 +367,7 @@
        units (e.g. sectors or blocks) on the storage device. The EE either encrypts the DEK with a
        KEK or an intermediate key.<h:br/><h:br/>
        
-       This version of the cPP includes additional security features, included advanced power saving
+       This version of the cPP includes additional security features, including advanced power saving
        requirements and firmware signing requirements.
       </section>
     
