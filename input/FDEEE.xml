@@ -4696,7 +4696,7 @@
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ci">wrapped as specified in FCS_COP.1/KeyWrap</selectable>
-                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc</selectable>
+                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
@@ -4735,9 +4735,10 @@
               or OE, the only methods that allow it to play a security relevant role for protecting the BEV or the DEK are if it is a key split or providing additional layers 
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
-              If the TSF implements key wrapping or key encryption to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap or FCS_COP.1/KeyEnc must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
+              If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
+              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
               support generation, encryption, and decryption of symmetric keys used in support of these operations. If the TSF implements submask combining to maintain protected
-              cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.
+              cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.  These selection must align with FCS_KYC_EXT.1.
             </note>
              
               <aactivity>
