@@ -3763,7 +3763,7 @@
               <KMD>
                 The evaluator shall examine the KMD to ensure it describes a high level key hierarchy and details of the key chain.
                 The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key 
-                derivation methods that meet FCS_CKM.5, FCS_COP.1(d), FCS_COP.1(e), and/or FCS_COP.1(g).<h:br/><h:br/>
+                derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.<h:br/><h:br/>
                 
                 The evaluator shall examine the KMD to ensure that it describes how the key chain process functions, such that it 
                 does not expose any material that might compromise any key in the chain. (e.g. using a key directly as a compare 
