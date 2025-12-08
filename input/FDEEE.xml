@@ -1307,18 +1307,17 @@
               </f-element>
          <f-element id="fcs-ckm-6e2-pwr">
                 <title>                  
-                  The TSF shall <h:b><selectables>
+                  The TSF shall destroy cryptographic keys and keying material specified by FCS_CKM.6.1/Power in
+                  accordance with a specified cryptographic key destruction method <h:b><selectables>
                     <selectable>instruct the operational environment to erase</selectable>
                     <selectable>erase</selectable>
-                  </selectables></h:b> [<h:i>cryptographic keys and key material from volatile
-                    memory</h:i>] when [<h:i>transitioning to a compliant power saving state as
-                      defined by FPT_PWR_EXT.1</h:i>] that meets the following: [<h:i>a key
+                  </selectables></h:b> that meets the following: [<h:i>a key
                         destruction method specified in FCS_CKM_EXT.6</h:i>].
                 </title>
                 <note role="application">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<h:br/><h:br/>
+                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<h:br/><h:br/>
 
                   Self-encrypting drives do not store keys in the Operational Environment and cannot instruct
                   the Operational Environment to perform functionality so they are not expected to select
@@ -1329,9 +1328,9 @@
                     The evaluator shall verify the TSS provides a high level description of how keys stored in volatile memory are destroyed. The valuator to verify that TSS outlines: <h:ul>
                       <h:li>if and when the TSF or the Operational Environment is used to destroy keys from volatile memory;</h:li>
                       <h:li>if and how memory locations for (temporary) keys are tracked;</h:li>
-                      <h:li>details of the interface used for key erasure when relying on the OE for memory clearing.</h:li></h:ul></TSS>
+                      <h:li>details of the interface used for key erasure when relying on the OE for memory erasure.</h:li></h:ul></TSS>
                   <Guidance>The evaluator shall check the guidance documentation if the TOE depends on the
-                    Operational Environment for memory clearing and how that is achieved.</Guidance>
+                    Operational Environment for memory erasure and how that is achieved.</Guidance>
                   <CustomEA name="KMD">The evaluator shall check to ensure the KMD lists each type of key, its origin, possible memory locations in volatile memory.</CustomEA>
                   <Tests>There are no test evaluation activities for this SFR.</Tests>
                 </aactivity>
