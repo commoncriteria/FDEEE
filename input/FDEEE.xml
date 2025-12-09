@@ -2798,11 +2798,6 @@
                   The intent of this requirement in the context of this cPP is to provide an SFR that expresses the appropriate symmetric encryption/decryption algorithms
                   suitable for use in the TOE. If the ST author incorporates the validation requirement (FCS_VAL_EXT.1) and chooses to select the option to decrypt a known
                   value and perform a comparison, this is the requirement used to specify the algorithm, modes, and key sizes the ST author can choose from.<h:br/><h:br/>
-
-                  This SFR is required when the TSF performs any key wrapping, key encryption, or key derivation operation as part of maintaining and deriving a key chain
-                  (FCS_CKM.5.1, FCS_KYC_EXT.2), or when the TSF performs validation of a submask, intermediate key, or BEV using a symmetric encryption operation
-                  (FCS_VAL_EXT.1).
-
                 </note>
                 <aactivity>
 					<TSS>
