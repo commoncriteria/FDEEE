@@ -367,7 +367,7 @@
        units (e.g. sectors or blocks) on the storage device. The EE either encrypts the DEK with a
        KEK or an intermediate key.<h:br/><h:br/>
        
-       This version of the cPP includes additional security features, included advanced power saving
+       This version of the cPP includes additional security features, including advanced power saving
        requirements and firmware signing requirements.
       </section>
     
@@ -1464,12 +1464,14 @@
                   If this is the case the test should be repeated with a different key in Step #1. If a fragment is found 
                   the test fails.
                 </test>
+              </testlist>
                 The following tests apply only to selection a), since the TOE in this instance has more visibility into what is 
                 happening within the underlying platform (e.g., a logical view of the media). In selection b), the TOE has no 
                 visibility into the inner workings and completely relies on the underlying platform, so there is no reason to
                 test the TOE beyond test 1.<h:br/><h:br/>
                 For selection a), the following tests are used to determine the TOE is able to request the platform to overwrite
                 the key with a TOE supplied pattern.
+              <testlist>
                 <test>
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
                   evaluator shall use a tool that provides a logical view of the media (e.g., MBR
@@ -1780,7 +1782,7 @@
                 <aactivity> 
                     <TSS>
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS, and not as a hash algorithm.
+						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
 					</TSS>
                     <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
 					<KMD>There are no KMD evaluation activities for this SFR.</KMD>
@@ -2651,8 +2653,8 @@ For 100 iterations
 			</selectables>.</title>
             
             <note role="application">
-              The selection should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example, 
-              SHA-256 should be chosen for 2048-bit RSA or ECC with P-256, SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
+              The selections in FCS_COP.1/Hash should be consistent with the overall strength of the algorithm used for FCS_COP.1/SigVer and quantum resistant recommendations. For example,
+              SHA-384 should be chosen for 3072-bit RSA, 4096-bit RSA, or ECC with P-384, and SHA-512 should
               be chosen for ECC with P-521. The selection of the standard is made based on the algorithms selected.<h:br/><h:br/>
               This SFR is mandatory for its use in verification of digital signatures for TOE updates. <h:p/>As support is expanded for CNSA 2.0, CNSA 1.0 will be removed as an selection in a future update.
             </note>
@@ -3557,7 +3559,7 @@ If ( keylen = 256 )
                       <TSS>The evaluator shall verify the TSS contains a high-level description of the BEV sizes– that it supports BEV outputs of no fewer 128 bits for products that support only AES128, and no fewer than 256 bits for products that support AES-256.</TSS>
                       <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
                       <CustomEA name="KMD">
-                        <h:p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_COP.1/KeyWrap and FCS_CKM.5.</h:p>
+                        <h:p>The evaluator shall examine the KMD describes a high level description of the key hierarchy for all authorizations methods selected in FCS_AFA_EXT.1 that are used to protect the BEV. The evaluator shall examine the KMD to ensure it describes the key chain in detail. The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.</h:p>
                         <h:p>The evaluator shall examine the KMD to ensure that it describes how the key chain
                           process functions, such that it does not expose any material that might compromise any
                           key in the chain. (e.g. using a key directly as a compare value against a TPM) This
@@ -3760,7 +3762,7 @@ If ( keylen = 256 )
               <KMD>
                 The evaluator shall examine the KMD to ensure it describes a high level key hierarchy and details of the key chain.
                 The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key 
-                derivation methods that meet FCS_CKM.5, FCS_COP.1(d), FCS_COP.1(e), and/or FCS_COP.1(g).<h:br/><h:br/>
+                derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.<h:br/><h:br/>
                 
                 The evaluator shall examine the KMD to ensure that it describes how the key chain process functions, such that it 
                 does not expose any material that might compromise any key in the chain. (e.g. using a key directly as a compare 
@@ -4455,8 +4457,8 @@ If ( keylen = 256 )
                     preconditions that must exist in order to successfully generate or re-generate the DEK.</h:p>
                   <h:p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</h:p>
-                  <h:p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
-                    the AGD documentation.</h:p>                  
+                  <h:p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
+                    the AGD documentation.</h:p>
                 </Guidance>
               <KMD>If item d)&#41; is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
                 an encrypted DEK, the evaluator shall ensure the KMD describes how the TOE imports a wrapped
@@ -4693,7 +4695,7 @@ If ( keylen = 256 )
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ci">wrapped as specified in FCS_COP.1/KeyWrap</selectable>
-                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc</selectable>
+                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
@@ -4732,9 +4734,10 @@ If ( keylen = 256 )
               or OE, the only methods that allow it to play a security relevant role for protecting the BEV or the DEK are if it is a key split or providing additional layers 
               of wrapping or encryption on keys that have already been protected.<h:br/><h:br/>
             
-              If the TSF implements key wrapping or key encryption to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap or FCS_COP.1/KeyEnc must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
+              If the TSF implements key wrapping, key encryption, or key encapsulation to maintain protected cryptographic key storage, then FCS_COP.1/KeyWrap, FCS_COP.1/KeyEnc,
+              or FCS_COP.1/KeyEncap must be claimed. Additionally, if key wrapping or key encryption is used, then FCS_CKM.1/SKG, FCS_RBG.1, and FCS_COP.1/SKC must be claimed to
               support generation, encryption, and decryption of symmetric keys used in support of these operations. If the TSF implements submask combining to maintain protected
-              cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.
+              cryptographic key storage, then FCS_SMC_EXT.1 must be claimed.  These selection must align with FCS_KYC_EXT.1.
             </note>
              
               <aactivity>
@@ -4752,10 +4755,9 @@ If ( keylen = 256 )
                   keys in non-volatile memory and plaintext keys in non-volatile memory meet one of the criteria
                   for storage.
                 </KMD>
-				<Tests>
-				If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the Evaluator shall verify that TOE protects key material in a way consistent with SFR selection and description in the TSS and KMD. This can be achieved by inspecting non-volatile location where TOE stores key material, by inspecting TOE memory when loading those materials from non-volatile storage using debug mode of TOE execution. 
-				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test.
-                </Tests>                  
+                <Tests>
+                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the evaluator shall verify that the TOE protects key material in a way consistent with the selections and description in the TSS and KMD. This can be achieved by inspecting non-volatile locations where the TOE stores key material or by inspecting the TOE memory when loading those materials from non-volatile storage. It would be sufficient to demonstrate that the stored value is different from the plaintext value of the key as discovered in the test EA for FCS_CKM.6.
+                </Tests>
                 </aactivity>
           </f-element>
          
@@ -4940,7 +4942,7 @@ If ( keylen = 256 )
                 <h:p>
                   The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
                 </h:p><h:p>
-                  Note that this information may also be placed in the entropy documentation specified by <xref to="entropyappendix"/>. 
+                  Note that this information may also be placed in the entropy documentation specified by <xref to="apndx-entropy"/>.
                 </h:p>
               </TSS>
               <Guidance>
