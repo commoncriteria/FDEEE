@@ -1199,15 +1199,14 @@ The following sections list Common Criteria and technology terms used in this do
                   or key materials to stay in volatile memory and identify mitigation measures that result in
                   erasure of volatile memory<a id="period_224" href="#period_224">. </a>                </span></div></div></div>
          <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">                  
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_67">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_68">erase</span>]</b> [<i>cryptographic keys and key material from volatile
-                    memory</i>] when [<i>transitioning to a compliant power saving state as
-                      defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>] that meets the following: [<i>a key
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1/Power">FCS_CKM.6.1/Power</a> in
+                  accordance with a specified cryptographic key destruction method <b>[<b>selection</b>: <span class="selectable-content" id="_s_67">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_68">erase</span>]</b> that meets the following: [<i>a key
                         destruction method specified in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i>]<a id="period_225" href="#period_225">. </a>                <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation<a id="period_226" href="#period_226">. </a><br><br>
+                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation<a id="period_226" href="#period_226">. </a><br><br>
 
                   Self-encrypting drives do not store keys in the Operational Environment and cannot instruct
                   the Operational Environment to perform functionality so they are not expected to select
@@ -1232,9 +1231,9 @@ The following sections list Common Criteria and technology terms used in this do
                     The evaluator shall verify the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> provides a high level description of how keys stored in volatile memory are destroyed<a id="period_234" href="#period_234">. </a>The valuator to verify that <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> outlines: <ul>
                       <li>if and when the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> or the Operational Environment is used to destroy keys from volatile memory;</li>
                       <li>if and how memory locations for (temporary) keys are tracked;</li>
-                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory clearing<a id="period_235" href="#period_235">. </a></li></ul></div>
+                      <li>details of the interface used for key erasure when relying on the <abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr> for memory erasure<a id="period_235" href="#period_235">. </a></li></ul></div>
                   <div class="eacategory">Guidance</div><div class="ea">The evaluator shall check the guidance documentation if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> depends on the
-                    Operational Environment for memory clearing and how that is achieved<a id="period_236" href="#period_236">. </a></div>
+                    Operational Environment for memory erasure and how that is achieved<a id="period_236" href="#period_236">. </a></div>
                   <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea">The evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> lists each type of key, its origin, possible memory locations in volatile memory<a id="period_237" href="#period_237">. </a></div>
                   <div class="eacategory">Tests</div><div class="ea">There are no test evaluation activities for this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_238" href="#period_238">. </a></div>
                 </div></div></div>

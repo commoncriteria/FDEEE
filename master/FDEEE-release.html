@@ -1244,16 +1244,15 @@ The following sections list Common Criteria and technology terms used in this do
                   erasure of volatile memory.
                 </span></div></div></div>
          <div class="element"><div class="reqid" id="FCS_CKM.6.2/Power"><a href="#FCS_CKM.6.2/Power" class="abbr">FCS_CKM.6.2/Power</a></div><div class="reqdesc">                  
-                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall <b>[<b>selection</b>: <span class="selectable-content" id="_s_67">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_68">erase</span>]</b> [<i>cryptographic keys and key material from volatile
-                    memory</i>] when [<i>transitioning to a compliant power saving state as
-                      defined by <a href="#FPT_PWR_EXT.1">FPT_PWR_EXT.1</a></i>] that meets the following: [<i>a key
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall destroy cryptographic keys and keying material specified by <a href="#FCS_CKM.6.1/Power">FCS_CKM.6.1/Power</a> in
+                  accordance with a specified cryptographic key destruction method <b>[<b>selection</b>: <span class="selectable-content" id="_s_67">instruct the operational environment to erase</span>, <span class="selectable-content" id="_s_68">erase</span>]</b> that meets the following: [<i>a key
                         destruction method specified in <a href="#FCS_CKM_EXT.6">FCS_CKM_EXT.6</a></i>].
                 <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
                   In some cases, erasure of keys from volatile memory is
                   only supported by the operational environment, in which case the operational
-                  environment must expose a well-documented mechanism or interface to invoke the memory clearing operation.<br/><br/>
+                  environment must expose a well-documented mechanism or interface to invoke the memory erase operation.<br/><br/>
 
                   Self-encrypting drives do not store keys in the Operational Environment and cannot instruct
                   the Operational Environment to perform functionality so they are not expected to select
