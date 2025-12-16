@@ -1,0 +1,3 @@
+output/FDEEE-release-linkable.html: SHAKE256
+output/FDEEE-release.html: SHAKE256
+output/FDEEE.html: SHAKE256
