@@ -4769,7 +4769,7 @@ If ( keylen = 256 )
           <dependencies>No dependencies</dependencies>
           <f-element id="fpt-pwr-ext-1-1">
             <title>
-              The TSF shall define the following compliant power saving states: <selectables choose-one-of="yes">
+              The TSF shall define the following compliant power saving states: <selectables>
                 <selectable>S3</selectable>
                 <selectable>S4</selectable>
                 <selectable>G2(S5)</selectable>
