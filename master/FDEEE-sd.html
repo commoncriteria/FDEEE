@@ -485,7 +485,7 @@ The following sections list Common Criteria and technology terms used in this do
                     
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
 						The evaluator shall examine the TSS to verify that if SHA-256 is selected, that it is being 
-						used only as a PRF or MAC step in a key derivation function or as part of LMS, and not as a hash algorithm.
+						used only as a PRF or MAC step in a key derivation function or as part of LMS or XMSS, and not as a hash algorithm.
 					</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There are no AGD evaluation activities for this SFR.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There are no KMD evaluation activities for this SFR.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 						The following tests may require the developer to provide access to a test platform that
 						provides the evaluator with tools that are typically not found on factory products.<p></p>
@@ -855,7 +855,7 @@ If ( keylen = 256 )
             <div class="eacategory">TSS</div><div class="ea"><div class="ea">There is no TSS for this activity</div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">
                 The evaluator shall examine the KMD to ensure it describes a high level key hierarchy and details of the key chain.
                 The description of the key chain shall be reviewed to ensure it maintains a chain of keys using key wrap or key 
-                derivation methods that meet FCS_CKM.5, FCS_COP.1(d), FCS_COP.1(e), and/or FCS_COP.1(g).<br/><br/>
+                derivation methods that meet FCS_CKM.5, FCS_COP.1/KeyWrap, FCS_COP.1/KeyEncap, and/or FCS_COP.1/KeyEnc.<br/><br/>
                 
                 The evaluator shall examine the KMD to ensure that it describes how the key chain process functions, such that it 
                 does not expose any material that might compromise any key in the chain. (e.g. using a key directly as a compare 
@@ -1009,8 +1009,8 @@ If ( keylen = 256 )
                     preconditions that must exist in order to successfully generate or re-generate the DEK.</p>
                   <p>The evaluator shall examine the operational 
                     guidance to ensure that it describes how to initiate TOE firmware/software updates.</p>
-                  <p>If Key Disable Key Recovery is selected: The guidance for disabling this capability shall be described in
-                    the AGD documentation.</p>                  
+                  <p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
+                    the AGD documentation.</p>
                 </div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">If item d)) is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
                 an encrypted DEK, the evaluator shall ensure the KMD describes how the TOE imports a wrapped
                 DEK and performs the decryption of the wrapped DEK.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
@@ -1028,7 +1028,7 @@ If ( keylen = 256 )
                 
                 
                 
-				                  
+                
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                   The evaluator shall examine the TSS to verify that it describes the method by which intermediate
                   keys are generated using submask combining.
@@ -1041,8 +1041,7 @@ If ( keylen = 256 )
                   keys in non-volatile memory and plaintext keys in non-volatile memory meet one of the criteria
                   for storage.
                 </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-				If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the Evaluator shall verify that TOE protects key material in a way consistent with SFR selection and description in the TSS and KMD. This can be achieved by inspecting non-volatile location where TOE stores key material, by inspecting TOE memory when loading those materials from non-volatile storage using debug mode of TOE execution. 
-				  It would be sufficient to demonstrate that the stored value is different from plaintext value of the key as discovered in Key Destruction test.
+                  If “only store keys in non-volatile memory when wrapped or encrypted” is selected, the evaluator shall verify that the TOE protects key material in a way consistent with the selections and description in the TSS and KMD. This can be achieved by inspecting non-volatile locations where the TOE stores key material or by inspecting the TOE memory when loading those materials from non-volatile storage. It would be sufficient to demonstrate that the stored value is different from the plaintext value of the key as discovered in the test EA for FCS_CKM.6.
                 </div></div></span></div><div class="comp" id="FPT-PWR-EXT-1"><h4>FPT_PWR_EXT.1 Power Saving States</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_PWR_EXT.1</div>
             
             
@@ -1341,12 +1340,14 @@ If ( keylen = 256 )
                   If this is the case the test should be repeated with a different key in Step #1. If a fragment is found 
                   the test fails.
                 </li>
+              </ul></span>
                 The following tests apply only to selection a), since the TOE in this instance has more visibility into what is 
                 happening within the underlying platform (e.g., a logical view of the media). In selection b), the TOE has no 
                 visibility into the inner workings and completely relies on the underlying platform, so there is no reason to
                 test the TOE beyond test 1.<br/><br/>
                 For selection a), the following tests are used to determine the TOE is able to request the platform to overwrite
                 the key with a TOE supplied pattern.
+              <span class="testlist-"><ul>
                 <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FCS_CKM.6/SW:2</a>:
       
                   Applied to each key held in non-volatile memory and subject to destruction by overwrite by the TOE. The 
@@ -2383,7 +2384,7 @@ If ( keylen = 256 )
                 <p>
                   The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
                 </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <span href="#entropyappendix" class="dynref" data-format=""></span>. 
+                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix D -  Entropy Documentation and Assessment</span>.
                 </p>
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p>
