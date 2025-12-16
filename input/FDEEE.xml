@@ -1020,26 +1020,21 @@
                 </note>
                 <aactivity>
                   <TSS>
-                    The evaluator shall verify that the TSS describes the known-answer self-tests for cryptographic functions.<h:br/><h:br/>
-                    The evaluator shall verify that the TSS describes, for some set of non-cryptographic functions affecting 
-                    the correct operation of the TOE and the method by which the TOE tests those functions. The evaluator 
-                    shall verify that the TSS includes each of these functions, the method by which the TOE verifies the 
-                    correct operation of the function. The evaluator shall verify that the TSF data are appropriate for 
-                    TSF Testing. For example, more than blocks are tested for AES in CBC mode, output of AES in GCM mode 
-                    is tested without truncation, or 512-bit key is used for testing HMAC-SHA-512.<h:br/><h:br/>
-                    If FCS_RBG_EXT.1 is implemented by the TOE and according to NIST SP 800-90, the evaluator shall verify
-                    that the TSS describes health tests that are consistent with section 11.3 of NIST SP 800-90.
-                    If any FCS_COP functions are implemented by the TOE, the TSS shall describe the known-answer self-tests 
-                    for those functions.<h:br/><h:br/>
-                    The evaluator shall verify that the TSS describes, for some set of non-cryptographic functions 
-                    affecting the correct operation of the TSF, the method by which those functions are tested. The TSS will
-                    describe, for each of these functions, the method by which correct operation of the function/component is
-                    verified. The evaluator shall determine that all of the identified functions/components are adequately 
-                    tested on start-up.
+                    The evaluator shall examine the TSS to determine that it describes how the TOE obtains a DEK (either generating the DEK or receiving from the environment). <h:br/><h:br/>
+					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG_EXT.1 is invoked. If the DEK
+					is generated outside of the TOE, the evaluator checks to ensure that for each platform identified in the TOE the TSS, it describes the interface used by the TOE to invoke this
+					functionality. The evaluator uses the description of the interface between the RBG and the TOE to determine that it requests a key greater than or equal to the required key
+					sizes.<h:br/><h:br/> 
+					If the TOE received the DEK from outside the host platform, then the evaluator shall examine the TSS to determine that the DEK is sent wrapped using the appropriate encryption algorithm.
                   </TSS>
                   <Guidance>There is no AGD for this activity.</Guidance>
-                  <KMD>There is no KMD for this activity.</KMD>
-                  <Tests>There is no test for this activity.</Tests>
+                  <KMD>If the TOE received the DEK from outside the host platform, then the evaluator shall verify that the KMD describes how the TOE unwraps the DEK.</KMD>
+                  <Tests>
+				  <testlist>
+				  <test>The evaluator shall configure the TOE to ensure the functionality of all selections.
+				  </test>
+				  </testlist>
+				  </Tests>
                 </aactivity>
               </f-element>
             </f-component>
