@@ -4202,11 +4202,6 @@ If ( keylen = 256 )
                   </title>                  
                 </ext-comp-def-title>
                 
-                <note role="application">
-                    This SFR is claimed when the TSF validates an authentication factor as a prerequisite to unlocking the key chain as
-                    defined in FCS_KYC_EXT.2.
-                </note>
-                
               </f-element>
               <f-element id="fcs-val-ext-1-3">
                 <title>The TSF shall 
