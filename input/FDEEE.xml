@@ -4215,7 +4215,7 @@ If ( keylen = 256 )
                     </selectable>
                     <selectable>institute a delay such that only <assignable>ST author specified number of attempts</assignable> can be made within a 24 hour period</selectable>
                     <selectable>block validation after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
-                    <selectable>require power cycle or reset the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
+                    <selectable>require power cycle or reset of the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
                   </selectables>.</title>
                 <note role="application">
                   <h:p>
