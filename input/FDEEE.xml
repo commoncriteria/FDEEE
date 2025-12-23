@@ -5015,9 +5015,10 @@ If ( keylen = 256 )
               The TSF shall verify updates to the TOE <selectables>
                 <selectable>software</selectable>
                 <selectable>firmware</selectable>
-              </selectables> using a <selectables>
+              </selectables> using a 
+              <selectables>
                 <selectable>digital signature <h:b>as specified in FCS_COP.1/SigVer</h:b></selectable>
-                <selectable id="uses-firmware-auth"><h:b>authenticated firmware update mechanism as described in FPT_FUA_EXT.1</h:b></selectable>
+                <selectable id="uses-firmware-auth">authenticated firmware update mechanism as described in FPT_FUA_EXT.1</selectable>
               </selectables> by the manufacturer prior to installing those updates.
             </title>
             
