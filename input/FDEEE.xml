@@ -533,7 +533,7 @@
 		    <addressed-by>FCS_CKM_EXT.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction for system power states.</rationale>		    
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>		    
-		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to accept a BEV.</rationale>
+		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to protect the BEV.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating new keys.</rationale>
