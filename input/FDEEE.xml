@@ -5033,7 +5033,7 @@ If ( keylen = 256 )
               <aactivity>
                 <TSS>
                   If "authenticated firmware update mechanism as described in FPT_FUA_EXT.1" is
-                  selected, you must claim FPT_FUA_EXT.1.<h:br/><h:br/>
+                  selected, then FPT_FUA_EXT.1 must be claimed.<h:br/><h:br/>
                   <h:p>The evaluator shall examine the TSS to ensure that it describes information stating that
                     an authorized source signs TOE updates and will have an associated digital signature.
                     The evaluator shall examine the TSS contains a definition of an authorized source along
