@@ -1023,7 +1023,7 @@
                 <aactivity>
                   <TSS>
                     The evaluator shall examine the TSS to determine that it describes how the TOE obtains a DEK (either generating the DEK or receiving from the environment). <h:br/><h:br/>
-					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG_EXT.1 is invoked. If the DEK
+					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG.1 is invoked. If the DEK
 					is generated outside of the TOE, the evaluator checks to ensure that for each platform identified in the TOE the TSS, it describes the interface used by the TOE to invoke this
 					functionality. The evaluator uses the description of the interface between the RBG and the TOE to determine that it requests a key greater than or equal to the required key
 					sizes.<h:br/><h:br/> 
@@ -1123,7 +1123,7 @@
             The intent is that a new value of a key (as specified in another SFR within the cPP) can be used
             to “replace” an existing key.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1389,7 +1389,7 @@
             and can only ask the platform to delete the resource. The level of detail to which the TOE has
             access will be reflected in the TSS section of the ST.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1579,7 +1579,7 @@
             If a selection for read verify is chosen, it should generate an audit record upon failures.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
             that the TOE uses some other specified data not drawn from an RBG meeting
-            FCS_RBG_EXT requirements, and not being any of the particular values listed as other
+            FCS_RBG.1 requirements, and not being any of the particular values listed as other
             selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the
             overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain
             current or residual data that itself requires confidentiality protection.<h:br/><h:br/>
