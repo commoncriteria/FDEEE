@@ -5785,7 +5785,7 @@ If ( keylen = 256 )
       patches have been released for the version of the component being evaluated, the subject of those patches may form the basis 
       for a flaw hypothesis).<h:br/><h:br/>
       <h:b><h:i>Type 2 Hypotheses-iTC-Sourced</h:i></h:b><h:br/><h:br/>
-      There are no type 2 hypotheses for AA.
+      There are no type 2 hypotheses.
       <h:br/><h:br/>
       <h:b><h:i>Type 3 Hypotheses-Evaluation-Team-Generated</h:i></h:b><h:br/><h:br/>
           The iTC has leveraged the expertise of the developers and the evaluation labs to diligently develop the appropriate search
