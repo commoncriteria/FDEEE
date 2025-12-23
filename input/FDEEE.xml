@@ -629,7 +629,7 @@
 		    </description>				
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
 		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
-		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
+		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including firmware updates.</rationale>        
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by defining a secure mechanism for updating the TOE firmware.</rationale>
 		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated by an authorized user.</rationale>
 		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>
