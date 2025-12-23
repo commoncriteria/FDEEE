@@ -4325,7 +4325,7 @@ If ( keylen = 256 )
             For the cryptographic functions that are provided by the Operational Environment, the evaluator
             shall check the TSS to ensure it describes, for each platform identified in the ST, the interfaces
             used by the TOE to invoke this functionality.<h:br/><h:br/>
-            66 The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
+            The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
             The evaluator shall ensure the comprehensiveness of the description, confirms how the TOE writes the
             data to the disk drive, and the point at which it applies the encryption function.<h:br/><h:br/>
             The evaluator shall verify that the TSS describes the initialization of the TOE and the activities 
