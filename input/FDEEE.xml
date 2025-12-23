@@ -180,10 +180,7 @@
         of the two components.</term>
       <term abbr='BIOS' full="Basic Input Output System"></term>
       <term abbr='CBC' full="Cipher Block Chaining"></term>
-      <term abbr='CC' full="Common Criteria"></term>
       <term abbr='CCM' full="Counter with CBC-Message Authentication Code"></term>
-      <term abbr='CEM' full="Common Evaluation Methodology"></term>
-      <term abbr='CPP' full="Collaborative Protection Profile"></term>
       <term abbr='DEK' full="Data Encryption Key">A key used to encrypt data-at-rest.</term>
       <term abbr='DRBG' full="Deterministic Random Bit Generator"></term>
       <term abbr='DSS' full="Digital Signature Standard"></term>
@@ -247,18 +244,13 @@
       <term abbr='RSA' full="Rivest Shamir Adleman Algorithm"></term>
       <term abbr='RTU' full="Root of Trust for Update">A type of RoT that verifies the integrity and authenticity of an 
         update payload before initiating the update process.</term>
-      <term abbr='SAR' full="Security Assurance Requirements"></term>
       <term abbr='SED' full="Self-Encrypting Drive"></term>
       <term abbr='SHA' full="Secure Hash Algorithm"></term>
-      <term abbr='SFR' full="Security Functional Requirements"></term>
-      <term abbr='ST' full="Security Target"></term>
       <term abbr='SPD' full="Security Problem Definition"></term>
       <term abbr='SPI' full="Serial Peripheral Interface"></term>
       <term full="Submask">A submask is a bit string that can be generated and stored in a number
         of ways.</term>
       <term abbr='TPM' full="Trusted Platform Module"></term>
-      <term abbr='TSF' full="TOE Security Functionality"></term>
-      <term abbr='TSS' full="TOE Summary Specification"></term>
       <term abbr='USB' full="Universal Serial Bus"></term>
       <term abbr='XOR' full="Exclusive or"></term>
       <term abbr='XTS' full="XEX (XOR Encrypt XOR) Tweakable Block Cipher with Ciphertext Stealing"></term>
