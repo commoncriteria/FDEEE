@@ -4219,13 +4219,21 @@ If ( keylen = 256 )
                   </selectables>.</title>
                 <note role="application">
                   <h:p>
-                    The purpose of performing secure validation is to not expose any material that might compromise the submasks. For the selections in FCS_VAL_EXT.1.1, the ST author must clarify in the KMD which specific entities are referred to in this SFR if multiple entities of a type exist.
+                  Validation” of the BEV can occur at any point in the key chain, including when the DEK is decrypted. 
+                  For the purposes of this requirement, validating a key derived from the BEV equates to “validating” the BEV.
+                  The purpose of performing secure validation is to not expose any material that might compromise the submask(s). 
                   </h:p>
-                  <h:p>The TOE validates the submasks (e.g., authorization factors) prior to presenting the BEV to the EE. When a password is used as an authorization factor, it is conditioned before any attempts to validate. In cases where validation of the authorization factors fails, the product will not forward a BEV to EE. </h:p>
-                  <h:p>When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.</h:p>
-                  <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
-                  <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
-                </note>
+                  <h:p>
+                  The TOE validates the BEV prior to allowing the user access to the data stored on the drive. 
+                  When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.
+                  </h:p>
+                  <h:p>
+                  The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product 
+                  (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party 
+                  password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in 
+                  FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.
+                  </h:p>
+                  </note>
 				        <aactivity>
                       <TSS>
                         <h:p>The evaluator shall examine the TSS to determine which authorization factors support
