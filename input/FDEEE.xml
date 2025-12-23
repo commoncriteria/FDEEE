@@ -2609,7 +2609,7 @@ For 100 iterations
             </f-component>
             
            
-        <f-component id="sfr-fcs-cop-1-sigver" cc-id="fcs_cop.1" iteration="SigVer" name="Cryptographic Operation - Signature Verification" 
+        <f-component id="sfr-fcs-cop-1-sigver" cc-id="fcs_cop.1" iteration="SigVer" name="Cryptographic Operation - Signature Verification"> 
 			<f-element id="fcs-cop-1e1-sigver">
 				<title> 
 					The TSF shall perform [digital signature verification] in accordance with a specified 
