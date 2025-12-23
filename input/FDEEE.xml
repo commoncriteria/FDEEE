@@ -568,7 +568,7 @@
 		      encryption algorithms and parameters allow attackers to exhaust the key space through brute force
 		      and give them unauthorized access to the data.</description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the DEK is computationally infeasible.</rationale>
-		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys accepting the BEV are of the same strength.</rationale>        
+		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys protecting the BEV are of the same strength.</rationale>        
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for data encryption are generated using a secure DRBG. </rationale>
