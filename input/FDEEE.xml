@@ -4417,7 +4417,7 @@ If ( keylen = 256 )
                 <selectable>disable key recovery functionality</selectable>
                 <selectable>securely update the public key needed for trusted update</selectable>
                 <selectable>configure the number of failed validation attempts required to trigger corrective behavior</selectable>
-                <selectable>configure the corrective behavior to issue 1 in the event of an excessive number of
+                <selectable>configure the corrective behavior to issue in the event of an excessive number of
                   failed validation attempts</selectable>
                 <selectable><assignable>other management functions provided by the TSF</assignable></selectable>
               </selectables>]</h:li>
