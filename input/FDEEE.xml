@@ -5875,7 +5875,7 @@ If ( keylen = 256 )
                 required to perform the identified vulnerabilities (cf. AVA_VAN.1-11);</h:li>
               <h:li>how each flaw hypothesis was resolved (this includes whether the original flaw hypothesis was confirmed or 
                 disproved, and any analysis relating to whether a residual vulnerability is exploitable by an attacker with Basic
-                Attack Potential) (cf. AVA_VAN1-10); and</h:li>
+                Attack Potential) (cf. AVA_VAN.1-10); and</h:li>
               <h:li>in the case that actual testing was performed in the investigation (either as part of flaw hypothesis generation
                 using tools specified by the iTC in the Type 4 Hypotheses section, or in proving or disproving a particular flaw) the steps followed in
                 setting up the TOE (and any required test equipment); executing the test; post-test procedures; and the actual results
