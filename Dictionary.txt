@@ -231,14 +231,15 @@ evaluator's
 fail'
 pass'
 test
-
-
-
-
-
-
-
-
+MGF1
+PSS
+RSASSA
+SHAKE256
+Winternitz
+XOF
+log2
+v1
+v2
 
 
 
