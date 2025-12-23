@@ -4524,7 +4524,7 @@ If ( keylen = 256 )
                 <selectable>a password</selectable>
                 <selectable>a known unique value printed on the device</selectable>
                 <selectable>a authorized user action</selectable>
-              </selectables>before the firmware update proceeds.
+              </selectables> before the firmware update proceeds.
             </title>
             <note role="application">
               Before an update takes place, the drive owner will authorize the update by providing either a known unique 
@@ -4540,7 +4540,7 @@ If ( keylen = 256 )
               </TSS>
               <Guidance>
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.f
+                the authorization process.
               </Guidance>
               <KMD>There is no KMD for this activity.</KMD>
               <Tests>
