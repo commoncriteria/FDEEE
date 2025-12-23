@@ -4283,8 +4283,7 @@ If ( keylen = 256 )
       
     <f-component cc-id="fdp_dsk_ext.1" name="Protection of Data on Disk" id="fdp-dsk-ext-1">
       <consistency-rationale/>
-      <comp-lev>requires the TSF to validate submasks and BEVs by one or
-        more of the specified methods.</comp-lev>
+      <comp-lev>requires the TSF to encrypt all protected data without user intervention using full drive encryption.</comp-lev>
       <management/>
       <audit/>
       <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
