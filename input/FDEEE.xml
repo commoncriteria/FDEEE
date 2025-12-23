@@ -444,9 +444,8 @@
 		<!-- Claims conformance to these other PPs (none)-->
 		<cc-pp-conf/>              		  
 		
-		<!-- Can be in a configuration with these PPs and Modules -->
-		<cc-pp-config-with>
-		</cc-pp-config-with>
+		<!-- Can be in a configuration with these PPs and Modules (none) -->
+		<cc-pp-config-with/>
 
 		<!-- Package claims -->
 		<cc-pkg-claim/>
