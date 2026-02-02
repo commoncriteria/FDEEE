@@ -1017,6 +1017,7 @@
                       the symmetric key is used as part of the key chain.</CustomEA>
                     <Tests>There are no test evaluation activities for this SFR.</Tests>
                 </aactivity>
+				</f-element>
 		    </f-component>
 
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6"
