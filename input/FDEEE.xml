@@ -998,13 +998,12 @@
               <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
 			  <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
 			  <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
-              <f-element id="fcs_ckm-1-1-skg"><title>
+			  <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
-                sizes [256 bit] that meet the following: [<h:i>no standard</h:i>].
+                sizes <h:i>256 bit</h:i> that meet the following: [<h:i>no standard</h:i>].
                 </title>
                 <note role="application">
-                  Symmetric keys may be used to generate keys along the key chain. Any instance in where the TSF DRBG is referenced for key generation (as in 
-                  FCS_SNI_EXT.1 and FCS_CKM.5), or where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key or validating a key.                 
+                  Symmetric keys may be used to generate keys along the key chain. This applies to any instance in where the TSF DRBG is referenced for key generation where the TSF generates or re-generates key encryption or key wrapping keys as part of deriving a key (as in FCS_KYC_EXT.2)                  
                 </note>
                 <aactivity>
                   <TSS>The evaluator shall review the TSS to determine that a symmetric key is supported by
@@ -1018,9 +1017,7 @@
                       the symmetric key is used as part of the key chain.</CustomEA>
                     <Tests>There are no test evaluation activities for this SFR.</Tests>
                 </aactivity>
-              </f-element>
-              
-            </f-component>
+		    </f-component>
 
       <f-component name="Cryptographic Key Destruction (General Hardware)" cc-id="fcs_ckm.6"
         iteration="GENHW" id="fcs-ckm-6-genhw" status="sel-based">
