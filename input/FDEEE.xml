@@ -360,8 +360,6 @@
        units (e.g. sectors or blocks) on the storage device. The EE either encrypts the DEK with a
        KEK or an intermediate key.<h:br/><h:br/>
        
-       This version of the cPP includes additional security features, including advanced power saving
-       requirements and firmware signing requirements.
       </section>
     
       <section title="Interface/Boundary" id="sec-TOEInterface-Boundary">
@@ -612,22 +610,11 @@
 		    </description>				
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by providing a mechanism used to initiate updates where the authenticity and integrity of the update can be verified as part of the update process.</rationale>        
 		    <addressed-by>FPT_FUA_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring existing firmware cannot be modified unless replaced with a valid update initiated as part of FPT_TUD_EXT.1</rationale>
+			<addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
+		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale> 
 		    </threat>
 		  
-		  <threat id="t-unauth-firmware-update" name="T.UNAUTHORIZED_FIRMWARE_UPDATE">
-		    <description>
-		      An attacker attempts to replace the firmware
-		      on the storage device via a command from the AA or from the host platform with a malicious firmware
-		      update that may compromise the security features of the TOE.
-		    </description>				
-		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
-		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
-		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE.</rationale>        
-		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by defining a secure mechanism for updating the TOE firmware.</rationale>
-		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated by an authorized user.</rationale>
-		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>
-		    <addressed-by>FPT_FUA_EXT.1 (selection-based)</addressed-by><rationale>Mitigates this threat by forcing the use of authenticated firmware so that no arbitrary replacement of the firmware is feasible.</rationale>		               
-		  </threat>
+		  
 
 		  <threat id="t-unauth_update" name="T.UNAUTHORIZED_UPDATE">
 				<description>
@@ -638,7 +625,9 @@
 				</description>        
 		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the signature function that is used to verify updates.</rationale>        
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important behavior of the TOE which includes the initiation of system firmware/software updates.</rationale>
-        <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by providing authorized users the ability to query the current version of the TOE software/firmware, initiate updates, and verify updates prior to installation using a manufacturer digital signature.</rationale>       
+        <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by providing authorized users the ability to query the current version of the TOE software/firmware, initiate updates, and verify updates prior to installation using a manufacturer digital signature.</rationale>    
+		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated by an authorized user.</rationale>
+		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the software/firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>		               		
 		  </threat>
 		</threats>
     </sec:Threats>
@@ -4669,7 +4658,7 @@ If ( keylen = 256 )
               <h:li>initiate TOE firmware/software updates</h:li>
               <h:li><selectables>
                 <selectable>no other functions</selectable>
-                <selectable>configure a password for firmware update</selectable>
+                <selectable>configure a password for an update</selectable>
                 <selectable>import a wrapped DEK</selectable>
                 <selectable>configure cryptographic functionality</selectable>
                 <selectable>disable key recovery functionality</selectable>
@@ -4736,7 +4725,7 @@ If ( keylen = 256 )
       </section>
     
       <section title="Protection of the TSF (FPT)" id="fpt">
-        <ext-comp-def title="Firmware Access Control" fam-id="FPT_FAC_EXT">
+        <ext-comp-def title="Firmware / Software Access Control" fam-id="FPT_FAC_EXT">
           <fam-behavior>This family requires that a valid authentication factor be provided prior to the TSF authorizing
             an update of its firmware.</fam-behavior>
         </ext-comp-def>
@@ -4756,22 +4745,21 @@ If ( keylen = 256 )
         
         <ext-comp-def title="Rollback Protection" fam-id="FPT_RBP_EXT">
           <fam-behavior>This family requires that the TSF protects against rollbacks or downgrades
-            to its firmware.</fam-behavior>
+            to its version.</fam-behavior>
         </ext-comp-def>
         
         <ext-comp-def title="Trusted Update" fam-id="FPT_TUD_EXT">
-          <fam-behavior>Components in this family address the requirements for updating the TOE firmware and/or software.
+          <fam-behavior>Components in this family address the requirements for updating the TOE firmware / software.
             </fam-behavior>
         </ext-comp-def>
         
-        <f-component name="Firmware Access Control" cc-id="fpt_fac_ext.1" id="fpt-fac-ext" status="optional">
+        <f-component name="Firmware / Software Access Control" cc-id="fpt_fac_ext.1" id="fpt-fac-ext" status="optional">
           <consistency-rationale/>
-          <comp-lev>requires the TSF to require an authentication factor or action prior to allowing a
-            firmware update to be performed.</comp-lev>
+          <comp-lev>requires the TSF to require an authentication factor or action prior to allowing an update to be performed.</comp-lev>
           <management>
             The following actions could be considered for the management functions in FMT:
             <h:ul>
-              <h:li>management of the password used to authorize the firmware update</h:li>
+              <h:li>management of the password used to authorize the update</h:li>
             </h:ul>
           </management>
           <audit/>
@@ -4782,18 +4770,18 @@ If ( keylen = 256 )
                 <selectable>a password</selectable>
                 <selectable>a known unique value printed on the device</selectable>
                 <selectable>a authorized user action</selectable>
-              </selectables>before the firmware update proceeds.
+              </selectables>before the <selectables><selectable>software</selectable><selectable>firmware</selectable></selectables> update proceeds.
             </title>
             <note role="application">
-              Before an update takes place, the drive owner will authorize the update by providing either a known unique 
+              Before an update takes place, the TSF owner will authorize the update by providing either a known unique 
               value (for example, a serial number) that is printed on the drive, a password (which should be administratively configurable as defined 
-              in FMT_SMF.1), or perform a specific action as an authorized user. It is assumed that physical presence to the drive
+              in FMT_SMF.1), or perform a specific action as an authorized user. If applicable, it is assumed that physical presence to the drive
               is limited to authorized personnel. If the correct value is not provided, the update will not take place. The
               values are intended to be unique per drive so they cannot be easily guessed.<h:br/><h:br/>
             </note>
             <aactivity>
               <TSS>
-                The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
+                The evaluator shall examine the TSS to ensure that it describes information stating how the access control 
                 process takes place along with a description of the values or actions that are used.
               </TSS>
               <Guidance>
@@ -4805,7 +4793,7 @@ If ( keylen = 256 )
                 The evaluator shall perform the following test.
                 <testlist>
                   <test>
-                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
+                    The evaluator shall try installing a upgrade and verify that a prompt is required and the appropriate
                     value or action is necessary for the update to continue.
                   </test>
                 </testlist>
@@ -5100,7 +5088,7 @@ If ( keylen = 256 )
           <dependencies>No dependencies.</dependencies>
           <f-element id="fpt_rbp-ext-1-1">
             <title>
-              The TSF shall verify that the new firmware package is not downgrading to a lower
+              The TSF shall verify that the new update is not downgrading to a lower
               security version number by <assignable>method of verifying the security version number
               is the same as or higher than the currently installed version</assignable>.
             </title>
@@ -5108,17 +5096,16 @@ If ( keylen = 256 )
           
             <f-element id="fpt_rbp-ext-1-2">
               <title>
-                The TSF shall generate and return an error code if the attempted firmware
+                The TSF shall generate and return an error code if the attempted
                 update package is detected to be an invalid version.
               </title>
               <note role="application">
-                This requirement prevents an unauthorized rollback of the firmware to an
+                This requirement prevents an unauthorized rollback of the update to an
                 earlier authentic version. This mitigates against unknowing installation of an earlier authentic
-                firmware version that may have a security weakness. It is expected that vendors will increase
+                version that may have a security weakness. It is expected that vendors will increase
                 security version numbers with each new update package.<h:br/><h:br/>
                 For FPT_RBP_EXT.1.1 the purpose is to verify that the new package has a security version
-                number equal to or larger than the security version number of currently installed firmware
-                package.<h:br/><h:br/>
+                number equal to or larger than the security version number of currently installed package.<h:br/><h:br/>
                 The administrator guidance would include instructions for the administrator to configure the
                 rollback prevention mechanism, if appropriate.
               </note>
