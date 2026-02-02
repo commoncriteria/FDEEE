@@ -55,7 +55,7 @@
 <!-- Revision History (all documents) -->
   <RevisionHistory>
     <entry>
-      <version>Round 0.1</version>
+      <version>0.1</version>
       <date>2014-08-26</date>
       <subject>Initial release for iTC review</subject>
     </entry>
@@ -180,10 +180,7 @@
         of the two components.</term>
       <term abbr='BIOS' full="Basic Input Output System"></term>
       <term abbr='CBC' full="Cipher Block Chaining"></term>
-      <term abbr='CC' full="Common Criteria"></term>
       <term abbr='CCM' full="Counter with CBC-Message Authentication Code"></term>
-      <term abbr='CEM' full="Common Evaluation Methodology"></term>
-      <term abbr='CPP' full="Collaborative Protection Profile"></term>
       <term abbr='DEK' full="Data Encryption Key">A key used to encrypt data-at-rest.</term>
       <term abbr='DRBG' full="Deterministic Random Bit Generator"></term>
       <term abbr='DSS' full="Digital Signature Standard"></term>
@@ -247,11 +244,8 @@
       <term abbr='RSA' full="Rivest Shamir Adleman Algorithm"></term>
       <term abbr='RTU' full="Root of Trust for Update">A type of RoT that verifies the integrity and authenticity of an 
         update payload before initiating the update process.</term>
-      <term abbr='SAR' full="Security Assurance Requirements"></term>
       <term abbr='SED' full="Self-Encrypting Drive"></term>
       <term abbr='SHA' full="Secure Hash Algorithm"></term>
-      <term abbr='SFR' full="Security Functional Requirements"></term>
-      <term abbr='ST' full="Security Target"></term>
       <term abbr='SPD' full="Security Problem Definition"></term>
       <term abbr='SPI' full="Serial Peripheral Interface"></term>
       <term full="Submask">A submask is a bit string that can be generated and stored in a number of ways. The individual SFRs provide context where these values may be used and what functions they perform, such as the BEV, intermediate key, or derived authentication value.</term>
@@ -444,8 +438,7 @@
 		<cc-pp-conf/>              		  
 		
 		<!-- Can be in a configuration with these PPs and Modules -->
-		<cc-pp-config-with>
-		</cc-pp-config-with>
+		<cc-pp-config-with/>
 
 		<!-- Package claims -->
 		<cc-pkg-claim/>
@@ -501,7 +494,7 @@
 		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by requiring
 		      several options for enforcing validation, such as key sanitization of the DEK or when a
 		      configurable number of failed validation attempts is reached within a 24 hour period. This
-		      mitigates brute force attacks against authorization factors such as passwords and PINs.</rationale>
+		      mitigates brute force attacks.</rationale>
 		  </threat>
 		  
 		  <threat id="t-chosen-plaintext" name="T.CHOSEN_PLAINTEXT">
@@ -533,9 +526,9 @@
 		    <addressed-by>FCS_CKM_EXT.6</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
 		    <addressed-by>FCS_CKM.6/Power</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction for system power states.</rationale>		    
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by performing cryptographic hashing services.</rationale>		    
-		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to accept a BEV.</rationale>
+		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by requiring chaining of keys to protect the BEV.</rationale>
 		    <addressed-by>FCS_SNI_EXT.1</addressed-by><rationale>Mitigates this threat by requiring additional obfuscation to the protected key material by introducing IV's and salting.</rationale>
-		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of keying material and number of validation attempts.</rationale>
+		    <addressed-by>FCS_VAL_EXT.1</addressed-by><rationale>Mitigates this threat by defining methods for validation of the BEV and number of validation attempts.</rationale>
 		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including generating new keys.</rationale>
 		    <addressed-by>FPT_KYP_EXT.1</addressed-by><rationale>Mitigates this threat by requiring unwrapped key material is not stored in non-volatile memory.</rationale>        
 		    <addressed-by>FPT_PWR_EXT.1</addressed-by><rationale>Mitigates this threat by requiring the TOE to meet a compliant power saving state that protects and/or destroys key material.</rationale>
@@ -568,7 +561,7 @@
 		      encryption algorithms and parameters allow attackers to exhaust the key space through brute force
 		      and give them unauthorized access to the data.</description>
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the DEK is computationally infeasible.</rationale>
-		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys accepting the BEV are of the same strength.</rationale>        
+		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys protecting the BEV are of the same strength.</rationale>        
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for data encryption are generated using a secure DRBG. </rationale>
@@ -629,7 +622,7 @@
 		    </description>				
 		    <addressed-by>FCS_COP.1/Hash</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
 		    <addressed-by>FCS_COP.1/SigVer</addressed-by><rationale>Mitigates this threat by defining the cryptographic functions that can be used to validate the authenticity and integrity of firmware updates as defined by FPT_FUA_EXT.1.</rationale>
-		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE including requests to change and erase the DEK.</rationale>        
+		    <addressed-by>FMT_SMF.1</addressed-by><rationale>Mitigates this threat by ensuring the TSF provides the functions necessary to manage important aspects of the TOE.</rationale>        
 		    <addressed-by>FPT_TUD_EXT.1</addressed-by><rationale>Mitigates this threat by defining a secure mechanism for updating the TOE firmware.</rationale>
 		    <addressed-by>FPT_FAC_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by providing additional security by only allowing an update to be initiated by an authorized user.</rationale>
 		    <addressed-by>FPT_RBP_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by protecting against a malicious or inadvertent downgrade of the firmware to an earlier version that may have security flaws not present in the more recent version.</rationale>
@@ -982,7 +975,7 @@
                 <aactivity>
                   <TSS>
                     The evaluator shall examine the TSS to determine that it describes how the TOE obtains a DEK (either generating the DEK or receiving from the environment). <h:br/><h:br/>
-					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG_EXT.1 is invoked. If the DEK
+					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG.1 is invoked. If the DEK
 					is generated outside of the TOE, the evaluator checks to ensure that for each platform identified in the TOE the TSS, it describes the interface used by the TOE to invoke this
 					functionality. The evaluator uses the description of the interface between the RBG and the TOE to determine that it requests a key greater than or equal to the required key
 					sizes.<h:br/><h:br/> 
@@ -1082,7 +1075,7 @@
             The intent is that a new value of a key (as specified in another SFR within the cPP) can be used
             to “replace” an existing key.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1348,7 +1341,7 @@
             and can only ask the platform to delete the resource. The level of detail to which the TOE has
             access will be reflected in the TSS section of the ST.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
-            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG
+            that the TOE uses some other specified data not drawn from an RBG meeting FCS_RBG.1
             requirements, and not being any of the particular values listed as other selection options. The
             point of the phrase ‘does not contain any CSP’ is to ensure that the overwritten data is carefully
             selected, and not taken from a general ‘pool’ that might contain current or residual data that
@@ -1538,7 +1531,7 @@
             If a selection for read verify is chosen, it should generate an audit record upon failures.<h:br/><h:br/>
             Several selections allow assignment of a ‘value that does not contain any CSP’. This means
             that the TOE uses some other specified data not drawn from an RBG meeting
-            FCS_RBG_EXT requirements, and not being any of the particular values listed as other
+            FCS_RBG.1 requirements, and not being any of the particular values listed as other
             selection options. The point of the phrase ‘does not contain any CSP’ is to ensure that the
             overwritten data is carefully selected, and not taken from a general ‘pool’ that might contain
             current or residual data that itself requires confidentiality protection.<h:br/><h:br/>
@@ -4484,16 +4477,22 @@ If ( keylen = 256 )
                     </selectable>
                     <selectable>institute a delay such that only <assignable>ST author specified number of attempts</assignable> can be made within a 24 hour period</selectable>
                     <selectable>block validation after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
-                    <selectable>require power cycle or reset the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
+                    <selectable>require power cycle or reset of the TOE after <assignable>ST author specified number of attempts</assignable> of consecutive failed validation attempts</selectable>
                   </selectables>.</title>
                 <note role="application">
-                  <h:p>
-                    The purpose of performing secure validation is to not expose any material that might compromise the submasks. For the selections in FCS_VAL_EXT.1.1, the ST author must clarify in the KMD which specific entities are referred to in this SFR if multiple entities of a type exist.
+                  <h:p>"Validation" of the BEV can occur at any point in the key chain, including when the DEK is decrypted. 
+                  For the purposes of this requirement, validating a key derived from the BEV equates to “validating” the BEV.
+                  The purpose of performing secure validation is to not expose any material that might compromise the submask(s). 
                   </h:p>
-                  <h:p>The TOE validates the submasks (e.g., authorization factors) prior to presenting the BEV to the EE. When a password is used as an authorization factor, it is conditioned before any attempts to validate. In cases where validation of the authorization factors fails, the product will not forward a BEV to EE. </h:p>
-                  <h:p>When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.</h:p>
-                  <h:p>The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.</h:p>
-                  <h:p>The ST author may need to iterate this requirement if multiple authentication factors are used, and either different methods are used to validate, or in some cases one or more authentication factors may be validated, and one or more are not validated.</h:p>
+                  <h:p>
+                  The TOE validates the BEV prior to allowing the user access to the data stored on the drive. 
+                  When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.
+                  <h:p>
+                  The delay must be enforced by the TOE, but this requirement is not intended to address attacks that bypass the product 
+                  (e.g. attacker obtains hash value or “known” crypto value and mounts attacks outside of the TOE, such as a third party 
+                  password crackers). The cryptographic functions (i.e., hash, decryption) performed are those specified in 
+                  FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.
+                  </h:p>
                 </note>
 				<aactivity level="element">
                       <TSS>
@@ -4544,8 +4543,7 @@ If ( keylen = 256 )
       
     <f-component cc-id="fdp_dsk_ext.1" name="Protection of Data on Disk" id="fdp-dsk-ext-1">
       <consistency-rationale/>
-      <comp-lev>requires the TSF to validate submasks and BEVs by one or
-        more of the specified methods.</comp-lev>
+      <comp-lev>requires the TSF to encrypt all protected data without user intervention using full drive encryption.</comp-lev>
       <management/>
       <audit/>
       <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
@@ -4586,7 +4584,7 @@ If ( keylen = 256 )
             For the cryptographic functions that are provided by the Operational Environment, the evaluator
             shall check the TSS to ensure it describes, for each platform identified in the ST, the interfaces
             used by the TOE to invoke this functionality.<h:br/><h:br/>
-            66 The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
+            The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
             The evaluator shall ensure the comprehensiveness of the description, confirms how the TOE writes the
             data to the disk drive, and the point at which it applies the encryption function.<h:br/><h:br/>
             The evaluator shall verify that the TSS describes the initialization of the TOE and the activities 
@@ -4801,7 +4799,7 @@ If ( keylen = 256 )
               </TSS>
               <Guidance>
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.f
+                the authorization process.
               </Guidance>
               <KMD>There is no KMD for this activity.</KMD>
               <Tests>
@@ -5277,9 +5275,10 @@ If ( keylen = 256 )
               The TSF shall verify updates to the TOE <selectables>
                 <selectable>software</selectable>
                 <selectable>firmware</selectable>
-              </selectables> using a <selectables>
+              </selectables> using a 
+			  <selectables>
                 <selectable>digital signature <h:b>as specified in FCS_COP.1/SigVer</h:b></selectable>
-                <selectable id="uses-firmware-auth"><h:b>authenticated firmware update mechanism as described in FPT_FUA_EXT.1</h:b></selectable>
+                <selectable id="uses-firmware-auth">authenticated firmware update mechanism as described in FPT_FUA_EXT.1</selectable>
               </selectables> by the manufacturer prior to installing those updates.
             </title>
             
@@ -5294,7 +5293,7 @@ If ( keylen = 256 )
               <aactivity>
                 <TSS>
                   If "authenticated firmware update mechanism as described in FPT_FUA_EXT.1" is
-                  selected, you must claim FPT_FUA_EXT.1.<h:br/><h:br/>
+                  selected, then FPT_FUA_EXT.1 must be claimed.<h:br/><h:br/>
                   <h:p>The evaluator shall examine the TSS to ensure that it describes information stating that
                     an authorized source signs TOE updates and will have an associated digital signature.
                     The evaluator shall examine the TSS contains a definition of an authorized source along
@@ -6046,7 +6045,7 @@ If ( keylen = 256 )
       patches have been released for the version of the component being evaluated, the subject of those patches may form the basis 
       for a flaw hypothesis).<h:br/><h:br/>
       <h:b><h:i>Type 2 Hypotheses-iTC-Sourced</h:i></h:b><h:br/><h:br/>
-      There are no type 2 hypotheses for AA.
+      There are no type 2 hypotheses.
       <h:br/><h:br/>
       <h:b><h:i>Type 3 Hypotheses-Evaluation-Team-Generated</h:i></h:b><h:br/><h:br/>
           The iTC has leveraged the expertise of the developers and the evaluation labs to diligently develop the appropriate search
@@ -6136,7 +6135,7 @@ If ( keylen = 256 )
                 required to perform the identified vulnerabilities (cf. AVA_VAN.1-11);</h:li>
               <h:li>how each flaw hypothesis was resolved (this includes whether the original flaw hypothesis was confirmed or 
                 disproved, and any analysis relating to whether a residual vulnerability is exploitable by an attacker with Basic
-                Attack Potential) (cf. AVA_VAN1-10); and</h:li>
+                Attack Potential) (cf. AVA_VAN.1-10); and</h:li>
               <h:li>in the case that actual testing was performed in the investigation (either as part of flaw hypothesis generation
                 using tools specified by the iTC in the Type 4 Hypotheses section, or in proving or disproving a particular flaw) the steps followed in
                 setting up the TOE (and any required test equipment); executing the test; post-test procedures; and the actual results
