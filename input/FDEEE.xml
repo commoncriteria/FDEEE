@@ -4483,7 +4483,7 @@ If ( keylen = 256 )
                   The purpose of performing secure validation is to not expose any material that might compromise the submask(s). 
                   </h:p>
                   <h:p>
-                  The TOE validates the BEV prior to allowing the user access to the data stored on the drive. 
+                  The TOE validates the BEV prior to processing (e.g. decryption, derivation) of the keychain. 
                   When the key wrap in FCS_COP.1/KeyWrap is used, the validation is performed inherently.
 				  </h:p>
                   <h:p>
