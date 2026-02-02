@@ -282,7 +282,7 @@
       The usage of the latter class is not only mandatory, but certificates
       issued as a result of their application are recognized under the CCRA.</p><p><b>Technical Editor:</b><br/>
       National Information Assurance Partnership (NIAP)
-      </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>Round 0.1</td><td>2014-08-26</td><td>Initial release for iTC review</td></tr><tr><td>0.2</td><td>2014-09-05</td><td>Draft published for public review</td></tr><tr><td>0.13</td><td>2014-10-17</td><td>Incorporated comments received from the public review</td></tr><tr><td>1.0</td><td>2015-01-26</td><td>Incorporated comments received from the CCDB review</td></tr><tr><td>1.5</td><td>2015-09-02</td><td>Revised based on additional use cases developed by iTC</td></tr><tr><td>2.0</td><td>2016-09-09</td><td>Incorporated comments received from the public review, and also
+      </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>0.1</td><td>2014-08-26</td><td>Initial release for iTC review</td></tr><tr><td>0.2</td><td>2014-09-05</td><td>Draft published for public review</td></tr><tr><td>0.13</td><td>2014-10-17</td><td>Incorporated comments received from the public review</td></tr><tr><td>1.0</td><td>2015-01-26</td><td>Incorporated comments received from the CCDB review</td></tr><tr><td>1.5</td><td>2015-09-02</td><td>Revised based on additional use cases developed by iTC</td></tr><tr><td>2.0</td><td>2016-09-09</td><td>Incorporated comments received from the public review, and also
         updated the Key Destruction section and AVA_VAN.</td></tr><tr><td>2.0 + Errata 20190201</td><td>2019-02-01</td><td>Updated to reflect CC Part 3 evaluation findings and FDE
         Interpretation Team [FIT] rulings</td></tr><tr><td>3.0</td><td>2025-12-23</td><td>Updated for CC:2022, reviewing and applying modifications to the cPP</td></tr></table></p><p><b>General Purpose:</b><br/>
       The purpose of this SD is to define evaluation methods for the functional behavior of
@@ -433,7 +433,7 @@ The following sections list Common Criteria and technology terms used in this do
                   
                 <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                     The evaluator shall examine the TSS to determine that it describes how the TOE obtains a DEK (either generating the DEK or receiving from the environment). <br/><br/>
-					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG_EXT.1 is invoked. If the DEK
+					If the TOE generates a DEK, the evaluator shall review the TSS to determine that it describes how the functionality described by FCS_RBG.1 is invoked. If the DEK
 					is generated outside of the TOE, the evaluator checks to ensure that for each platform identified in the TOE the TSS, it describes the interface used by the TOE to invoke this
 					functionality. The evaluator uses the description of the interface between the RBG and the TOE to determine that it requests a key greater than or equal to the required key
 					sizes.<br/><br/> 
@@ -1125,7 +1125,7 @@ If ( keylen = 256 )
             For the cryptographic functions that are provided by the Operational Environment, the evaluator
             shall check the TSS to ensure it describes, for each platform identified in the ST, the interfaces
             used by the TOE to invoke this functionality.<br/><br/>
-            66 The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
+            The evaluator shall verify the TSS in performing the evaluation activities for this requirement.
             The evaluator shall ensure the comprehensiveness of the description, confirms how the TOE writes the
             data to the disk drive, and the point at which it applies the encryption function.<br/><br/>
             The evaluator shall verify that the TSS describes the initialization of the TOE and the activities 
@@ -1274,7 +1274,7 @@ If ( keylen = 256 )
                   
               <div class="eacategory">TSS</div><div class="ea"><div class="ea">
                   If "authenticated firmware update mechanism as described in FPT_FUA_EXT.1" is
-                  selected, you must claim FPT_FUA_EXT.1.<br/><br/>
+                  selected, then FPT_FUA_EXT.1 must be claimed.<br/><br/>
                   <p>The evaluator shall examine the TSS to ensure that it describes information stating that
                     an authorized source signs TOE updates and will have an associated digital signature.
                     The evaluator shall examine the TSS contains a definition of an authorized source along
@@ -1312,7 +1312,7 @@ If ( keylen = 256 )
                 process takes place along with a description of the values or actions that are used.
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
-                the authorization process.f
+                the authorization process.
               </div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall perform the following test.
                 <span class="testlist-"><ul>
