@@ -272,7 +272,7 @@
    
    </style></head><body><div style="text-align: center; margin-left: auto; margin-right: auto;"><h1 class="title" style="page-break-before:auto;">Supporting Document<br/>
         Mandatory Technical Document</h1><br/><br/><br/><br/><hr width="50%"></hr><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><br/>collaborative Protection Profile for Full Drive Encryption – Encryption Engine<br/>
-      Version: 3.0<br/>2025-12-23<br/><b>Full Disk Encryption international Technical Community</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
+      Version: 3.0<br/>2026-2-2<br/><b>Full Disk Encryption international Technical Community</b></div><div class="foreword"><h1 style="text-align: center">Foreword</h1><p>This is a Supporting Document (SD), intended to complement the Common Criteria version 3
       and the associated Common Evaluation Methodology for
       Information Technology Security Evaluation.</p><p>SDs may be “Guidance Documents”, that highlight specific approaches 
       and application of the standard to areas where no mutual recognition of
@@ -284,7 +284,7 @@
       National Information Assurance Partnership (NIAP)
       </p><p><b style="page-break-before:always;">Document history:</b><table><tr class="header"><th>Version</th><th>Date</th><th style="align:left;">Comment</th></tr><tr><td>0.1</td><td>2014-08-26</td><td>Initial release for iTC review</td></tr><tr><td>0.2</td><td>2014-09-05</td><td>Draft published for public review</td></tr><tr><td>0.13</td><td>2014-10-17</td><td>Incorporated comments received from the public review</td></tr><tr><td>1.0</td><td>2015-01-26</td><td>Incorporated comments received from the CCDB review</td></tr><tr><td>1.5</td><td>2015-09-02</td><td>Revised based on additional use cases developed by iTC</td></tr><tr><td>2.0</td><td>2016-09-09</td><td>Incorporated comments received from the public review, and also
         updated the Key Destruction section and AVA_VAN.</td></tr><tr><td>2.0 + Errata 20190201</td><td>2019-02-01</td><td>Updated to reflect CC Part 3 evaluation findings and FDE
-        Interpretation Team [FIT] rulings</td></tr><tr><td>3.0</td><td>2025-12-23</td><td>Updated for CC:2022, reviewing and applying modifications to the cPP</td></tr></table></p><p><b>General Purpose:</b><br/>
+        Interpretation Team [FIT] rulings</td></tr><tr><td>3.0</td><td>2026-2-2</td><td>Updated for CC:2022, reviewing and applying modifications to the cPP</td></tr></table></p><p><b>General Purpose:</b><br/>
       The purpose of this SD is to define evaluation methods for the functional behavior of
             
       products.
@@ -1302,13 +1302,13 @@ If ( keylen = 256 )
                         operational guidance and verifies that an update successfully installs on the TOE. The
                         evaluator performs the version verification activity again to verify that the version
                         correctly corresponds to that of the update.</li>
-                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2><h2 class="indexable" data-level="2" id="fpt">2.2.1 Protection of the TSF (FPT)</h2><div class="comp" id="FPT-FAC-EXT"><h4>FPT_FAC_EXT.1 Firmware Access Control</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FAC_EXT.1</div>
+                    </ul></span> </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.2 Evaluation Activities for Optional SFRs</h2><h2 class="indexable" data-level="2" id="fpt">2.2.1 Protection of the TSF (FPT)</h2><div class="comp" id="FPT-FAC-EXT"><h4>FPT_FAC_EXT.1 Firmware / Software Access Control</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_FAC_EXT.1</div>
               
               
               
               
             <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                The evaluator shall examine the TSS to ensure that it describes information stating how the Access Control 
+                The evaluator shall examine the TSS to ensure that it describes information stating how the access control 
                 process takes place along with a description of the values or actions that are used.
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 The evaluator ensures that the Operational Guidance describes how the user will be expected to interact with
@@ -1318,7 +1318,7 @@ If ( keylen = 256 )
                 <span class="testlist-"><ul>
                   <li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FPT_FAC_EXT.1:1</a>:
       
-                    The evaluator shall try installing a firmware upgrade and verify that a prompt is required and the appropriate
+                    The evaluator shall try installing a upgrade and verify that a prompt is required and the appropriate
                     value or action is necessary for the update to continue.
                   </li>
                 </ul></span>
