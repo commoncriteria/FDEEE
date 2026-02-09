@@ -4320,7 +4320,7 @@ If ( keylen = 256 )
               <depends on-sel="fcs-kyc-ext-2-2-sel-2"></depends>
               <consistency-rationale/>
               <comp-lev>requires the TSF to combine the submasks in a predictable fashion.</comp-lev>
-              <management/>f
+              <management/>
               <audit/>
               <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
               <f-element id="fcs-smc-ext-1-1">
