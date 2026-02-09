@@ -2290,8 +2290,7 @@ For 100 iterations
 					</selectables>
 				</title>
             <note role="application">
-              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain (FCS_CKM.5.1, FCS_KYC_EXT.2) or when the TSF
-              uses key encryption as part of password conditioning.
+              This SFR is required when the TSF performs key encryption as part of maintaining and deriving a key chain.
             </note>
                 <aactivity>
 					<TSS>
@@ -2316,7 +2315,7 @@ For 100 iterations
 						of how key encryption will be used as part of the key chain.
 					</KMD>
 					<Tests>
-						The AES test should be followed in FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography
+						The AES test should be followed in FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography.
 					</Tests>
             </aactivity>
           </f-element>
