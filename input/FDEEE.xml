@@ -5194,14 +5194,6 @@ If ( keylen = 256 )
 		  <depends on-sel="sel-fcs-cop-keyencap-kas1"/>
 		  <depends on-sel="sel-fcs-cop-keyencap-kts"/>
 		  <depends on-sel="sel-fcs-cop-keyencap-mlkem"/>
-		  <depends on-sel="sel-fcs-sni-ext-1-1-sel-2"/>
-		  <depends on-sel="genhw-rbg-overwrite-vol"/>
-		  <depends on-sel="genhw-rbg-overwrite-nonvol"/>
-		  <depends on-sel="sw-rbg-overwrite-vol"/>
-		  <depends on-sel="sw-rbg-overwrite-nonvol"/>
-		  <depends on-sel="toe-rbg-overwrite-vol"/>
-		  <depends on-sel="toe-rbg-overwrite-nonvol"/>
-		  <depends on-sel="tsf-rbg-dek"/>
           <f-element id="fel-tsf-self-test">
             <title>
               The TSF shall run a suite of the following self-tests <selectables>
