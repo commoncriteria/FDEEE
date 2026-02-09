@@ -2290,7 +2290,7 @@ For 100 iterations
                 <aactivity>
 					<TSS>
 						<h:p>The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
-						tweak values, and counters in conformance with the relevant specifications.
+						tweak values, and counters in conformance with the relevant specifications.<h:p/>
 						If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
 						specification to confirm that it describes how the IV is generated and that the same IV is never
 						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
