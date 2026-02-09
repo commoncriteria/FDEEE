@@ -1,2 +1,0 @@
-/home/runner/work/FDEEE/FDEEE/input/FDEEE.xml:4969:223: error: text not allowed here; expected element "not-selectable" or "selectable"
-/home/runner/work/FDEEE/FDEEE/input/FDEEE.xml:4975:187: error: text not allowed here; expected element "not-selectable" or "selectable"
