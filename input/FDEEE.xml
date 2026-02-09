@@ -4312,6 +4312,7 @@ If ( keylen = 256 )
         
             <f-component cc-id="fcs_smc_ext.1" name="Submask Combining" id="fcs-smc-ext-1" status="sel-based">
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3c"></depends>
+              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-5"></depends>
               <consistency-rationale/>
               <comp-lev>requires the TSF to combine the submasks in a predictable fashion.</comp-lev>
               <management/>
@@ -4965,13 +4966,14 @@ If ( keylen = 256 )
             <title>
               The TSF shall <selectables linebreak="yes">
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-1">not store keys in non-volatile memory</selectable>
-                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1/KeyWrap, or encrypted, as specified in FCS_COP.1/KeyEnc</selectable>
+                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when <selectable id="sel-fpt-kyp-ext-1-1-sel-2-1">wrapped, as specified in "FCS_COP.1/KeyWrap</selectable>, or <selectable id="sel-fpt-kyp-ext-1-1-sel-2-2">encrypted, as specified in FCS_COP.1/KeyEnc</selectable></selectable>
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-3">only store plaintext keys that meet any one of the following criteria <selectables>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3a">the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.2</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ci">wrapped as specified in FCS_COP.1/KeyWrap</selectable>
-                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
+                    <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-1">FCS_COP.1/KeyEnc</selectable> or 
+					<selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-1">FCS_COP.1/KeyEncap</selectable></selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
