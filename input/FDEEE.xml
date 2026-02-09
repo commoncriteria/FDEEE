@@ -1842,6 +1842,7 @@ For 100 iterations
         
 		<f-component cc-id="fcs_cop.1" iteration="KeyEncap" name="Cryptographic Operation - Key Encapsulation" id="fcs-cop-1-keyencap" status="sel-based">
           <depends on-sel="fcs-kyc-ext-2-2-sel-5"/>
+          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii-2"/>
           <f-element id="fcs_cop-1-1-keyencap">
 				<title> The TSF shall perform [key encapsulation] in accordance with a specified cryptographic algorithm
 					<selectables>
@@ -2219,6 +2220,8 @@ For 100 iterations
         
         <f-component cc-id="fcs_cop.1" iteration="KeyEnc" name="Cryptographic Operation (Key Encryption)" id="fcs-cop-1-kE" status="sel-based">
           <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
+          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2-2"/>
+          <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3cii-1"/>
            <f-element id="fcs_cop-1-1-keyenc">
 				<title>
 					The TSF shall perform [symmetric-key key encryption/decryption] in accordance with a
@@ -2326,6 +2329,8 @@ For 100 iterations
             <f-component cc-id="fcs_cop.1" iteration="KeyWrap" name="Cryptographic Operation - Key Wrapping" id="fcs-cop-1-keywrap" status="sel-based">
               <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
               <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
+              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-2-1"/>
+              <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3ci"/>
               <f-element id="fcs_cop-1-1-keywrap">
                 
 				<title>
@@ -4973,7 +4978,7 @@ If ( keylen = 256 )
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3c">the plaintext key is a key split that is combined as specified in FCS_SMC_EXT.1, and the other half of the key split is <selectables linebreak="yes">
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ci">wrapped as specified in FCS_COP.1/KeyWrap</selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3cii">encrypted as specified in <selectables><selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-1">FCS_COP.1/KeyEnc</selectable>
-					<selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-1">FCS_COP.1/KeyEncap</selectable></selectables></selectable>
+					<selectable id="sel-fpt-kyp-ext-1-1-sel-3cii-2">FCS_COP.1/KeyEncap</selectable></selectables></selectable>
                     <selectable id="sel-fpt-kyp-ext-1-1-sel-3ciii">derived and not stored in non-volatile memory</selectable>
                   </selectables></selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3d">the non-volatile memory the key is stored on is located in an external storage device for use as an authorization factor</selectable>
