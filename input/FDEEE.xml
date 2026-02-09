@@ -891,9 +891,11 @@
           <fam-behavior>This family specifies the means by which submasks and/or BEVs are determined to be valid prior to their use.
             </fam-behavior>
         </ext-comp-def>
-       
+       	   
             <f-component cc-id="fcs_ckm.1" iteration="AKG" name="Cryptographic Key Generation (Asymmetric Keys)" id="fcs-ckm-1-akg" status="sel-based">
-			  <depends on-sel="fcs-kyc-ext-2-2-sel-5"/>
+			  <depends on-sel="sel-fcs-cop-keyencap-kas1"/>
+			  <depends on-sel="sel-fcs-cop-keyencap-kts"/>
+			  <depends on-sel="sel-fcs-cop-keyencap-mlkem"/>
               <f-element id="fcs_ckm-1-1-akg">
 			  <title>The TSF  shall generate <h:b>asymmetric</h:b>  cryptographic keys in accordance with a specified cryptographic key generation algorithm  
 			  <selectables linebreak="yes">
@@ -985,9 +987,13 @@
       
       <f-component cc-id="fcs_ckm.1" iteration="SKG" name="Cryptographic Key Generation (Symmetric Keys)" id="fcs-ckm-1-b" status="sel-based">
               <depends on-sel="tsf-rbg-dek"/>
-              <depends on-sel="fcs-kyc-ext-2-2-sel-1"/>
-			  <depends on-sel="fcs-kyc-ext-2-2-sel-4"/>
-			  <depends on-sel="sel-fcs-val-ext-1-1-sel-2a"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-cbc"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-gcm"/>
+              <depends on-sel="sel-fcs-cop-keyenc-aes-xts"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-kw"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-kwp"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-ccm"/>
+			  <depends on-sel="sel-fcs-cop-kw-aes-gcm"/>
 			  <f-element id="fcs_ckm-1-1-skg"><title>
                 The TSF shall generate <h:b>symmetric</h:b> cryptographic keys <h:b>using a Random Bit Generator as specified in FCS_RBG.1</h:b> and specified cryptographic key
                 sizes <h:i>256 bit</h:i> that meet the following: [<h:i>no standard</h:i>].
