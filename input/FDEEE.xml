@@ -4317,10 +4317,10 @@ If ( keylen = 256 )
         
             <f-component cc-id="fcs_smc_ext.1" name="Submask Combining" id="fcs-smc-ext-1" status="sel-based">
               <depends on-sel="sel-fpt-kyp-ext-1-1-sel-3c"></depends>
-              <depends on-sel="sel-fcs-kyc-ext-1-1-sel-5"></depends>
+              <depends on-sel="fcs-kyc-ext-2-2-sel-2"></depends>
               <consistency-rationale/>
               <comp-lev>requires the TSF to combine the submasks in a predictable fashion.</comp-lev>
-              <management/>
+              <management/>f
               <audit/>
               <dependencies>FCS_COP.1 Cryptographic Operation</dependencies>
               <f-element id="fcs-smc-ext-1-1">
