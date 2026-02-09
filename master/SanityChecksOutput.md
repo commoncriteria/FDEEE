@@ -11,6 +11,8 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[21]""/depends[6]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'sel-fcs-cop-skc-aes-xts'.
 * Error: Detected multiple elements with an id of 'sel-fcs-cop-skc-aes-xts'.
+* Error: Detected multiple elements with an id of 'sel-fpt-kyp-ext-1-1-sel-3cii-1'.
+* Error: Detected multiple elements with an id of 'sel-fpt-kyp-ext-1-1-sel-3cii-1'.
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[10]""/f-element[1]""/note[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[10]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[10]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:p[2]""
