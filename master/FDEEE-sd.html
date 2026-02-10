@@ -375,9 +375,6 @@ The following sections list Common Criteria and technology terms used in this do
         things as the Master Boot Record (MBR) or other AA/EE pre-authentication software, 
         so long as it contains no protected data.
        </td></tr>
-<tr><td><div id="Host_Platform">Host Platform</div></td><td>The local hardware and software the TOE is running on, and does not
-        include any peripheral devices (e.g. USB devices) that may be
-        connected to the local hardware and software.</td></tr>
 <tr><td><div id="Intermediate_Key">Intermediate Key</div></td><td>A key used in a point between the initial user authorization and the
         DEK.</td></tr>
 <tr><td><div id="Key_Chaining">Key Chaining</div></td><td>The method of using multiple layers of encryption keys to protect data.
@@ -437,8 +434,8 @@ The following sections list Common Criteria and technology terms used in this do
 					is generated outside of the TOE, the evaluator checks to ensure that for each platform identified in the TOE the TSS, it describes the interface used by the TOE to invoke this
 					functionality. The evaluator uses the description of the interface between the RBG and the TOE to determine that it requests a key greater than or equal to the required key
 					sizes.<br/><br/> 
-					If the TOE received the DEK from outside the host platform, then the evaluator shall examine the TSS to determine that the DEK is sent wrapped using the appropriate encryption algorithm.
-                  </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">If the TOE received the DEK from outside the host platform, then the evaluator shall verify that the KMD describes how the TOE unwraps the DEK.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+					If the TOE received the DEK from outside the OE, then the evaluator shall examine the TSS to determine that the DEK is sent wrapped using the appropriate encryption algorithm.
+                  </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">If the TOE received the DEK from outside the OE, then the evaluator shall verify that the KMD describes how the TOE unwraps the DEK.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
 				  <span class="testlist-"><ul>
 				  <li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FCS_CKM.1/DEK:1</a>:
       The evaluator shall configure the TOE to ensure the functionality of all selections.
@@ -1120,7 +1117,7 @@ If ( keylen = 256 )
         <div class="eacategory">TSS</div><div class="ea"><div class="ea">
             The evaluator shall examine the TSS to ensure that the description is comprehensive in how the
             data is written to the disk and the point at which the encryption function is applied. The TSS
-            must make the case that standard methods of accessing the disk drive via the host platforms 
+            must make the case that standard methods of accessing the disk drive via the OEs 
             operating system will pass through these functions.<br/><br/>
             For the cryptographic functions that are provided by the Operational Environment, the evaluator
             shall check the TSS to ensure it describes, for each platform identified in the ST, the interfaces
