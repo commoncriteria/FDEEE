@@ -4766,7 +4766,7 @@ If ( keylen = 256 )
       <section title="Protection of the TSF (FPT)" id="fpt">
         <ext-comp-def title="Firmware / Software Access Control" fam-id="FPT_FAC_EXT">
           <fam-behavior>This family requires that a valid authentication factor be provided prior to the TSF authorizing
-            an update of its firmware.</fam-behavior>
+            an update.</fam-behavior>
         </ext-comp-def>
         
         <ext-comp-def title="Firmware Update Authentication" fam-id="FPT_FUA_EXT">
@@ -4807,12 +4807,12 @@ If ( keylen = 256 )
             <title>
               The TSF shall require <selectables>
                 <selectable>a password</selectable>
-                <selectable>a known unique value printed on the device</selectable>
+                <selectable>a unique value printed on the device</selectable>
                 <selectable>a authorized user action</selectable>
-              </selectables>before the <selectables><selectable>software</selectable><selectable>firmware</selectable></selectables> update proceeds.
+              </selectables> before the <selectables><selectable>software</selectable><selectable>firmware</selectable></selectables> update proceeds.
             </title>
             <note role="application">
-              Before an update takes place, the TSF owner will authorize the update by providing either a known unique 
+              Before an update takes place, the TSF owner will authorize the update by providing either a unique 
               value (for example, a serial number) that is printed on the drive, a password (which should be administratively configurable as defined 
               in FMT_SMF.1), or perform a specific action as an authorized user. If applicable, it is assumed that physical presence to the drive
               is limited to authorized personnel. If the correct value is not provided, the update will not take place. The
@@ -5147,7 +5147,8 @@ If ( keylen = 256 )
                 For FPT_RBP_EXT.1.1 the purpose is to verify that the new package has a security version
                 number equal to or larger than the security version number of currently installed package.<h:br/><h:br/>
                 The administrator guidance would include instructions for the administrator to configure the
-                rollback prevention mechanism, if appropriate.
+                rollback protection mechanism, if appropriate.<h:br/><h:br/>
+				The security version may be different from other parts that undergo update by the TSF.
               </note>
                         
             <aactivity>
