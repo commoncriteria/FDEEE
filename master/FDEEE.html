@@ -3450,11 +3450,11 @@ If ( keylen = 256 )
           
           
           <div class="element"><div class="reqid" id="FPT_FAC_EXT.1.1"><a href="#FPT_FAC_EXT.1.1" class="abbr">FPT_FAC_EXT.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_448">a password</span>, <span class="selectable-content" id="_s_449">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_450">a authorized user action</span>]before the [<b>selection</b>: <span class="selectable-content" id="_s_451">software</span>, <span class="selectable-content" id="_s_452">firmware</span>] update proceeds.
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_448">a password</span>, <span class="selectable-content" id="_s_449">a unique value printed on the device</span>, <span class="selectable-content" id="_s_450">a authorized user action</span>] before the [<b>selection</b>: <span class="selectable-content" id="_s_451">software</span>, <span class="selectable-content" id="_s_452">firmware</span>] update proceeds.
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
-              Before an update takes place, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> owner will authorize the update by providing either a known unique 
+              Before an update takes place, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> owner will authorize the update by providing either a unique 
               value (for example, a serial number) that is printed on the drive, a password (which should be administratively configurable as defined 
               in <a href="#FMT_SMF.1">FMT_SMF.1</a>), or perform a specific action as an authorized user. If applicable, it is assumed that physical presence to the drive
               is limited to authorized personnel. If the correct value is not provided, the update will not take place. The
@@ -3506,7 +3506,8 @@ If ( keylen = 256 )
                 For <a href="#FPT_RBP_EXT.1.1">FPT_RBP_EXT.1.1</a> the purpose is to verify that the new package has a security version
                 number equal to or larger than the security version number of currently installed package.<br/><br/>
                 The administrator guidance would include instructions for the administrator to configure the
-                rollback prevention mechanism, if appropriate.
+                rollback protection mechanism, if appropriate.<br/><br/>
+				The security version may be different from other parts that undergo update by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.
               </span></div></div></div>
           
           
@@ -5748,7 +5749,7 @@ If ( keylen = 256 )
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author specified number of attempts</span>] of consecutive failed validation attempts</span></li></ul>].</div></div></span><span data-sortkey="Protection of the TSF (FPT)"><h3 id="ext-comp-FPT" class="indexable" data-level="3">C.2.2 Protection of the TSF (FPT)</h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the following extended components as part of the
 	 FPT class originally defined by <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> Part 2:
 	<h3 id="ext-comp-FPT_FAC_EXT" class="indexable" data-level="4">C.2.2.1 FPT_FAC_EXT Firmware / Software Access Control</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family requires that a valid authentication factor be provided prior to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> authorizing
-            an update of its firmware.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FPT_FAC_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FPT_FAC_EXT.1">FPT_FAC_EXT.1</a>,
+            an update.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FPT_FAC_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FPT_FAC_EXT.1">FPT_FAC_EXT.1</a>,
              Firmware / Software Access Control,
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to require an authentication factor or action prior to allowing an update to be performed.</p><h4>Management: FPT_FAC_EXT.1</h4><p>
             The following actions could be considered for the management functions in FMT:
@@ -5756,7 +5757,7 @@ If ( keylen = 256 )
               <li>management of the password used to authorize the update</li>
             </ul>
           </p><h4>Audit: FPT_FAC_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FPT_FAC_EXT.1 Firmware / Software Access Control</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>No dependencies.</td></tr></table><h4 id="ext-comp-FPT_FAC_EXT.1.1">FPT_FAC_EXT.1.1</h4>
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_448">a password</span>, <span class="selectable-content" id="_s_449">a known unique value printed on the device</span>, <span class="selectable-content" id="_s_450">a authorized user action</span>]before the [<b>selection</b>: <span class="selectable-content" id="_s_451">software</span>, <span class="selectable-content" id="_s_452">firmware</span>] update proceeds.
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall require [<b>selection</b>: <span class="selectable-content" id="_s_448">a password</span>, <span class="selectable-content" id="_s_449">a unique value printed on the device</span>, <span class="selectable-content" id="_s_450">a authorized user action</span>] before the [<b>selection</b>: <span class="selectable-content" id="_s_451">software</span>, <span class="selectable-content" id="_s_452">firmware</span>] update proceeds.
             </div></div><h3 id="ext-comp-FPT_FUA_EXT" class="indexable" data-level="4">C.2.2.2 FPT_FUA_EXT Firmware Update Authentication</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family requires that firmware updates be authenticated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> prior to being applied.</div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FPT_FUA_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FPT_FUA_EXT.1">FPT_FUA_EXT.1</a>,
              Firmware Update Authentication,
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to authenticate firmware updates using a specified method.</p><h4>Management: FPT_FUA_EXT.1</h4><p>There are no management functions foreseen.</p><h4>Audit: FPT_FUA_EXT.1</h4><p>There are no audit events foreseen.</p><h4>FPT_FUA_EXT.1 Firmware Update Authentication</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components.</td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>
