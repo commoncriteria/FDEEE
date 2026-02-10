@@ -48,7 +48,7 @@
       <PPVersion>3.0</PPVersion>
       <PPAuthor>Full Disk Encryption international Technical Community</PPAuthor>
       <!-- Year - Month - Day --> 
-      <PPPubDate>2026-02-02</PPPubDate>
+      <PPPubDate>2026-02-10</PPPubDate>
       <Keywords>Full Drive Encryption – Encryption Engine</Keywords>               <!-- This field is unused and optional -->
     </ReferenceTable>
   </PPReference>
@@ -94,7 +94,7 @@
     </entry>
     <entry>
         <version>3.0</version>
-        <date>2026-02-02</date>
+        <date>2026-02-10</date>
         <subject>Updated for CC:2022, reviewing and applying modifications to the cPP</subject>
       </entry>
   </RevisionHistory>
