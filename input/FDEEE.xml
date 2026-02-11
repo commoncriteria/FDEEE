@@ -4968,7 +4968,7 @@ If ( keylen = 256 )
             <title>
               The TSF shall <selectables linebreak="yes">
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-1">not store keys in non-volatile memory</selectable>
-                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when <selectables><selectable id="sel-fpt-kyp-ext-1-1-sel-2-1">wrapped, as specified in "FCS_COP.1/KeyWrap</selectable><selectable id="sel-fpt-kyp-ext-1-1-sel-2-2">encrypted, as specified in FCS_COP.1/KeyEnc</selectable></selectables></selectable>
+                <selectable id="sel-fpt-kyp-ext-1-1-sel-2">only store keys in non-volatile memory when wrapped, as specified in FCS_COP.1/KeyWrap, or encrypted, as specified in FCS_COP.1/KeyEnc or FCS_COP.1/KeyEncap</selectable>
                 <selectable id="sel-fpt-kyp-ext-1-1-sel-3">only store plaintext keys that meet any one of the following criteria <selectables>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3a">the plaintext key is not part of the key chain as specified in FCS_KYC_EXT.2</selectable>
                   <selectable id="sel-fpt-kyp-ext-1-1-sel-3b">the plaintext key will no longer provide access to the encrypted data after initial provisioning</selectable>
