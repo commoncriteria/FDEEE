@@ -2566,7 +2566,52 @@ If ( keylen = 256 )
         
         
         
-        
+        <div class="comp" id="FPT_TST.1"><h4>FPT_TST.1 TSF Self-Testing</h4>
+          <div class="element"><div class="reqid" id="FPT_TST.1.1"><a href="#FPT_TST.1.1" class="abbr">FPT_TST.1.1</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests [<b>selection</b>: <span class="selectable-content" id="_s_497">during initial start-up</span>, <span class="selectable-content" id="_s_498">at the conditions [<i>before the function is first invoked</i>]</span>]
+              to demonstrate the correct operation of [<b>selection</b>: <span class="selectable-content" id="_s_499">[<b>assignment</b>: 
+     <span class="assignable-content">parts of  <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]</span>, <span class="selectable-content" id="_s_500">the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]:
+			  [<b>assignment</b>: 
+     <span class="assignable-content">list of self-tests run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].              
+            </div></div>
+          
+          <div class="element"><div class="reqid" id="FPT_TST.1.2"><a href="#FPT_TST.1.2" class="abbr">FPT_TST.1.2</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of
+              [<b>selection</b>: <span class="selectable-content" id="_s_501">[<b>assignment</b>: 
+     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>]</span>, <span class="selectable-content" id="_s_502"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>].
+            </div></div>
+          
+          <div class="element"><div class="reqid" id="FPT_TST.1.3"><a href="#FPT_TST.1.3" class="abbr">FPT_TST.1.3</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of [<b>selection</b>: <span class="selectable-content" id="_s_503">[<b>assignment</b>: 
+     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> </span>]</span>, <span class="selectable-content" id="_s_504"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is a required dependency of <a href="#FCS_RBG.1">FCS_RBG.1</a> and the cryptographic requirements that are selectable in <a href="#FCS_KYC_EXT.2">FCS_KYC_EXT.2</a>. It is intended to require that any <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> undergo health testing to ensure that the random bit generation functionality has not been degraded. If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports multiple DRBGs, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be iterated to describe the self-test behavior for each.
+			
+			<p>The tests regarding cryptographic functions implemented in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can be deferred, as long as the tests are performed before the function is invoked.</p>
+			<p>If any FCS_COP functions are implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> should describe the known answer self-tests for those functions.</p></span></div></div></div>
+          
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_TST.1">FPT_TST.1</a></div>
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p>
+                  The	evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it details the self-tests that are run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> makes an argument that the tests are sufficient to demonstrate that the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is operating correctly.
+                </p><p>
+                  Note that this information may also be placed in the entropy documentation specified by <a href="#apndx-entropy" class="dynref">Appendix D -  Entropy Documentation and Assessment</a>.
+                </p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
+                </p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <p>
+                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by <a href="#FPT_TST.1.1">FPT_TST.1.1</a>.
+                </p><p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
+                </p>
+              </div></div></div></div></div>
 
         <div class="comp" id="FPT_TUD_EXT.1"><h4>FPT_TUD_EXT.1 Trusted Update</h4>
           
@@ -5559,68 +5604,7 @@ If ( keylen = 256 )
                 The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses the <abbr class="dyn-abbr"><a href="#abbr_RTU">RTU</a></abbr>, what type
                 of key or hash value, and where the value is stored on the <abbr class="dyn-abbr"><a href="#abbr_RTU">RTU</a></abbr>. The evaluator shall also verify that
                 the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> contains a description (storage location) of where the original firmware exists.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There is no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></div></div></div><div class="comp" id="FPT_TST.1"><h4>FPT_TST.1 TSF Self-Testing</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_COP.1.1/KeyEncap">FCS_COP.1.1/KeyEncap</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyEnc">FCS_COP.1.1/KeyEnc</a>, </i></b></li><li><b><i><a href="#FCS_COP.1.1/KeyWrap">FCS_COP.1.1/KeyWrap</a>, </i></b></li><li><b><i><a href="#FCS_CKM.5.1">FCS_CKM.5.1</a>, </i></b></li><li><b><i><a href="#FCS_RBG.1.2">FCS_RBG.1.2</a></i></b></li></ul></div>
-          
-          
-          
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-          <div class="element"><div class="reqid" id="FPT_TST.1.1"><a href="#FPT_TST.1.1" class="abbr">FPT_TST.1.1</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests [<b>selection</b>: <span class="selectable-content" id="_s_497">during initial start-up</span>, <span class="selectable-content" id="_s_498">at the conditions [<i>before the function is first invoked</i>]</span>]
-              to demonstrate the correct operation of [<b>selection</b>: <span class="selectable-content" id="_s_499">[<b>assignment</b>: 
-     <span class="assignable-content">parts of  <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]</span>, <span class="selectable-content" id="_s_500">the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>]:
-			  [<b>assignment</b>: 
-     <span class="assignable-content">list of self-tests run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].              
-            </div></div>
-          
-          <div class="element"><div class="reqid" id="FPT_TST.1.2"><a href="#FPT_TST.1.2" class="abbr">FPT_TST.1.2</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of
-              [<b>selection</b>: <span class="selectable-content" id="_s_501">[<b>assignment</b>: 
-     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>]</span>, <span class="selectable-content" id="_s_502"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data</span>].
-            </div></div>
-          
-          <div class="element"><div class="reqid" id="FPT_TST.1.3"><a href="#FPT_TST.1.3" class="abbr">FPT_TST.1.3</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide authorized users with the capability to verify the integrity of [<b>selection</b>: <span class="selectable-content" id="_s_503">[<b>assignment</b>: 
-     <span class="assignable-content">parts of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> </span>]</span>, <span class="selectable-content" id="_s_504"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span>].
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">This <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is a required dependency of <a href="#FCS_RBG.1">FCS_RBG.1</a> and the cryptographic requirements that are selectable in <a href="#FCS_KYC_EXT.2">FCS_KYC_EXT.2</a>. It is intended to require that any <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> undergo health testing to ensure that the random bit generation functionality has not been degraded. If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports multiple DRBGs, this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> should be iterated to describe the self-test behavior for each.
-			
-			<p>The tests regarding cryptographic functions implemented in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can be deferred, as long as the tests are performed before the function is invoked.</p>
-			<p>If any FCS_COP functions are implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> should describe the known answer self-tests for those functions.</p></span></div></div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_TST.1">FPT_TST.1</a></div>
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                <p>
-                  The	evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that it details the self-tests that are run by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> makes an argument that the tests are sufficient to demonstrate that the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is operating correctly.
-                </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <a href="#apndx-entropy" class="dynref">Appendix D -  Entropy Documentation and Assessment</a>.
-                </p>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
-                </p>
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>
-                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by <a href="#FPT_TST.1.1">FPT_TST.1.1</a>.
-                </p><p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
-                </p>
-              </div></div></div></div></div><h1 id="ext-comp-defs" class="indexable" data-level="A">Appendix C -  Extended Component Definitions</h1>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr></div><div class="ea"><div class="ea">There is no <abbr class="dyn-abbr"><a href="#abbr_KMD">KMD</a></abbr> for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></div></div></div><h1 id="ext-comp-defs" class="indexable" data-level="A">Appendix C -  Extended Component Definitions</h1>
 	This appendix contains the definitions for all extended requirements specified in the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
 
     <h2 id="ext-comp-defs-bg" class="indexable" data-level="2">C.1 Extended Components Table</h2>

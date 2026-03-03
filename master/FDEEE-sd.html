@@ -1264,7 +1264,27 @@ If ( keylen = 256 )
                   to take for the TOE to fully transition into the Compliant power saving state (e.g. how
                   many seconds for the volatile memory to be completely erased).</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">The evaluator shall trigger each condition in the list of identified conditions and ensure
                     the TOE ends up in a compliant power saving state by using the test indicated by
-                    the selection in FCS_CKM_EXT.6.</div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
+                    the selection in FCS_CKM_EXT.6.</div></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                <p>
+                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
+                </p><p>
+                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix D -  Entropy Documentation and Assessment</span>.
+                </p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
+                </p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <p>
+                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
+                </p><p>
+                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
+                </p>
+              </div></div></span></div><div class="comp" id="FPT-TUD-EXT-1"><h4>FPT_TUD_EXT.1 Trusted Update</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TUD_EXT.1</div>
                 
                   
                   
@@ -2581,27 +2601,7 @@ If ( keylen = 256 )
                 The evaluator shall examine the TSS to ensure that it describes how the TOE uses the RTU, what type
                 of key or hash value, and where the value is stored on the RTU. The evaluator shall also verify that
                 the TSS contains a description (storage location) of where the original firmware exists.
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></span></div><div class="comp" id=""><h4>FPT_TST.1 TSF Self-Testing</h4><span class="activity_pane_body"><div class="component-activity-header">FPT_TST.1</div>
-              
-              
-              
-            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
-                <p>
-                  The	evaluator shall examine the TSS to ensure that it details the self-tests that are run by the TSF along with how they are run. This description should include an outline of what the tests are actually doing. The evaluator shall ensure that the TSS makes an argument that the tests are sufficient to demonstrate that the DRBG is operating correctly.
-                </p><p>
-                  Note that this information may also be placed in the entropy documentation specified by <span href="#apndx-entropy" class="dynref">Appendix D -  Entropy Documentation and Assessment</span>.
-                </p>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that the operational guidance provides instructions on how to execute that self-test.
-                </p>
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p>
-                  For each self-test, the evaluator shall verify that evidence is produced that the self-test is executed when specified by FPT_TST.1.1.
-                </p><p>
-                  If a self-test can be executed at the request of an authorized user, the evaluator shall verify that following the steps documented in the operational guidance to perform the self-test will result in execution of the self-test.
-                </p>
-              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ADV_FSP.1</div>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">There is no AGD for this activity.</div></div><div class="eacategory">KMD</div><div class="ea"><div class="ea">There is no KMD for this activity.</div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">There is no test for this activity</div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.4 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.5 Evaluation Activities for Implementation-dependent SFRs</h2>The PP-Module does not define any implementation-dependent requirements.<h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><h1 class="indexable" data-level="1" id="adv">3.1 ADV: Development</h1><div class="comp" id=""><h4>ADV_FSP.1 Basic Functional Specification (ADV_FSP.1)</h4><span class="activity_pane_body"><div class="component-activity-header">ADV_FSP.1</div>
             
             There are no specific evaluation activities associated with these SARs, except
             ensuring the information is provided. The functional specification documentation is
