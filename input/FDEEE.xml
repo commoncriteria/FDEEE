@@ -42,13 +42,14 @@
 -->
 
   <!-- PPReference (all documents) -->
+  
+	  <comment>Adjust date once finalized</comment>
   <PPReference>
     <ReferenceTable>
       <PPTitle>collaborative Protection Profile for Full Drive Encryption – Encryption Engine</PPTitle>
       <PPVersion>3.0</PPVersion>
       <PPAuthor>Full Disk Encryption international Technical Community</PPAuthor>
       <!-- Year - Month - Day --> 
-	  <comment>Adjust date once finalized</comment>
       <PPPubDate>2026-03-03</PPPubDate>
       <Keywords>Full Drive Encryption – Encryption Engine</Keywords>               <!-- This field is unused and optional -->
     </ReferenceTable>
