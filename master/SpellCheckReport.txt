@@ -1,3 +1,9 @@
 output/FDEEE-release-linkable.html: OEs
+output/FDEEE-release-linkable.html: devivation
+output/FDEEE-release-linkable.html: wwith
+output/FDEEE-release.html: devivation
+output/FDEEE-release.html: wwith
 output/FDEEE-sd.html: OEs
 output/FDEEE.html: OEs
+output/FDEEE.html: devivation
+output/FDEEE.html: wwith

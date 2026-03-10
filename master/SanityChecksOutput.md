@@ -4,8 +4,6 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[1]""
 * Error: f-element FCS_VAL_EXT.1.2  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[2]""
-* Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ci from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[14]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
