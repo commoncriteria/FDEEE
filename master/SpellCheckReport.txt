@@ -1,3 +1,0 @@
-output/FDEEE-release-linkable.html: OEs
-output/FDEEE-sd.html: OEs
-output/FDEEE.html: OEs
