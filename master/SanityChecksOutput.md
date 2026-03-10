@@ -6,10 +6,8 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[28]""/f-element[2]""
 * Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[3]""/depends[4]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-2-2 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[13]""/depends[2]""/on-sel[1]""
-* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-2-1 from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[14]""/depends[3]""/on-sel[1]""
+* Error: Detected dangling id-reference to sel-fpt-kyp-ext-1-1-sel-3ci from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[14]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to sel-fcs-cop-keyenc-aes-xts from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]"The indiv"/section[1]""/f-component[21]""/depends[6]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'sel-fcs-cop-skc-aes-xts'.
