@@ -545,7 +545,7 @@
 		    <addressed-by>FPT_PWR_EXT.2</addressed-by><rationale>Mitigates this threat by requiring the TOE to enter into a safe power saving state based on each condition. </rationale>
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
 		    <addressed-by>FCS_CKM.6/KEK (optional)</addressed-by><rationale>Mitigates this threat by ensuring proper key cryptographic erase.</rationale>
-		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
+		    <addressed-by>FCS_CKM.1/SKG (implementation-dependent)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>		    
 		    <addressed-by>FCS_CKM.6/GENHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction in general hardware.</rationale>		    
 		    <addressed-by>FCS_CKM.6/SW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction within the software TOE and 3rd party storage.</rationale>
 		    <addressed-by>FCS_CKM.6/TOEHW (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring proper key material destruction.</rationale>
@@ -573,7 +573,7 @@
 		    <addressed-by>FCS_CKM.1/DEK</addressed-by><rationale>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the DEK is computationally infeasible.</rationale>
 		    <addressed-by>FCS_KYC_EXT.2</addressed-by><rationale>Mitigates this threat by ensuring all keys protecting the BEV are of the same strength.</rationale>        
 		    <addressed-by>FCS_CKM.1/AKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring asymmetric key generation.</rationale>
-		    <addressed-by>FCS_CKM.1/SKG (selection-based)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
+		    <addressed-by>FCS_CKM.1/SKG (implementation-dependent)</addressed-by><rationale>Mitigates this threat by requiring symmetric cryptographic key generation.</rationale>
 		    <addressed-by>FCS_RBG.1 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that keys used for data encryption are generated using a secure DRBG. </rationale>
 		    <addressed-by>FCS_RBG.2 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
 		    <addressed-by>FCS_RBG.3 (selection-based)</addressed-by><rationale>Mitigates this threat by ensuring that the TOE's DRBG is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</rationale>
