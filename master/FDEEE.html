@@ -2711,7 +2711,7 @@ If ( keylen = 256 )
 <tr><td><a href="#FPT_PWR_EXT.2">FPT_PWR_EXT.2</a></td><td>Mitigates this threat by requiring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to enter into a safe power saving state based on each condition. </td></tr>
 <tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.6/KEK">FCS_CKM.6/KEK</a> (optional)</td><td>Mitigates this threat by ensuring proper key cryptographic erase.</td></tr>
-<tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
+<tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (implementation-dependent)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
 <tr><td><a href="#FCS_CKM.6/GENHW">FCS_CKM.6/GENHW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction in general hardware.</td></tr>
 <tr><td><a href="#FCS_CKM.6/SW">FCS_CKM.6/SW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction within the software <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and 3rd party storage.</td></tr>
 <tr><td><a href="#FCS_CKM.6/TOEHW">FCS_CKM.6/TOEHW</a> (selection-based)</td><td>Mitigates this threat by ensuring proper key material destruction.</td></tr>
@@ -2731,7 +2731,7 @@ If ( keylen = 256 )
 <tr class="major-row"><td rowspan="11"><a href="#T.KEYSPACE_EXHAUST">T.KEYSPACE_​EXHAUST</a></td><td><a href="#FCS_CKM.1/DEK">FCS_CKM.1/DEK</a></td><td>Mitigates this threat by defining a sufficiently large keyspace such that keyspace exhaust to determine the value of the <abbr class="dyn-abbr"><a href="#abbr_DEK">DEK</a></abbr> is computationally infeasible.</td></tr>
 <tr><td><a href="#FCS_KYC_EXT.2">FCS_KYC_EXT.2</a></td><td>Mitigates this threat by ensuring all keys protecting the <abbr class="dyn-abbr"><a href="#abbr_BEV">BEV</a></abbr> are of the same strength.</td></tr>
 <tr><td><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a> (selection-based)</td><td>Mitigates this threat by requiring asymmetric key generation.</td></tr>
-<tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (selection-based)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
+<tr><td><a href="#FCS_CKM.1/SKG">FCS_CKM.1/SKG</a> (implementation-dependent)</td><td>Mitigates this threat by requiring symmetric cryptographic key generation.</td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a> (selection-based)</td><td>Mitigates this threat by ensuring that keys used for data encryption are generated using a secure <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </td></tr>
 <tr><td><a href="#FCS_RBG.2">FCS_RBG.2</a> (selection-based)</td><td>Mitigates this threat by ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</td></tr>
 <tr><td><a href="#FCS_RBG.3">FCS_RBG.3</a> (selection-based)</td><td>Mitigates this threat by ensuring that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is seeded with sufficient entropy to ensure the generation of strong cryptographic keys.</td></tr>
