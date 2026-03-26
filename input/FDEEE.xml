@@ -874,7 +874,7 @@
   <sec:SFRs title="Security Functional Requirements">
     The individual security functional requirements are specified in the sections below.
     
-    <section title="Cryptographic Support (FCS)" id="fcs">
+    <section title="Class FCS: Cryptographic Support" id="fcs">
 	  
 
         <!-- FCS_CKM_EXT.1 -->
@@ -4565,7 +4565,7 @@ If ( keylen = 256 )
             </f-component>
       </section>
     
-    <section title="User Data Protection" id="FDP">
+    <section title="Class FDP: User Data Protection" id="FDP">
       <ext-comp-def title="Protection of Data on Disk" fam-id="FDP_DSK_EXT">
         <fam-behavior>This family specifies methods for ensuring that data residing in permanent storage on disk is
           not subject to unauthorized disclosure.
@@ -4689,7 +4689,7 @@ If ( keylen = 256 )
     </f-component>
     </section>
     
-      <section title="Security Management (FMT)" id="FMT">        
+    <section title="Class FMT: Security Management" id="FMT">        
         
         <f-component cc-id="fmt_smf.1" name="Specification of Management Functions" id="fmt-smf-1">
         <f-element id="fmt-smf-1-1">
@@ -4767,7 +4767,7 @@ If ( keylen = 256 )
       </f-component>
       </section>
     
-      <section title="Protection of the TSF (FPT)" id="fpt">
+    <section title="Class FPT: Protection of the TSF" id="fpt">
         <ext-comp-def title="Firmware / Software Access Control" fam-id="FPT_FAC_EXT">
           <fam-behavior>This family requires that a valid authentication factor be provided prior to the TSF authorizing
             an update.</fam-behavior>
