@@ -46,7 +46,7 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/release-3
 
 === 3.0 NIAP Link
 
-* Added upon 3.0 endorsement.
+* https://www.niap-ccevs.org/protectionprofiles/536[NIAP collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0]
 
 === Common Criteria Portal
 
