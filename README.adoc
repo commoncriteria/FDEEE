@@ -37,12 +37,12 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/release-3
 |===
 
 === Draft Version (latest build of master branch)
-* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine] (html)
 
 === 3.0 Release Version
 
-* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
-* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html.pdf[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (pdf)
+* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0] (html)
+* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html.pdf[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0] (pdf)
 
 === 3.0 NIAP Link
 
