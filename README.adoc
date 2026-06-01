@@ -37,16 +37,16 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/release-3
 |===
 
 === Draft Version (latest build of master branch)
-* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
+* https://commoncriteria.github.io/FDEEE/master/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine] (html)
 
 === 3.0 Release Version
 
-* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (html)
-* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html.pdf[Collaborative Protection Profile for Full Drive Encryption - Authorization Acquisition] (pdf)
+* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0] (html)
+* https://commoncriteria.github.io/FDEEE/release-3.0/FDEEE-release-linkable.html.pdf[Collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0] (pdf)
 
 === 3.0 NIAP Link
 
-* Added upon 3.0 endorsement.
+* https://www.niap-ccevs.org/protectionprofiles/536[NIAP collaborative Protection Profile for Full Drive Encryption - Encryption Engine Version 3.0]
 
 === Common Criteria Portal
 
@@ -56,9 +56,9 @@ image::https://raw.githubusercontent.com/commoncriteria/FDEEE/gh-pages/release-3
 
 If you are interested in contributing directly to future versions the
 this Protection Profile, please consider joining the NIAP technical
-community. *
-https://www.niap-ccevs.org/NIAP_Evolution/tech_communities.cfm[How to
-join the NIAP Technical Community (Mailing list and updates)]
+community. 
+
+* https://www.niap-ccevs.org/NIAP_Evolution/tech_communities.cfm[How to join the NIAP Technical Community (Mailing list and updates)]
 
 === Feedback
 
