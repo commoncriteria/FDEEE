@@ -4525,7 +4525,7 @@ If ( keylen = 256 )
                   FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.
                   </h:p>
                 </note>
-				<aactivity level="element">
+				<aactivity>
                       <TSS>
                         <h:p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</h:p>
@@ -4555,9 +4555,10 @@ If ( keylen = 256 )
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</test>
-                          <test>For each validated authorization factor, ensure that when the user provides an
-                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
-                            the TOE (e.g., to the EE).</test>
+                          <test>The evaluator shall force the TOE to enter a Compliant power saving state,
+                            attempt to resume it from this state, and verify that only a valid authorization factor as
+                            defined by the guidance documentation is sufficient to allow the TOE to exit the
+                            Compliant power saving state.</test>
                         </testlist></Tests>
                   </aactivity>
               </f-element>
