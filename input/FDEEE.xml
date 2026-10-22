@@ -5029,14 +5029,9 @@ If ( keylen = 256 )
             </note>
              
               <aactivity>
-                <TSS>
-                  The evaluator shall examine the TSS to verify that it describes the method by which intermediate
-                  keys are generated using submask combining.
-                </TSS>
+                <TSS>The evaluator shall examine the TSS and verify it identifies the methods used to protect keys stored in non-volatile memory.</TSS>
                 <Guidance>There are no AGD evaluation activities for this SFR.</Guidance>
                 <KMD>
-                  The evaluator shall examine the KMD for a description of the methods used to protect keys stored
-                  in non-volatile memory.<h:br/><h:br/>
                   The evaluator shall verify the KMD to ensure it describes the storage location of all keys and 
                   the protection of all keys stored in non-volatile memory. The description of the key chain shall
                   be reviewed to ensure the selected method is followed for the storage of wrapped or encrypted 
