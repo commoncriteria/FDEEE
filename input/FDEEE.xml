@@ -4761,6 +4761,12 @@ If ( keylen = 256 )
                   <h:p>If item d&#41; is selected in FMT_SMF.1.1: If additional 
                     management functions are claimed, the evaluator shall verify
                     that the additional features function as described.</h:p>
+                  <h:p><testlist>
+                    <test>(conditional): If the TOE provides key recovery capability whose effects are
+                      visible at the TOE interface, then the evaluator shall devise a test that ensures that
+                      the key recovery capability has been or can be disabled following the guidance
+                      provided by the vendor.</test>
+                  </testlist></h:p>
                 </Tests>
             </aactivity>
         </f-element>          
