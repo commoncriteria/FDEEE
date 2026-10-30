@@ -4746,7 +4746,7 @@ If ( keylen = 256 )
                   <h:p>If Disable Key Recovery is selected: The guidance for disabling key recovery shall be described in
                     the AGD documentation.</h:p>
                 </Guidance>
-              <KMD>If item d)&#41; is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
+              <KMD>If item d&#41; is selected in FMT_SMF.1.1: If the TOE offers the functionality to import 
                 an encrypted DEK, the evaluator shall ensure the KMD describes how the TOE imports a wrapped
                 DEK and performs the decryption of the wrapped DEK.</KMD>
                 <Tests>
