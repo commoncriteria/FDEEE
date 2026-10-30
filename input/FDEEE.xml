@@ -4524,27 +4524,27 @@ If ( keylen = 256 )
                   FCS_COP.1/Hash, FCS_COP.1/KeyedHash, and FCS_COP.1/SKC.
                   </h:p>
                 </note>
-				<aactivity level="element">
+				<aactivity>
                       <TSS>
                         <h:p>The evaluator shall examine the TSS to determine which authorization factors support
                           validation.</h:p>
                         <h:p>The evaluator shall examine the TSS to review a high-level description if multiple
                           submasks are used within the TOE, how the submasks are validated (e.g., each submask
-                          validated before combining, once combined validation takes place).</h:p></TSS>
+                          validated before combining, once combined validation takes place).</h:p>
+                        <h:p>The evaluator shall also examine the TSS to determine that a subset or all of the authorization factors identified in the SFR can be used to exit from a compliant power saving state.</h:p></TSS>
                       <Guidance>
                         <h:p>(conditional) If the validation functionality is configurable, the evaluator shall examine
                           the operational guidance to ensure it describes how to configure the TOE to ensure the
                           limits regarding validation attempts can be established.</h:p>
                         <h:p>(conditional) If the validation functionality is specified by the ST author, the evaluator
                           shall examine the operational guidance to ensure that it states the values that the TOE
-                          uses for limits regarding validation attempts.</h:p></Guidance>
+                          uses for limits regarding validation attempts.</h:p>
+                        <h:p>The evaluator shall verify that the guidance documentation states which authorization factors are allowed to exit a compliant power saving state.</h:p></Guidance>
                       <CustomEA name="KMD">
                         <h:p>The evaluator shall examine the KMD to verify that it described the method the TOE
                           employs to limit the number of consecutively failed authorization attempts.</h:p>
-                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation
-                          is performed. The description of the validation process in the KMD provides detailed
-                          information how the TOE validates the submasks. The KMD describes how the process
-                          works, such that it does not expose any material that might compromise the submasks.</h:p></CustomEA>
+                        <h:p>The evaluator shall examine the vendor’s KMD to ensure it describes how validation is performed. The description of the validation process in the KMD provides detailed information how the TOE validates the BEV.</h:p>
+                        <h:p>The KMD describes how the process works, such that it does not expose any material that might compromise the submask(s).</h:p></CustomEA>
                       <Tests>
                         The evaluator shall perform the following tests:
                         <testlist>
@@ -4554,9 +4554,10 @@ If ( keylen = 256 )
                             protected data. If the limit mechanism includes any “lockout” period, the time period
                             tested should include at least one such period. Then the evaluator will verify that the
                             TOE behaves as described in the TSS.</test>
-                          <test>For each validated authorization factor, ensure that when the user provides an
-                            incorrect authorization factor, the TOE prevents the BEV from being forwarded outside
-                            the TOE (e.g., to the EE).</test>
+                          <test>The evaluator shall force the TOE to enter a Compliant power saving state,
+                            attempt to resume it from this state, and verify that only a valid authorization factor as
+                            defined by the guidance documentation is sufficient to allow the TOE to exit the
+                            Compliant power saving state.</test>
                         </testlist></Tests>
                   </aactivity>
               </f-element>
